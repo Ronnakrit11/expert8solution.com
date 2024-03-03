@@ -107,7 +107,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                       />
 
                           <span className="ml-[15px] text-[#2e2e2e]">
-                          Peopledna
+                          Expert8-Sollution
                       </span>
                       
                     </Link>
