@@ -9,10 +9,27 @@ export const ordersApi = apiSlice.injectEndpoints({
         credentials: "include" as const,
       }),
     }),
+    checkPayment: builder.query({
+      query: (refId) => ({
+        url: `check-payment?refId=${refId}`,
+        method: "GET",
+        credentials: "include" as const,
+      }),
+    }),
     getStripePublishablekey: builder.query({
       query: () => ({
         url: `payment/stripepublishablekey`,
         method: "GET",
+        credentials: "include" as const,
+      }),
+    }),
+    createLinkPaymentCourse: builder.mutation({
+      query: (courseId) => ({
+        url: `/payment-course`,
+        method: "POST",
+        body: {
+          courseId,
+        },
         credentials: "include" as const,
       }),
     }),
@@ -51,5 +68,5 @@ export const ordersApi = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useGetAllOrdersQuery,useGetStripePublishablekeyQuery, useCreatePaymentIntentMutation ,useCreateOrderMutation, useCreateOrderEbookMutation} =
+export const { useGetAllOrdersQuery, useCheckPaymentQuery, useGetStripePublishablekeyQuery,useCreateLinkPaymentCourseMutation, useCreatePaymentIntentMutation ,useCreateOrderMutation, useCreateOrderEbookMutation} =
   ordersApi;

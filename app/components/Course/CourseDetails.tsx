@@ -11,6 +11,7 @@ import CheckOutForm from "../Payment/CheckOutForm";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Image from "next/image";
 import { VscVerifiedFilled } from "react-icons/vsc";
+import { useCreateLinkPaymentCourseMutation } from "@/redux/features/orders/ordersApi";
 
 type Props = {
   data: any;
@@ -27,13 +28,23 @@ const CourseDetails = ({
   setRoute,
   setOpen: openAuthModal,
 }: Props) => {
-  const { data: userData,refetch } = useLoadUserQuery(undefined, {});
+  const { data: userData, refetch } = useLoadUserQuery(undefined, {});
+  const [createLinkPayment, { data: linkPaymentData, isLoading,  }] = useCreateLinkPaymentCourseMutation();
+
   const [user, setUser] = useState<any>();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setUser(userData?.user);
   }, [userData]);
+
+  useEffect(() => {
+    if (linkPaymentData?.paymentUrl) {
+      window.location.href = linkPaymentData.paymentUrl
+      console.log("🚀 ~ useEffect ~ linkPaymentData:", linkPaymentData)
+      // setClientSecret(paymentIntentData?.client_secret);
+    }
+  }, [linkPaymentData]);
 
   const dicountPercentenge =
     ((data?.estimatedPrice - data.price) / data?.estimatedPrice) * 100;
@@ -51,6 +62,10 @@ const CourseDetails = ({
       openAuthModal(true);
     }
   };
+
+  const confirmPurchase = async () => {
+    createLinkPayment(data._id);
+  }
 
   return (
     <div>
@@ -247,16 +262,16 @@ const CourseDetails = ({
               </div>
               <br />
               <p className="pb-1 text-white dark:text-white">
-                
+
               </p>
               <p className="pb-1 text-white dark:text-white">
-               
+
               </p>
               <p className="pb-1 text-white dark:text-white">
-                
+
               </p>
               <p className="pb-3 800px:pb-1 text-white dark:text-white">
-               
+
               </p>
             </div>
           </div>
@@ -264,21 +279,27 @@ const CourseDetails = ({
       </div>
       <>
         {open && (
-          <div className="w-full h-screen bg-[#00000036] fixed top-0 left-0 z-50 flex items-center justify-center">
-            <div className="w-[500px] min-h-[500px] bg-white rounded-xl shadow p-3">
+          <div className="w-full h-screen bg-[#0000006d] fixed top-0 left-0 z-50 flex items-center justify-center">
+            <div className="w-[500px] min-h-[200px] bg-white rounded-xl shadow p-3">
               <div className="w-full flex justify-end">
                 <IoCloseOutline
                   size={40}
-                  className="text-white cursor-pointer"
+                  className="text-black cursor-pointer"
                   onClick={() => setOpen(false)}
                 />
               </div>
-              <div className="w-full">
-                {stripePromise && clientSecret && (
-                  <Elements stripe={stripePromise} options={{ clientSecret }}>
-                    <CheckOutForm setOpen={setOpen} data={data} user={user} refetch={refetch} payForm="course"/>
-                  </Elements>
-                )}
+              <div className="w-full text-black text-center">
+                <h1 className="text-2xl">ยืนยันคำสั่งซื้อ</h1>
+                <h1 className="text-xl mt-5"> {data.name} ราคา {data.price} บาท</h1>
+                <div className="w-full flex justify-center">
+                  <button
+                    className={`${styles.button} text-white !w-[180px] my-3 font-Poppins cursor-pointer !bg-[#14c1dc] mt-10 text-center`}
+                    onClick={confirmPurchase}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? 'กำลังดำเนิดการ...' : 'ชำระเงิน'}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
