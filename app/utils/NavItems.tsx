@@ -22,10 +22,7 @@ export const navItemsData = [
     name: "เกี่ยวกับ",
     url: "/about",
   },
-  {
-    name: "Policy",
-    url: "/policy",
-  },
+  
   {
     name: "คำถามที่เจอบ่อย",
     url: "/faq",
