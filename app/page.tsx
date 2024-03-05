@@ -1,20 +1,20 @@
 import Home from "./components/HomeNew/Home";
 
 export const metadata = {
-  title: "Ajaree สอนจิตวิทยาการบริหารบุคคล",
+  title: "Expert8-Solution",
   description:
-  "Ajaree สอนจิตวิทยาการบริหารบุคคล",
+  "เปลี่ยนไอเดียเป็น Techsolution ของตัวเอง",
   keywords:
-    "จิตวิทยา,บริหารบุคคล,บริหารบุคคล ",
+    "ไอเดีย,Techsolution,การตลาด ",
   openGraph: {
-    title: "Ajaree สอนจิตวิทยาการบริหารบุคคล ",
-    description: "Ajaree สอนจิตวิทยาการบริหารบุคคล",
-    url: "https://aree-client.vercel.app",
+    title: "Expert8-Solution ",
+    description: "เปลี่ยนไอเดียเป็น Techsolution ของตัวเอง",
+    url: "https://www.expert8-solution.info/",
 
-    siteName: "Ajaree",
+    siteName: "expert8-solution",
     images: [
       {
-        url: "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709055938/vprckzuzds52riarrpy4.jpg",
+        url: "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709633303/zscax0wvqcqxqzvpmcin.png",
         width: 800,
         height: 600,
       },
@@ -24,11 +24,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Ajaree สอนจิตวิทยาการบริหารบุคคล",
+    title: "Expert8-Solution",
     description:
-      "Ajaree สอนจิตวิทยาการบริหารบุคคล",
+      "เปลี่ยนไอเดียเป็น Techsolution ของตัวเอง",
     images: [
-      "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709055938/vprckzuzds52riarrpy4.jpg",
+      "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709633303/zscax0wvqcqxqzvpmcin.png ",
     ],
   },
 };
