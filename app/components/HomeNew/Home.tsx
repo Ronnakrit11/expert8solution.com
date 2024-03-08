@@ -59,7 +59,7 @@ function Home({ webInfo }: any) {
             />
              <div className="w-[100%] h-auto md:h-[502px] 1000px:flex items-center dark:bg-[#1846a8] ">
                 <Image
-                    src={'/bannerEX22.png'}
+                    src={'/bannerEX.png'}
                     width={9000}
                     height={600}
                     alt=''
