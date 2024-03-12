@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Expert8-Solution ",
     description: "เปลี่ยนไอเดียเป็น Techsolution ของตัวเอง",
-    url: "https://www.expert8-solution.info/",
+    url: "https://www.expert8-solution.com/",
 
     siteName: "expert8-solution",
     images: [
