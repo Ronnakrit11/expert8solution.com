@@ -2,7 +2,7 @@ import { styles } from "@/app/styles/style";
 import CoursePlayer from "@/app/utils/CoursePlayer";
 import Ratings from "@/app/utils/Ratings";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoCheckmarkDoneOutline, IoCloseOutline } from "react-icons/io5";
 import { format } from "timeago.js";
 import CourseContentList from "../Course/CourseContentList";
@@ -11,40 +11,32 @@ import CheckOutForm from "../Payment/CheckOutForm";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Image from "next/image";
 import { VscVerifiedFilled } from "react-icons/vsc";
-import { useCreateLinkPaymentCourseMutation } from "@/redux/features/orders/ordersApi";
+import { useGetTokenPaymentMutation } from "@/redux/features/orders/ordersApi";
 
 type Props = {
   data: any;
-  stripePromise: any;
-  clientSecret: string;
   setRoute: any;
   setOpen: any;
 };
 
 const CourseDetails = ({
   data,
-  stripePromise,
-  clientSecret,
   setRoute,
   setOpen: openAuthModal,
 }: Props) => {
   const { data: userData, refetch } = useLoadUserQuery(undefined, {});
-  const [createLinkPayment, { data: linkPaymentData, isLoading,  }] = useCreateLinkPaymentCourseMutation();
+  const [getToken, { isLoading, isSuccess, error }] = useGetTokenPaymentMutation();
 
+
+  const submitRef = useRef<HTMLButtonElement | null>(null)
   const [user, setUser] = useState<any>();
+  const [token, setToken] = useState<string | ''>('')
+  const [refId, setRefId] = useState<string | ''>('')
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setUser(userData?.user);
   }, [userData]);
-
-  useEffect(() => {
-    if (linkPaymentData?.paymentUrl) {
-      window.location.href = linkPaymentData.paymentUrl
-      console.log("🚀 ~ useEffect ~ linkPaymentData:", linkPaymentData)
-      // setClientSecret(paymentIntentData?.client_secret);
-    }
-  }, [linkPaymentData]);
 
   const dicountPercentenge =
     ((data?.estimatedPrice - data.price) / data?.estimatedPrice) * 100;
@@ -54,21 +46,53 @@ const CourseDetails = ({
   const isPurchased =
     user && user?.courses?.find((item: any) => item._id === data._id);
 
+  useEffect(() => {
+    if (user && data._id) {
+      getToken(data._id).then((response: any) => {
+        setToken(response?.data?.token || '')
+        setRefId(response?.data?.refId || '')
+      })
+    }
+  }, [user, data])
+
   const handleOrder = (e: any) => {
     if (user) {
-      setOpen(true);
+      if (!token) {
+        return window.alert('token payment notfound!')
+      }
+      if (!refId) {
+        return window.alert('refId payment notfound!')
+      }
+
+      submitRef.current?.click()
     } else {
       setRoute("Login");
       openAuthModal(true);
     }
   };
 
-  const confirmPurchase = async () => {
-    createLinkPayment(data._id);
-  }
+  const returnUrl = `${window?.location?.origin}/course-access/${data._id}?ptoken=${token}`
+  const postBackUrl = `${process.env.NEXT_PUBLIC_SERVER_URI}/create-order-postback?payment_token=${token}&`
 
   return (
     <div>
+      <form className="hidden" method="post" action="https://payment.paysolutions.asia/epaylink/payment.aspx">
+        <input type="hidden" name="customeremail" defaultValue={userData?.user?.email} value={userData?.user?.email} />
+        <input type="hidden" name="productdetail" defaultValue={data.name} value={data.name} />
+        <input type="hidden" name="refno" defaultValue={refId} />
+        <input type="hidden" name="merchantid" defaultValue={process.env.NEXT_PUBLIC_PAYMENT_MERCHANT_ID} />
+        <input type="hidden" name="cc" defaultValue={'00'} />
+        <input type="hidden" name="total" defaultValue={data.price} value={data.price} />
+        <input type="hidden" name="lang" defaultValue="TH" />
+        <input type="hidden" name="returnurl" defaultValue={returnUrl} value={returnUrl} />
+        <input type="hidden" name="postbackurl" defaultValue={postBackUrl} value={postBackUrl} />
+        <button
+          className="hidden"
+          ref={submitRef}
+          type="submit"
+        >
+        </button>
+      </form>
       <div className="w-[90%] 800px:w-[90%] m-auto py-5">
         <div className="w-full flex flex-col-reverse 800px:flex-row">
           <div className="w-full 800px:w-[65%] 800px:pr-5">
@@ -277,34 +301,6 @@ const CourseDetails = ({
           </div>
         </div>
       </div>
-      <>
-        {open && (
-          <div className="w-full h-screen bg-[#0000006d] fixed top-0 left-0 z-50 flex items-center justify-center">
-            <div className="w-[500px] min-h-[200px] bg-white rounded-xl shadow p-3">
-              <div className="w-full flex justify-end">
-                <IoCloseOutline
-                  size={40}
-                  className="text-black cursor-pointer"
-                  onClick={() => setOpen(false)}
-                />
-              </div>
-              <div className="w-full text-black text-center">
-                <h1 className="text-2xl">ยืนยันคำสั่งซื้อ</h1>
-                <h1 className="text-xl mt-5"> {data.name} ราคา {data.price} บาท</h1>
-                <div className="w-full flex justify-center">
-                  <button
-                    className={`${styles.button} text-white !w-[180px] my-3 font-Poppins cursor-pointer !bg-[#14c1dc] mt-10 text-center`}
-                    onClick={confirmPurchase}
-                    disabled={isLoading}
-                  >
-                    {isLoading ? 'กำลังดำเนิดการ...' : 'ชำระเงิน'}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </>
     </div>
   );
 };

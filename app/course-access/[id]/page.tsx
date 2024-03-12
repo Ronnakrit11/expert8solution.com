@@ -2,43 +2,64 @@
 import CourseContent from "@/app/components/Course/CourseContent";
 import Loader from "@/app/components/Loader/Loader";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
-import { redirect } from "next/navigation";
+import axios from "axios";
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 
 type Props = {
-    params:any;
+  params: any;
 }
 
-const Page = ({params}: Props) => {
-    const id = params.id;
-  const { isLoading, error, data,refetch } = useLoadUserQuery(undefined, {});
+const Page = ({ params }: Props) => {
+  const id = params.id;
+  const { isLoading, error, data, refetch } = useLoadUserQuery(undefined, {});
+  const router = useRouter();
+
+  const searchParams = useSearchParams();
+  const paymentToken = searchParams?.get("ptoken");
 
   useEffect(() => {
-    if (data) {
-      const isPurchased = data.user.courses.find(
-        (item: any) => item._id === id
-      );
-      if (!isPurchased) {
-        redirect("/");
+    if (paymentToken) {
+      checkPaymentToken()
+    }
+  }, [])
+
+  const checkPaymentToken = async () => {
+    try {
+      const result = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URI}/create-order-postback?payment_token=${paymentToken}`)
+    } catch (err) {
+    }
+    window.location.href = `/course-access/${id}`
+  }
+
+  useEffect(() => {
+    if (!paymentToken) {
+      if (data) {
+        const isPurchased = data.user.courses.find(
+          (item: any) => item._id === id
+        );
+        if (!isPurchased) {
+          router.replace("/");
+        }
+      }
+      if (error) {
+        router.replace("/");
       }
     }
-    if (error) {
-      redirect("/");
-    }
-  }, [data,error]);
+  }, [data, error]);
 
   return (
-   <>
-   {
-    isLoading ? (
-        <Loader />
-    ) : (
-        <div>
-          <CourseContent id={id} user={data.user} />
-        </div>
-    )
-   }
-   </>
+    <>
+      {
+        (paymentToken || isLoading) ? (
+          <Loader />
+        ) : (
+          <div>
+            <CourseContent id={id} user={data.user} />
+          </div>
+        )
+      }
+    </>
   )
 }
 

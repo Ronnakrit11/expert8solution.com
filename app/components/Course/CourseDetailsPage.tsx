@@ -65,15 +65,11 @@ const CourseDetailsPage = ({ id }: Props) => {
             activeItem={1}
           />
           <div className="w-full bg-gradient-4 text-white">
-          {stripePromise && (
-            <CourseDetails
+          <CourseDetails
               data={data.course}
-              stripePromise={stripePromise}
-              clientSecret={clientSecret}
               setRoute={setRoute}
               setOpen={setOpen}
             />
-          )}
           </div>
           <Footer />
         </div>

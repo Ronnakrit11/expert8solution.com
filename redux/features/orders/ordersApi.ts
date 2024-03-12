@@ -9,13 +9,6 @@ export const ordersApi = apiSlice.injectEndpoints({
         credentials: "include" as const,
       }),
     }),
-    checkPayment: builder.query({
-      query: (refId) => ({
-        url: `check-payment?refId=${refId}`,
-        method: "GET",
-        credentials: "include" as const,
-      }),
-    }),
     getStripePublishablekey: builder.query({
       query: () => ({
         url: `payment/stripepublishablekey`,
@@ -23,12 +16,24 @@ export const ordersApi = apiSlice.injectEndpoints({
         credentials: "include" as const,
       }),
     }),
-    createLinkPaymentCourse: builder.mutation({
+
+    getTokenPayment: builder.mutation({
       query: (courseId) => ({
-        url: `/payment-course`,
+        url: `/payment/token`,
         method: "POST",
         body: {
-          courseId,
+          courseId
+        },
+        credentials: "include" as const,
+      }),
+    }),
+
+    getTokenPaymentEbook: builder.mutation({
+      query: (ebookId) => ({
+        url: `/payment/token`,
+        method: "POST",
+        body: {
+          ebookId
         },
         credentials: "include" as const,
       }),
@@ -68,5 +73,12 @@ export const ordersApi = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useGetAllOrdersQuery, useCheckPaymentQuery, useGetStripePublishablekeyQuery,useCreateLinkPaymentCourseMutation, useCreatePaymentIntentMutation ,useCreateOrderMutation, useCreateOrderEbookMutation} =
-  ordersApi;
+export const { 
+  useGetAllOrdersQuery,
+  useGetTokenPaymentMutation,
+  useGetTokenPaymentEbookMutation,
+  useGetStripePublishablekeyQuery, 
+  useCreatePaymentIntentMutation ,
+  useCreateOrderMutation, 
+  useCreateOrderEbookMutation
+} = ordersApi;
