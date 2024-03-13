@@ -1,35 +1,18 @@
-"use client";
-import React, { useState } from "react";
-import Heading from "../utils/Heading";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import FAQ from "../components/FAQ/FAQ";
+import FaqPage from "../components/FaqPage/FaqPage";
 
-type Props = {};
+export const revalidate = 180;
 
-const Page = (props: Props) => {
-  const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(6);
-  const [route, setRoute] = useState("Login");
-
-  return (
-    <div className="min-h-screen">
-      <Heading
-        title="FAQ - Elearning"
-        description="Elearning is a learning management system for helping programmers."
-        keywords="programming,mern"
-      />
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
-      <FAQ />
-      <Footer />
-    </div>
+// http://localhost:8000/api/v1/get-layout/Banner
+const Page = async () => {
+  const pmFaq = fetch(
+    `${process.env.NEXT_PUBLIC_SERVER_URI}/get-layout/FAQ`,
+    {}
   );
+  const [rsFaq] = await Promise.all([pmFaq]);
+
+  const faq = await rsFaq.json();
+
+  return <FaqPage faq={faq?.layout?.faq || []} />;
 };
 
 export default Page;
