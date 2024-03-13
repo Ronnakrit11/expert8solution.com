@@ -1,24 +1,32 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Heading from "../../utils/Heading";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-// import AOS from 'aos';
+import AOS from 'aos';
 
-// import 'aos/dist/aos.css';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import 'aos/dist/aos.css';
+
+import Hero from "./Hero";
+import TopCategory from "./TopCategory";
 import PeopleReview from "./PeopleReview";
 import WhyLearnCourse from "./WhyLearnCourse";
 import Courses from "./Course";
+import TrustBy from "./TrustBy";
 import Ebooks from "./Ebooks";
 import FAQ from "../FAQ/FAQ";
 import { useTheme } from "next-themes";
 import Blogs from "./Blogs";
+import OurService from "./OurService";
 import Image from "next/image";
 import CallToAction from "./CallToAction";
 
 
 function Home({ webInfo }: any) {
-    console.log("🚀 ~ Home ~ webInfo:", webInfo)
+    console.log("🚀 ~ file: Home.tsx:24 ~ Home ~ layout:", webInfo)
     const [open, setOpen] = useState(false);
     const [activeItem, setActiveItem] = useState(0);
     const [route, setRoute] = useState("Login");
@@ -29,10 +37,10 @@ function Home({ webInfo }: any) {
 
     useEffect(() => {
         setTheme('light')
-        // AOS.init({
-        //     once: true,
-        //     delay: 300
-        // });
+        AOS.init({
+            once: true,
+            delay: 300
+        });
     }, [])
 
 
@@ -69,13 +77,13 @@ function Home({ webInfo }: any) {
             
               {/*<PeopleReview />*/}
             
-            <Courses courses={webInfo?.courses}/>
-            <Ebooks ebooks={webInfo?.ebooks}/>
+            <Courses />
+            <Ebooks/>
             <Blogs/>
             <PeopleReview />
             
             <WhyLearnCourse />
-            <FAQ faq={webInfo?.faq}/> 
+            <FAQ/> 
             {/* <TrustBy /> */}
             
             <Footer />

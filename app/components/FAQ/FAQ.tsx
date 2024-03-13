@@ -3,20 +3,18 @@ import { useGetHeroDataQuery } from "@/redux/features/layout/layoutApi";
 import React, { useEffect, useState } from "react";
 import { HiMinus, HiPlus } from "react-icons/hi";
 
-type Props = {
-  faq: any;
-};
+type Props = {};
 
 const FAQ = (props: Props) => {
-  // const { data } = useGetHeroDataQuery("FAQ", {});
+  const { data } = useGetHeroDataQuery("FAQ", {});
   const [activeQuestion, setActiveQuestion] = useState(null);
   const [questions, setQuestions] = useState<any[]>([]);
 
-  // useEffect(() => {
-  //   if (data) {
-  //     setQuestions(data.layout?.faq);
-  //   }
-  // }, [data]);
+  useEffect(() => {
+    if (data) {
+      setQuestions(data.layout?.faq);
+    }
+  }, [data]);
 
   const toggleQuestion = (id: any) => {
     setActiveQuestion(activeQuestion === id ? null : id);
@@ -27,7 +25,7 @@ const FAQ = (props: Props) => {
       <div className="w-[90%] 800px:w-[80%] m-auto">
         <div className="pt-12">
           <dl className="space-y-8">
-            {props?.faq?.map?.((q) => (
+            {questions?.map((q) => (
               <div
                 key={q.id}
                 className={`${
