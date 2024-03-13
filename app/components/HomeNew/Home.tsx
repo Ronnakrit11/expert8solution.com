@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import AOS from 'aos';
+// import AOS from 'aos';
 
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
 import PeopleReview from "./PeopleReview";
 import WhyLearnCourse from "./WhyLearnCourse";
@@ -29,10 +29,10 @@ function Home({ webInfo }: any) {
 
     useEffect(() => {
         setTheme('light')
-        AOS.init({
-            once: true,
-            delay: 300
-        });
+        // AOS.init({
+        //     once: true,
+        //     delay: 300
+        // });
     }, [])
 
 
