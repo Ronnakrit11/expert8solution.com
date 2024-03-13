@@ -18,6 +18,7 @@ import CallToAction from "./CallToAction";
 
 
 function Home({ webInfo }: any) {
+    console.log("🚀 ~ Home ~ webInfo:", webInfo)
     const [open, setOpen] = useState(false);
     const [activeItem, setActiveItem] = useState(0);
     const [route, setRoute] = useState("Login");
@@ -68,13 +69,13 @@ function Home({ webInfo }: any) {
             
               {/*<PeopleReview />*/}
             
-            <Courses />
-            <Ebooks/>
+            <Courses courses={webInfo?.courses}/>
+            <Ebooks ebooks={webInfo?.ebooks}/>
             <Blogs/>
             <PeopleReview />
             
             <WhyLearnCourse />
-            <FAQ/> 
+            <FAQ faq={webInfo?.faq}/> 
             {/* <TrustBy /> */}
             
             <Footer />

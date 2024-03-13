@@ -47,13 +47,34 @@ const Page = async () => {
     `${process.env.NEXT_PUBLIC_SERVER_URI}/get-layout/Categories`,
     {}
   );
-  const [resBanner, resCategory] = await Promise.all([pmBanner, pmCategory]);
+
+  const pmEbookAll = fetch(
+    `${process.env.NEXT_PUBLIC_SERVER_URI}/get-ebooks`,
+    {}
+  );
+
+  const pmCourse = fetch(
+    `${process.env.NEXT_PUBLIC_SERVER_URI}/get-courses`,
+    {}
+  );
+  const pmFaq = fetch(
+    `${process.env.NEXT_PUBLIC_SERVER_URI}/get-layout/FAQ`,
+    {}
+  );
+  const [resBanner, resCategory, rsEbooks, rsCourse, rsFaq] = await Promise.all([pmBanner, pmCategory, pmEbookAll, pmCourse, pmFaq]);
   const banner = await resBanner.json();
   const category = await resCategory.json();
+  const ebooks = await rsEbooks.json();
+  const courses = await rsCourse.json();
+  const faq = await rsFaq.json();
+  console.log("🚀 ~ Page ~ faq:", faq)
 
   const webInfo = {
     banner: banner?.layout?.banner || {},
     category: category?.layout?.categories || [],
+    ebooks: ebooks?.ebooks || [],
+    courses: courses?.courses || [],
+    faq: faq?.layout?.faq || [],
   };
 
   return <Home webInfo={webInfo} />;
