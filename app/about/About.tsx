@@ -17,7 +17,7 @@ const About = () => {
               <p className="text-[22px] mt-1 mb-1">
 
               </p>
-              <p className="text-[16px]"> ( อาจารย์อารีย์ )  </p>
+              <p className="text-[16px]"> ( อาจารย์นุ๊ก )  </p>
             </div>
           </div>
           {/* <div className="w-full">
@@ -28,7 +28,7 @@ const About = () => {
         </div> */}
           <div className="w-full">
             <div className="pt-5">
-              <span className="text-[16px] md:text-[24px] font-semibold text-white">ประสบการณ์ทํางาน ( Professional Experience )</span>
+              <span className="text-[16px] md:text-[24px] font-semibold text-white">ประสบวัติการศึกษา ( Professional Experience )</span>
               <div className="flex mt-3">
                 <p className="li-item text-[13px] md:text-[16px] min-w-[126px] text-white">ผู้ก่อตั้งสถาบันการสอนการตลาดออนไลน์ผ่าน Page Facebook
                   “ Online Marketing Academy ที่ปรึกษาการตลาด” เป็นอาจารย์ผู้สอน
