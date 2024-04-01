@@ -15,8 +15,10 @@ const About = () => {
             <div className="pl-5">
               <span className="text-[24px] font-semibold text-white">ประวัติ</span>
               <p className="text-[22px] mt-1 mb-1">
+              รนกฤต เชียรวิชัย
 
               </p>
+
               <p className="text-[16px]"> ( อาจารย์นุ๊ก )  </p>
             </div>
           </div>
@@ -28,18 +30,38 @@ const About = () => {
         </div> */}
           <div className="w-full">
             <div className="pt-5">
-              <span className="text-[16px] md:text-[24px] font-semibold text-white">ประสบวัติการศึกษา ( Professional Experience )</span>
+              <span className="text-[16px] md:text-[24px] font-semibold text-white">ประวัติการศึกษา ( Education )</span>
               <div className="flex mt-3">
-                <p className="li-item text-[13px] md:text-[16px] min-w-[126px] text-white">ผู้ก่อตั้งสถาบันการสอนการตลาดออนไลน์ผ่าน Page Facebook
-                  “ Online Marketing Academy ที่ปรึกษาการตลาด” เป็นอาจารย์ผู้สอน
-                  การยิงแอดโฆษณาผ่าน Facebook ให้กับเจ้าของธุรกิจ ตัวแทนจำหน่าย
-                  อาหารเสริม ตัวแทนประกันชีวิต และอื่นๆ อีกมากมาย</p>
+                <p className="li-item text-[15px] md:text-[16px] min-w-[126px] text-white">ปริญญาตรีคณะวิศวกรรมศาสตร์
+                  โยธาเเละการบริหารธุรกิจก่อสร้าง</p>
 
               </div>
               <div className="flex mt-3">
-                <p className="li-item text-[13px] md:text-[16px] min-w-[126px] text-white">ประสบการณ์ด้านการตลาดออนไลน์ และการสอนผ่าน
-                  คอร์สตัวต่อตัว มากกว่า 1,000 ชั่วโมง ทำให้ลูกศิษย์ประสบความสำเร็จ
-                  ในการยิงแอดโฆษณาอย่างมากมาย ทั้งมือใหม่และผู้มีประสบการณ์</p>
+            
+
+              </div>
+            </div>
+            <div className="pt-5">
+              <span className="text-[16px] md:text-[24px] font-semibold text-white">ประวัติการทำงาน ( Professional Experience )</span>
+              <div className="flex mt-3">
+                <p className="li-item text-[15px] md:text-[16px] min-w-[126px] text-white">Business Development
+                 ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg , Suzuki </p>
+
+              </div>
+              <div className="flex mt-3">
+                <p className="li-item text-[15px] md:text-[16px] min-w-[126px] text-white">Lead Marketting & Ads Optimize
+                KPAuto Groups ซึ่งทำให้ขึ้นเป็นยอดขายอันดับ 1 ของ MG Dealer 2 ปีซ้อน
+                  </p>
+
+              </div>
+              <div className="flex mt-3">
+                <p className="li-item text-[15px] md:text-[16px] min-w-[126px] text-white">Business Development
+                 ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg , Suzuki </p>
+
+              </div>
+              <div className="flex mt-3">
+                <p className="li-item text-[15px] md:text-[16px] min-w-[126px] text-white">Business Development
+                 ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg , Suzuki </p>
 
               </div>
             </div>
