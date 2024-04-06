@@ -100,14 +100,14 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                       className={`text-[18px] md:text-[25px] flex items-center font-Poppins font-[500] text-black dark:text-white`}
                     >
                       <Image
-                        src={'/logo1.png'}
-                        width={80}
-                        height={80}
+                        src={'/exp8.png'}
+                        width={100}
+                        height={100}
                         alt=""
                       />
 
                           <span className="ml-[15px] text-[#2e2e2e]">
-                          Expert8-Solution
+                          
                       </span>
                       
                     </Link>
