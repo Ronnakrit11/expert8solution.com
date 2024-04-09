@@ -48,7 +48,7 @@ function Home({ webInfo }: any) {
         <div>
 
          
-            <CallToAction />
+           
 
             <Header
                 open={open}
