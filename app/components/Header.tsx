@@ -100,7 +100,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                       className={`text-[18px] md:text-[25px] flex items-center font-Poppins font-[500] text-black dark:text-white`}
                     >
                       <Image
-                        src={'/exlogo3.png'}
+                        src={'/new1.png'}
                         width={210}
                         height={230}
                         alt=""
