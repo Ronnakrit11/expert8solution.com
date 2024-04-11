@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://primeschool.online/sitemap.xml',
+    sitemap: 'https://expert8-solution.com/sitemap.xml',
   }
 }
