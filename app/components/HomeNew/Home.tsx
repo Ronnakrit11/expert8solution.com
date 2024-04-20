@@ -23,7 +23,13 @@ import Blogs from "./Blogs";
 import OurService from "./OurService";
 import Image from "next/image";
 import CallToAction from "./CallToAction";
-
+import LandingPage from "./(NewTemplate)/LandingPage";
+import Trust from "./(NewTemplate)/Trust";
+import Tab from "./(NewTemplate)/Tab";
+import LeftImageContent from "./(NewTemplate)/LeftImageContent";
+import GridThreeGadient from "./(NewTemplate)/GridThreeGadient";
+import Review from "./(NewTemplate)/Review";
+import FooterContact from "./(NewTemplate)/FooterContact";
 
 function Home({ webInfo }: any) {
     console.log("🚀 ~ file: Home.tsx:24 ~ Home ~ layout:", webInfo)
@@ -47,8 +53,8 @@ function Home({ webInfo }: any) {
     return (
         <div>
 
-         
-           
+
+
 
             <Header
                 open={open}
@@ -57,7 +63,7 @@ function Home({ webInfo }: any) {
                 setRoute={setRoute}
                 route={route}
             />
-             <div className="w-[100%] h-auto md:h-[502px] 1000px:flex items-center dark:bg-[#1846a8] ">
+            {/*<div className="w-[100%] h-auto md:h-[502px] 1000px:flex items-center dark:bg-[#1846a8] ">
                 <Image
                     src={'/bannerEX.webp'}
                     width={9000}
@@ -65,7 +71,17 @@ function Home({ webInfo }: any) {
                     alt=''
                     className="object-cover w-full h-full"
                 />
-            </div>
+             </div>*/}
+
+
+            {/* New Theme */}
+            <LandingPage />
+            <Trust />
+            <Tab />
+            <LeftImageContent />
+            <GridThreeGadient />
+            <Review />
+            <FooterContact />
             {/* <Hero
                 banner={webInfo?.banner || {}}
                 setOpen={setOpen}
@@ -74,18 +90,18 @@ function Home({ webInfo }: any) {
                 categoty={webInfo.category}
             />
             */}
-            
-              {/*<PeopleReview />*/}
-            
+
+            {/*<PeopleReview />*/}
+
             <Courses />
-            <Ebooks/>
-            <Blogs/>
+            <Ebooks />
+            <Blogs />
             <PeopleReview />
-            
+
             <WhyLearnCourse />
-            <FAQ/> 
+            <FAQ />
             {/* <TrustBy /> */}
-            
+
             <Footer />
         </div>
     );
