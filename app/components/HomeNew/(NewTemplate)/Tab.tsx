@@ -23,9 +23,9 @@ const Tab = () => {
             </div>
             {tabState === 0
                 ?
-                <div className='mt-20'>
-                    <div className='grid grid-cols-2'>
-                        <div className='mt-12 space-y-6'>
+                <div className='mt-4 sm:mt-4 md:mt-10'>
+                    <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
+                        <div className='mt-12 space-y-6 '>
                             <div>
                                 <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>โทรศัพท์มือถือ</p>
                                 <p className='mt-8 text-gray-600 dark:text-gray-300'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
@@ -58,8 +58,8 @@ const Tab = () => {
             }
             {tabState === 1
                 ?
-                <div className='mt-20'>
-                    <div className='grid grid-cols-2'>
+                <div className='mt-4 sm:mt-4 md:mt-10'>
+                    <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                         <div className='mt-12 space-y-6'>
                             <div>
                                 <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>แทบเล็ต</p>
@@ -93,8 +93,8 @@ const Tab = () => {
             }
             {tabState === 2
                 ?
-                <div className='mt-20'>
-                    <div className='grid grid-cols-2'>
+                <div className='mt-4 sm:mt-4 md:mt-10'>
+                    <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                         <div className='mt-12 space-y-6'>
                             <div>
                                 <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>คอมพิวเตอร์</p>
@@ -119,9 +119,10 @@ const Tab = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='relative pt-20 bg-gray-100 before:absolute before:inset-0 before:scale-x-110 before:border-y before:border-gray-200 after:absolute after:inset-0 after:scale-y-110 after:border-x after:border-gray-200 dark:bg-gray-800 dark:before:border-gray-700 dark:after:border-gray-700'>
-                            <img src='https://ampire.tailus.io/images/screenshots/tailus-home-dark.webp' className='mx-auto h-80 w-96 rounded-t-3xl border object-cover object-top shadow-2xl dark:border-transparent sm:h-[28rem]' />
+                        <div className='relative pt-20 p-2 bg-gray-100 before:absolute before:inset-0 before:scale-x-110 before:border-y before:border-gray-200 after:absolute after:inset-0 after:scale-y-110 after:border-x after:border-gray-200 dark:bg-gray-800 dark:before:border-gray-700 dark:after:border-gray-700'>
+                            <img src='https://ampire.tailus.io/images/screenshots/tailus-home-dark.webp' className='mx-auto rounded-t-3xl border object-cover object-top shadow-2xl dark:border-transparent sm:h-[28rem] md:h-[20rem] lg:h-[28rem]' />
                         </div>
+
                     </div>
                 </div>
                 : <></>

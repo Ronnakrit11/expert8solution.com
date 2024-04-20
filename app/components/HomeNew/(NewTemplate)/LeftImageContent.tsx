@@ -3,7 +3,7 @@ import React from 'react'
 const LeftImageContent = () => {
     return (
         <div className='container mx-auto mt-32'>
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                 <div>
                     <img src='https://ampire.tailus.io/images/stats-login.webp' />
                 </div>

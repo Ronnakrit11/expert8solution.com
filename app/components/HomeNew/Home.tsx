@@ -82,6 +82,7 @@ function Home({ webInfo }: any) {
             <GridThreeGadient />
             <Review />
             <FooterContact />
+
             {/* <Hero
                 banner={webInfo?.banner || {}}
                 setOpen={setOpen}
@@ -93,13 +94,13 @@ function Home({ webInfo }: any) {
 
             {/*<PeopleReview />*/}
 
-            <Courses />
+            {/*<Courses />
             <Ebooks />
             <Blogs />
             <PeopleReview />
 
             <WhyLearnCourse />
-            <FAQ />
+        <FAQ /> */}
             {/* <TrustBy /> */}
 
             <Footer />

@@ -17,8 +17,8 @@ const LandingPage = () => {
                         <button className='bg-[#1565c0] py-2 w-[150px] px-4 text-white rounded-full text-[16px]'>Get Started</button>
                     </div>
                 </div>
-                <div>
-                    <img src='https://ampire.netlify.app/images/team.svg' className='w-[800px] h-[600px]' />
+                <div className='p-2'>
+                    <img src='https://ampire.netlify.app/images/team.svg' className='w-full' />
                 </div>
             </div>
         </div>

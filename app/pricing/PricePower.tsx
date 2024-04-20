@@ -19,7 +19,7 @@ const PricePower = () => {
         }
     ]
     return (
-        <div className='overflow-x-clip pt-32 sm:pt-40 md:pt-48 lg:pt-10'>
+        <div className='overflow-x-clip pt-10'>
             <div className='mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0'>
                 <div className='relative z-10 text-center md:mx-auto md:w-5/6 lg:w-4/6'>
                     <div className='relative text-center text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl md:text-6xl'>

@@ -23,7 +23,7 @@ const GridThreeGadient = () => {
                                         <p className='text-5xl font-bold text-blue-600'>฿ 15,900</p>
                                         <p className='text-xl'>จ่ายครั้งเดียว</p>
                                     </div>
-                                    <ul className='text-green-600 dark:text-gray-300 flex flex-col justify-start'>
+                                    <ul className='text-gray-800 dark:text-gray-300 flex flex-col justify-start'>
                                         <li>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
                                         <li>ระบบการเรียนออนไลน์</li>
                                         <li>ระบบหลังบ้าน</li>
@@ -37,24 +37,24 @@ const GridThreeGadient = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='rounded-3xl border border-gray-100 bg-white p-8 py-12 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none sm:p-12'>
+                        <div className='rounded-3xl border border-gray-100 bg-gray-800  p-8 py-12 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none sm:p-12'>
                             <div className='space-y-12 text-center' >
                                 <img src="https://cdn-icons-png.flaticon.com/512/584/584796.png" className="mx-auto h-14 w-auto" width="512" height="512" alt="burger illustration" />
                                 <div className='space-y-6'>
-                                    <h3 className="text-2xl font-semibold text-gray-800 transition dark:text-white">Pro</h3>
+                                    <h3 className="text-2xl font-semibold text-white transition dark:text-white">Pro</h3>
                                     <div className='space-y-2'>
-                                        <p className='text-5xl font-bold text-blue-600'>฿ 27,900</p>
-                                        <p className='text-xl'>จ่ายครั้งเดียว</p>
+                                        <p className='text-5xl font-bold text-white'>฿ 27,900</p>
+                                        <p className='text-xl text-white'>จ่ายครั้งเดียว</p>
                                     </div>
-                                    <ul className='text-green-600 dark:text-gray-300 flex flex-col justify-start'>
+                                    <ul className='text-white dark:text-gray-300 flex flex-col justify-start'>
                                         <li>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
                                         <li>ระบบการเรียนออนไลน์</li>
                                         <li>ระบบหลังบ้าน</li>
                                         <li>รองรับการเเสดงผลทุกอุปกรณ์</li>
                                         <li>ทำกราฟฟิก</li>
-                                        <li className='text-purple-600'>ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
-                                        <li className='text-purple-600'>ตัดต่อวีดีโอให้ 1 คอร์ส</li>
-                                        <li className='text-purple-600'>3 Months Free Support</li>
+                                        <li >ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
+                                        <li >ตัดต่อวีดีโอให้ 1 คอร์ส</li>
+                                        <li >3 Months Free Support</li>
                                     </ul>
                                     <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
@@ -73,15 +73,15 @@ const GridThreeGadient = () => {
                                         <p className='text-5xl font-bold text-blue-600'>฿ 36,900</p>
                                         <p className='text-xl'>จ่ายครั้งเดียว</p>
                                     </div>
-                                    <ul className='text-green-600 dark:text-gray-300 flex flex-col justify-start'>
+                                    <ul className='text-gray-800 dark:text-gray-300 flex flex-col justify-start'>
                                         <li><p>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</p></li>
                                         <li>ระบบการเรียนออนไลน์</li>
                                         <li>ระบบหลังบ้าน</li>
                                         <li>รองรับการเเสดงผลทุกอุปกรณ์</li>
                                         <li>ทำกราฟฟิก</li>
-                                        <li className='text-sky-600'>ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
-                                        <li className='text-sky-600'>ตัดต่อวีดีโอให้ 3 คอร์ส</li>
-                                        <li className='text-sky-600'>12 Months Free Support</li>
+                                        <li >ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
+                                        <li >ตัดต่อวีดีโอให้ 3 คอร์ส</li>
+                                        <li >12 Months Free Support</li>
                                     </ul>                                    <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
                                             <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
