@@ -22,10 +22,13 @@ export const navItemsData = [
     name: "เกี่ยวกับ",
     url: "/about",
   },
-  
   {
     name: "คำถามที่เจอบ่อย",
     url: "/faq",
+  },
+  {
+    name: "pricing",
+    url: "/pricing"
   },
 ];
 
