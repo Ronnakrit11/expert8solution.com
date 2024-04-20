@@ -21,7 +21,7 @@ const BlogCardNew: FC<Props> = ({ item, isProfile }) => {
     console.log(isProfile)
     return (
         <>
-            <a onClick={handleClick} className="block cursor-pointer rounded-[3.875rem] px-4 sm:border sm:border-gray-200 sm:bg-gray-100 sm:p-12 dark:sm:border-gray-800 sm:dark:bg-gray-800/50 md:py-12">
+            <a onClick={handleClick} className="block cursor-pointer rounded-2xl px-4 py-6 sm:border bg-gray-200 dark:sm:border-gray-800 sm:dark:bg-gray-800/50">
                 <img className="rounded-3xl" src={item.thumbnail.url} alt="blog cover" width="1556" height="778" />
                 <div className="mt-8">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">{item.title}</h2>
@@ -33,6 +33,9 @@ const BlogCardNew: FC<Props> = ({ item, isProfile }) => {
                             <span className="text-sm text-gray-500 dark:text-gray-400">Product Designer</span>
     </div>
                     </div>*/}
+                </div>
+                <div className="flex justify-end mt-4">
+                    <button className="bg-sky-600 py-4 px-2 rounded-3xl text-white">อ่านเพิ่มเติม...</button>
                 </div>
             </a>
         </>

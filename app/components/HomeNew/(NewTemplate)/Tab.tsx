@@ -11,14 +11,14 @@ const Tab = () => {
     return (
         <div className='container mx-auto mt-20 mb-20'>
             <div>
-                <p className='text-3xl text-center font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl'>For growing teams and organizations</p>
-                <p className='mx-auto text-center mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5'>A growing team doesn't need to mean growing pains. Privacy, and the right tool for every step of your journey - Jira Software friction - company size.</p>
+                <p className='text-3xl text-center font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl'>Full Responsive</p>
+                <p className='mx-auto text-center mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5'>รองรับกับอุปกรณ์ทุกรูปแบบ เช่น คอมพิวเตอร์ โน้ตบุ๊ค โทรศัพท์มือถือ ไอแพด แทบเล็ต</p>
             </div>
             <div>
                 <div className='relative mx-auto mt-12 grid w-auto grid-cols-3 items-center gap-x-1 overflow-hidden rounded-full border border-gray-200 bg-gray-100 px-[3px] text-gray-600 dark:border-gray-700 dark:border-opacity-60 dark:bg-darker dark:text-gray-300 dark:shadow-none sm:w-max'>
-                    <button className={` p-4 m-2 ${tabState === 0 ? ' bg-white rounded-full' : ''}`} onClick={() => handleTabChange(0)}>First Tab</button>
-                    <button className={` p-4 m-2 ${tabState === 1 ? ' bg-white rounded-full' : ''}`} onClick={() => handleTabChange(1)}>Second Tab</button>
-                    <button className={` p-4 m-2 ${tabState === 2 ? ' bg-white rounded-full' : ''}`} onClick={() => handleTabChange(2)}>Third Tab</button>
+                    <button className={` p-4 m-2 ${tabState === 0 ? ' bg-white rounded-full' : ''}`} onClick={() => handleTabChange(0)}>โทรศัพท์มือถือ</button>
+                    <button className={` p-4 m-2 ${tabState === 1 ? ' bg-white rounded-full' : ''}`} onClick={() => handleTabChange(1)}>แทบเล็ต</button>
+                    <button className={` p-4 m-2 ${tabState === 2 ? ' bg-white rounded-full' : ''}`} onClick={() => handleTabChange(2)}>คอมพิวเตอร์</button>
                 </div>
             </div>
             {tabState === 0
@@ -27,7 +27,7 @@ const Tab = () => {
                     <div className='grid grid-cols-2'>
                         <div className='mt-12 space-y-6'>
                             <div>
-                                <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>Make work flow across teams while connecting back to company goals</p>
+                                <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>โทรศัพท์มือถือ</p>
                                 <p className='mt-8 text-gray-600 dark:text-gray-300'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
                             </div>
                             <div className='flex items-center gap-6'>
@@ -62,7 +62,7 @@ const Tab = () => {
                     <div className='grid grid-cols-2'>
                         <div className='mt-12 space-y-6'>
                             <div>
-                                <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>Make work flow across teams while connecting back to company goals</p>
+                                <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>แทบเล็ต</p>
                                 <p className='mt-8 text-gray-600 dark:text-gray-300'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
                             </div>
                             <div className='flex items-center gap-6'>
@@ -97,7 +97,7 @@ const Tab = () => {
                     <div className='grid grid-cols-2'>
                         <div className='mt-12 space-y-6'>
                             <div>
-                                <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>Make work flow across teams while connecting back to company goals</p>
+                                <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>คอมพิวเตอร์</p>
                                 <p className='mt-8 text-gray-600 dark:text-gray-300'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
                             </div>
                             <div className='flex items-center gap-6'>

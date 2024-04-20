@@ -9,7 +9,7 @@ const Pricing = () => {
         <div className='container mx-auto pt-32'>
             <PricePower />
             <ComparePlan />
-            <h2 className="my-12 text-center text-3xl font-bold text-gray-800 dark:text-white md:text-4xl">Frequently Asqued Questions</h2>
+            <h2 className="mt-12 mb-4 text-center text-3xl font-bold text-gray-800 dark:text-white md:text-4xl">คำถามที่พบบ่อย</h2>
             <FAQPricing />
         </div>
     )

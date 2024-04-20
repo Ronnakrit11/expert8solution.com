@@ -23,10 +23,11 @@ const PricePower = () => {
             <div className='mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0'>
                 <div className='relative z-10 text-center md:mx-auto md:w-5/6 lg:w-4/6'>
                     <div className='relative text-center text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl md:text-6xl'>
-                        Find a plan to power your
-                        <span className="opacity-80">team.</span>
+                        โปรโมชั่นสุดพิเศษ
                     </div>
-                    <p className="mt-6 text-gray-700 dark:text-gray-300">Saepe nulla ab nobis itaque corporis fuga illo doloribus sequi esse aspernatur impedit nihil quisquam, voluptates placeat architecto adipisci id cum enim.</p>
+                    <p className="mt-6 text-gray-700 dark:text-gray-300">
+                        เพื่อคุณลูกค้าแพ็กเกจ Ultimate Package ลดราคาสุดพิเศษ
+                    </p>
                 </div>
 
                 <div className=' relative mt-20'>
@@ -40,8 +41,8 @@ const PricePower = () => {
                                         <img src="https://tailus.io/sources/blocks/comparator/preview/images/team.webp" className="m-auto h-8 w-auto" alt="organization icon" />
                                     </div>
                                     <div>
-                                        <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">Teams</h2>
-                                        <p className="mt-1 text-gray-600 dark:text-gray-400">For product teams</p>
+                                        <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">Ultimate Package</h2>
+                                        <p className="mt-1 text-gray-600 dark:text-gray-400">Sale for you</p>
                                     </div>
                                 </div>
                                 <div className="relative flex justify-around">
