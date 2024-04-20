@@ -124,7 +124,7 @@ const Page = (props: Props) => {
                             <div className="lg:w-3/4">
                                 {courses &&
                                     courses.map((item: any, index: number) => (
-                                        <BlogCardNew item={item} key={index} />
+                                        index === 0 && <BlogCardNew item={item} key={index} />
                                     ))}
                             </div>
                         </div>
@@ -143,7 +143,6 @@ const Page = (props: Props) => {
                                         courses.slice(1).map((item: any, index: number) => (
                                             <BlogCardNew item={item} key={index} />
                                         ))}
-
                                 </div>
                             </div>
                         </div>
