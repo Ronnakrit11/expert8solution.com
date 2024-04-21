@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaCheck } from "react-icons/fa6";
+import { FaX } from "react-icons/fa6";
 
 const ComparePlan = () => {
     return (
@@ -31,7 +33,7 @@ const ComparePlan = () => {
                                             <img src="https://tailus.io/sources/blocks/comparator/preview/images/team.webp" className="h-12 w-auto" alt="team icon" width="512" height="512" loading="lazy" />
                                             <div className="space-y-4">
                                                 <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">Standard Package</h4>
-                                                <p className="text-sm text-gray-600 dark:text-gray-400">Delectus natus illum vel veritatis in, iste ut facilis ex sit culpa fuga dolor atque? Quis.</p>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">เหมาะสำหรับท่านที่มีกราฟฟิคและคอร์สการเรียนอยู่แล้ว</p>
                                             </div>
                                             <button className='bg-[#1565c0] py-2 px-4 text-white rounded-full text-[16px] w-full flex justify-center'>Send us Email to us</button>
                                         </div>
@@ -41,7 +43,7 @@ const ComparePlan = () => {
                                             <img src="https://tailus.io/sources/blocks/comparator/preview/images/team.webp" className="h-12 w-auto" alt="team icon" width="512" height="512" loading="lazy" />
                                             <div className="space-y-4">
                                                 <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">Pro Package</h4>
-                                                <p className="text-sm text-gray-600 dark:text-gray-400">Delectus natus illum vel veritatis in, iste ut facilis ex sit culpa fuga dolor atque? Quis.</p>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">เหมาะสำหรับท่านที่ยังไม่มีกราฟฟิคและคอร์สการเรียนอยู่แล้ว</p>
                                             </div>
                                             <button className='bg-[#1565c0] py-2 px-4 text-white rounded-full text-[16px] w-full flex justify-center'>Send us Email to us</button>
                                         </div>
@@ -51,7 +53,7 @@ const ComparePlan = () => {
                                             <img src="https://tailus.io/sources/blocks/comparator/preview/images/team.webp" className="h-12 w-auto" alt="team icon" width="512" height="512" loading="lazy" />
                                             <div className="space-y-4">
                                                 <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">Ultimate Package</h4>
-                                                <p className="text-sm text-gray-600 dark:text-gray-400">Delectus natus illum vel veritatis in, iste ut facilis ex sit culpa fuga dolor atque? Quis.</p>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">เหมาะสำหรับท่านที่ยังไม่มีกราฟฟิคและคอร์สการเรียนอยู่แล้ว</p>
                                             </div>
                                             <button className='bg-[#1565c0] py-2 px-4 text-white rounded-full text-[16px] w-full flex justify-center'>Send us Email to us</button>
                                         </div>
@@ -67,13 +69,13 @@ const ComparePlan = () => {
                                         ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์
                                     </th>
                                     <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                    <td className="py-5 px-6 bg-gray-50">
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                     <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -81,14 +83,13 @@ const ComparePlan = () => {
                                         ระบบการเรียนออนไลน์
                                     </th>
                                     <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
-
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                    <td className="py-5 px-6 bg-gray-50">
+                                        <p className='flex  justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                     <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -96,14 +97,14 @@ const ComparePlan = () => {
                                         ระบบหลังบ้าน
                                     </th>
                                     <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
 
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                    <td className="py-5 px-6 bg-gray-50">
+                                        <p className='flex justify-center  text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                     <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -111,14 +112,13 @@ const ComparePlan = () => {
                                         รองรับการเเสดงผลทุกอุปกรณ์
                                     </th>
                                     <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
-
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                    <td className="py-5 px-6 bg-gray-50">
+                                        <p className='flex justify-center  text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                     <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -126,27 +126,27 @@ const ComparePlan = () => {
                                         ทำกราฟฟิก
                                     </th>
                                     <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-red-600'>✗</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-red-600'><FaX /></p>
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                    <td className="py-5 px-6 bg-gray-50">
+                                        <p className='flex justify-center  text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                     <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th className="py-5 px-6 text-left text-sm font-normal text-gray-600 dark:text-gray-400" scope="row">
                                         ดูเเลเเละเทรนการยิงโฆษณา
                                     </th>
-                                    <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-red-600'>✗</p>
+                                    <td className="py-5 px-6 ">
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-red-600'><FaX /></p>
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                    <td className="py-5 px-6 bg-gray-50">
+                                        <p className='flex justify-center  text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                     <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
-                                        <p className='text-center font-bold text-[20px] text-green-600'>✓</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-green-600'><FaCheck /></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -154,12 +154,12 @@ const ComparePlan = () => {
                                         ตัดต่อวีดีโอ
                                     </th>
                                     <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-red-600'>✗</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-red-600'><FaX /></p>
                                     </td>
                                     <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
                                         <p className='text-center font-bold text-[20px] text-green-600'>1 คอร์ส</p>
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
+                                    <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
                                         <p className='text-center font-bold text-[20px] text-green-600'>3 คอร์ส</p>
                                     </td>
                                 </tr>
@@ -168,12 +168,12 @@ const ComparePlan = () => {
                                         Free Support
                                     </th>
                                     <td className="py-5 px-6">
-                                        <p className='text-center font-bold text-[20px] text-red-600'>✗</p>
+                                        <p className='flex justify-center text-center font-bold text-[20px] text-red-600'><FaX /></p>
                                     </td>
                                     <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
                                         <p className='text-center font-bold text-[20px] text-green-600'>3 เดือน</p>
                                     </td>
-                                    <td className="bg-gray-50 py-5 px-6 dark:bg-gray-800">
+                                    <td className="bg-gray-100 py-5 px-6 dark:bg-gray-800">
                                         <p className='text-center font-bold text-[20px] text-green-600'>12 เดือน</p>
                                     </td>
                                 </tr>

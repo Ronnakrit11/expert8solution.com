@@ -18,7 +18,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className='p-2'>
-                    <img src='https://ampire.netlify.app/images/team.svg' className='w-full' />
+                    <img src='/banner1.jpg' className='w-full' />
                 </div>
             </div>
         </div>

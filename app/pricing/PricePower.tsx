@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const PricePower = () => {
@@ -47,7 +48,7 @@ const PricePower = () => {
                                 </div>
                                 <div className="relative flex justify-around">
                                     <div className="flex items-end">
-                                        <span className="leading-0 text-8xl font-bold text-gray-800 dark:text-white">35</span>
+                                        <span className="leading-0 text-8xl font-bold text-gray-800 dark:text-white">20</span>
                                         <div className="pb-2">
                                             <span className="block text-2xl font-bold text-gray-700 dark:text-white">%</span>
                                             <span className="block text-xl font-bold text-primary dark:text-primaryLight">Off</span>
@@ -57,30 +58,30 @@ const PricePower = () => {
                                 <ul role="list" className="m-auto w-max space-y-4 py-6 text-gray-600 dark:text-gray-300">
                                     <li className="space-x-2">
                                         <span className="font-semibold text-gray-500">✓</span>
-                                        <span>First premium advantage</span>
+                                        <span>ดูเเลเเละเทรนการยิงโฆษณา</span>
                                     </li>
                                     <li className="space-x-2">
                                         <span className="font-semibold text-gray-500">✓</span>
-                                        <span>First premium advantage</span>
+                                        <span>ตัดต่อวีดีโอ 3 คอร์ส</span>
                                     </li>
                                     <li className="space-x-2">
                                         <span className="font-semibold text-gray-500">✓</span>
-                                        <span>First premium advantage</span>
+                                        <span>Free Support 12 เดือน</span>
                                     </li>
                                 </ul>
                                 <p className="mt-6 flex items-center justify-center space-x-4 text-center text-lg text-gray-600 dark:text-gray-300">
-                                    <span>Call us at</span>
+                                    <span>ติดต่อ</span>
                                     <a href="tel:+24300" className="flex items-center space-x-2 text-blue-600 dark:text-blue-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-6" viewBox="0 0 16 16">
                                             <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
                                         </svg>
-                                        <span className="font-semibold">+1 000 000</span>
+                                        <span className="font-semibold">096 970 6879</span>
                                     </a>
-                                    <span>or</span>
+                                    <span>หรือ</span>
                                 </p>
-                                <div className=''>
-                                    <button className='bg-[#1565c0] py-2 px-4 text-white rounded-full text-[16px] w-full flex justify-center'>Send us Email to us</button>
-                                </div>
+                                <Link href="/about" >
+                                    <button className='bg-[#1565c0] mt-2 py-2 px-4 text-white rounded-full text-[16px] w-full flex justify-center'>ช่องทางการติดต่อ</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="relative mx-4 rounded-3xl rounded-t-none border border-gray-700 bg-gray-800 shadow-2xl shadow-gray-600/10 dark:border-gray-100 dark:bg-white dark:shadow-none md:mx-0 md:w-6/12 md:rounded-l-none md:rounded-tl-none md:rounded-tr-3xl lg:w-7/12">
@@ -92,8 +93,8 @@ const PricePower = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h2 className="text-2xl font-semibold text-white dark:text-gray-800">Organizations</h2>
-                                        <p className="mt-1 text-gray-400 dark:text-gray-600">For teams with 100+ employees</p>
+                                        <h2 className="text-2xl font-semibold text-white dark:text-gray-800">โปรโมชั่นสุดพิเศษ</h2>
+                                        <p className="mt-1 text-gray-400 dark:text-gray-600">สำหรับ Ultimate Package</p>
                                     </div>
                                 </div>
                                 <p className="my-8 text-white dark:text-gray-700">
