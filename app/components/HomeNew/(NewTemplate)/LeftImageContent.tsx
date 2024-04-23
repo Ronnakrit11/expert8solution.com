@@ -5,7 +5,7 @@ const LeftImageContent = () => {
         <div className='container mx-auto mt-32'>
             <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                 <div>
-                    <img src='https://ampire.tailus.io/images/stats-login.webp' />
+                    <img src='image1.jpg' />
                 </div>
                 <div className='flex flex-col justify-center'>
                     <p className='text-3xl font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl'>Development is carried out by passionate developers</p>
