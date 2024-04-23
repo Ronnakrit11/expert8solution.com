@@ -17,7 +17,7 @@ const Footer = (props: Props) => {
              
               <li>
                 <Link
-                  href="https://www.facebook.com/profile.php?id=61553635442923"
+                  href="https://www.facebook.com/experts8academy"
                   className="text-base text-white dark:text-gray-300 dark:hover:text-white"
                 >
                   Facebook
