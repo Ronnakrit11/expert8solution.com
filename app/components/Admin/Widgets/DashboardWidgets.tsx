@@ -93,15 +93,15 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
 
   return (
     <div className="mt-[30px] min-h-screen">
-      <div className="grid grid-cols-[75%,25%]">
-        <div className="p-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
+        <div className="p-8">
           <UserAnalytics isDashboard={true} />
         </div>
 
-        <div className="pt-[80px] pr-8">
+        <div className="pt-[20px] px-4 sm:pt-[20px] lg:pt-[80px] pr-8">
           <div className="w-full dark:bg-[#111C43] rounded-sm shadow">
             <div className="flex items-center p-5 justify-between">
-              <div className="">
+              <div>
                 <BiBorderLeft className="dark:text-[#45CBA0] text-[#000] text-[30px]" />
                 <h5 className="pt-2 font-Poppins dark:text-[#fff] text-black text-[20px]">
                   {ordersComparePercentage?.currentMonth}
@@ -112,16 +112,16 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
               </div>
               <div>
                 <CircularProgressWithLabel value={
-                  ordersComparePercentage?.percentChange > 0 
-                  ? 100 
-                  : 0
+                  ordersComparePercentage?.percentChange > 0
+                    ? 100
+                    : 0
                 } open={open} />
                 <h5 className="text-center pt-4">
-                 {
-                  ordersComparePercentage?.percentChange > 0 
-                  ? "+" + ordersComparePercentage?.percentChange.toFixed(2)
-                  : "-" + ordersComparePercentage?.percentChange.toFixed(2)
-                 } %
+                  {
+                    ordersComparePercentage?.percentChange > 0
+                      ? "+" + ordersComparePercentage?.percentChange.toFixed(2)
+                      : "-" + ordersComparePercentage?.percentChange.toFixed(2)
+                  } %
                 </h5>
               </div>
             </div>
@@ -140,13 +140,13 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
               </div>
               <div>
                 <CircularProgressWithLabel value={
-                  userComparePercentage?.percentChange > 0 
-                  ? 100 
-                  : 0
+                  userComparePercentage?.percentChange > 0
+                    ? 100
+                    : 0
                 } open={open} />
                 <h5 className="text-center pt-4">
                   {userComparePercentage?.percentChange > 0
-                    ? "+" + userComparePercentage?.percentChange.toFixed(2) 
+                    ? "+" + userComparePercentage?.percentChange.toFixed(2)
                     : "-" + userComparePercentage?.percentChange.toFixed(2)} %
                 </h5>
               </div>
@@ -155,7 +155,7 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-[65%,35%] mt-[-20px]">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 mt-[-20px]">
         <div className="dark:bg-[#111c43] w-[94%] mt-[30px] h-[40vh] shadow-sm m-auto">
           <OrdersAnalytics isDashboard={true} />
         </div>
