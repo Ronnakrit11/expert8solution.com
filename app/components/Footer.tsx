@@ -34,11 +34,11 @@ const Footer = (props: Props) => {
               </p>
 
               <p className="text-base text-white dark:text-gray-300 dark:hover:text-white pb-2">
-                Email :  Achareeya.tal@gmail.com
+                Email :  info@expert8-solution.com
               </p>
 
               <p className="text-base text-white dark:text-gray-300 dark:hover:text-white  pb-2">
-                Line Id : Smiley_season
+               
               </p>
             </div>
           </div>
