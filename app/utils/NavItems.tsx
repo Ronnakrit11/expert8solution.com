@@ -6,10 +6,7 @@ export const navItemsData = [
     name: "หน้าเเรก",
     url: "/",
   },
-  {
-    name: "คอร์สเรียน",
-    url: "/courses",
-  },
+ 
   {
     name: "อีบุ๊ค",
     url: "/ebook",
