@@ -18,7 +18,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className='p-2'>
-                    <img src='/mm44.webp' className='w-full' />
+                    <img src='/mm23.webp' className='w-full' />
                 </div>
             </div>
         </div>
