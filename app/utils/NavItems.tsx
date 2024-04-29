@@ -3,28 +3,25 @@ import React from "react";
 
 export const navItemsData = [
   {
-    name: "หน้าเเรก",
+    name: "Home",
     url: "/",
   },
  
+
   {
-    name: "อีบุ๊ค",
-    url: "/ebook",
-  },
-  {
-    name: "บล๊อค",
+    name: "Blog",
     url: "/blog",
   },
   {
-    name: "เกี่ยวกับ",
+    name: "About us",
     url: "/about",
   },
   {
-    name: "คำถามที่เจอบ่อย",
+    name: "FAQ",
     url: "/faq",
   },
   {
-    name: "pricing",
+    name: "Price",
     url: "/pricing"
   },
 ];
