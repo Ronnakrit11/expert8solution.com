@@ -4,6 +4,7 @@ import Heading from "../utils/Heading";
 import Header from "../components/Header";
 import About from "./About";
 import Footer from "../components/Footer";
+import AboutNew from "./AboutNew";
 
 type Props = {};
 
@@ -14,7 +15,13 @@ const Page = (props: Props) => {
 
   return (
     <div>
-     
+      <Heading
+        title={"About Us - Elearning"}
+        description={"Elearning is a programming community."}
+        keywords={
+          "programming community, coding skills, expert insights, collaboration, growth"
+        }
+      />
       <Header
         open={open}
         setOpen={setOpen}
@@ -22,7 +29,7 @@ const Page = (props: Props) => {
         setRoute={setRoute}
         route={route}
       />
-      <About />
+      <AboutNew />
       <Footer />
     </div>
   );
