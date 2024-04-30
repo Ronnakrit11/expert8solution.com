@@ -9,22 +9,6 @@ export const navItemsData = [
     url: "/",
   },
   {
-    name: "Blog",
-    url: "/blog",
-  },
-  {
-    name: "About us",
-    url: "/about",
-  },
-  {
-    name: "FAQ",
-    url: "/faq",
-  },
-  // {
-  //   name: "Price",
-  //   url: "/pricing"
-  // },
-  {
     name: "Services",
     url: "/pricing",
     subMenu: [
@@ -43,9 +27,26 @@ export const navItemsData = [
     ]
   },
   {
-    name: "Contact",
-    url: "/"
+    name: "Blog",
+    url: "/blog",
   },
+  {
+    name: "About Us",
+    url: "/about",
+  },
+  {
+    name: "FAQ",
+    url: "/faq",
+  },
+  // {
+  //   name: "Price",
+  //   url: "/pricing"
+  // },
+
+  // {
+  //   name: "Contact",
+  //   url: "/"
+  // },
 ];
 
 type Props = {

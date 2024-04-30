@@ -2,6 +2,7 @@ import { styles } from "@/app/styles/style";
 import { useUpdatePasswordMutation } from "@/redux/features/user/userApi";
 import React, { FC, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { Button, Checkbox, Label, TextInput, Card } from "flowbite-react";
 
 type Props = {};
 
@@ -33,59 +34,56 @@ const ChangePassword: FC<Props> = (props) => {
   }, [isSuccess, error]);
 
   return (
-    <div className="w-full pl-7 px-2 800px:px-5 800px:pl-0">
-      <h1 className="block text-[25px] 800px:text-[30px] font-Poppins text-center font-[500] text-black dark:text-[#fff] pb-2">
-        Change Password
-      </h1>
-      <div className="w-full">
-        <form
-          aria-required
-          onSubmit={passwordChangeHandler}
-          className="flex flex-col items-center"
-        >
-          <div className=" w-[100%] 800px:w-[60%] mt-5">
-            <label className="block pb-2 text-black dark:text-[#fff]">
-              Enter your old password
-            </label>
-            <input
-              type="password"
-              className={`${styles.input} !w-[95%] mb-4 800px:mb-0 text-black dark:text-[#fff]`}
-              required
-              value={oldPassword}
-              onChange={(e) => setOldPassword(e.target.value)}
-            />
-          </div>
-          <div className=" w-[100%] 800px:w-[60%] mt-2">
-            <label className="block pb-2 text-black dark:text-[#fff]">
-              Enter your new password
-            </label>
-            <input
-              type="password"
-              className={`${styles.input} !w-[95%] mb-4 800px:mb-0 text-black dark:text-[#fff]`}
-              required
-              value={newPassword}
-              onChange={(e) => setNewPassword(e.target.value)}
-            />
-          </div>
-          <div className=" w-[100%] 800px:w-[60%] mt-2">
-            <label className="block pb-2 text-black dark:text-[#fff]">
-              Enter your confirm password
-            </label>
-            <input
-              type="password"
-              className={`${styles.input} !w-[95%] mb-4 800px:mb-0 text-black dark:text-[#fff]`}
-              required
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-            <input
-              className={`w-[95%] h-[40px] border border-[#37a39a] text-center text-black dark:text-[#fff] rounded-[3px] mt-8 cursor-pointer`}
-              required
-              value="Update"
-              type="submit"
-            />
-          </div>
-        </form>
+    <div className="bg-white mx-2 px-2 py-10 rounded-xl shadow-md">
+      <div className="w-full pl-7 px-2 800px:px-5 800px:pl-0">
+        <h1 className="block text-[25px] 800px:text-[30px] font-Poppins text-center font-[500] text-black dark:text-[#fff] pb-2">
+          Change Password
+        </h1>
+        <div className="w-full">
+          <form
+            aria-required
+            onSubmit={passwordChangeHandler}
+            className="flex flex-col items-center"
+          >
+            <div className=" w-[100%] 800px:w-[60%] mt-5">
+              <div className="mb-2 block">
+                <Label htmlFor="password" value="Enter your old password" />
+              </div>
+              <TextInput
+                type="password"
+                id="password"
+                required
+                value={oldPassword}
+                onChange={(e) => setOldPassword(e.target.value)}
+              />
+            </div>
+            <div className=" w-[100%] 800px:w-[60%] mt-2">
+              <div className="mb-2 block">
+                <Label htmlFor="newpassword" value="Enter your new password" />
+              </div>
+              <TextInput
+                type="password"
+                id="newpassword"
+                required
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+              />
+            </div>
+            <div className=" w-[100%] 800px:w-[60%] mt-2">
+              <div className="mb-2 block">
+                <Label htmlFor="confirmpassword" value="Enter your confirm password" />
+              </div>
+              <TextInput
+                type="password"
+                id="confirmpassword"
+                required
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+              <Button type="submit" className="mt-4">Change Password</Button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

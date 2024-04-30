@@ -24,7 +24,7 @@ const Profile: FC<Props> = ({ user }) => {
   const { data: ebookList, isLoading: isLoadingEbook } = useGetAllEbookQuery(undefined, {});
   const { data, isLoading } = useGetUsersAllCoursesQuery(undefined, {});
 
-  const {} = useLogOutQuery(undefined, {
+  const { } = useLogOutQuery(undefined, {
     skip: !logout ? true : false,
   });
 
@@ -68,63 +68,64 @@ const Profile: FC<Props> = ({ user }) => {
   }, [ebookList]);
 
   return (
-    <div className="w-[85%] flex mx-auto">
-      <div
-        className={`w-[60px] 800px:w-[310px] h-[450px] dark:bg-slate-900 bg-opacity-90 border bg-white dark:border-[#ffffff1d] border-[#00000014] rounded-[5px] shadow-sm dark:shadow-sm mt-[80px] mb-[80px] sticky ${
-          scroll ? "top-[120px]" : "top-[30px]"
-        } left-[30px]`}
-      >
-        <SideBarProfile
-          user={user}
-          active={active}
-          avatar={avatar}
-          setActive={setActive}
-          logOutHandler={logOutHandler}
-        />
+    <div className="bg-[#e3e9f7] py-10">
+      <div className="w-[85%] flex  mx-auto ">
+        <div
+          className={`w-[60px] 800px:w-[310px] h-[450px] dark:bg-slate-900 bg-opacity-90 border bg-white dark:border-[#ffffff1d] border-[#00000014] rounded-xl shadow-md dark:shadow-sm mt-[80px] mb-[80px] sticky ${scroll ? "top-[120px]" : "top-[30px]"
+            } left-[30px]`}
+        >
+          <SideBarProfile
+            user={user}
+            active={active}
+            avatar={avatar}
+            setActive={setActive}
+            logOutHandler={logOutHandler}
+          />
+        </div>
+        {active === 1 && (
+          <div className="w-full h-full bg-transparent mt-[80px]">
+            <ProfileInfo avatar={avatar} user={user} />
+          </div>
+        )}
+
+        {active === 2 && (
+          <div className="w-full h-full bg-transparent mt-[80px]">
+            <ChangePassword />
+          </div>
+        )}
+
+        {active === 3 && (
+            <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px] bg-white mx-2 py-10 rounded-xl shadow-md" >
+              <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
+                {courses &&
+                  courses.map((item: any, index: number) => (
+                    <CourseCard item={item} key={index} isProfile={true} />
+                  ))}
+              </div>
+              {courses.length === 0 && (
+                <h1 className="text-center text-[18px] font-Poppins dark:text-white text-black">
+                  You don&apos;t have any purchased courses!
+                </h1>
+              )}
+            </div>
+        )}
+
+        {active === 4 && (
+          <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px] bg-white mx-2 py-10 rounded-xl shadow-md">
+            <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
+              {ebooks &&
+                ebooks.map((item: any, index: number) => (
+                  <EbookCard item={item} key={index} />
+                ))}
+            </div>
+            {ebooks.length === 0 && (
+              <h1 className="text-center text-[18px] font-Poppins dark:text-white text-black">
+                You don&apos;t have any purchased ebooks!
+              </h1>
+            )}
+          </div>
+        )}
       </div>
-      {active === 1 && (
-        <div className="w-full h-full bg-transparent mt-[80px]">
-          <ProfileInfo avatar={avatar} user={user} />
-        </div>
-      )}
-
-      {active === 2 && (
-        <div className="w-full h-full bg-transparent mt-[80px]">
-          <ChangePassword />
-        </div>
-      )}
-
-      {active === 3 && (
-        <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px]">
-          <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
-            {courses &&
-              courses.map((item: any, index: number) => (
-                <CourseCard item={item} key={index} isProfile={true} />
-              ))}
-          </div>
-          {courses.length === 0 && (
-            <h1 className="text-center text-[18px] font-Poppins dark:text-white text-black">
-              You don&apos;t have any purchased courses!
-            </h1>
-          )}
-        </div>
-      )}
-
-      {active === 4 && (
-        <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px]">
-          <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
-            {ebooks &&
-              ebooks.map((item: any, index: number) => (
-                <EbookCard item={item} key={index} />
-              ))}
-          </div>
-          {ebooks.length === 0 && (
-            <h1 className="text-center text-[18px] font-Poppins dark:text-white text-black">
-              You don&apos;t have any purchased ebooks!
-            </h1>
-          )}
-        </div>
-      )}
     </div>
   );
 };

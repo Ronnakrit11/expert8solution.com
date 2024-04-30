@@ -127,7 +127,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                       alt=""
                       width={30}
                       height={30}
-                      className="w-[30px] h-[30px] rounded-full cursor-pointer"
+                      className="w-[35px] h-[35px] rounded-full border-2 cursor-pointer"
                       style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none", marginLeft: "15px" }}
                     />
                   </Link>
@@ -159,7 +159,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                       alt=""
                       width={30}
                       height={30}
-                      className="w-[30px] h-[30px] rounded-full ml-[20px] cursor-pointer"
+                      className="w-[35px] h-[35px] rounded-full border-2 ml-[20px] cursor-pointer"
                       style={{ border: activeItem === 5 ? "2px solid #37a39a" : "none" }}
                     />
                   </Link>
