@@ -2,7 +2,7 @@ import React from 'react'
 
 const Feature = () => {
     return (
-        <section className='my-32'>
+        <section className='py-32 bg-white dark:bg-[#101726]'>
             <div className="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl">For growing teams and organizations</h2>

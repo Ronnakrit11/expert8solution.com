@@ -20,10 +20,10 @@ export const navItemsData = [
     name: "FAQ",
     url: "/faq",
   },
-  {
-    name: "Price",
-    url: "/pricing"
-  },
+  // {
+  //   name: "Price",
+  //   url: "/pricing"
+  // },
   {
     name: "Services",
     url: "/pricing",
@@ -44,7 +44,7 @@ export const navItemsData = [
   },
   {
     name: "Contact",
-    url: "/pricing"
+    url: "/"
   },
 ];
 
@@ -100,7 +100,7 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
               <span
                 onMouseOver={resetActive}
                 className={`${pathname === item.url
-                  ? "text-black border-primary border-b-4 p-6"
+                  ? "text-black dark:text-white border-primary border-b-4 p-6"
                   : "dark:text-white text-black"
                   } text-[18px] px-6 font-Poppins font-[400] ${item.name === hightlightMenu ? 'border-solid border-2 border-red-300 py-1 rounded-md' : null} `}
               >

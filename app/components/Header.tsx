@@ -15,6 +15,7 @@ import { useLogOutQuery, useSocialAuthMutation } from "@/redux/features/auth/aut
 import { toast } from "react-hot-toast";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Loader from "./Loader/Loader";
+import { DarkThemeToggle, Flowbite } from "flowbite-react";
 
 type Props = {
   open: boolean;
@@ -85,11 +86,11 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
         isLoading ? (
           <Loader />
         ) : ( */}
-      <div className="w-full bg-white relative dark:bg-[#140342]">
+      <div className="w-full bg-white relative dark:bg-[#101726]">
         <div
           className={`${active
-            ? "dark:bg-opacity-50 bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:to-black fixed top-0 left-0 w-full h-[80px] z-[80] border-b dark:border-[#ffffff1c] shadow-xl transition duration-500"
-            : "w-full border-b dark:border-[#ffffff1c] h-[80px] z-[80] dark:shadow"
+            ? " bg-white dark:bg-[#101726] dark:text-white  fixed top-0 left-0 w-full h-[80px] z-[80] border-b dark:border-[#ffffff1c] shadow-xl transition duration-500"
+            : "w-full border-b dark:border-[#ffffff1c] dark:text-white h-[80px] z-[80] dark:shadow"
             }`}
         >
           <div className="w-[95%] 800px:w-[92%] m-auto h-full">
@@ -105,17 +106,15 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                     height={95}
                     alt="logo"
                   />
-
-                  <span className="ml-[15px] text-[#2e2e2e]">
-
-                  </span>
-
                 </Link>
               </div>
               <div className="flex items-center">
                 <NavItems activeItem={activeItem} isMobile={false} />
                 {/* <ThemeSwitcher /> */}
                 {/* only for mobile */}
+                <Flowbite>
+                  <DarkThemeToggle />
+                </Flowbite>
                 <div className="800px:hidden">
                   <HiOutlineMenuAlt3
                     size={25}

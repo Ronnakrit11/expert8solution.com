@@ -3,9 +3,8 @@ import { FaEnvelope } from "react-icons/fa6";
 
 const FooterContact = () => {
     return (
-        <div className="border-y border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-darker">
+        <div className="border-y border-gray-200 bg-gray-100 dark:bg-[#101726] dark:border-gray-700 dark:bg-darker">
             <div className='container mx-auto'>
-
                 <div className="items-end justify-between md:flex">
                     <div className="h-max py-16 md:w-6/12 xl:w-5/12">
                         <div className="text-center md:text-left">
@@ -21,7 +20,7 @@ const FooterContact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='md:w-[42%] lg:w-1/2'>
+                    <div className='md:w-[42%] lg:w-1/2 '>
                         <img src='https://www.freeprivacypolicy.com/public/images/illustrations/illustration-contact.png' />
                     </div>
                 </div>
