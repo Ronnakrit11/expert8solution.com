@@ -137,7 +137,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                 ) : (
                   <FaUserLarge
                     size={35}
-                    className="cursor-pointer dark:text-white text-gray-600 border-2 p-2 rounded-3xl"
+                    className="cursor-pointer dark:text-gray-400 dark:border-gray-400 text-gray-600 border-2 p-2 rounded-xl"
                     onClick={() => setOpen(true)}
                     style={{ marginLeft: "15px" }}
                   />
