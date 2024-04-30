@@ -30,6 +30,7 @@ import LeftImageContent from "./(NewTemplate)/LeftImageContent";
 import GridThreeGadient from "./(NewTemplate)/GridThreeGadient";
 import Review from "./(NewTemplate)/Review";
 import FooterContact from "./(NewTemplate)/FooterContact";
+import Feature from "./(NewTemplate)/Feature";
 
 function Home({ webInfo }: any) {
     console.log("🚀 ~ file: Home.tsx:24 ~ Home ~ layout:", webInfo)
@@ -79,6 +80,7 @@ function Home({ webInfo }: any) {
             <Trust />
             <Tab />
             <LeftImageContent />
+            <Feature />
             <GridThreeGadient />
             <Review />
             <FooterContact />
