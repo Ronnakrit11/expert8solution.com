@@ -16,6 +16,7 @@ import { toast } from "react-hot-toast";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Loader from "./Loader/Loader";
 import { DarkThemeToggle, Flowbite } from "flowbite-react";
+import { FaUserLarge } from "react-icons/fa6";
 
 type Props = {
   open: boolean;
@@ -101,8 +102,8 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                   className={`text-[18px] md:text-[25px] flex items-center font-Poppins font-[500] text-black dark:text-white`}
                 >
                   <Image
-                    src={'/Expert8Solution.png'}
-                    width={95}
+                    src={'/Expert8logo.png'}
+                    width={170}
                     height={95}
                     alt="logo"
                   />
@@ -134,9 +135,9 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                     />
                   </Link>
                 ) : (
-                  <HiOutlineUserCircle
-                    size={25}
-                    className="cursor-pointer dark:text-white text-black"
+                  <FaUserLarge
+                    size={35}
+                    className="cursor-pointer dark:text-white text-gray-600 border-2 p-2 rounded-3xl"
                     onClick={() => setOpen(true)}
                     style={{ marginLeft: "15px" }}
                   />
