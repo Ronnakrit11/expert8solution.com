@@ -11,6 +11,7 @@ import { FcGoogle } from "react-icons/fc";
 import { styles } from "../../../app/styles/style";
 import { useRegisterMutation } from "@/redux/features/auth/authApi";
 import { toast } from "react-hot-toast";
+import { Button, Checkbox, Label, TextInput, Card } from "flowbite-react";
 
 type Props = {
   setRoute: (route: string) => void;
@@ -26,29 +27,29 @@ const schema = Yup.object().shape({
 
 const Signup: FC<Props> = ({ setRoute }) => {
   const [show, setShow] = useState(false);
-  const [register,{data,error,isSuccess}] = useRegisterMutation(); 
+  const [register, { data, error, isSuccess }] = useRegisterMutation();
 
   useEffect(() => {
-   if(isSuccess){
+    if (isSuccess) {
       const message = data?.message || "Registration successful";
       toast.success(message);
       setRoute("Verification");
-   }
-   if(error){
-    if("data" in error){
-      const errorData = error as any;
-      toast.error(errorData.data.message);
     }
-   }
-  }, [isSuccess,error]);
-  
+    if (error) {
+      if ("data" in error) {
+        const errorData = error as any;
+        toast.error(errorData.data.message);
+      }
+    }
+  }, [isSuccess, error]);
+
 
   const formik = useFormik({
     initialValues: { name: "", email: "", password: "" },
     validationSchema: schema,
-    onSubmit: async ({name, email, password }) => {
+    onSubmit: async ({ name, email, password }) => {
       const data = {
-        name,email,password
+        name, email, password
       };
       await register(data);
     },
@@ -57,59 +58,52 @@ const Signup: FC<Props> = ({ setRoute }) => {
   const { errors, touched, values, handleChange, handleSubmit } = formik;
 
   return (
-    <div className="w-full">
-      <h1 className={`${styles.title}`}>Join to ELearning</h1>
+    <Card>
+      <p className='text-xl sm:text-2xl lg:text-left lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>Register With Expert8Shop</p>
+      <p className="text-center text-gray-600">ขอบคุณทุกท่านที่ร่วมเป็นส่วนหนึ่งกับเรา</p>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label className={`${styles.label}`} htmlFor="email">
-            Enter your Name
-          </label>
-          <input
+          <div className="mb-2 block">
+            <Label htmlFor="name" value="Your Name" />
+          </div>
+          <TextInput
             type="text"
             name=""
             value={values.name}
             onChange={handleChange}
             id="name"
             placeholder="johndoe"
-            className={`${errors.name && touched.name && "border-red-500"} ${
-              styles.input
-            }`}
           />
           {errors.name && touched.name && (
             <span className="text-red-500 pt-2 block">{errors.name}</span>
           )}
         </div>
-        <label className={`${styles.label}`} htmlFor="email">
-          Enter your Email
-        </label>
-        <input
+        <div className="mb-2 block">
+          <Label htmlFor="email" value="Your Email" />
+        </div>
+        <TextInput
           type="email"
           name=""
           value={values.email}
           onChange={handleChange}
           id="email"
           placeholder="loginmail@gmail.com"
-          className={`${errors.email && touched.email && "border-red-500"} ${
-            styles.input
-          }`}
         />
+
         {errors.email && touched.email && (
           <span className="text-red-500 pt-2 block">{errors.email}</span>
         )}
         <div className="w-full mt-5 relative mb-1">
-          <label className={`${styles.label}`} htmlFor="email">
-            Enter your password
-          </label>
-          <input
+          <div className="mb-2 block">
+            <Label htmlFor="password" value="Your Password" />
+          </div>
+          <TextInput
             type={!show ? "password" : "text"}
             name="password"
             value={values.password}
             onChange={handleChange}
             id="password"
             placeholder="password!@%"
-            className={`${
-              errors.password && touched.password && "border-red-500"
-            } ${styles.input}`}
           />
           {!show ? (
             <AiOutlineEyeInvisible
@@ -128,17 +122,17 @@ const Signup: FC<Props> = ({ setRoute }) => {
         {errors.password && touched.password && (
           <span className="text-red-500 pt-2 block">{errors.password}</span>
         )}
-        <div className="w-full mt-5">
-          <input type="submit" value="Sign Up" className={`${styles.button}`} />
-        </div>
+        <Button className="w-full mt-5" type="submit">
+          Register
+        </Button>
         <br />
-        <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">
+        {/* <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">
           Or join with
         </h5>
         <div className="flex items-center justify-center my-3">
           <FcGoogle size={30} className="cursor-pointer mr-2" />
           <AiFillGithub size={30} className="cursor-pointer ml-2" />
-        </div>
+        </div> */}
         <h5 className="text-center pt-4 font-Poppins text-[14px]">
           Already have an account?{" "}
           <span
@@ -149,8 +143,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
           </span>
         </h5>
       </form>
-      <br />
-    </div>
+    </Card>
   );
 };
 

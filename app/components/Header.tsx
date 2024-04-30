@@ -15,7 +15,6 @@ import { useLogOutQuery, useSocialAuthMutation } from "@/redux/features/auth/aut
 import { toast } from "react-hot-toast";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Loader from "./Loader/Loader";
-import { DarkThemeToggle, Flowbite } from "flowbite-react";
 import { FaUserLarge } from "react-icons/fa6";
 
 type Props = {
@@ -113,9 +112,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                 <NavItems activeItem={activeItem} isMobile={false} />
                 {/* <ThemeSwitcher /> */}
                 {/* only for mobile */}
-                <Flowbite>
-                  <DarkThemeToggle />
-                </Flowbite>
+                <ThemeSwitcher />
                 <div className="800px:hidden">
                   <HiOutlineMenuAlt3
                     size={25}

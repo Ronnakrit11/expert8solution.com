@@ -26,11 +26,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  useEffect(()=>{
-    window.localStorage.setItem('theme', 'light')
-  },[])
-
-
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
@@ -38,7 +33,7 @@ export default function RootLayout({
       >
         <Providers>
           <SessionProvider>
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
               <Custom>
                 <div>{children}</div>
               </Custom>
@@ -54,10 +49,10 @@ export default function RootLayout({
 const Custom: FC<{ children: React.ReactNode }> = ({ children }) => {
   const { isLoading } = useLoadUserQuery({});
   const { data: session } = useSession()
-  
+
 
   useEffect(() => {
-    socketId.on("connection", () => {});
+    socketId.on("connection", () => { });
   }, []);
 
   return <div>{(isLoading && session) ? <Loader /> : <div className="font-Inter">{children} </div>}</div>;

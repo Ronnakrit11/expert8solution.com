@@ -86,7 +86,7 @@ const Page = (props: Props) => {
                             </div>
                         </div>
                         <div className="mt-32 mb-20">
-                            <p className="text-center text-4xl font-bold text-gray-900 my-10">บทความทั้งหมด</p>
+                            <p className="text-center text-4xl font-bold text-gray-900 dark:text-white my-10">บทความทั้งหมด</p>
                             <div className="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                                 <div className="grid gap-y-20 md:grid-cols-2 md:gap-x-6 lg:gap-x-12">
                                     {

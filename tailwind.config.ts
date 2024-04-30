@@ -32,7 +32,8 @@ const config: Config = {
         "primary": "#1565c0",
         "secondary": "#d249ac",
         "header": "#1f2937",
-        "lolem": "#4b5563"
+        "lolem": "#4b5563",
+        "darkbg": "#0f1623"
       }
     },
   },

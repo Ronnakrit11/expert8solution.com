@@ -4,17 +4,19 @@ import { FaCheckCircle } from "react-icons/fa";
 const AboutNew = () => {
     return (
         <>
-            <div className='container mx-auto px-4'>
-                <div className='flex flex-col justify-center items-center space-y-4 py-20 sm:py-20 lg:py-60'>
-                    <div className='bg-secondary px-4 py-2 rounded-full'>
-                        <p className='text-white text-[16px]'>About Us</p>
+            <div className='bg-white dark:bg-darkbg'>
+                <div className='container mx-auto px-4'>
+                    <div className='flex flex-col justify-center items-center space-y-4 py-20 sm:py-20 lg:py-60'>
+                        <div className='bg-secondary px-4 py-2 rounded-full'>
+                            <p className='text-white text-[16px]'>About Us</p>
+                        </div>
+                        <p className='text-[48px] text-center text-header dark:text-white'>บริษัท Expert8Solution จำกัด</p>
+                        <p className='text-lolem text-center'>วัตถุประสงค์ของเราให้บริการในการพัฒนาโปรแกรมคอมพิวเตอร์และแอพพลิเคชั่น
+                            ทั้งในส่วนของซอฟต์แวร์และฮาร์ดแวร์<br /> โดยเน้นไปที่การเขียนโปรแกรมเป็นหลัก</p>
                     </div>
-                    <p className='text-[48px] text-center text-header'>บริษัท Expert8Solution จำกัด</p>
-                    <p className='text-lolem text-center'>วัตถุประสงค์ของเราให้บริการในการพัฒนาโปรแกรมคอมพิวเตอร์และแอพพลิเคชั่น
-                        ทั้งในส่วนของซอฟต์แวร์และฮาร์ดแวร์<br /> โดยเน้นไปที่การเขียนโปรแกรมเป็นหลัก</p>
                 </div>
             </div>
-            <div className='bg-[#101828] py-20 px-4'>
+            <div className='bg-[#101828] dark:bg-darkbg py-20 px-4'>
                 <div className='container mx-auto'>
                     <div className='mb-8'>
                         <p className='text-[48px] text-white font-bold'>Our mission</p>
@@ -39,8 +41,8 @@ const AboutNew = () => {
                     </div>
                 </div>
             </div>
-            <div className='p-4 py-10' >
-                <p className='text-[28px] sm:text-[28px] md:text-[48px] font-bold text-center'>Our story & achievements</p>
+            <div className='p-4 py-10 bg-white dark:bg-darkbg' >
+                <p className='text-[28px] sm:text-[28px] md:text-[48px] font-bold text-center dark:text-white'>Our story & achievements</p>
                 <div className='container mx-auto'>
                     <div className="relative py-32 before:absolute before:inset-0 before:mx-auto before:h-full before:w-px after:absolute after:inset-0 after:h-32 after:w-px after:bg-gradient-to-t after:from-gray-900/20 after:via-gray-200 after:before:to-gray-900 dark:after:from-white/20 dark:after:via-gray-800 lg:before:bg-gray-200 lg:after:mx-auto lg:after:bg-gradient-to-b lg:dark:before:bg-gray-900">
                         <div className="relative flex flex-col items-center gap-10 py-12 pl-6 after:absolute after:inset-0 after:h-full after:w-px after:border-r after:border-dashed after:border-gray-400/70 dark:after:border-gray-700 sm:pl-12 md:flex-row md:py-20 lg:pl-0 lg:after:left-[9.1rem]">
@@ -162,23 +164,23 @@ const AboutNew = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-[#101828] py-20 px-4'>
-                    <div className='container mx-auto'>
-                        <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2'>
+            <div className='bg-[#101828] dark:bg-darkbg py-20 px-4'>
+                <div className='container mx-auto'>
+                    <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2'>
+                        <div>
+                            <img src='https://www.knacx.com/wp-content/uploads/2024/01/corporate-inovations-2.webp' />
+                        </div>
+                        <div className='space-y-4 flex flex-col justify-center'>
+                            <p className='text-[28px] sm:text-[28px] md:text-[48px] font-bold text-white'>เราช่วยสร้างธุรกิจจากไอเดีย</p>
+                            <p className='text-[16px] text-[#7f848c]'>ช่วยคุณหาโซลูชั่น วางโฟลว์ ออกแบบโปรแกรม ซอฟต์แวร์ที่ดีที่สุดในการทำงานเพื่อให้ธุรกิจคุณเติบโตมีกำลังแข่งขันในโลกของดิจิตอล ทรานฟอร์มองค์กรคุณอย่างยั่งยืน</p>
                             <div>
-                                <img src='https://www.knacx.com/wp-content/uploads/2024/01/corporate-inovations-2.webp' />
-                            </div>
-                            <div className='space-y-4 flex flex-col justify-center'>
-                                <p className='text-[28px] sm:text-[28px] md:text-[48px] font-bold text-white'>เราช่วยสร้างธุรกิจจากไอเดีย</p>
-                                <p className='text-[16px] text-[#7f848c]'>ช่วยคุณหาโซลูชั่น วางโฟลว์ ออกแบบโปรแกรม ซอฟต์แวร์ที่ดีที่สุดในการทำงานเพื่อให้ธุรกิจคุณเติบโตมีกำลังแข่งขันในโลกของดิจิตอล ทรานฟอร์มองค์กรคุณอย่างยั่งยืน</p>
-                                <div>
-                                    <button className='text-[16px] text-white bg-primary rounded-3xl py-2 px-4'>สอบถามบริการ</button>
-                                </div>
+                                <button className='text-[16px] text-white bg-primary rounded-3xl py-2 px-4'>สอบถามบริการ</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            <div className='bg-[#101828] py-40 px-4'>
+            </div>
+            <div className='bg-[#101828] dark:bg-darkbg py-40 px-4'>
                 <div className='container mx-auto '>
                     <div className='flex flex-col justify-center items-center space-y-4'>
                         <p className='text-[28px] sm:text-[28px] md:text-[48px] font-bold text-white'>มีไอเดียปรึกษาเราสิ</p>
