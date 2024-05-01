@@ -20,13 +20,13 @@ const Review = () => {
                                 <Rating.Star />
                                 <Rating.Star />
                                 <Rating.Star />
-                                <Rating.Star filled={false} />
+                                <Rating.Star />
                             </Rating>
                             <p className="text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl">
-                                " ได้ความรู้ในการบริหารบุคคล เเละความรู้ในการใช้จิตวิทยาบริหารบุคคฃ แนะนำได้ดีมาก  อาจารย์สอนตั้งเเต่พื้นฐานไปจนถึงสามารถนำไปใช้ได้จริง "
+                                " ชอบความทุ่มเทของคุณนุ๊ก การ บริการที่รวดเร็วและการรับปรับตามความ ต้องการของผม ไม่มีการเรียกร้องใดๆ ถือว่าดีมากๆครับ เว็บออกมาดูดีตามที่เรา "
                                 <br />
                                 <br />
-                                " อาจารย์สอนดีมาก ๆ เรียนเเล้วสนุก สามารถนำไปใช้ได้จริง "
+                                " ชอบเลย"
                             </p>
                             <div className='flex items-center gap-3'>
                                 <img className="h-12 w-12 rounded-full" src="https://ampire.tailus.io/images/avatars/avatar-2.webp" loading="lazy" alt="user avatar" width="200" height="200" />
@@ -43,16 +43,16 @@ const Review = () => {
                             <Rating.Star />
                             <Rating.Star />
                             <Rating.Star />
-                            <Rating.Star filled={false} />
+                            <Rating.Star />
                         </Rating>
                         <p className="text-gray-600 dark:text-gray-300">
-                            " หลังจากเรียน สามารถนำความรู้ที่อาจารย์สอนไปใช้จริงเเล้วได้ผล ลดขั้นตอนได้เยอะมากครับ "
+                            " ผู้รับงานสุภาพ ใจเย็น ใช้เวลาทํางาน ตามตกลง สอนการใช้งานแก่ผู้ว่าจ้างได้ดี บริการหลังการขายเป็นที่น่าพึงพอใจ"
                         </p>
                         <div className='flex items-center gap-3'>
                             <img className="h-12 w-12 rounded-full" src="https://ampire.tailus.io/images/avatars/avatar-2.webp" loading="lazy" alt="user avatar" width="200" height="200" />
                             <div>
-                                <h3 className="text-lg font-semibold leading-none text-gray-600 dark:text-gray-200">คุณชา</h3>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">นักเรียน Expert8Solution</span>
+                                <h3 className="text-lg font-semibold leading-none text-gray-600 dark:text-gray-200">RedBird</h3>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">ลูกค้า Expert8Solution</span>
                             </div>
                         </div>
                     </div>
@@ -62,16 +62,16 @@ const Review = () => {
                             <Rating.Star />
                             <Rating.Star />
                             <Rating.Star />
-                            <Rating.Star filled={false} />
+                            <Rating.Star  />
                         </Rating>
                         <p className="text-gray-600 dark:text-gray-300">
-                            " อาจารย์สอนการใช้กลยุทธ์ในการตลาดกับการยิงแอดได้เข้าใจเลยค่ะ เราลืมคิดถึงลูกค้าไปเลย เรียนเสร็จการบ้านเพียบเลย ขอบคุณมากๆค่ะ "
+                            " ระบบของคุณนุ๊ก มี features ให้เลือกใช้เยอะมากๆครับ และใจดี คอยให้คําปรึกษา ตลอดเส้นทาง ส่วนตัวแนะนําเลยครับ ระบบของ Expert8 Academy "
                         </p>
                         <div className='flex items-center gap-3'>
                             <img className="h-12 w-12 rounded-full" src="https://ampire.tailus.io/images/avatars/avatar-2.webp" loading="lazy" alt="user avatar" width="200" height="200" />
                             <div>
                                 <h3 className="text-lg font-semibold leading-none text-gray-600 dark:text-gray-200">คุณนัท</h3>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">นักเรียน Expert8Solution</span>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">ลูกค้า Expert8Solution</span>
                             </div>
                         </div>
                     </div>

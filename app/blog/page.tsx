@@ -27,7 +27,7 @@ const Page = (props: Props) => {
     useEffect(() => {
         setcourses(data?.result || []);
     }, [data]);
-
+    console.log(courses)
     return (
         <div>
             <Header
@@ -79,10 +79,9 @@ const Page = (props: Props) => {
                                 </div>
                             </div>
                             <div className="lg:w-3/4">
-                                {courses &&
-                                    courses.map((item: any, index: number) => (
-                                        index === 0 && <BlogCardNew item={item} key={index} />
-                                    ))}
+                                {courses && courses.map((item, index) => (
+                                    index === courses.length - 1 && <BlogCardNew item={item} key={index} />
+                                ))}
                             </div>
                         </div>
                         <div className="mt-32 mb-20">
@@ -97,9 +96,10 @@ const Page = (props: Props) => {
                                         )
                                     }
                                     {courses &&
-                                        courses.slice(1).map((item: any, index: number) => (
+                                        courses.slice(0).reverse().map((item: any, index: number) => (
                                             <BlogCardNew item={item} key={index} />
                                         ))}
+
                                 </div>
                             </div>
                         </div>
