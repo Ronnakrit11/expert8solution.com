@@ -27,7 +27,7 @@ const BlogCardNew: FC<Props> = ({ item, isProfile }) => {
                 <img className="rounded-3xl" src={item.thumbnail.url} alt="blog cover" width="1556" height="778" />
                 <div className="mt-8">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">{item.title}</h2>
-                    <p className="text-white">{dayjs(item.createdAt).format("DD MMMM YYYY")}</p>
+                    <p className="text-black dark:text-white">{dayjs(item.createdAt).format("DD MMMM YYYY")}</p>
                     <p className="mt-4 text-gray-700 dark:text-gray-300">{add3Dots(item.description, 100)}</p>
                     {/*<div className='flex items-center gap-3 mt-8'>
                         <img className="h-12 w-12 rounded-full" src="https://ampire.tailus.io/images/avatars/avatar-2.webp" loading="lazy" alt="user avatar" width="200" height="200" />

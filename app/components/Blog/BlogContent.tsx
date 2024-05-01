@@ -24,24 +24,24 @@ const BlogContent = ({ slug, blog }: Props) => {
     const [activeVideo, setActiveVideo] = useState(0);
 
     return (
-            <>
-                <Header activeItem={3} open={open} setOpen={setOpen} route={route} setRoute={setRoute} />
-                <div className="w-full grid 800px:grid-cols-10">
-                    <Heading
-                        title={data?.title}
-                        description={data?.description}
-                        keywords={data?.keyword}
-                    />
-                </div>
-                <div className="w-full pb-[8rem]">
+        <>
+            <Header activeItem={3} open={open} setOpen={setOpen} route={route} setRoute={setRoute} />
+            <div className="w-full grid 800px:grid-cols-10">
+                <Heading
+                    title={data?.title}
+                    description={data?.description}
+                    keywords={data?.keyword}
+                />
+            </div>
+            <div className="w-full pb-[8rem]">
                 <div className="max-w-[700px] mx-auto p-[20px] md:p-0 text-black">
-                        <h1 className="text-[32px] pt-10 font-bold">{data?.title}</h1>
-                        {/* <h1 className="text-[28px]">{data?.description}</h1> */}
-                        <p dangerouslySetInnerHTML={{ __html: data.content }}></p>
-                    </div>
+                    <h1 className="text-[32px] pt-10 font-bold text-black dark:text-white">{data?.title}</h1>
+                    {/* <h1 className="text-[28px]">{data?.description}</h1> */}
+                    <p dangerouslySetInnerHTML={{ __html: data.content }}></p>
                 </div>
-                <Footer />
-            </>
+            </div>
+            <Footer />
+        </>
     );
 };
 
