@@ -1,14 +1,14 @@
 import Home from "./components/HomeNew/Home";
 
 export const metadata = {
-  title: "Expert8-Solution",
+  title: "Expert8-Solution เพราะเราคือผู้นำด้านการผลิตซอฟเเวร์สำหรับระบบขายคอร์สออนไลน์ครบวจร",
   description:
-  "เปลี่ยนไอเดียเป็น Techsolution ของตัวเอง",
+  "บริการทำซอฟเเวร์เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงระบบชำระเงิน ระบบจัดการคอร์สเรียน เเละบริการทำ Marketing ครบวงจร",
   keywords:
-    "ไอเดีย,Techsolution,การตลาด ",
+    "ไอเดีย,Techsolution,การตลาด,ระบบเรียนออนไลน์ , ระบบขายคอร์สออนไลน์ ",
   openGraph: {
-    title: "Expert8-Solution ",
-    description: "เปลี่ยนไอเดียเป็น Techsolution ของตัวเอง",
+    title: "Expert8-Solution เพราะเราคือผู้นำด้านการผลิตซอฟเเวร์สำหรับระบบขายคอร์สออนไลน์ครบวจร ",
+    description: "บริการทำซอฟเเวร์เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงระบบชำระเงิน ระบบจัดการคอร์สเรียน เเละบริการทำ Marketing ครบวงจร",
     url: "https://www.expert8-solution.com/",
 
     siteName: "expert8-solution",
@@ -24,9 +24,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Expert8-Solution",
+    title: "Expert8-Solution เพราะเราคือผู้นำด้านการผลิตซอฟเเวร์สำหรับระบบขายคอร์สออนไลน์ครบวจร",
     description:
-      "เปลี่ยนไอเดียเป็น Techsolution ของตัวเอง",
+      "บริการทำซอฟเเวร์เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงระบบชำระเงิน ระบบจัดการคอร์สเรียน เเละบริการทำ Marketing ครบวงจร",
     images: [
       "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709633303/zscax0wvqcqxqzvpmcin.png ",
     ],
