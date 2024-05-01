@@ -103,7 +103,7 @@ const Profile: FC<Props> = ({ user }) => {
                   ))}
               </div>
               {courses.length === 0 && (
-                <h1 className="text-center text-[18px] font-Poppins dark:text-white text-black">
+                <h1 className="text-center text-[18px] font-Poppins dark:text-black text-black">
                   You don&apos;t have any purchased courses!
                 </h1>
               )}
@@ -119,7 +119,7 @@ const Profile: FC<Props> = ({ user }) => {
                 ))}
             </div>
             {ebooks.length === 0 && (
-              <h1 className="text-center text-[18px] font-Poppins dark:text-white text-black">
+              <h1 className="text-center text-[18px] font-Poppins dark:text-black text-black">
                 You don&apos;t have any purchased ebooks!
               </h1>
             )}

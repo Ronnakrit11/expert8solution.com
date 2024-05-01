@@ -9,6 +9,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { LineChart, Line } from 'recharts';
+
 import Loader from "../../Loader/Loader"
 
 type Props = {

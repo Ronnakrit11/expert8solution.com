@@ -343,7 +343,7 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
             (
               <div className="w-full flex justify-end">
                 <div
-                  className={`${styles.button} !w-[200px] !rounded-[10px] dark:bg-[#57c7a3] !h-[35px] dark:border dark:border-[#ffffff6c]`}
+                  className={`${styles.button} !w-[200px] !rounded-[10px] bg-primary text-white dark:bg-primary !h-[35px] dark:border dark:border-[#ffffff6c]`}
                   onClick={() => setOpenModalAddUser(prev => !prev)}
                 >
                   + Add New User
@@ -360,10 +360,10 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
                 outline: "none",
               },
               "& .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon": {
-                color: theme === "dark" ? "#fff" : "#000",
+                color: theme === "dark" ? "#fff" : "#fff",
               },
               "& .MuiDataGrid-sortIcon": {
-                color: theme === "dark" ? "#fff" : "#000",
+                color: theme === "dark" ? "#fff" : "#fff",
               },
               "& .MuiDataGrid-row": {
                 color: theme === "dark" ? "#fff" : "#000",
@@ -373,26 +373,26 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
                     : "1px solid #ccc!important",
               },
               "& .MuiTablePagination-root": {
-                color: theme === "dark" ? "#fff" : "#000",
+                color: theme === "dark" ? "#fff" : "#fff",
               },
               "& .MuiDataGrid-cell": {
                 borderBottom: "none!important",
               },
               "& .name-column--cell": {
-                color: theme === "dark" ? "#fff" : "#000",
+                color: theme === "dark" ? "#fff" : "#fff",
               },
               "& .MuiDataGrid-columnHeaders": {
-                backgroundColor: theme === "dark" ? "#3e4396" : "#A4A9FC",
+                backgroundColor: theme === "dark" ? "#1565c0" : "#1565c0",
                 borderBottom: "none",
-                color: theme === "dark" ? "#fff" : "#000",
+                color: theme === "dark" ? "#fff" : "#fff",
               },
               "& .MuiDataGrid-virtualScroller": {
                 backgroundColor: theme === "dark" ? "#1F2A40" : "#F2F0F0",
               },
               "& .MuiDataGrid-footerContainer": {
-                color: theme === "dark" ? "#fff" : "#000",
+                color: theme === "dark" ? "#fff" : "#fff",
                 borderTop: "none",
-                backgroundColor: theme === "dark" ? "#3e4396" : "#A4A9FC",
+                backgroundColor: theme === "dark" ? "#1565c0" : "#1565c0",
               },
               "& .MuiCheckbox-root": {
                 color:

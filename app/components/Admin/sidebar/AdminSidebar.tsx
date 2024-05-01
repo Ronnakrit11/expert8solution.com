@@ -31,6 +31,7 @@ import { useTheme } from "next-themes";
 import { AiFillFileAdd } from "react-icons/ai";
 import ArtTrackIcon from '@mui/icons-material/ArtTrack';
 import ArticleIcon from '@mui/icons-material/Article';
+import { Badge } from "flowbite-react";
 
 interface itemProps {
   title: string;
@@ -75,7 +76,7 @@ const Sidebar = () => {
     <Box
       sx={{
         "& .pro-sidebar-inner": {
-          background: `${theme === "dark" ? "#111C43 !important" : "#fff !important"
+          background: `${theme === "dark" ? "#0f1623 !important" : "#fff !important"
             }`,
         },
         "& .pro-icon-wrapper": {
@@ -95,7 +96,7 @@ const Sidebar = () => {
           color: `${theme !== "dark" && "#000"}`,
         },
       }}
-      className="!bg-white dark:bg-[#111C43] z-99"
+      className="!bg-white dark:bg-[#0f1623] z-99"
     >
       <ProSidebar
         collapsed={isCollapsed}
@@ -126,8 +127,9 @@ const Sidebar = () => {
               >
                 <Link href="/" className="block">
                   <h3 className="text-[25px] font-Poppins uppercase dark:text-white text-black">
-                    ELearning
+                    Expert8Shop
                   </h3>
+                  <p>Admin Dashboard</p>
                 </Link>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)} className="inline-block">
                   <ArrowBackIosIcon className="text-black dark:text-[#ffffffc1]" />
@@ -138,35 +140,26 @@ const Sidebar = () => {
 
           {!isCollapsed && (
             <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
+              <div className="flex justify-center items-center gap-4">
                 <Image
                   alt="profile-user"
                   width={100}
                   height={100}
+                  className="w-[100px] h-[100px] rounded-xl border-2 border-primary"
                   src={user.avatar ? user.avatar.url : avatarDefault}
-                  style={{
-                    cursor: "pointer",
-                    borderRadius: "50%",
-                    border: "3px solid #5b6fe6",
-                  }}
+
                 />
-              </Box>
-              <Box textAlign="center">
-                <Typography
-                  variant="h4"
-                  className="!text-[20px] text-black dark:text-[#ffffffc1]"
-                  sx={{ m: "10px 0 0 0" }}
-                >
-                  {user?.name}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{ m: "10px 0 0 0" }}
-                  className="!text-[20px] text-black dark:text-[#ffffffc1] capitalize"
-                >
-                  - {user?.role}
-                </Typography>
-              </Box>
+                <div>
+                  <div className="flex justify-center items-center">
+                    <p className="!text-[20px] text-black dark:text-[#ffffffc1] mr-2">Name : </p>
+                    <Badge color="info">{user?.name}</Badge>
+                  </div>
+                  <div className="flex justify-center items-center">
+                    <p className="!text-[20px] text-black dark:text-[#ffffffc1] mr-2">Role : </p>
+                    <Badge color="purple">{user?.role}</Badge>
+                  </div>
+                </div>
+              </div>
             </Box>
           )}
 
@@ -178,7 +171,6 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
             <Typography
               variant="h5"
               sx={{ m: "15px 0 5px 25px" }}
