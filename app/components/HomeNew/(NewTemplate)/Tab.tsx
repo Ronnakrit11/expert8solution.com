@@ -50,8 +50,8 @@ const Tab = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='relative pt-20 bg-gray-100 before:absolute before:inset-0 before:scale-x-110 before:border-y before:border-gray-200 after:absolute after:inset-0 after:scale-y-110 after:border-x after:border-gray-200 dark:bg-gray-800 dark:before:border-gray-700 dark:after:border-gray-700'>
-                                <img src='https://ampire.tailus.io/images/screenshots/tailus-home.webp' className='mx-auto h-80 w-96 rounded-t-3xl border object-cover object-top shadow-2xl dark:border-transparent sm:h-[28rem]' />
+                            <div className='mt-4'>
+                                <img src='/tap/phone.png' className='mx-auto h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
@@ -85,8 +85,8 @@ const Tab = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='relative pt-20 bg-gray-100 before:absolute before:inset-0 before:scale-x-110 before:border-y before:border-gray-200 after:absolute after:inset-0 after:scale-y-110 after:border-x after:border-gray-200 dark:bg-gray-800 dark:before:border-gray-700 dark:after:border-gray-700'>
-                                <img src='https://ampire.tailus.io/images/screenshots/tailus-contact.webp' className='mx-auto h-80 w-96 rounded-t-3xl border object-cover object-top shadow-2xl dark:border-transparent sm:h-[28rem]' />
+                            <div className='mt-4'>
+                                <img src='/tap/ipad.png' className='mx-auto h-80 w-full rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
@@ -120,8 +120,8 @@ const Tab = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='relative pt-20 p-2 bg-gray-100 before:absolute before:inset-0 before:scale-x-110 before:border-y before:border-gray-200 after:absolute after:inset-0 after:scale-y-110 after:border-x after:border-gray-200 dark:bg-gray-800 dark:before:border-gray-700 dark:after:border-gray-700'>
-                                <img src='https://ampire.tailus.io/images/screenshots/tailus-home-dark.webp' className='mx-auto rounded-t-3xl border object-cover object-top shadow-2xl dark:border-transparent sm:h-[28rem] md:h-[20rem] lg:h-[28rem]' />
+                            <div className='mt-4'>
+                                <img src='/tap/mac.png' className='mx-auto h-80 w-full rounded-t-3xl  object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
 
                         </div>
