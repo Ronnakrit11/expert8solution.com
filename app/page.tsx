@@ -1,7 +1,7 @@
 import Home from "./components/HomeNew/Home";
 
 export const metadata = {
-  title: "Expert8-Solution เพราะเราคือผู้นำด้านการผลิตซอฟเเวร์สำหรับระบบขายคอร์สออนไลน์ครบวจร",
+  title: "Expert8-Solution เราคือผู้นำด้านการผลิตซอฟเเวร์สำหรับระบบขายคอร์สออนไลน์",
   description:
   "บริการทำซอฟเเวร์เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงระบบชำระเงิน ระบบจัดการคอร์สเรียน เเละบริการทำ Marketing ครบวงจร",
   keywords:
