@@ -43,7 +43,6 @@ function Home({ webInfo }: any) {
     const chevronWidth = 40;
 
     useEffect(() => {
-        setTheme('light')
         AOS.init({
             once: true,
             delay: 300
