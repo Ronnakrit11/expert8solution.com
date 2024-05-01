@@ -5,16 +5,16 @@ const Feature = () => {
         <section className='py-32 bg-white dark:bg-[#101726]'>
             <div className="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <div className="text-center">
-                    <h2 className="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl">For growing teams and organizations</h2>
-                    <p className="mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5">A growing team doesn't need to mean growing pains. Privacy, and the right tool for every step of your journey - Jira Software friction - company size.</p>
+                    <h2 className="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl">ทำเว็ปไซต์เรียนออนไลน์กับเราดียังไง</h2>
+                    <h3 className="mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5">เราเข้าใจความต้องการของคุณ รวมถึงความต้องการของนักเรียนคุณดี</h3>
                 </div>
-                <div className="mt-12 grid divide-x divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-100 dark:divide-gray-700 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0">
+                <div className="mt-12 grid divide-x divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-100 dar-k:divide-gray-700 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0">
                     <div className="group relative bg-white transition-shadow hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 dark:bg-gray-800">
                         <div className="relative space-y-8 p-8 py-12">
                             <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png" loading="lazy" className="w-12" width="512" height="512" alt="burger illustration" />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold text-gray-700 transition group-hover:text-primary dark:text-white dark:group-hover:text-primaryLight">เขียนด้วย Next-Js Framework</h3>
-                                <p className="text-gray-600 dark:text-gray-400">เป็นภาษาโปรเเกรมมิ่งที่ดี เเละ มีประสิทธิภาพที่สุดในโลก</p>
+                                <p className="text-gray-600 dark:text-gray-400">เป็นภาษาโปรเเกรมมิ่งที่ดีที่สุด หมดกังวลเรื่องเว็บไซต์โหลดช้า ไม่เสถียร เเละรองรับจำนวนนักเรียนเข้าพร้อมกันไม่จำกัด</p>
                             </div>
                             <a href="#" className="flex items-center justify-between text-gray-500 group-hover:text-primary dark:text-gray-400 dark:group-hover:text-primaryLight">
                                 <span className="text-sm">Read more</span>
