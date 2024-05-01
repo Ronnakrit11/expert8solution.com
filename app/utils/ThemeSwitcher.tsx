@@ -30,7 +30,7 @@ export const ThemeSwitcher = () => {
   }
 
   return (
-    <div className="ml-4" >
+    <div  >
       {theme === "light" ? (
         <BiSun
           className="cursor-pointer dark:text-gray-400 dark:border-gray-400 text-gray-600 border-2 p-2 rounded-xl"

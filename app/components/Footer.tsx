@@ -14,7 +14,7 @@ const Footer = (props: Props) => {
           <div className="space-y-3">
             <h3 className="text-[20px] font-[600] text-white dark:text-white">Social Links</h3>
             <ul className="space-y-4">
-             
+
               <li>
                 <Link
                   href="https://www.facebook.com/experts8academy"
@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
                   Facebook
                 </Link>
               </li>
-           
+
             </ul>
           </div>
           <div className='flex'>
@@ -38,12 +38,14 @@ const Footer = (props: Props) => {
               </p>
 
               <p className="text-base text-white dark:text-gray-300 dark:hover:text-white  pb-2">
-               
+                บริษัทเอ็กซ์เพิร์ท เอท โซลูชั่น จำกัด
+
+                สำนักงานใหญ่ : 170/51 ถนนอ้อมค่าย ตำบลท่าซัก อำเภอเมือง จังหวัดนครศรีธรรมราช
               </p>
             </div>
           </div>
           <div>
-          <div className='bg-white max-w-[160px] p-2'>
+            <div className='bg-white max-w-[160px] p-2'>
               <Image
                 src={'/lineqr.jpeg'}
                 height={200}

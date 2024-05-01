@@ -136,11 +136,11 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
                     <GoChevronDown />
                   </span>
                   <div onMouseLeave={resetActive} className={`flex justify-left px-8 py-2 z-10 top-[28px] min-w-[143px] transition  ease-out ${active === item.name ? 'visible' : 'hidden'}`}>
-                    <ul className="text-black">
+                    <ul>
                       {
                         item.subMenu.map((subItem, subIndex) => {
                           return <li onClick={() => router.push(subItem.url)} key={`sub-${subIndex}`} className="py-2">
-                            <span className="text-[8px] pr-2">⚪ </span> {subItem.name}
+                            <span className="text-[8px] pr-2 text-black dark:text-white">⚪ </span> {subItem.name}
                             <hr />
                           </li>
                         })
@@ -154,7 +154,7 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
                 <Link onMouseOver={resetActive} href={`${item.url}`} passHref key={index}>
                   <span
                     className={`${pathname === item.url
-                      ? "text-black font-bold"
+                      ? "text-primary dark:text-primary font-bold"
                       : "dark:text-white text-black"
                       } block py-5 text-[18px] px-6 font-Poppins font-[400] ${item.name === hightlightMenu ? 'border-solid border-2 border-red-300 py-1 rounded-md' : null}`}
                   >
