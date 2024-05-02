@@ -55,7 +55,7 @@ const Tab = () => {
 
                             </div>
                             <div className='mt-4'>
-                                <img src='/tap/phone11.png' className='mx-auto h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <img src='/tap/phones.png' className='mx-auto h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
