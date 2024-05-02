@@ -90,7 +90,7 @@ const Tab = () => {
                                 </div>
                             </div>
                             <div className='mt-4'>
-                                <img src='/tap/ipadf.png' className='mx-auto h-80 w-full rounded-t-3xl  object-top dark:border-transparent sm:h-[28rem]' />
+                                <img src='/tap/ipadf.png' className='mx-auto h-80 w-full rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
