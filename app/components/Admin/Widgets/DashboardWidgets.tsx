@@ -97,7 +97,7 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
   }, [isLoading, ordersLoading, data, ordersData]);
 
   return (
-    <div className=" my-24 p-4">
+    <div className=" my-24 pl-8 sm:pl-8 md:pl-40 lg:pl-16 xl:pl-8" >
       <Box>
         <Grid container spacing={2} >
           <Grid item xs={12} md={8} padding={2}>

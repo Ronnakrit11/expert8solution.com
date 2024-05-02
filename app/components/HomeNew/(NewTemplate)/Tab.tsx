@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const Tab = () => {
@@ -50,12 +51,9 @@ const Tab = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='mt-4'>
-                                <img src='/tap/phone.png' className='mx-auto h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
-
-                            </div>
-                            <div className='mt-4'>
-                                <img src='/tap/phones.png' className='mx-auto h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                            <div className='mt-4 flex mx-auto'>
+                                <Image src='/tap/phone.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <Image src='/tap/phones.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
@@ -90,7 +88,7 @@ const Tab = () => {
                                 </div>
                             </div>
                             <div className='mt-4'>
-                                <img src='/tap/ipadf.png' className='mx-auto h-80 w-full rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <Image src='/tap/ipadf.png' width={500} height={400} alt='' className='mx-auto h-60 w-full object-cover object-top dark:border-transparent sm:h-[30rem]' />
                             </div>
                         </div>
                     </div>
