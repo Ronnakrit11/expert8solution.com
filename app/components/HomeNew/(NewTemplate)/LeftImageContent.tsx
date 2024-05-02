@@ -4,7 +4,7 @@ import React from 'react'
 
 const LeftImageContent = () => {
     return (
-        <div className='bg-white dark:bg-[#101726]'>
+        <div className='bg-white dark:bg-[#101726] p-4'>
             <div className='container mx-auto mp-32'>
                 <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                     <div>

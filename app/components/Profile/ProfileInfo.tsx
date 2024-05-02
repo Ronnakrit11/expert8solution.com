@@ -59,7 +59,7 @@ const ProfileInfo: FC<Props> = ({ avatar, user }) => {
   };
 
   return (
-    <div className="bg-white mx-2 px-2 py-10 rounded-xl shadow-md">
+    <div className="bg-white dark:bg-darkbg mx-2 px-2 py-10 rounded-xl shadow-md">
       <div className="w-full flex justify-center ">
         <div className="relative">
           <Image

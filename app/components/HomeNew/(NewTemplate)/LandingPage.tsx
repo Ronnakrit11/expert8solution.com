@@ -3,7 +3,7 @@ import { FaEnvelope } from "react-icons/fa6";
 
 const LandingPage = () => {
     return (
-        <div className='bg-white dark:bg-[#101726]'>
+        <div className='bg-white dark:bg-[#101726] p-4'>
             <div className='container mx-auto'>
                 <div className='py-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                     <div className='flex flex-col justify-center'>
