@@ -9,7 +9,7 @@ const Tab = () => {
     }
 
     return (
-        <div className='bg-white dark:bg-[#101726] py-20'>
+        <div className='bg-white dark:bg-[#101726] py-20 px-4'>
             <div className='container mx-auto '>
                 <div>
                     <h2 className='text-3xl text-center font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl'>ภาพรวมระบบ</h2>

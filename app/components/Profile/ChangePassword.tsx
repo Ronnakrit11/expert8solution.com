@@ -34,7 +34,7 @@ const ChangePassword: FC<Props> = (props) => {
   }, [isSuccess, error]);
 
   return (
-    <div className="bg-white mx-2 px-2 py-10 rounded-xl shadow-md">
+    <div className="bg-white dark:bg-darkbg mx-2 px-2 py-10 rounded-xl shadow-md">
       <div className="w-full pl-7 px-2 800px:px-5 800px:pl-0">
         <h1 className="block text-[25px] 800px:text-[30px] font-Poppins text-center font-[500] text-black dark:text-[#fff] pb-2">
           Change Password

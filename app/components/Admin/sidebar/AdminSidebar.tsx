@@ -45,10 +45,14 @@ const Item: FC<itemProps> = ({ title, to, icon, selected, setSelected }) => {
   return (
     <MenuItem
       active={selected === title}
-      onClick={() => setSelected(title)}
+      onClick={() => {
+        setSelected(title);
+        localStorage.setItem("selectedItem", title); // Save selected item to localStorage
+      }}
       icon={icon}
+      className="hover:bg-[#f3f4f6] rounded-l-full"
     >
-      <Typography className="!text-[16px] !font-Poppins">{title}</Typography>
+      <Typography className="!text-[16px]  !font-Poppins">{title}</Typography>
       <Link href={to} />
     </MenuItem>
   );
@@ -58,10 +62,12 @@ const Sidebar = () => {
   const { user } = useSelector((state: any) => state.auth);
   const [logout, setlogout] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [selected, setSelected] = useState("Dashboard");
+  const [selected, setSelected] = useState(() => {
+    return localStorage.getItem("selectedItem") || "Dashboard";
+  });
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-
+  console.log(selected)
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
@@ -83,10 +89,10 @@ const Sidebar = () => {
           backgroundColor: "transparent !important",
         },
         "& .pro-inner-item:hover": {
-          color: "#868dfb !important",
+          color: "#1565c0 !important",
         },
         "& .pro-menu-item.active": {
-          color: "#6870fa !important",
+          color: "#1565c0 !important",
         },
         "& .pro-inner-item": {
           padding: "5px 35px 5px 20px !important",
@@ -170,6 +176,7 @@ const Sidebar = () => {
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+
             />
             <Typography
               variant="h5"

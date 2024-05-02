@@ -3,7 +3,7 @@ import { FaEnvelope } from "react-icons/fa6";
 
 const FooterContact = () => {
     return (
-        <div className="border-y border-gray-200 bg-gray-100 dark:bg-[#101726] dark:border-gray-700 dark:bg-darker">
+        <div className="border-y border-gray-200 p-4 bg-gray-100 dark:bg-[#101726] dark:border-gray-700 dark:bg-darker">
             <div className='container mx-auto'>
                 <div className="items-end justify-between md:flex">
                     <div className="h-max py-16 md:w-6/12 xl:w-5/12">
