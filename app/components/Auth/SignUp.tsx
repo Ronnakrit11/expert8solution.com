@@ -59,7 +59,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
 
   return (
     <Card>
-      <p className='text-xl sm:text-2xl lg:text-left lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>Register With Expert8Shop</p>
+      <p className='text-xl sm:text-2xl lg:text-left lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>Register With Expert8-Solution</p>
       <p className="text-center text-gray-600">ขอบคุณทุกท่านที่ร่วมเป็นส่วนหนึ่งกับเรา</p>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
