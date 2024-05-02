@@ -127,7 +127,7 @@ const Sidebar = () => {
               >
                 <Link href="/" className="block">
                   <h3 className="text-[25px] font-Poppins uppercase dark:text-white text-black">
-                    Expert8Shop
+                    Expert8-Solution
                   </h3>
                   <p>Admin Dashboard</p>
                 </Link>
