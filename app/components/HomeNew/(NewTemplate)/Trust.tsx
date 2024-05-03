@@ -22,6 +22,14 @@ const Trust = () => {
         {
             img: "/cus8.png"
         }
+        ,
+        {
+            img: "/cus9.png"
+        }
+        ,
+        {
+            img: "/cus10.png"
+        }
     ];
     return (
         <div className='bg-white dark:bg-[#101726] pt-12 p-4'>
