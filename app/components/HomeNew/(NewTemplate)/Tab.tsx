@@ -88,7 +88,7 @@ const Tab = () => {
                                 </div>
                             </div>
                             <div className='mt-4'>
-                                <Image src='/tap/ipadf.png' width={500} height={400} alt='' className='mx-auto h-60 w-full object-cover object-top dark:border-transparent sm:h-[20rem]' />
+                                <Image src='/tap/ipadf.png' width={500} height={400} alt='' className='mx-auto w-full object-cover object-top dark:border-transparent' />
                             </div>
                         </div>
                     </div>
