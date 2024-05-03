@@ -72,7 +72,7 @@ const Page = (props: Props) => {
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h2 className="text-base font-medium text-gray-800 dark:text-white">คอร์สเรียน</h2>
+                                                <h2 className="text-base font-medium text-gray-800 dark:text-white">จำนวนบทความ</h2>
                                                 <span className="-mt-1 block w-max text-sm text-gray-500 dark:text-gray-400">{courses.length} บทความ</span>
                                             </div>
                                         </a>
