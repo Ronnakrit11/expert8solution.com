@@ -4,19 +4,23 @@ import Image from 'next/image';
 const Trust = () => {
     const items = [
         {
-            img: "/logo1.png"
+            img: "/cus1.png"
         },
         {
-            img: "/logo1.png"
+            img: "/cus2.png"
         },
         {
-            img: "/logo1.png"
+            img: "/cus3.png"
         },
         {
-            img: "/logo1.png"
+            img: "/cus55.png"
         },
         {
-            img: "/logo1.png"
+            img: "/cus6.png"
+        }
+        ,
+        {
+            img: "/cus77.png"
         }
     ];
     return (
@@ -24,7 +28,7 @@ const Trust = () => {
             <div className='container mx-auto border-y border-gray-100 py-8 text-center dark:border-gray-800  md:py-12 xl:mt-20'>
                 <div className='mt-8 flex flex-wrap justify-center gap-6 brightness-75 contrast-200 dark:brightness-200 dark:contrast-0 sm:justify-between lg:gap-24'>
                     {items.map((item, index) => (
-                        <div key={index} className='h-8 w-auto lg:h-10 lg:w-auto'>
+                        <div key={index} className='h-15 w-auto lg:h-17 lg:w-auto'>
                             <Image
                                 src={item.img}
                                 alt=''
