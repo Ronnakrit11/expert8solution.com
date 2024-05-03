@@ -1,34 +1,42 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 
 const Trust = () => {
-    const item = [
+    const items = [
         {
-            img: "https://ampire.tailus.io/images/clients/airbnb.svg"
+            img: "/logo1.png"
         },
         {
-            img: "https://ampire.tailus.io/images/clients/coty.svg"
+            img: "/logo1.png"
         },
         {
-            img: "https://ampire.tailus.io/images/clients/ge.svg"
+            img: "/logo1.png"
         },
         {
-            img: "https://ampire.tailus.io/images/clients/lilly.png"
+            img: "/logo1.png"
         },
         {
-            img: "https://ampire.tailus.io/images/clients/microsoft.svg"
+            img: "/logo1.png"
         }
-    ]
+    ];
     return (
         <div className='bg-white dark:bg-[#101726] pt-12 p-4'>
             <div className='container mx-auto border-y border-gray-100 py-8 text-center dark:border-gray-800  md:py-12 xl:mt-20'>
                 <div className='mt-8 flex flex-wrap justify-center gap-6 brightness-75 contrast-200 dark:brightness-200 dark:contrast-0 sm:justify-between lg:gap-24'>
-                    {item.map((item, index) => (
-                        <img src={item.img} key={index} className='h-8 w-auto lg:h-10 lg:w-auto' />
+                    {items.map((item, index) => (
+                        <div key={index} className='h-8 w-auto lg:h-10 lg:w-auto'>
+                            <Image
+                                src={item.img}
+                                alt=''
+                                width={100}
+                                height={100}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Trust
+export default Trust;

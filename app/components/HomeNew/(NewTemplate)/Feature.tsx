@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Feature = () => {
@@ -11,7 +12,7 @@ const Feature = () => {
                 <div className="mt-12 grid divide-x divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-100 dar-k:divide-gray-700 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0">
                     <div className="group relative bg-white transition-shadow hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 dark:bg-gray-800">
                         <div className="relative space-y-8 p-8 py-12">
-                            <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png" loading="lazy" className="w-12" width="512" height="512" alt="burger illustration" />
+                            <Image src="/feature3.png" loading="lazy" className="w-12" width="512" height="512" alt="burger illustration" />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold text-gray-700 transition group-hover:text-primary dark:text-white dark:group-hover:text-primaryLight">เขียนด้วย Next-Js Framework</h3>
                                 <p className="text-gray-600 dark:text-gray-400">เป็นภาษาโปรเเกรมมิ่งที่ดีที่สุด หมดกังวลเรื่องเว็บไซต์โหลดช้า ไม่เสถียร เเละรองรับจำนวนนักเรียนเข้าพร้อมกันไม่จำกัด</p>
@@ -26,7 +27,7 @@ const Feature = () => {
                     </div>
                     <div className="group relative bg-white transition-shadow hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 dark:bg-gray-800">
                         <div className="relative space-y-8 p-8 py-12">
-                            <img src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png" loading="lazy" className="w-12" width="512" height="512" alt="burger illustration" />                                <div className="space-y-2">
+                            <Image src="/feature1.png" loading="lazy" className="w-12" width="512" height="512" alt="burger illustration" />                                <div className="space-y-2">
                                 <div className="space-y-2">
                                     <h3 className="text-2xl font-semibold text-gray-700 transition group-hover:text-primary dark:text-white dark:group-hover:text-primaryLight">ระบบป้องกันที่เเน่นหนา</h3>
                                     <p className="text-gray-600 dark:text-gray-400">มีระบบป้องกันการดาวน์โหลด VDO เเละระบบป้องกันการเจาะระบบ</p>
@@ -42,7 +43,7 @@ const Feature = () => {
                     </div>
                     <div className="group relative bg-white transition-shadow hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 dark:bg-gray-800">
                         <div className="relative space-y-8 p-8 py-12">
-                            <img src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png" loading="lazy" className="w-12" width="512" height="512" alt="burger illustration" />                                <div className="space-y-2">
+                            <Image src="/feature2.png" loading="lazy" className="w-12" width="512" height="512" alt="burger illustration" />                                <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold text-gray-700 transition group-hover:text-primary dark:text-white dark:group-hover:text-primaryLight">ระบบทำด้วยการเขียนโค้ดทั้งหมด</h3>
                                 <p className="text-gray-600 dark:text-gray-400">เราไม่ใช้ wordpress หรือเว็ปสำเร็จรูปในการทำ</p>
                             </div>

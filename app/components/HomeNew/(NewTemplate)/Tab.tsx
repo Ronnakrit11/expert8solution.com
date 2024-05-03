@@ -34,7 +34,7 @@ const Tab = () => {
                                 </div>
                                 <div className='flex items-center gap-6'>
                                     <div className="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
-                                        <img className="m-auto h-8 w-auto" src="https://cdn-icons-png.flaticon.com/512/4727/4727266.png" alt="icon illustration" loading="lazy" width="512" height="512" />
+                                        <Image className='m-auto h-8 w-auto' width={100} height={100} src="/i2.png" alt='' />
                                     </div>
                                     <div className='w-[calc(100%-7.5rem)]'>
                                         <p className='text-lg font-semibold text-gray-800 dark:text-white'>ดีไซน์ทันสมัย </p>
@@ -43,7 +43,7 @@ const Tab = () => {
                                 </div>
                                 <div className='flex items-center gap-6'>
                                     <div className="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
-                                        <img className="m-auto h-8 w-auto" src="https://cdn-icons-png.flaticon.com/512/584/584796.png" alt="icon illustration" loading="lazy" width="512" height="512" />
+                                        <Image className='m-auto h-8 w-auto' width={100} height={100} src="/i1.png" alt='' />
                                     </div>
                                     <div className='w-[calc(100%-7.5rem)]'>
                                         <p className='text-lg font-semibold text-gray-800 dark:text-white'>Responsive</p>
@@ -51,7 +51,7 @@ const Tab = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='mt-4 flex mx-auto'>
+                            <div className='mt-10 flex mx-auto'>
                                 <Image src='/tap/phonee2.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                                 <Image src='/tap/pphone1.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
@@ -70,7 +70,7 @@ const Tab = () => {
                                 </div>
                                 <div className='flex items-center gap-6'>
                                     <div className="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
-                                        <img className="m-auto h-8 w-auto" src="https://cdn-icons-png.flaticon.com/512/4727/4727266.png" alt="icon illustration" loading="lazy" width="512" height="512" />
+                                        <Image className='m-auto h-8 w-auto' width={100} height={100} src="/i2.png" alt='' />
                                     </div>
                                     <div className='w-[calc(100%-7.5rem)]'>
                                         <p className='text-lg font-semibold text-gray-800 dark:text-white'>จัดการหน้าเว็ปไซต์</p>
@@ -79,7 +79,7 @@ const Tab = () => {
                                 </div>
                                 <div className='flex items-center gap-6'>
                                     <div className="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
-                                        <img className="m-auto h-8 w-auto" src="https://cdn-icons-png.flaticon.com/512/584/584796.png" alt="icon illustration" loading="lazy" width="512" height="512" />
+                                        <Image className='m-auto h-8 w-auto' width={100} height={100} src="/i1.png" alt='' />
                                     </div>
                                     <div className='w-[calc(100%-7.5rem)]'>
                                         <p className='text-lg font-semibold text-gray-800 dark:text-white'>จัดการข้อมูล</p>
@@ -87,7 +87,7 @@ const Tab = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='mt-4'>
+                            <div className='mt-10'>
                                 <Image src='/tap/ipadf.png' width={500} height={400} alt='' className='mx-auto w-full object-cover object-top dark:border-transparent' />
                             </div>
                         </div>
@@ -105,7 +105,7 @@ const Tab = () => {
                                 </div>
                                 <div className='flex items-center gap-6'>
                                     <div className="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
-                                        <img className="m-auto h-8 w-auto" src="https://cdn-icons-png.flaticon.com/512/4727/4727266.png" alt="icon illustration" loading="lazy" width="512" height="512" />
+                                        <Image className='m-auto h-8 w-auto' width={100} height={100} src="/i2.png" alt='' />
                                     </div>
                                     <div className='w-[calc(100%-7.5rem)]'>
                                         <p className='text-lg font-semibold text-gray-800 dark:text-white'>Togeter</p>
@@ -114,7 +114,7 @@ const Tab = () => {
                                 </div>
                                 <div className='flex items-center gap-6'>
                                     <div className="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
-                                        <img className="m-auto h-8 w-auto" src="https://cdn-icons-png.flaticon.com/512/584/584796.png" alt="icon illustration" loading="lazy" width="512" height="512" />
+                                        <Image className='m-auto h-8 w-auto' width={100} height={100} src="/i1.png" alt='' />
                                     </div>
                                     <div className='w-[calc(100%-7.5rem)]'>
                                         <p className='text-lg font-semibold text-gray-800 dark:text-white'>Togeter</p>
@@ -122,10 +122,9 @@ const Tab = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='mt-4'>
-                                <img src='/tap/mac.png' className='mx-auto h-80 w-full rounded-t-3xl  object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                            <div className='mt-10'>
+                                <Image src='/tap/mac.png' width={500} height={400} alt='' className='mx-auto w-full object-cover object-top dark:border-transparent' />
                             </div>
-
                         </div>
                     </div>
                     : <></>

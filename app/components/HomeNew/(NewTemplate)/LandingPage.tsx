@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import { FaEnvelope } from "react-icons/fa6";
 
@@ -19,7 +20,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <div className='p-2'>
-                        <img src='/mm2311.webp' className='w-full' />
+                        <Image width={1000} height={1000} alt='' src='/mm2311.webp' className='w-full' />
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaEnvelope } from "react-icons/fa6";
+import Image from 'next/image'
 
 const FooterContact = () => {
     return (
@@ -21,7 +22,7 @@ const FooterContact = () => {
                         </div>
                     </div>
                     <div className='md:w-[42%] lg:w-1/2 '>
-                        <img src='https://www.freeprivacypolicy.com/public/images/illustrations/illustration-contact.png' />
+                        <Image width={1000} height={1000} alt="" src='/illustration-contact.webp' />
                     </div>
                 </div>
             </div>
