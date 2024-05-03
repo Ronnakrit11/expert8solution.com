@@ -45,10 +45,7 @@ const Item: FC<itemProps> = ({ title, to, icon, selected, setSelected }) => {
   return (
     <MenuItem
       active={selected === title}
-      onClick={() => {
-        setSelected(title);
-        localStorage.setItem("selectedItem", title); // Save selected item to localStorage
-      }}
+
       icon={icon}
       className="hover:bg-[#f3f4f6] rounded-l-full"
     >
@@ -62,9 +59,7 @@ const Sidebar = () => {
   const { user } = useSelector((state: any) => state.auth);
   const [logout, setlogout] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [selected, setSelected] = useState(() => {
-    return localStorage.getItem("selectedItem") || "Dashboard";
-  });
+  const [selected, setSelected] = useState("Dashboard");
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   console.log(selected)
