@@ -52,8 +52,8 @@ const Tab = () => {
                                 </div>
                             </div>
                             <div className='mt-4 flex mx-auto'>
-                                <Image src='/tap/phone.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
-                                <Image src='/tap/phones.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <Image src='/tap/phonee2.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <Image src='/tap/pphone1.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
