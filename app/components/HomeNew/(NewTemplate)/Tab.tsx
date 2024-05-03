@@ -53,7 +53,7 @@ const Tab = () => {
                             </div>
                             <div className='mt-10 flex mx-auto'>
                                 <Image src='/tap/phonee2.png' width={250} height={400} alt='การเเสดงผลคอร์สเรียนออนไลน์' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
-                                <Image src='/tap/pphone1.png' width={250} height={400} alt='หน้าเว็ปไซต์คอร์สเรียน' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <Image src='/tap/pphone11.png' width={250} height={400} alt='หน้าเว็ปไซต์คอร์สเรียน' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
