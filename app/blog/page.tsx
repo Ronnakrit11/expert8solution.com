@@ -38,10 +38,10 @@ const Page = (props: Props) => {
                 activeItem={3}
             />
             <Heading
-                title={"Blog - Elearning"}
-                description={"Elearning is a programming community."}
+                title={"บทความความรู้ในวงการคอร์สเรียนออนไลน์ Expert8-Solution"}
+                description={"Blog บทความที่เกี่ยวกข้องกับการทำคอร์สเรียนออนไลน์ การทำเว็ปไซต์คอร์สเรียนออนไลน์ เเละเคล็ดลับการขายคอร์สเรียนออนไลน์ให้ประสบความสำเร็จ"}
                 keywords={
-                    "programming community, coding skills, expert insights, collaboration, growth"
+                    "บทความเกี่ยวกับคอร์สเรียนออนไลน์ ,ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์"
                 }
             />
             <div className="bg-white dark:bg-darkbg pb-10">
@@ -51,13 +51,13 @@ const Page = (props: Props) => {
                             <div className="z-10">
                                 <h1 className="relative text-center text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
 
-                                    <p className='text-5xl sm:text-6xl lg:text-left lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>บทความ</p>
-                                    Expert8Solution
+                                    <h1 className='text-5xl sm:text-6xl lg:text-left lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>บทความ</h1>
+                                    
                                 </h1>
                             </div>
-                            <p className="mx-auto mt-6 text-center text-gray-700 dark:text-gray-400 md:w-2/3 lg:w-1/2">
+                            <h2 className="mx-auto mt-6 text-center text-gray-700 dark:text-gray-400 md:w-2/3 lg:w-1/2">
                                 อ่านบทความทั้งหมดจากเรา Expert8Solution
-                            </p>
+                            </h2>
                         </div>
                     </div>
                     <div className="pt-8 lg:pt-16">

@@ -52,8 +52,8 @@ const Tab = () => {
                                 </div>
                             </div>
                             <div className='mt-10 flex mx-auto'>
-                                <Image src='/tap/phonee2.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
-                                <Image src='/tap/pphone1.png' width={250} height={400} alt='' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <Image src='/tap/phonee2.png' width={250} height={400} alt='การเเสดงผลคอร์สเรียนออนไลน์' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
+                                <Image src='/tap/pphone1.png' width={250} height={400} alt='หน้าเว็ปไซต์คอร์สเรียน' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ const Tab = () => {
                                 </div>
                             </div>
                             <div className='mt-10'>
-                                <Image src='/tap/ipadf.png' width={500} height={400} alt='' className='mx-auto w-full object-cover object-top dark:border-transparent' />
+                                <Image src='/tap/ipadf.png' width={500} height={400} alt='ระบบหลังบ้านจัดการคอร์สเรียนออนไลน์' className='mx-auto w-full object-cover object-top dark:border-transparent' />
                             </div>
                         </div>
                     </div>
