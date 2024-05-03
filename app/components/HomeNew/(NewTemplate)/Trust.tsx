@@ -28,6 +28,10 @@ const Trust = () => {
         }
         ,
         {
+            img: "/cus11.png"
+        }
+        ,
+        {
             img: "/cus10.png"
         }
     ];
