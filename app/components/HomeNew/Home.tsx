@@ -21,6 +21,7 @@ import Review from "./(NewTemplate)/Review";
 import FooterContact from "./(NewTemplate)/FooterContact";
 import Feature from "./(NewTemplate)/Feature";
 import Services from "./(NewTemplate)/Services";
+import Services2 from "./(NewTemplate)/Services2";
 
 function Home({ webInfo }: any) {
     console.log("🚀 ~ file: Home.tsx:24 ~ Home ~ layout:", webInfo)
@@ -54,7 +55,8 @@ function Home({ webInfo }: any) {
             <LandingPage />
             <Trust />
             <Tab />
-            <Services />
+            {/* <Services /> */}
+            <Services2 />
             <LeftImageContent />
             <Feature />
             <GridThreeGadient />
