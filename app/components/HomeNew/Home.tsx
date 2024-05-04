@@ -10,19 +10,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'aos/dist/aos.css';
 
-import Hero from "./Hero";
-import TopCategory from "./TopCategory";
-import PeopleReview from "./PeopleReview";
-import WhyLearnCourse from "./WhyLearnCourse";
-import Courses from "./Course";
-import TrustBy from "./TrustBy";
-import Ebooks from "./Ebooks";
-import FAQ from "../FAQ/FAQ";
 import { useTheme } from "next-themes";
-import Blogs from "./Blogs";
-import OurService from "./OurService";
-import Image from "next/image";
-import CallToAction from "./CallToAction";
+
 import LandingPage from "./(NewTemplate)/LandingPage";
 import Trust from "./(NewTemplate)/Trust";
 import Tab from "./(NewTemplate)/Tab";
@@ -31,6 +20,7 @@ import GridThreeGadient from "./(NewTemplate)/GridThreeGadient";
 import Review from "./(NewTemplate)/Review";
 import FooterContact from "./(NewTemplate)/FooterContact";
 import Feature from "./(NewTemplate)/Feature";
+import Services from "./(NewTemplate)/Services";
 
 function Home({ webInfo }: any) {
     console.log("🚀 ~ file: Home.tsx:24 ~ Home ~ layout:", webInfo)
@@ -52,10 +42,6 @@ function Home({ webInfo }: any) {
 
     return (
         <div>
-
-
-
-
             <Header
                 open={open}
                 setOpen={setOpen}
@@ -63,46 +49,17 @@ function Home({ webInfo }: any) {
                 setRoute={setRoute}
                 route={route}
             />
-            {/*<div className="w-[100%] h-auto md:h-[502px] 1000px:flex items-center dark:bg-[#1846a8] ">
-                <Image
-                    src={'/bannerEX.webp'}
-                    width={9000}
-                    height={600}
-                    alt=''
-                    className="object-cover w-full h-full"
-                />
-             </div>*/}
-
 
             {/* New Theme */}
             <LandingPage />
             <Trust />
             <Tab />
+            <Services />
             <LeftImageContent />
             <Feature />
             <GridThreeGadient />
             <Review />
             <FooterContact />
-
-            {/* <Hero
-                banner={webInfo?.banner || {}}
-                setOpen={setOpen}
-            /> */}
-            {/* <TopCategory
-                categoty={webInfo.category}
-            />
-            */}
-
-            {/*<PeopleReview />*/}
-
-            {/*<Courses />
-            <Ebooks />
-            <Blogs />
-            <PeopleReview />
-
-            <WhyLearnCourse />
-        <FAQ /> */}
-            {/* <TrustBy /> */}
 
             <Footer />
         </div>
