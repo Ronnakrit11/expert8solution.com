@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 const Tab = () => {
@@ -50,6 +51,11 @@ const Tab = () => {
                                         <p className='mt-1 text-gray-600 dark:text-gray-400'>การเเสดงผลที่สวยงามบนทุกอุปกรณ์</p>
                                     </div>
                                 </div>
+                                <div>
+                                    <Link href={"/e-learning"}>
+                                        <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
+                                    </Link>
+                                </div>
                             </div>
                             <div className='mt-10 flex mx-auto'>
                                 <Image src='/tap/phonee2.png' width={250} height={400} alt='การเเสดงผลคอร์สเรียนออนไลน์' className=' h-80 rounded-t-3xl object-cover object-top dark:border-transparent sm:h-[28rem]' />
@@ -86,6 +92,11 @@ const Tab = () => {
                                         <p className='mt-1 text-gray-600 dark:text-gray-400'>สามารถดูยอดขายรวม จัดการนักเรียน เเละเข้าถึงข้อมูลของนักเรียน </p>
                                     </div>
                                 </div>
+                                <div>
+                                    <Link href={"/e-learning"}>
+                                        <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
+                                    </Link>
+                                </div>
                             </div>
                             <div className='mt-10'>
                                 <Image src='/tap/ipadf.png' width={500} height={400} alt='ระบบหลังบ้านจัดการคอร์สเรียนออนไลน์' className='mx-auto w-full object-cover object-top dark:border-transparent' />
@@ -120,6 +131,11 @@ const Tab = () => {
                                         <p className='text-lg font-semibold text-gray-800 dark:text-white'>Togeter</p>
                                         <p className='mt-1 text-gray-600 dark:text-gray-400'>Accusantium nemo perspiciatis delectus atque autem!</p>
                                     </div>
+                                </div>
+                                <div>
+                                    <Link href={"/e-learning"}>
+                                        <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className='mt-10'>
