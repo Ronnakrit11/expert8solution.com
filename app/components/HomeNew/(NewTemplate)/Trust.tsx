@@ -64,6 +64,7 @@ const Trust = () => {
                                     alt=''
                                     width={200}
                                     height={200}
+                                    className='w-[100px] h-[100px]  xl:w-[200px] xl:h-[200px]'
                                 />
                             </Link>
                         </div>
