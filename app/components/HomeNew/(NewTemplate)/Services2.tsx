@@ -42,6 +42,29 @@ const Services2 = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="bg-white dark:bg-gray-800 shadow-sm ring-1 ring-inset ring-gray-200 dark:ring-gray-800 rounded-3xl xl:sticky xl:top-20">
+                        <div className="grid grid-cols-1 items-center -space-y-12 lg:grid-cols-2 lg:space-y-0">
+                            <div className="p-8 sm:p-12 lg:p-16">
+                                <p className="text-sm font-bold uppercase tracking-wide text-blue-600 dark:text-white">Perfomance</p>
+                                <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-4 sm:text-3xl sm:mt-6 lg:text-4xl">ความเร็ว ความเสถียรสูงสุด</h2>
+                                <p className="text-base font-normal text-black dark:text-white mt-4">คะเเนน Perfomance ของระบบทุกด้านเต็ม 100 จากการทดสอบ Lighthourse</p>
+                            </div>
+                            <div>
+                                <img src='https://sitegpt.ai/images/features/feature-1.svg' className='w-full object-cover' />
+                            </div>
+                        </div>
+                    <div className="bg-white dark:bg-gray-800 shadow-sm ring-1 ring-inset ring-gray-200 dark:ring-gray-800 rounded-3xl xl:sticky xl:top-20">
+                        <div className="grid grid-cols-1 items-center -space-y-12 lg:grid-cols-2 lg:space-y-0">
+                            <div className="p-8 sm:p-12 lg:p-16">
+                                <p className="text-sm font-bold uppercase tracking-wide text-blue-600 dark:text-white">Marketing</p>
+                                <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-4 sm:text-3xl sm:mt-6 lg:text-4xl">Seo Friendly</h2>
+                                <p className="text-base font-normal text-black dark:text-white mt-4">โครงสร้างของระบบทำให้ได้คะเเนนในส่วน Seo 100 เต็ม ส่วนนี้จะทำให้เว็บไซต์ของเราเข้าไปติดหน้าเเรกของ Google ใน keywordนั้นได้</p>
+                            </div>
+                            <div>
+                                <img src='https://sitegpt.ai/images/features/feature-1.svg' className='w-full object-cover' />
+                            </div>
+                        </div>
+                    </div>
 
                     <div className="bg-white dark:bg-gray-800 shadow-sm ring-1 ring-inset ring-gray-200 dark:ring-gray-800 rounded-3xl xl:sticky xl:top-20">
                         <div className="grid grid-cols-1 items-center -space-y-12 lg:grid-cols-2 lg:space-y-0">
