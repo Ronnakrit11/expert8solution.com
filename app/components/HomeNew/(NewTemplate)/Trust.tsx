@@ -6,48 +6,49 @@ const Trust = () => {
     const items = [
         {
             img: "/cus1.png",
-            url: 'https://www.facebook.com/'
+            url: 'https://www.aeroplanecenter.com/'
         },
         {
             img: "/cus2.png",
-            url: '/'
+            url: 'https://www.physicsptoeyonline.com/'
 
         },
         {
             img: "/cus3.png",
-            url: ''
+            url: 'https://www.dotknowledgeth.com/'
 
         },
         {
             img: "/cus55.png",
-            url: ''
+            url: 'https://duckyengineer.com/'
 
         },
         {
-            img: "/cus6.png"
+            img: "/cus6.png",
+            url:'https://www.primeschool.online/'
         }
         ,
         {
             img: "/cus8.png",
-            url: '/'
+            url: '/https://successpath-academy.com/'
 
         }
         ,
         {
             img: "/cus9.png",
-            url: ''
+            url: 'https://www.passivecreator.net/'
 
         }
         ,
         {
             img: "/cus11.png",
-            url: '/'
+            url: '/https://whatsskill.com/'
 
         }
         ,
         {
             img: "/cus10.png",
-            url: '/'
+            url: '/https://treelearningx.online/'
 
         }
     ];
