@@ -14,7 +14,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงลูกค้าเป็นหลัก เพียงไม่กี่คลิ๊กนักเรียนสามารถเข้าสู่ระบบเเละจ่ายเงินเข้าเรียนได้ทันที ระบบหลังบ้านใช้งานง่าย</p>
                             </div>
                             <div>
-                                <Image src='/feature1.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/future3.webp' alt='' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
