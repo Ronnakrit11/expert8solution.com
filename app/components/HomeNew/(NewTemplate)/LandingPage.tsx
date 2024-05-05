@@ -20,7 +20,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <div className='p-2'>
-                        <Image width={1000} height={1000} alt='ระบบคอร์สเรียนออนไลน์' src='/mnm.webp' className='w-full' />
+                        <Image width={1000} height={1000} alt='ระบบคอร์สเรียนออนไลน์' src='/mnm1.webp' className='w-full' />
                     </div>
                 </div>
             </div>
