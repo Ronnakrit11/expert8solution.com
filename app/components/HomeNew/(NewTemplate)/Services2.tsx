@@ -63,7 +63,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">โครงสร้างของระบบทำให้ได้คะเเนนในส่วน Seo 100 เต็ม ส่วนนี้จะทำให้เว็บไซต์ของเราเข้าไปติดหน้าเเรกของ Google ใน keywordนั้นได้</p>
                             </div>
                             <div>
-                                <Image src='/feature5.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/features5.webp' alt='' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
