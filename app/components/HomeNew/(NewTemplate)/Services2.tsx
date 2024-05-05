@@ -8,8 +8,8 @@ const Services2 = () => {
                     <div className="grid grid-cols-1 items-center -space-y-12 lg:grid-cols-2 lg:space-y-0">
                         <div className="p-8 sm:p-12 lg:p-16">
                             <p className="text-sm font-bold uppercase tracking-wide text-blue-600 dark:text-white">ความสะดวกสบาย</p>
-                            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-4 sm:text-3xl sm:mt-6 lg:text-4xl">ดีไซน์สวยงาม ทันสมัย ใช้งานง่ายทั้งฝั่งของนักเรียน เเละเจ้าของเว็บไซต์</h2>
-                            <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงลูกค้าเป็นหลัก เพียงไม่กี่คลิ๊กนักเรียนสามารถเข้าสู่ระบบเเละจ่ายเงินเข้าเร่ียนได้ทันที </p>
+                            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-4 sm:text-3xl sm:mt-6 lg:text-4xl">ดีไซน์สวยงาม ทันสมัย ใช้งานง่าย</h2>
+                            <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงลูกค้าเป็นหลัก เพียงไม่กี่คลิ๊กนักเรียนสามารถเข้าสู่ระบบเเละจ่ายเงินเข้าเรียนได้ทันที ระบบหลังบ้านใช้งานง่าย</p>
                         </div>
                         <div>
                             <img src='https://sitegpt.ai/images/features/feature-1.svg' className='w-full object-cover' />
