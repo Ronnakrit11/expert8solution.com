@@ -14,7 +14,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงลูกค้าเป็นหลัก เพียงไม่กี่คลิ๊กนักเรียนสามารถเข้าสู่ระบบเเละจ่ายเงินเข้าเรียนได้ทันที ระบบหลังบ้านใช้งานง่าย</p>
                             </div>
                             <div>
-                                <Image src='/future3.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/feature3.webp' alt='' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">โครงสร้างของระบบทำให้ได้คะเเนนในส่วน Seo 100 เต็ม ส่วนนี้จะทำให้เว็บไซต์ของเราเข้าไปติดหน้าเเรกของ Google ใน keywordนั้นได้</p>
                             </div>
                             <div>
-                                <Image src='/feature1.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/feature5.webp' alt='' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
