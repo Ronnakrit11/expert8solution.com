@@ -42,13 +42,13 @@ const Trust = () => {
         ,
         {
             img: "/cus11.png",
-            url: '/https://whatsskill.com/'
+            url: 'https://whatsskill.com/'
 
         }
         ,
         {
             img: "/cus10.png",
-            url: '/https://treelearningx.online/'
+            url: 'https://treelearningx.online/'
 
         }
     ];
