@@ -14,8 +14,8 @@ const Tab = () => {
         <div className='bg-white dark:bg-[#101726] py-20 px-4'>
             <div className='container mx-auto '>
                 <div>
-                    <h2 className='text-3xl text-center font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl'>ภาพรวมระบบ</h2>
-                    <h3 className='mx-auto text-center mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5'>หน้าเว็ปไซต์สำหรับนักเรียนของคุณ เเละหลังบ้านสำหรับจัดการเว็ปไซต์ของคุณ</h3>
+                    <h2 className='text-3xl text-center font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl'>ภาพรวมระบบเรียนออนไลน์</h2>
+                    <h3 className='mx-auto text-center mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5'>หน้าเว็ปไซต์สำหรับนักเรียนของคุณ เเละหลังบ้านสำหรับจัดการเว็ปไซต์</h3>
                 </div>
                 <div>
                     <div className='relative mx-auto mt-12 grid w-auto grid-cols-3 items-center gap-x-1 overflow-hidden rounded-full border border-gray-200 bg-gray-100 px-[3px] text-gray-600 dark:bg-[#101726] dark:border-gray-700 dark:border-opacity-60 dark:bg-darker dark:text-gray-300 dark:shadow-none sm:w-max'>
