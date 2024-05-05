@@ -30,7 +30,7 @@ const Trust = () => {
         ,
         {
             img: "/cus8.png",
-            url: '/https://successpath-academy.com/'
+            url: 'https://successpath-academy.com/'
 
         }
         ,
