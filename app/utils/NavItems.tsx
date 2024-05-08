@@ -140,7 +140,7 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
                       {
                         item.subMenu.map((subItem, subIndex) => {
                           return <li onClick={() => router.push(subItem.url)} key={`sub-${subIndex}`} className="py-2">
-                            <span className="text-[8px] pr-2 text-black dark:text-white">⚪ </span> {subItem.name}
+                            <span className="text-[8px] pr-2 text-black dark:text-white"></span> {subItem.name}
                             <hr />
                           </li>
                         })
