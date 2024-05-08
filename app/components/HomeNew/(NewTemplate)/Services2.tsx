@@ -14,7 +14,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงลูกค้าเป็นหลัก เพียงไม่กี่คลิ๊กนักเรียนสามารถเข้าสู่ระบบเเละจ่ายเงินเข้าเรียนได้ทันที ระบบหลังบ้านใช้งานง่าย</p>
                             </div>
                             <div>
-                                <Image src='/02.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/02.webp' alt='ใช้งานง่าย' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">ระบบเรียนออนไลน์ของเราสามารถรองรับการชำระเงินทุกช่องทาง บัตรเครดิต บัตรเดบิต ผ่อนชำระ รวมถึง True money wallet</p>
                             </div>
                             <div>
-                                <Image src='/03.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/03.webp' alt='ระบบเรียนออนไลน์รองรับการชำระเงินทุกช่องทาง' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงสิทธิประโยชน์ของลูกค้าเป็นหลัก ด้วยการเพิ่มฟังก์การขายอีบุ๊คเข้าไป</p>
                             </div>
                             <div>
-                                <Image src='/04.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/04.webp' alt='ขายได้ทั้งคอร์สเรีียนเเละอีบุ๊ค' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">ระบบเรียนออนไลน์ของเรารองรับจำนวน User เข้าใช้งานได้ไม่จำกัด ไม่มีอาการเเลค หรือเว็บล่ม</p>
                             </div>
                             <div>
-                                <Image src='/05.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/05.webp' alt='ความเร็ว ประสิทธิภาพสูงสุด' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">โครงสร้างของระบบทำให้ได้คะเเนนในส่วน Seo 100 เต็ม ส่วนนี้จะทำให้เว็บไซต์ของเราเข้าไปติดหน้าเเรกของ Google ใน keywordนั้นได้</p>
                             </div>
                             <div>
-                                <Image src='/01.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/01.webp' alt='รองรับ Seo ' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">ระบบพัฒนาด้วยภาษา next js ซึ่งมีประสิทธิภาพเเละมีการป้องกันที่เเน่นหนา</p>
                             </div>
                             <div>
-                                <Image src='/06.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/06.webp' alt='ปลอดภัยเเละสเถียร' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เนื่องจากทางเราได้ทำเว็บไซต์สำหรับการเรียนออนไลน์เหมือนกัน ทำให้เข้าใจในมุมมองของธุรกิจขายคอร์สออนไลน์ทั้งในส่วนเจ้าของเว็บไซต์เเละส่วนของนักเรียน</p>
                             </div>
                             <div>
-                                <Image src='/07.webp' alt='' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/07.webp' alt='ภาพรวมธุรกิจเรียนออนไลน์' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
