@@ -35,7 +35,7 @@ const Trust = () => {
         }
         ,
         {
-            img: "/cus9.png",
+            img: "/cus91.png",
             url: 'https://www.passivecreator.net/'
 
         }
