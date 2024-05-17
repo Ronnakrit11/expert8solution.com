@@ -3,12 +3,12 @@ import Home from "./components/HomeNew/Home";
 export const metadata = {
   title: "Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร",
   description:
-  "Expert8-Solution บริการทำซอฟเเวร์เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงระบบชำระเงิน ระบบจัดการคอร์สเรียน ",
+  "บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท",
   keywords:
     "สร้างระบบคอร์สเรียนสออนไลน์,ระบบสอนออนไลน์,การตลาดออนไลน์,ระบบเรียนออนไลน์ , ระบบขายคอร์สออนไลน์ เเบบครบวงจร ",
   openGraph: {
     title: "Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร ",
-    description: "Expert8-Solution บริการทำซอฟเเวร์เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงระบบชำระเงิน ระบบจัดการคอร์สเรียน เเละบริการทำ Marketing ครบวงจร",
+    description: "บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท ",
     url: "https://www.expert8-solution.com/",
 
     siteName: "expert8-solution",
@@ -26,7 +26,7 @@ export const metadata = {
     card: "summary",
     title: "Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร",
     description:
-      "Expert8-Solution บริการทำซอฟเเวร์เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงระบบชำระเงิน ระบบจัดการคอร์สเรียน เเละบริการทำ Marketing ครบวงจร",
+      "บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท",
     images: [
       "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709633303/zscax0wvqcqxqzvpmcin.png ",
     ],
