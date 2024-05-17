@@ -10,7 +10,7 @@ const LandingPage = () => {
                     <div className='flex flex-col justify-center'>
                         <div className='flex'>
                             <h1 className='text-center text-3xl font-bold text-blue-900 dark:text-white sm:text-6xl lg:text-left lg:text-5xl'>E-LEARNING &nbsp;</h1>
-                            <h1 className='text-3xl sm:text-3xl lg:text-left lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>SOLUTION</h1>
+                            <h1 className='text-3xl sm:text-3xl lg:text-center lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>SOLUTION</h1>
                         </div>
                         <h2 className='my-6 lg:my-12 text-lg text-gray-600 dark:text-gray-300 sm:text-xl'>บริการทำระบบเรียนออนไลน์ เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท</h2>
                         <div className='relative flex items-center rounded-full border border-primary/20 bg-white dark:bg-[#101726] p-1 px-2 shadow-md focus-within:ring-2 dark:border-white/10 dark:bg-dark dark:text-white md:p-2 lg:pr-3'>
