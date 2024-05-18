@@ -38,10 +38,10 @@ export const navItemsData = [
     name: "FAQ",
     url: "/faq",
   },
-  // {
-  //   name: "Price",
-  //   url: "/pricing"
-  // },
+  {
+    name: "Price",
+    url: "/pricing"
+  },
 
   // {
   //   name: "Contact",
