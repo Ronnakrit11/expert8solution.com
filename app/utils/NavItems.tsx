@@ -10,19 +10,19 @@ export const navItemsData = [
   },
   {
     name: "Services",
-    url: "/",
+    url: "/services",
     subMenu: [
       {
         name: "บริการทำเว็ปไซต์ E-learning",
-        url: "/",
+        url: "/services",
       },
       {
         name: "บริการทำเว็ปไซต์ E-Commerce",
-        url: "/",
+        url: "/services",
       },
       {
         name: "บริการทำ Marketing ครบวงจร",
-        url: "/",
+        url: "/services",
       },
     ]
   },
