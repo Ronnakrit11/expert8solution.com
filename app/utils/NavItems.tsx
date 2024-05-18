@@ -10,7 +10,7 @@ export const navItemsData = [
   },
   {
     name: "Services",
-    url: "/pricing",
+    url: "/",
     subMenu: [
       {
         name: "บริการทำเว็ปไซต์ E-learning",
@@ -83,7 +83,7 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
                   <div>{item.name}</div>
                   <GoChevronDown />
                 </span>
-                <div onMouseLeave={resetActive} className={`flex justify-center absolute z-10 top-[28px] min-w-[143px] transition  ease-out ${active === item.name ? 'visible' : 'hidden'}`}>
+                <div onMouseLeave={resetActive} className={`flex text-black dark:text-white justify-center absolute z-10 top-[28px] min-w-[143px] transition  ease-out ${active === item.name ? 'visible' : 'hidden'}`}>
                   <ListGroup className="w-48">
                     {
                       item.subMenu.map((subItem, subIndex) => {
