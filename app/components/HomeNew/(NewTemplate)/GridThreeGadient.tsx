@@ -23,13 +23,13 @@ const GridThreeGadient = () => {
                                         <h3 className="text-2xl font-semibold text-gray-800 transition dark:text-white">Standard</h3>
                                         <div className='space-y-2'>
                                             <p className='text-5xl font-bold text-blue-600'>฿ 15,900</p>
-                                            <p className='text-xl'>จ่ายครั้งเดียว</p>
+                                            <p className='text-xl text-black dark:text-white'>จ่ายครั้งเดียว</p>
                                         </div>
-                                        <ul className='text-gray-800 dark:text-gray-300 flex flex-col justify-start'>
-                                            <li>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
-                                            <li>ระบบการเรียนออนไลน์</li>
-                                            <li>ระบบหลังบ้าน</li>
-                                            <li>รองรับการเเสดงผลทุกอุปกรณ์</li>
+                                        <ul className='text-gray-800 dark:text-gray-300 flex flex-col'>
+                                            <li className='border-t border-b py-4'>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
+                                            <li className='border-b py-4'>ระบบการเรียนออนไลน์</li>
+                                            <li className='border-b py-4'>ระบบหลังบ้าน</li>
+                                            <li className='border-b py-4'>รองรับการเเสดงผลทุกอุปกรณ์</li>
                                         </ul>
                                         <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
@@ -49,14 +49,14 @@ const GridThreeGadient = () => {
                                             <p className='text-xl text-white'>จ่ายครั้งเดียว</p>
                                         </div>
                                         <ul className='text-white dark:text-gray-300 flex flex-col justify-start'>
-                                            <li>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
-                                            <li>ระบบการเรียนออนไลน์</li>
-                                            <li>ระบบหลังบ้าน</li>
-                                            <li>รองรับการเเสดงผลทุกอุปกรณ์</li>
-                                            <li>ทำกราฟฟิก</li>
-                                            <li >ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
-                                            <li >ตัดต่อวีดีโอให้ 1 คอร์ส</li>
-                                            <li >3 Months Free Support</li>
+                                            <li className='border-t border-b py-4'>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
+                                            <li className='border-b py-4'>ระบบการเรียนออนไลน์</li>
+                                            <li className='border-b py-4'>ระบบหลังบ้าน</li>
+                                            <li className='border-b py-4'>รองรับการเเสดงผลทุกอุปกรณ์</li>
+                                            <li className='border-b py-4'>ทำกราฟฟิก</li>
+                                            <li className='border-b py-4'>ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
+                                            <li className='border-b py-4'>ตัดต่อวีดีโอให้ 1 คอร์ส</li>
+                                            <li className='border-b py-4'>3 Months Free Support</li>
                                         </ul>
                                         <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
@@ -73,17 +73,17 @@ const GridThreeGadient = () => {
                                         <h3 className="text-2xl font-semibold text-gray-800 transition dark:text-white">Ultimate</h3>
                                         <div className='space-y-2'>
                                             <p className='text-5xl font-bold text-blue-600'>฿ 36,900</p>
-                                            <p className='text-xl'>จ่ายครั้งเดียว</p>
+                                            <p className='text-xl text-black dark:text-white'>จ่ายครั้งเดียว</p>
                                         </div>
                                         <ul className='text-gray-800 dark:text-gray-300 flex flex-col justify-start'>
-                                            <li><p>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</p></li>
-                                            <li>ระบบการเรียนออนไลน์</li>
-                                            <li>ระบบหลังบ้าน</li>
-                                            <li>รองรับการเเสดงผลทุกอุปกรณ์</li>
-                                            <li>ทำกราฟฟิก</li>
-                                            <li >ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
-                                            <li >ตัดต่อวีดีโอให้ 3 คอร์ส</li>
-                                            <li >12 Months Free Support</li>
+                                            <li className='border-t border-b py-4'>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
+                                            <li className='border-b py-4'>ระบบการเรียนออนไลน์</li>
+                                            <li className='border-b py-4'>ระบบหลังบ้าน</li>
+                                            <li className='border-b py-4'>รองรับการเเสดงผลทุกอุปกรณ์</li>
+                                            <li className='border-b py-4'>ทำกราฟฟิก</li>
+                                            <li className='border-b py-4' >ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
+                                            <li className='border-b py-4' >ตัดต่อวีดีโอให้ 3 คอร์ส</li>
+                                            <li className='border-b py-4'>12 Months Free Support</li>
                                         </ul>
                                         <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
