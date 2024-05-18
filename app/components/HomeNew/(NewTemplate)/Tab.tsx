@@ -139,7 +139,7 @@ const Tab = () => {
                                 </div>
                             </div>
                             <div className='mt-10'>
-                                <Image src='/tap/mac.png' width={500} height={400} alt='' className='mx-auto w-full object-cover object-top dark:border-transparent' />
+                                <Image src='/tap/macr.webp' width={500} height={400} alt='' className='mx-auto w-full object-cover object-top dark:border-transparent' />
                             </div>
                         </div>
                     </div>
