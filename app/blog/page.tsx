@@ -65,7 +65,7 @@ const Page = (props: Props) => {
                         </div>
                     </div>
                     <div className="pt-8 lg:pt-16">
-                        <div className="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
+                        <div >
                             <div className="flex flex-wrap lg:flex-nowrap">
                                 <div className="mb-8 w-full sm:py-4 lg:w-1/4 lg:py-12">
                                     <div className="flex flex-wrap justify-center gap-6 p-4 sm:justify-between sm:px-12 lg:block lg:space-y-6 lg:px-0">
