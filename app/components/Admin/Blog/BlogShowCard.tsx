@@ -12,7 +12,7 @@ type Props = {
     isProfile?: boolean;
 };
 
-const BlogCardNew: FC<Props> = ({ item, isProfile }) => {
+const BlogShowCard: FC<Props> = ({ item, isProfile }) => {
     const router = useRouter()
     const linkUrl = `/blog/${item.slug}`
     dayjs.locale("th");
@@ -20,13 +20,13 @@ const BlogCardNew: FC<Props> = ({ item, isProfile }) => {
         e.preventDefault()
         router.push(linkUrl)
     }
-    // console.log(item)
+    console.log(item)
     return (
         <>
-            <a onClick={handleClick} className="block cursor-pointer rounded-2xl px-4 py-6 sm:border bg-[#F1F5F9] dark:bg-darkbg dark:sm:border-gray-800 sm:dark:bg-gray-800/50">
+            <a onClick={handleClick} className="block cursor-pointer rounded-3xl px-4 py-6 sm:border bg-[#F1F5F9] dark:bg-darkbg dark:sm:border-gray-800 sm:dark:bg-gray-800/50">
                 <img className="rounded-3xl" src={item.thumbnail.url} alt="blog cover" width="1556px" height="778px" />
                 <div className="mt-8">
-                    <h2 className="text-xl font-bold text-gray-800 dark:text-white md:text-xl">{item.title}</h2>
+                    <h2 className="text-xl font-bold text-gray-800 dark:text-white md:text-3xl">{item.title}</h2>
                     <p className="text-black dark:text-white">{dayjs(item.createdAt).format("DD MMMM YYYY")}</p>
                     <p className="mt-4 text-gray-700 dark:text-gray-300">{add3Dots(item.description, 100)}</p>
                     {/*<div className='flex items-center gap-3 mt-8'>
@@ -56,4 +56,4 @@ function add3Dots(string: string, limit: number) {
 }
 
 
-export default BlogCardNew;
+export default BlogShowCard;

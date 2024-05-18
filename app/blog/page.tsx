@@ -13,6 +13,7 @@ import BlogCard from "../components/Admin/Blog/BlogCard";
 import { useGetAllBlogQuery } from "@/redux/features/blog/blogsApi";
 import { FaEnvelope } from "react-icons/fa6";
 import BlogCardNew from "../components/Admin/Blog/BlogCardNew";
+import BlogShowCard from "../components/Admin/Blog/BlogShowCard";
 
 type Props = {};
 
@@ -23,11 +24,15 @@ const Page = (props: Props) => {
     const [route, setRoute] = useState("Login");
     const [open, setOpen] = useState(false);
     const [courses, setcourses] = useState(data?.result || []);
-
+    const [course2 ,setCourse2] = useState([])
+    
     useEffect(() => {
         setcourses(data?.result || []);
+        const gridtwoCourse = courses.slice(1)
+        setCourse2(gridtwoCourse)
     }, [data]);
-    console.log(courses)
+    console.log(course2)
+
     return (
         <div>
             <Header
@@ -51,8 +56,7 @@ const Page = (props: Props) => {
                             <div className="z-10">
                                 <h1 className="relative text-center text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
 
-                                    <h1 className='text-5xl sm:text-6xl lg:text-left lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>บทความ</h1>
-                                    
+                                    <span className='text-5xl sm:text-6xl lg:text-left lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>บทความ</span>
                                 </h1>
                             </div>
                             <h2 className="mx-auto mt-6 text-center text-gray-700 dark:text-gray-400 md:w-2/3 lg:w-1/2">
@@ -80,7 +84,7 @@ const Page = (props: Props) => {
                                     </div>
                                 </div>
                                 <div className="lg:w-3/4">
-                                    {courses && courses.map((item, index) => (
+                                    {courses && courses.map((item: any, index: number) => (
                                         index === courses.length - 1 && <BlogCardNew item={item} key={index} />
                                     ))}
                                 </div>
@@ -100,7 +104,10 @@ const Page = (props: Props) => {
                                             courses.slice(0).reverse().map((item: any, index: number) => (
                                                 <BlogCardNew item={item} key={index} />
                                             ))}
-
+                                        {/* {course2 &&
+                                            course2.map((item: any, index: number) => (
+                                                <BlogCardNew item={item} key={index} />
+                                            ))} */}
                                     </div>
                                 </div>
                             </div>
