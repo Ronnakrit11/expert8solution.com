@@ -52,7 +52,7 @@ const Tab = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <Link href={"/e-learning"}>
+                                    <Link href={"/elearning"}>
                                         <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
                                     </Link>
                                 </div>
@@ -93,7 +93,7 @@ const Tab = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <Link href={"/e-learning"}>
+                                    <Link href={"/elearning"}>
                                         <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
                                     </Link>
                                 </div>
@@ -133,7 +133,7 @@ const Tab = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <Link href={"/e-learning"}>
+                                    <Link href={"/elearning"}>
                                         <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
                                     </Link>
                                 </div>
