@@ -14,7 +14,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงลูกค้าเป็นหลัก เพียงไม่กี่คลิ๊กนักเรียนสามารถเข้าสู่ระบบเเละจ่ายเงินเข้าเรียนได้ทันที ระบบหลังบ้านใช้งานง่าย</p>
                             </div>
                             <div>
-                                <Image src='/uxui1.webp' alt='ใช้งานง่าย' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/02.webp' alt='ใช้งานง่าย' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">ระบบเรียนออนไลน์ของเราสามารถรองรับการชำระเงินทุกช่องทาง บัตรเครดิต บัตรเดบิต ผ่อนชำระ รวมถึง True money wallet</p>
                             </div>
                             <div>
-                                <Image src='/03033.webp' alt='ระบบเรียนออนไลน์รองรับการชำระเงินทุกช่องทาง' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/03.webp' alt='ระบบเรียนออนไลน์รองรับการชำระเงินทุกช่องทาง' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงสิทธิประโยชน์ของลูกค้าเป็นหลัก ด้วยการเพิ่มฟังก์การขายอีบุ๊คเข้าไป</p>
                             </div>
                             <div>
-                                <Image src='/ebook1.webp' alt='ขายได้ทั้งคอร์สเรีียนเเละอีบุ๊ค' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/04.webp' alt='ขายได้ทั้งคอร์สเรีียนเเละอีบุ๊ค' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
