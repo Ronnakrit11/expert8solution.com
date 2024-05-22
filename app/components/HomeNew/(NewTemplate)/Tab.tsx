@@ -30,7 +30,7 @@ const Tab = () => {
                         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                             <div className='mt-12 space-y-6 '>
                                 <div>
-                                    <h3 className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>หน้าเว็ปไซต์สำหรับนักเรียน</h3>
+                                    <h2 className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>หน้าเว็ปไซต์สำหรับนักเรียน</h2>
                                     <h4 className='mt-8 text-gray-600 dark:text-gray-300'>ระบบพัฒนาด้วยการเขียนโค้ดทั้งหมด ไม่ใช้ wordpress เเละไม่ใช้เว็ปไซต์สำเร็จรูป</h4>
                                 </div>
                                 <div className='flex items-center gap-6'>
@@ -71,7 +71,7 @@ const Tab = () => {
                         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                             <div className='mt-12 space-y-6'>
                                 <div>
-                                    <h3 className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>ระบบหลังบ้านสำหรับคุณ</h3>
+                                    <h2 className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>ระบบหลังบ้านสำหรับคุณ</h2>
                                     <h4 className='mt-8 text-gray-600 dark:text-gray-300'>ระบบหลังบ้านสามารถจัดการได้อย่างง่ายเเละครบครัน</h4>
                                 </div>
                                 <div className='flex items-center gap-6'>
@@ -111,7 +111,7 @@ const Tab = () => {
                         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                             <div className='mt-12 space-y-6'>
                                 <div>
-                                    <p className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>จัดการ Commission ครู</p>
+                                    <h2 className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>จัดการ Commission ครู</h2>
                                     <p className='mt-8 text-gray-600 dark:text-gray-300'>จัดการส่วนเเบ่งค่า Commission ครูทั้งหมดได้อย่างง่ายดาย</p>
                                 </div>
                                 <div className='flex items-center gap-6'>
