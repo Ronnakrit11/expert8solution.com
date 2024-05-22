@@ -5,6 +5,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Banner from "./Banner";
 import Working from "./Working";
+import Solution from "./Solution";
 
 type Props = {};
 
@@ -31,6 +32,7 @@ const Page = (props: Props) => {
       />
       <Banner />
       <Working />
+      <Solution />
       <Footer />
     </div>
   );
