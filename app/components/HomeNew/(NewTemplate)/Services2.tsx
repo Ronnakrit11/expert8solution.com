@@ -47,7 +47,7 @@ const Services2 = () => {
                         <div className="grid grid-cols-1 items-center -space-y-12 lg:grid-cols-2 lg:space-y-0">
                             <div className="p-8 sm:p-12 lg:p-16">
                                 <p className="text-sm font-bold uppercase tracking-wide text-blue-600 dark:text-white">Perfomance</p>
-                                <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-4 sm:text-3xl sm:mt-6 lg:text-4xl">ความเร็ว ความเสถียรสูงสุด</h2>
+                                <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-4 sm:text-3xl sm:mt-6 lg:text-4xl">ความเร็วเเละความเสถียรสูงสุด</h2>
                                 <p className="text-base font-normal text-black dark:text-white mt-4">ระบบเรียนออนไลน์ของเรารองรับจำนวน User เข้าใช้งานได้ไม่จำกัด ไม่มีอาการเเลค หรือเว็บล่ม</p>
                             </div>
                             <div>
