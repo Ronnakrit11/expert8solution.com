@@ -26,7 +26,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">ระบบเรียนออนไลน์ของเราสามารถรองรับการชำระเงินทุกช่องทาง บัตรเครดิต บัตรเดบิต ผ่อนชำระ รวมถึง True money wallet</p>
                             </div>
                             <div>
-                                <Image src='/03.webp' alt='ระบบเรียนออนไลน์รองรับการชำระเงินทุกช่องทาง' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/paymentreal.webp' alt='ระบบเรียนออนไลน์รองรับการชำระเงินทุกช่องทาง' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
