@@ -39,7 +39,7 @@ const Services2 = () => {
                                 <p className="text-base font-normal text-black dark:text-white mt-4">เราคำนึงถึงสิทธิประโยชน์ของลูกค้าเป็นหลัก ด้วยการเพิ่มฟังก์การขายอีบุ๊คเข้าไป</p>
                             </div>
                             <div>
-                                <Image src='/courseebook.webp' alt='ขายได้ทั้งคอร์สเรีียนเเละอีบุ๊ค' width={500} height={500} className='w-full object-cover' />
+                                <Image src='/courseebook1.webp' alt='ขายได้ทั้งคอร์สเรีียนเเละอีบุ๊ค' width={500} height={500} className='w-full object-cover' />
                             </div>
                         </div>
                     </div>
