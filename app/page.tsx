@@ -14,7 +14,7 @@ export const metadata = {
     siteName: "expert8-solution",
     images: [
       {
-        url: "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709633303/zscax0wvqcqxqzvpmcin.png",
+        url: "https://res.cloudinary.com/dtmtluhfw/image/upload/v1716983686/qeew54xsvcpbcjrdhusb.png",
         width: 800,
         height: 600,
       },
@@ -28,7 +28,7 @@ export const metadata = {
     description:
       "บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท",
     images: [
-      "https://res.cloudinary.com/dtmtluhfw/image/upload/v1709633303/zscax0wvqcqxqzvpmcin.png ",
+      "https://res.cloudinary.com/dtmtluhfw/image/upload/v1716983686/qeew54xsvcpbcjrdhusb.png ",
     ],
   },
 };
