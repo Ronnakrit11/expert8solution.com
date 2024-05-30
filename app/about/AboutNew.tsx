@@ -10,7 +10,7 @@ const AboutNew = () => {
                         <div className='bg-secondary px-4 py-2 rounded-full'>
                             <p className='text-white text-[16px]'>About Us</p>
                         </div>
-                        <p className='text-[48px] text-center text-header dark:text-white'>บริษัท Expert8Solution จำกัด</p>
+                        <p className='text-[48px] text-center text-header dark:text-white'>บริษัทเอ็กซ์เพิร์ท เอท โซลูชั่น จำกัด</p>
                         <p className='text-lolem text-center'>วัตถุประสงค์ของเราให้บริการในการพัฒนาโปรแกรมคอมพิวเตอร์และแอพพลิเคชั่น
                             ทั้งในส่วนของซอฟต์แวร์และฮาร์ดแวร์<br /> โดยเน้นไปที่การเขียนโปรแกรมเป็นหลัก</p>
                     </div>
