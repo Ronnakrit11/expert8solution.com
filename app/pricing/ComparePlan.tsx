@@ -202,13 +202,15 @@ const ComparePlan = () => {
                                                 <h3 className="text-2xl font-semibold text-gray-800 transition dark:text-white">Standard</h3>
                                                 <div className='space-y-2'>
                                                     <p className='text-5xl font-bold text-blue-600'>฿ 15,900</p>
-                                                    <p className='text-xl text-black dark:text-white'>จ่ายครั้งเดียว</p>
+                                                    <p className='text-xl text-black dark:text-white'>ปีเเรก</p>
                                                 </div>
                                                 <ul className='text-gray-800 dark:text-gray-300 flex flex-col'>
-                                                    <li className='border-t border-b py-4 dark:border-gray-700'>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
+                                                    <li className='border-t border-b py-4 dark:border-gray-700'>ฟรีโดเมน , SSL </li>
                                                     <li className='border-b py-4 dark:border-gray-700'>ระบบการเรียนออนไลน์</li>
                                                     <li className='border-b py-4 dark:border-gray-700'>ระบบหลังบ้าน</li>
                                                     <li className='border-b py-4 dark:border-gray-700'>รองรับการเเสดงผลทุกอุปกรณ์</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'> Free 10GB Video Hosting</li>
+
                                                 </ul>
                                                 <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
@@ -224,18 +226,29 @@ const ComparePlan = () => {
                                             <div className='space-y-6'>
                                                 <h3 className="text-2xl font-semibold text-white transition dark:text-white">Pro</h3>
                                                 <div className='space-y-2'>
-                                                    <p className='text-5xl font-bold text-white'>฿ 27,900</p>
-                                                    <p className='text-xl text-white'>จ่ายครั้งเดียว</p>
+                                                    <p className='text-5xl font-bold text-white'>฿ 32,900</p>
+                                                    <p className='text-xl text-white'>ปีเเรก</p>
                                                 </div>
                                                 <ul className='text-white dark:text-gray-300  flex flex-col justify-start'>
-                                                    <li className='border-t border-b border-gray-700 py-4'>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
+                                                    <li className='border-t border-b border-gray-700 py-4'>ฟรีโดเมน , SSL </li>
                                                     <li className='border-b py-4 border-gray-700'>ระบบการเรียนออนไลน์</li>
                                                     <li className='border-b py-4 border-gray-700'>ระบบหลังบ้าน</li>
+                                                    <li className='border-b py-4 border-gray-700'>ระบบบทความ</li>
+
                                                     <li className='border-b py-4 border-gray-700'>รองรับการเเสดงผลทุกอุปกรณ์</li>
-                                                    <li className='border-b py-4 border-gray-700'>ทำกราฟฟิก</li>
+                                                    <li className='border-b py-4 border-gray-700'>ระบบจ่ายเงินด้วยบัตรเครดิต เดบิต เเละผ่อนชำระ</li>
                                                     <li className='border-b py-4 border-gray-700'>ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
-                                                    <li className='border-b py-4 border-gray-700'>ตัดต่อวีดีโอให้ 1 คอร์ส</li>
-                                                    <li className='border-b py-4 border-gray-700'>3 Months Free Support</li>
+                                                    <li className='border-b py-4 border-gray-700'>ติดตั้ง Google Analytic</li>
+                                                    <li className='border-b py-4 border-gray-700'>ติดตั้ง Google Seach console</li>
+                                                    <li className='border-b py-4 border-gray-700'>SEO 1 Keywords</li>
+                                                    <li className='border-b py-4 border-gray-700'>ติดตั้ง Facebook Pixel</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'> Free 80GB Video Hosting</li>
+
+
+
+
+
+                                             
                                                 </ul>
                                                 <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
@@ -251,18 +264,37 @@ const ComparePlan = () => {
                                             <div className='space-y-6'>
                                                 <h3 className="text-2xl font-semibold text-gray-800 transition dark:text-white">Ultimate</h3>
                                                 <div className='space-y-2'>
-                                                    <p className='text-5xl font-bold text-blue-600'>฿ 36,900</p>
-                                                    <p className='text-xl text-black dark:text-white'>จ่ายครั้งเดียว</p>
+                                                    <p className='text-5xl font-bold text-blue-600'>฿ 59,900</p>
+                                                    <p className='text-xl text-black dark:text-white'>ปีเเรก</p>
                                                 </div>
                                                 <ul className='text-gray-800 dark:text-gray-300 flex flex-col justify-start'>
-                                                    <li className='border-t border-b py-4 dark:border-gray-700'>ฟรีโดเมน , SSL ระบบป้องกันการเจาะเว็ปไซต์</li>
+                                                    <li className='border-t border-b py-4 dark:border-gray-700'>ฟรีโดเมน , SSL </li>
+                                                    <li className='border-b py-4 dark:border-gray-700'>Design ใหม่ทุกจุด Custom ได้ทั้งหมด</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'>ระบบติวเตอร์ เเละคอมมิชชั่น</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'>ระบบแบบทดสอบ Pre-test/Post-test</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'>ระบบ Report</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'>ระบบขาย E-Book</li>
+                                                    <li className='border-b py-4 border-gray-700'>ระบบจ่ายเงินด้วยบัตรเครดิต เดบิต เเละผ่อนชำระ</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'>รองรับนักเรียนไม่จำกัด ระบบไม่ช้าไม่ล่ม</li>
+
+
                                                     <li className='border-b py-4 dark:border-gray-700'>ระบบการเรียนออนไลน์</li>
                                                     <li className='border-b py-4 dark:border-gray-700'>ระบบหลังบ้าน</li>
+                                                    <li className='border-b py-4 border-gray-700'>ระบบบทความ</li>
+
                                                     <li className='border-b py-4 dark:border-gray-700'>รองรับการเเสดงผลทุกอุปกรณ์</li>
                                                     <li className='border-b py-4 dark:border-gray-700'>ทำกราฟฟิก</li>
                                                     <li className='border-b py-4 dark:border-gray-700' >ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง</li>
-                                                    <li className='border-b py-4 dark:border-gray-700' >ตัดต่อวีดีโอให้ 3 คอร์ส</li>
-                                                    <li className='border-b py-4 dark:border-gray-700'>12 Months Free Support</li>
+                                                    <li className='border-b py-4 border-gray-700'>ติดตั้ง Google Analytic</li>
+                                                    <li className='border-b py-4 border-gray-700'>ติดตั้ง Google Seach console</li>
+                                                    <li className='border-b py-4 border-gray-700'>SEO 3 Keywords</li>
+                                                    <li className='border-b py-4 border-gray-700'>ติดตั้ง Facebook Pixel</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'> Free 500GB Video Hosting</li>
+
+
+
+
+                                                    
                                                 </ul>
                                                 <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
