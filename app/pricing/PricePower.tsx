@@ -27,7 +27,7 @@ const PricePower = () => {
                         โปรโมชั่นสุดพิเศษ
                     </div>
                     <p className="mt-6 text-gray-700 dark:text-gray-300">
-                        เพื่อคุณลูกค้าแพ็กเกจ Ultimate Package ลดราคาสุดพิเศษ
+                        เพื่อคุณลูกค้าแพ็กเกจ Life-time ลดราคาสุดพิเศษ
                     </p>
                 </div>
 
@@ -42,7 +42,7 @@ const PricePower = () => {
                                         <img src="https://tailus.io/sources/blocks/comparator/preview/images/team.webp" className="m-auto h-8 w-auto" alt="organization icon" />
                                     </div>
                                     <div>
-                                        <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">Ultimate Package</h2>
+                                        <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">Lifetime Package</h2>
                                         <p className="mt-1 text-gray-600 dark:text-gray-400">Sale for you</p>
                                     </div>
                                 </div>
@@ -58,15 +58,15 @@ const PricePower = () => {
                                 <ul role="list" className="m-auto w-max space-y-4 py-6 text-gray-600 dark:text-gray-300">
                                     <li className="space-x-2">
                                         <span className="font-semibold text-gray-500">✓</span>
-                                        <span>ดูเเลเเละเทรนการยิงโฆษณา</span>
+                                        <span></span>
                                     </li>
                                     <li className="space-x-2">
                                         <span className="font-semibold text-gray-500">✓</span>
-                                        <span>ตัดต่อวีดีโอ 3 คอร์ส</span>
+                                        <span></span>
                                     </li>
                                     <li className="space-x-2">
                                         <span className="font-semibold text-gray-500">✓</span>
-                                        <span>Free Support 12 เดือน</span>
+                                        <span></span>
                                     </li>
                                 </ul>
                                 <p className="mt-6 flex items-center justify-center space-x-4 text-center text-lg text-gray-600 dark:text-gray-300">
@@ -94,39 +94,39 @@ const PricePower = () => {
                                     </div>
                                     <div>
                                         <h2 className="text-2xl font-semibold text-white dark:text-gray-800">โปรโมชั่นสุดพิเศษ</h2>
-                                        <p className="mt-1 text-gray-400 dark:text-gray-600">สำหรับ Ultimate Package</p>
+                                        <p className="mt-1 text-gray-400 dark:text-gray-600">สำหรับ Lifetime Package</p>
                                     </div>
                                 </div>
                                 <p className="my-8 text-white dark:text-gray-700">
-                                    Voluptatum iure rerum qui Voluptates dignissimos quibusdam reiciendis soluta tempore illum possimus esse.
+                                    สำหรับลูกค้าเเพคเกจ Lifetime
                                 </p>
                                 <div className="mb-8 grid grid-cols-2 rounded-3xl border border-gray-700 text-white dark:border-gray-200 dark:text-gray-600 [&>*]:border-gray-700 [&>*]:p-4 [&>*]:dark:border-gray-200">
                                     <div className="flex justify-center gap-2 border-b">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 opacity-60">
                                             <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"></path>
                                         </svg>
-                                        Shine
+                                        
                                     </div>
                                     <div className="flex justify-center gap-2 border-b border-l">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 opacity-60">
                                             <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clip-rule="evenodd"></path>
                                         </svg>
-                                        Feature
+                                        
                                     </div>
                                     <div className="flex justify-center gap-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 opacity-60">
                                             <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"></path>
                                         </svg>
-                                        Shine
+                                        
                                     </div>
                                     <div className="flex justify-center gap-2 border-l">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 opacity-60">
                                             <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clip-rule="evenodd"></path>
                                         </svg>
-                                        Feature
+                                        
                                     </div>
                                 </div>
-                                <a href="./contact.html" className="block rounded-2xl border border-gray-700 bg-gray-700/50 p-6 text-center dark:border-primary/20 dark:bg-primary/5 md:-mx-6 md:-mb-6 lg:-mx-12 lg:-mb-12">
+                                <a href="https://lin.ee/FQNO0Wv" className="block rounded-2xl border border-gray-700 bg-gray-700/50 p-6 text-center dark:border-primary/20 dark:bg-primary/5 md:-mx-6 md:-mb-6 lg:-mx-12 lg:-mb-12">
                                     <span className="text-xl font-semibold text-blue-500 dark:text-primary">Contact sales</span>
                                 </a>
                             </div>
