@@ -12,10 +12,7 @@ export const navItemsData = [
     name: "Services",
     url: "/services",
     subMenu: [
-      {
-        name: "บริการทำเว็ปไซต์ E-learning",
-        url: "/elearning",
-      },
+    
       {
         name: "บริการทำเว็ปไซต์ E-Commerce",
         url: "/services",
