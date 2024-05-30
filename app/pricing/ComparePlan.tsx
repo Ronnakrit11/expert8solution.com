@@ -192,7 +192,7 @@ const ComparePlan = () => {
                             <div className="relative mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                                 <div className="text-center">
                                     <p className='text-3xl font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl '>Pricing Plan</p>
-                                    <p className='mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5'>ทุก package ชำระค่าบริการเพียงครั้งเดียว ไม่มีค่าใช้จ่ายเพิ่มเติม</p>
+                                    <p className='mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5'>ทุก packageรองรับจำนวน Traffic ไม่จำกัด</p>
                                 </div>
                                 <div className='mt-16 grid gap-8 sm:mx-auto sm:w-2/3 md:w-full md:grid-cols-2 lg:grid-cols-3'>
                                     <div className='rounded-3xl border border-gray-100 bg-white p-8 py-12 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none sm:p-12'>
