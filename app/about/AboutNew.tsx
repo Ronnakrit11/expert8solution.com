@@ -66,7 +66,7 @@ const AboutNew = () => {
                                         Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg , Suzuki
                                     </h3>
                                     <p className="mt-2 text-gray-600 dark:text-gray-400">
-                                        Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia
+                                       
                                     </p>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@ const AboutNew = () => {
                                         Lead Marketting & Ads Optimize KPAuto Groups ซึ่งทำให้ขึ้นเป็นยอดขายอันดับ 1 ของ MG Dealer 2 ปีซ้อน
                                     </h3>
                                     <p className="mt-2 text-gray-600 dark:text-gray-400">
-                                        Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia
+                                      
                                     </p>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ const AboutNew = () => {
                                         Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg , Suzuki
                                     </h3>
                                     <p className="mt-2 text-gray-600 dark:text-gray-400">
-                                        Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia
+                                        
                                     </p>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ const AboutNew = () => {
                                         Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg , Suzuki
                                     </h3>
                                     <p className="mt-2 text-gray-600 dark:text-gray-400">
-                                        Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia
+                                        
                                     </p>
                                 </div>
                             </div>
