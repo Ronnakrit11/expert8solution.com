@@ -110,7 +110,7 @@ const GridThreeGadient = () => {
                                                     <li className='border-b py-4 border-gray-700'>ติดตั้ง Google Seach console</li>
                                                     <li className='border-b py-4 border-gray-700'>SEO 3 Keywords</li>
                                                     <li className='border-b py-4 border-gray-700'>ติดตั้ง Facebook Pixel</li>
-                                                    <li className='border-b py-4 dark:border-gray-700'> Free 500GB Video Hosting</li>
+                                                    <li className='border-b py-4 dark:border-gray-700'> Free 200GB Video Hosting</li>
 
 
 
