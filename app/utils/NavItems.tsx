@@ -7,22 +7,23 @@ export const navItemsData = [
   {
     name: "Home",
     url: "/",
+    subMenu:[]
   },
-  {
-    name: "Services",
-    url: "/services",
-    subMenu: [
+  // {
+  //   name: "Services",
+  //   url: "/services",
+  //   subMenu: [
     
-      {
-        name: "บริการทำเว็ปไซต์ E-Commerce",
-        url: "/services",
-      },
-      {
-        name: "บริการทำ Marketing ครบวงจร",
-        url: "/services",
-      },
-    ]
-  },
+  //     {
+  //       name: "บริการทำเว็ปไซต์ E-Commerce",
+  //       url: "/services",
+  //     },
+  //     {
+  //       name: "บริการทำ Marketing ครบวงจร",
+  //       url: "/services",
+  //     },
+  //   ]
+  // },
   {
     name: "Blog",
     url: "/blog",
