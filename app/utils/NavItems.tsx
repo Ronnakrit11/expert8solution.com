@@ -8,7 +8,7 @@ export const navItemsData = [
     name: "Home",
     url: "/",
   },
-  {
+   {/*{
     name: "Services",
     url: "/services",
     subMenu: [
@@ -22,7 +22,7 @@ export const navItemsData = [
         url: "/services",
       },
     ]
-  },
+  }*/},
   {
     name: "Blog",
     url: "/blog",
