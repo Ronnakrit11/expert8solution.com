@@ -7,7 +7,7 @@ import GridThreeGadient from '../components/HomeNew/(NewTemplate)/GridThreeGadie
 const Pricing = () => {
 
     return (
-        <div className='container mx-auto pt-32'>
+        <div className='container mx-auto pt-10'>
              <GridThreeGadient/>
             <PricePower />
            

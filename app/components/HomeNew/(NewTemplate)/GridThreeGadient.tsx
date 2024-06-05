@@ -5,7 +5,7 @@ const GridThreeGadient = () => {
     return (
         <div className='bg-white dark:bg-[#101726]'>
             <div className='container mx-auto'>
-                <div className='relative py-32'>
+                <div className='relative py-20'>
                     <div aria-hidden="true" className="absolute inset-0 top-60 grid grid-cols-2 -space-x-52 opacity-50 dark:opacity-30">
                         <div className="h-60 bg-gradient-to-br from-purple-600 to-purple-400 blur-[106px] dark:from-blue-700"></div>
                         <div className="h-40 bg-gradient-to-r from-cyan-400 to-sky-300 blur-[106px] dark:to-indigo-600"></div>
