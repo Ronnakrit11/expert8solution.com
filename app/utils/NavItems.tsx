@@ -24,6 +24,7 @@ export const navItemsData = [
   //     },
   //   ]
   // },
+  
   {
     name: "Blog",
     url: "/blog",
