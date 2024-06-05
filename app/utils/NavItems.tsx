@@ -7,7 +7,6 @@ export const navItemsData = [
   {
     name: "Home",
     url: "/",
-    subMenu: [{ name: "", url: "" }],
   },
   // {
   //   name: "Services",
@@ -69,42 +68,42 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
       <div className="hidden 800px:flex">
         {navItemsData &&
           navItemsData.map((item, index) => {
-            if (item.subMenu?.length) {
-              return (
-                <div className="relative">
-                  <span
-                    className={`${
-                      pathname === item.url
-                        ? "text-white"
-                        : "dark:text-white text-black"
-                    } text-[18px] px-6 font-Poppins font-[400] cursor-pointer flex items-center justify-center gap-1 `}
-                    onMouseOver={() => setActive(item.name)}
-                  >
-                    <div>{item.name}</div>
-                    <GoChevronDown />
-                  </span>
-                  <div
-                    onMouseLeave={resetActive}
-                    className={`flex text-black dark:text-white justify-center absolute z-10 top-[28px] min-w-[143px] transition  ease-out ${
-                      active === item.name ? "visible" : "hidden"
-                    }`}
-                  >
-                    <ListGroup className="w-48">
-                      {item.subMenu.map((subItem, subIndex) => {
-                        return (
-                          <ListGroup.Item
-                            onClick={() => router.push(subItem.url)}
-                            key={`sub-${subIndex}`}
-                          >
-                            {subItem.name}
-                          </ListGroup.Item>
-                        );
-                      })}
-                    </ListGroup>
-                  </div>
-                </div>
-              );
-            }
+            // if (item.subMenu?.length) {
+            //   return (
+            //     <div className="relative">
+            //       <span
+            //         className={`${
+            //           pathname === item.url
+            //             ? "text-white"
+            //             : "dark:text-white text-black"
+            //         } text-[18px] px-6 font-Poppins font-[400] cursor-pointer flex items-center justify-center gap-1 `}
+            //         onMouseOver={() => setActive(item.name)}
+            //       >
+            //         <div>{item.name}</div>
+            //         <GoChevronDown />
+            //       </span>
+            //       <div
+            //         onMouseLeave={resetActive}
+            //         className={`flex text-black dark:text-white justify-center absolute z-10 top-[28px] min-w-[143px] transition  ease-out ${
+            //           active === item.name ? "visible" : "hidden"
+            //         }`}
+            //       >
+            //         <ListGroup className="w-48">
+            //           {item.subMenu.map((subItem, subIndex) => {
+            //             return (
+            //               <ListGroup.Item
+            //                 onClick={() => router.push(subItem.url)}
+            //                 key={`sub-${subIndex}`}
+            //               >
+            //                 {subItem.name}
+            //               </ListGroup.Item>
+            //             );
+            //           })}
+            //         </ListGroup>
+            //       </div>
+            //     </div>
+            //   );
+            // }
 
             return (
               <Link href={`${item.url}`} key={index} passHref>
@@ -139,45 +138,45 @@ const NavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
           </div>
           {navItemsData &&
             navItemsData.map((item, index) => {
-              if (item.subMenu?.length) {
-                return (
-                  <div className="relative">
-                    <span
-                      className={`${
-                        pathname === item.url
-                          ? "text-black font-bold"
-                          : "dark:text-white text-black"
-                      } text-[18px] px-6 font-Poppins font-[400] cursor-pointer flex justify-left gap-1 py-5 w-[95%]`}
-                      onMouseOver={() => setActive(item.name)}
-                    >
-                      <div>{item.name}</div>
-                      <GoChevronDown />
-                    </span>
-                    <div
-                      onMouseLeave={resetActive}
-                      className={`flex justify-left px-8 py-2 z-10 top-[28px] min-w-[143px] transition  ease-out ${
-                        active === item.name ? "visible" : "hidden"
-                      }`}
-                    >
-                      <ul>
-                        {item.subMenu.map((subItem, subIndex) => {
-                          return (
-                            <li
-                              onClick={() => router.push(subItem.url)}
-                              key={`sub-${subIndex}`}
-                              className="py-2"
-                            >
-                              <span className="text-[8px] pr-2 text-black dark:text-white"></span>{" "}
-                              {subItem.name}
-                              <hr />
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  </div>
-                );
-              }
+              // if (item.subMenu?.length) {
+              //   return (
+              //     <div className="relative">
+              //       <span
+              //         className={`${
+              //           pathname === item.url
+              //             ? "text-black font-bold"
+              //             : "dark:text-white text-black"
+              //         } text-[18px] px-6 font-Poppins font-[400] cursor-pointer flex justify-left gap-1 py-5 w-[95%]`}
+              //         onMouseOver={() => setActive(item.name)}
+              //       >
+              //         <div>{item.name}</div>
+              //         <GoChevronDown />
+              //       </span>
+              //       <div
+              //         onMouseLeave={resetActive}
+              //         className={`flex justify-left px-8 py-2 z-10 top-[28px] min-w-[143px] transition  ease-out ${
+              //           active === item.name ? "visible" : "hidden"
+              //         }`}
+              //       >
+              //         <ul>
+              //           {item.subMenu.map((subItem, subIndex) => {
+              //             return (
+              //               <li
+              //                 onClick={() => router.push(subItem.url)}
+              //                 key={`sub-${subIndex}`}
+              //                 className="py-2"
+              //               >
+              //                 <span className="text-[8px] pr-2 text-black dark:text-white"></span>{" "}
+              //                 {subItem.name}
+              //                 <hr />
+              //               </li>
+              //             );
+              //           })}
+              //         </ul>
+              //       </div>
+              //     </div>
+              //   );
+              // }
 
               return (
                 <Link
