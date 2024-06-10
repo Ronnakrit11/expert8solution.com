@@ -2,8 +2,8 @@ import React from "react";
 
 const VideoBanner = () => {
   return (
-    <div className="w-[80%] md:w-[55%] mx-auto">
-      <div className="relative w-full" style={{ paddingBottom: "57.325%" }}>
+    <div className="w-[80%] md:w-[55%] mx-auto py-10">
+      <div className="relative w-full " style={{ paddingBottom: "57.325%" }}>
         <div
           aria-hidden="true"
           className="absolute inset-0 top-10 md:top-40 grid grid-cols-2 -space-x-52 opacity-50 dark:opacity-30"
