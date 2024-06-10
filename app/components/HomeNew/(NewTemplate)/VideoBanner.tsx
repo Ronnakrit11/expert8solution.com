@@ -3,7 +3,7 @@ import React from "react";
 const VideoBanner = () => {
   return (
     <div className="w-[80%] md:w-[55%] mx-auto py-10">
-      <div className="relative w-full " style={{ paddingBottom: "57.325%" }}>
+      <div className="relative w-full" style={{ paddingBottom: "57.325%" }}>
         <div
           aria-hidden="true"
           className="absolute inset-0 top-10 md:top-40 grid grid-cols-2 -space-x-52 opacity-50 dark:opacity-30"
@@ -13,16 +13,15 @@ const VideoBanner = () => {
         </div>
         <iframe
           className="absolute top-0 left-0 w-full h-full rounded-md"
-          src="https://streamable.com/e/gnmnn9?autoplay=1&muted=1"
+          src="https://streamable.com/e/gnmnn9?autoplay=1&muted=1&controls=0"
           allow="fullscreen; autoplay"
           allowFullScreen
           style={{ border: "none" }}
         />
-        <style jsx>{`
-          iframe {
-            pointer-events: none;
-          }
-        `}</style>
+        <div
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ background: 'transparent', pointerEvents: 'none' }}
+        ></div>
       </div>
     </div>
   );
