@@ -6,6 +6,9 @@ import Footer from "@/app/components/Footer";
 import Banner from "./Banner";
 import Working from "./Working";
 import Solution from "./Solution";
+import TheEasy from "./TheEasy";
+import Record from "./Record";
+import Shere from "./Shere";
 
 type Props = {};
 
@@ -17,8 +20,12 @@ const Page = (props: Props) => {
   return (
     <div>
       <Heading
-        title={"เกี่ยวกับเรา Expert8-Solution ทำซอฟเเวร์ พัฒนาเว็บไซต์  Marketing ครบวงจร"}
-        description={"บริษัทเอ็กซ์เพิร์ท เอท โซลูชั่น จำกัด พัฒนาซอฟเเวร์ครบวงจร ระบบคอร์สเรียนออนไลน์ , ระบบ E-Commerce , ระบบจองโรงเเรม เเละการตลาดออนไลน์ทุกเเพลทฟอร์ม "}
+        title={
+          "เกี่ยวกับเรา Expert8-Solution ทำซอฟเเวร์ พัฒนาเว็บไซต์  Marketing ครบวงจร"
+        }
+        description={
+          "บริษัทเอ็กซ์เพิร์ท เอท โซลูชั่น จำกัด พัฒนาซอฟเเวร์ครบวงจร ระบบคอร์สเรียนออนไลน์ , ระบบ E-Commerce , ระบบจองโรงเเรม เเละการตลาดออนไลน์ทุกเเพลทฟอร์ม "
+        }
         keywords={
           "ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์"
         }
@@ -31,7 +38,10 @@ const Page = (props: Props) => {
         route={route}
       />
       <Banner />
-      <Working />
+      <TheEasy />
+      <Record />
+      {/* <Shere /> */}
+      {/* <Working /> */}
       <Solution />
       <Footer />
     </div>

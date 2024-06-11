@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 
 const Tab = () => {
+    
     const [tabState, setTabState] = useState(0)
 
     const handleTabChange = (index) => {
