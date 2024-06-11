@@ -169,7 +169,7 @@ const Contact = (props: Props) => {
                   </div>
                 </div>
                 <div className='col-span-1 flex justify-end py-2'>
-                  <Button onClick={handleSubmit} color="blue">{result ? result : 'Send'}</Button>
+                  <Button onClick={() => { handleSubmit() }} color="blue">{result ? result : 'Send'}</Button>
                 </div>
               </div>
 
