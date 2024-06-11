@@ -157,7 +157,6 @@ const Contact = (props: Props) => {
                     </div>
                     <Textarea
                       rows={4}
-                      type="text"
                       name=""
                       value={values.message}
                       onChange={handleChange}
