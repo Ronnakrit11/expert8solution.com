@@ -8,7 +8,7 @@ const Solution = () => {
                 <p className='text-[16px]'>OUR <span className='font-bold'>FEATURES</span></p>
                 <p className='text-[30px] font-semibold'>ฟังก์ชั่นที่ตอบโจทย์</p>
                 <br />
-                <p className='text-[16px] text-[#6D7176]'>Se rspiciatis unde omnis iste natus error voluptatem accusantium doloremque rem aperiam.</p>
+                <p className='text-[16px] text-[#6D7176]'> unde omnis iste natus error voluptatem accusantium doloremque rem aperiam.</p>
             </div>
             <div className='w-[90%] sm:w-[90%] md:w-[60%] mx-auto'>
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-4'>
