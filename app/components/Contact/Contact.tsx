@@ -43,7 +43,7 @@ const Contact = (props: Props) => {
     for (var key in event) {
       formData.append(key, event[key]);
     }
-    formData.append("access_key", "4813e22e-075f-45d1-836d-64fd4fef358d");
+    formData.append("access_key", "7f1167f1-42d2-4065-b7f4-37ee69e92c9b");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
