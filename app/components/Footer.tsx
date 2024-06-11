@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { FaFacebookSquare, FaLine } from "react-icons/fa";
 
 type Props = {}
 
@@ -13,14 +14,26 @@ const Footer = (props: Props) => {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-3">
           <div className="space-y-3">
             <h3 className="text-[20px] font-[600] text-white dark:text-white">Social Links</h3>
+
             <ul className="space-y-4">
 
               <li>
                 <Link
+                  target="_blank"
                   href="https://www.facebook.com/experts8academy"
-                  className="text-base text-white dark:text-gray-300 dark:hover:text-white"
+                  className="flex items-center gap-5 text-base text-white dark:text-gray-300 dark:hover:text-white"
                 >
-                  Facebook
+                  <FaFacebookSquare size={50} className=" fill-blue-500 bg-white rounded-lg" /> Facebook
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href="https://lin.ee/v3bBhCR"
+
+                  className="flex items-center gap-5 text-base text-white dark:text-gray-300 dark:hover:text-white"
+                >
+                  <FaLine size={50} className=" fill-green-500 bg-white rounded-lg" /> Line
                 </Link>
               </li>
 
@@ -60,7 +73,7 @@ const Footer = (props: Props) => {
         </div>
         <br />
         <p className="text-center text-white dark:text-white">
-        Copyright @ 2024 Expert8-Solution. All rights reserved.
+          Copyright @ 2024 Expert8-Solution. All rights reserved.
         </p>
       </div>
       <br />
