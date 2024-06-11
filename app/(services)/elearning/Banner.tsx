@@ -9,8 +9,8 @@ const Banner = () => {
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-4'>
                     <div className='flex justify-center items-center '>
                         <div className='text-black space-y-8'>
-                            <h1 className='text-[40px] sm:text-[40px] xl:text-[56px] font-bold'>Best Way to Make Online Payments</h1>
-                            <p className='text-[14px] sm:text-[14px] xl:text-[17px] text-[#6D7176]'>Maecenas tempus, tellus eget condimentum rhoncus quam semper libero sit amet adipiscing sem neque sed.</p>
+                            <h1 className='text-[40px] sm:text-[40px] xl:text-[56px] font-bold'>ลดขั้นตอนการใช้งานที่ยุ่งยากออกทั้งหมด</h1>
+                            <p className='text-[14px] sm:text-[14px] xl:text-[17px] text-[#6D7176]'>ระบบของเราคำนึงถึงการใช้งานเป็นหลัก นักเรียนของลูกค้า เเละลูกค้าต้องใช้งานง่าย เพียงไม่กี่คลิ๊ก</p>
                             <ul className='text-[17px] sm:text-[14px] xl:text-[16px] space-y-4 text-[#6D7176]'>
                                 <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' /> Aenean leo ligula porttitor eu consequat vitae.</li>
                                 <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' /> Aenean leo ligula porttitor eu consequat vitae.</li>
