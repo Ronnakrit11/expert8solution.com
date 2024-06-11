@@ -12,9 +12,9 @@ const Banner = () => {
                             <h1 className='text-[40px] sm:text-[40px] xl:text-[56px] font-bold'>ลดขั้นตอนการใช้งานที่ยุ่งยากออกทั้งหมด</h1>
                             <p className='text-[14px] sm:text-[14px] xl:text-[17px] text-[#6D7176]'>ระบบของเราคำนึงถึงการใช้งานของคุณเเละนักเรียนของคุณเป็นหลัก เพียงไม่กี่คลิ๊ก</p>
                             <ul className='text-[17px] sm:text-[14px] xl:text-[16px] space-y-4 text-[#6D7176]'>
-                                <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' />นักเรียนเข้่าสู่ระบบเพียง 3 คลิ๊ก</li>
+                                <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' />นักเรียนเข้าสู่ระบบเพียง 3 คลิ๊ก</li>
                                 <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' />นักเรียนชำระเงินภายใน 3 คลิ๊ก</li>
-                                <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' /> ระบบตรวจสอบสลิปอัตโนมัติ คุณไม่จำเป็นต้องอนุมัติ</li>
+                                <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' /> ระบบตรวจสอบสลิปอัตโนมัติ คุณไม่จำเป็นต้องมาคอยอนุมัติ</li>
                             </ul>
                             <button className='bg-primary text-white px-6 py-4 rounded-2xl'>Get Started</button>
                         </div>
