@@ -5,8 +5,8 @@ import Contact from '../../Contact/Contact';
 
 const FooterContact = () => {
     return (
-        <div className="border-y border-gray-200 p-4 bg-gray-100 dark:bg-[#101726] dark:border-gray-700 dark:bg-darker">
-            <div className='container mx-auto'>
+        <div className="border-y border-gray-200 p-0 sm:p-4 bg-gray-100 dark:bg-[#101726] dark:border-gray-700 dark:bg-darker">
+            <div className=' w-full flex justify-center'>
                 <div className="items-start  justify-around md:flex">
                     <div className="h-max py-16 md:w-6/12 xl:w-5/12 flex flex-col items-center justify-center" >
                         <div className="text-center md:text-left">

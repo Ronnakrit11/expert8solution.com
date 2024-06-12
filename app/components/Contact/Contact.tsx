@@ -103,8 +103,8 @@ const Contact = (props: Props) => {
                   </div>
                 </div> */}
                 <div className='grid grid-cols-2 gap-3'>
-                  <div>
-                    <div className="mb-2 block">
+                  <div className='sm:col-span-1 col-span-2'>
+                    <div className=" mb-2 block">
                       <Label htmlFor="name" value="Your Name" />
                     </div>
                     <TextInput
@@ -119,7 +119,7 @@ const Contact = (props: Props) => {
                       <span className="text-red-500 pt-2 block">{errors.name}</span>
                     )}
                   </div>
-                  <div>
+                  <div className='sm:col-span-1 col-span-2'>
                     <div className="mb-2 block">
                       <Label htmlFor="email" value="Your Email" />
                     </div>
