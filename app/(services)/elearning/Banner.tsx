@@ -1,5 +1,6 @@
 import React from 'react'
 import { LuCheckCircle } from "react-icons/lu";
+import Image from "next/image";
 
 
 const Banner = () => {
@@ -20,8 +21,16 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className='flex justify-center items-center'>
-                        <img src="https://coderthemes.com/appexy/layouts/images/heros/hero-3-img.png" alt="" className='w-[500px] h-auto' />
+                    
+
+                        <Image src="/hero-3.webp" alt="ระบบจ่ายเงิน" 
+                          width={1000}
+                          height={1000}
+                        className='w-[500px] h-auto' />
+                        
+                        
                     </div>
+                    
                 </div>
             </div>
         </div>
