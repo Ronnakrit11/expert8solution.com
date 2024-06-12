@@ -29,8 +29,9 @@ const VideoBanner = () => {
         </div>
       </div>
       <div>
+        <br />
         <Link href="https://www.idea-solution.tech/">
-          <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px] my-5'>Booking demo</button>
+          <button className='bg-[#1565c0] py-4 w-[170px] px-4 text-white rounded-full text-[17px] my-5'>Booking demo</button>
         </Link>
       </div>
     </div>
