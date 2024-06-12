@@ -53,8 +53,8 @@ const LandingPage = () => {
               />
               <button
                 onClick={() => { onSubmitToW3() }}
-                className="bg-[#1565c0] py-3 w-[150px] px-4 text-white rounded-full text-[16px]">
-                {result ? result : `Get Started`}
+                className="bg-[#1565c0] py-5 w-[150px] px-4 text-white rounded-full text-[16px]">
+                {result ? result : `Sent`}
               </button>
             </div>
           </div>
