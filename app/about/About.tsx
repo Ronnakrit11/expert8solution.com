@@ -19,7 +19,7 @@ const About = () => {
               <p className='text-center text-5xl font-bold text-blue-900 dark:text-white sm:text-6xl lg:text-left lg:text-7xl'>Expert 8</p>
               <p className='text-5xl sm:text-6xl lg:text-left lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>Solution</p>
               <p className="mt-12 text-center text-lg text-gray-600 dark:text-gray-300 sm:text-xl md:text-left lg:w-3/4">
-                Expert8Solution เรามีบริการให้ครบครัน ตั้งเเต่ทำระบบ งานกราฟฟิก งานตัดต่อ หรืองานด้าน marketing
+                Expert8Solution เรามีบริการให้ครบครัน ตั้งเเต่ทำระบบคอร์สเรียนออนไลน์ห งานกราฟฟิก งานตัดต่อ หรืองานด้าน marketing
               </p>
             </div>
             <div className="relative -mx-4 mt-16 flex snap-x snap-mandatory justify-between gap-6 overflow-x-auto border-y border-gray-100 px-4 py-8 dark:border-gray-800 sm:-mx-12 sm:px-12 lg:mx-0 lg:px-0">
