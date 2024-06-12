@@ -43,6 +43,8 @@ const Page = (props: Props) => {
       {/* <Shere /> */}
       {/* <Working /> */}
       <Solution />
+      <br />
+      <br />
       <Footer />
     </div>
   );

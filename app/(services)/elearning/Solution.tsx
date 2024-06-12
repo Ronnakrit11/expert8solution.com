@@ -29,7 +29,9 @@ const Solution = () => {
                                 <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' /> Aenean leo ligula porttitor eu consequat vitae.</li>
                             </ul>
                             <button className='bg-primary text-white px-6 py-4 rounded-2xl'>Get Started</button>
+                            <br />
                         </div>
+                        <br />
                     </div>
                 </div>
             </div>
