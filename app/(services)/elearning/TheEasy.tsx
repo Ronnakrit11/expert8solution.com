@@ -4,9 +4,9 @@ const TheEasy = () => {
   return (
     <div className="container mx-auto">
       <div className="py-10 space-y-2">
-        <h1 className="text-[30px] md:text-[65px] text-center">
-          The easiest screen recorder you’ll ever use
-        </h1>
+        <h3 className="text-[30px] md:text-[50px]  lg:text-[30px] text-center text-[#2B1C50] font-bold ">
+          เน้นการใช้งานง่ายที่สุด
+        </h3>
         <p className="text-[19px] md:text-[27px] text-center text-[#3D2E7C]">
           Record in a few clicks. Share anywhere. Collaborate better.
         </p>
