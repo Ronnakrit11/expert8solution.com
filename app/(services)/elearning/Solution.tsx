@@ -1,5 +1,7 @@
 import React from 'react'
 import { LuCheckCircle } from "react-icons/lu";
+import Image from 'next/image'
+
 
 const Solution = () => {
     return (
@@ -13,8 +15,10 @@ const Solution = () => {
             <div className='w-[90%] sm:w-[90%] md:w-[60%] mx-auto'>
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-4'>
                     <div className='flex justify-center items-center'>
-                        <img src="https://coderthemes.com/appexy/layouts/images/features-1.png" alt="" className='w-[500px] h-auto' />
-                    </div>
+                    <Image src="/features-1.webp" alt="ฟังก์ชั่นระบบเรียนออนไลน์" 
+                          width={1000}
+                          height={1000}
+                        className='w-[500px] h-auto' />                    </div>
                     <div className='flex justify-center items-center '>
                         <div className='text-black space-y-8'>
                             <h1 className='text-[40px] sm:text-[40px] xl:text-[56px] font-bold'>Best Way to Make Online Payments</h1>
