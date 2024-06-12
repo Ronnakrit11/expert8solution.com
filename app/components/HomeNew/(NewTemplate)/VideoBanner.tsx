@@ -30,7 +30,8 @@ const VideoBanner = () => {
       </div>
       <div>
         <br />
-        <Link href="https://www.demoexpert8-solution.com">
+        <Link href="https://www.demoexpert8-solution.com"
+        target="_blank">
           <button className='bg-[#1565c0] py-4 w-[170px] px-4 text-white rounded-full text-[17px] my-5'>Booking demo</button>
         </Link>
       </div>
