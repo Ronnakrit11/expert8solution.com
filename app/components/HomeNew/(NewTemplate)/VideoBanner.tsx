@@ -30,7 +30,7 @@ const VideoBanner = () => {
       </div>
       <div>
         <Link href="https://www.idea-solution.tech/">
-          <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px] my-5'>ดูรายละเอียดเพิ่มเติม</button>
+          <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px] my-5'>Booking demo</button>
         </Link>
       </div>
     </div>
