@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const VideoBanner = () => {
   return (
@@ -22,6 +23,14 @@ const VideoBanner = () => {
           className="absolute top-0 left-0 w-full h-full"
           style={{ background: 'transparent', pointerEvents: 'none' }}
         ></div>
+        <div>
+           <Link href="https://www.idea-solution.tech/">
+                                        <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
+                                    </Link>
+                                </div>
+          <div>
+                                 
+                                </div>
       </div>
     </div>
   );
