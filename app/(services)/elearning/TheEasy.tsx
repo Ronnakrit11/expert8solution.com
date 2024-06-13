@@ -8,7 +8,7 @@ const TheEasy = () => {
           เน้นการใช้งานง่ายที่สุด
         </h3>
         <p className="text-[19px] md:text-[27px] text-center text-[#3D2E7C]">
-          Record in a few clicks. Share anywhere. Collaborate better.
+          ระบบของเราคำนึงถึงความง่ายของนักเรียนเเละเจ้าของเว็บไซต์เป็นหลัก
         </p>
       </div>
 
@@ -17,11 +17,11 @@ const TheEasy = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="w-[60%] mx-auto space-y-6 flex flex-col justify-center">
               <h2 className="text-[33px] text-[#2B1C50]">
-                Lightning fast screen recording
+                เข้าสู่ระบบด้วย Line โดยไม่ต้องสมัครใหม่
               </h2>
               <p className="text-[19px] text-[#3D2E7C]">
-                Easily record your screen and camera. Record on any device using
-                Loom’s Chrome extension, desktop app or mobile app.
+                เพียง 3 คลิ๊ก นักเรียนก็สามารถเข้าสู่ระบบได้ทันที
+               ตอบโจทย์ทั้งนักเรียนเเละเจ้าของเว็บไซต์
               </p>
               <button className="px-4 py-3 ring-4 ring-[#B0B4F2] text-white rounded-full bg-[#565ADD]">
                 Dowload Now

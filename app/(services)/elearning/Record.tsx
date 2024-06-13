@@ -19,13 +19,13 @@ const Record = () => {
                 <FaEraser />
               </div> */}
               <h2 className="text-[33px] text-[#2B1C50]">
-                Record once, edit effortlessly
+                การชำระเงินที่ง่ายใน 3 คลิ๊ก
               </h2>
               <p className="text-[19px] text-[#3D2E7C]">
-                Outsmart the undo button. Instead of restarting, rewind while
-                you’re still recording to get the perfect take. After recording,
-                dial in your video by trimming words from its transcript. With
-                Loom, editing video is as easy as editing a text.
+                หลังจากนักเรียนเข้าสู่ระบบด้วย Line 
+                เพียงไม่กี่คลิ๊กนักเรียนสามารถจ่ายเงินเข้าเรียนได้ทันที
+                มีระบบตรวจสลิปการโอนเงินอัตโนมัติ
+                เจ้าของเว็บไซต์ไม่ต้องมากดอนุมัติเอง
               </p>
               <button className="flex items-center gap-2 text-[18px]">
                 Record now
