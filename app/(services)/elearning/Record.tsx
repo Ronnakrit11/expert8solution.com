@@ -40,7 +40,7 @@ const Record = () => {
                 <iframe
                   allow="fullscreen; autoplay"
                   allowFullScreen
-                  src="https://streamable.com/e/o09xgn?autoplay=1&muted=1"
+                  src="https://streamable.com/e/o09xgn?autoplay=1&muted=1&nocontrols=1"
                   className="absolute top-0 left-0 w-full h-full border-none rounded-3xl"
                 ></iframe>
               </div>
