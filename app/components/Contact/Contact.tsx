@@ -129,6 +129,7 @@ const Contact = (props: Props) => {
                     <TextInput
                       type="email"
                       name="email"
+                       sizing="lg"
                       value={values.email}
                       onChange={handleChange}
                       id="email"
