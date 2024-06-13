@@ -63,9 +63,9 @@ const Contact = (props: Props) => {
 
 
   return (
-    <div className="bg-white dark:bg-darkbg  rounded-md shadow-lg">
+    <div className="">
       <div className="w-full text-black ">
-        <div className="w-[90%] 800px:w-[80%] m-auto">
+        <div className="px-5 m-auto">
           <div className="pt-12">
             <dl className="space-y-8">
               <div className='grid grid-cols-1  gap-3'>
@@ -110,8 +110,10 @@ const Contact = (props: Props) => {
                     <TextInput
                       type="text"
                       name="name"
+                      sizing="lg"
                       value={values.name}
                       onChange={handleChange}
+
                       id="name"
                       placeholder="your name"
                     />
@@ -126,6 +128,7 @@ const Contact = (props: Props) => {
                     <TextInput
                       type="email"
                       name="email"
+                      sizing="lg"
                       value={values.email}
                       onChange={handleChange}
                       id="email"
@@ -142,6 +145,7 @@ const Contact = (props: Props) => {
                     <TextInput
                       type="text"
                       name="phone"
+                      sizing="lg"
                       value={values.phone}
                       onChange={handleChange}
                       id="phone"
@@ -158,6 +162,7 @@ const Contact = (props: Props) => {
                     <Textarea
                       rows={4}
                       name=""
+                      sizing="lg"
                       value={values.message}
                       onChange={handleChange}
                       id="message"
