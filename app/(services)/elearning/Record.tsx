@@ -29,7 +29,11 @@ const Record = () => {
                 เจ้าของเว็บไซต์ไม่ต้องมากดอนุมัติเอง
               </p>
           
-      
+              <Link href="https://www.demoexpert8-solution.com"
+        target="_blank">
+        
+                  <button className="px-4 py-3 ring-4 ring-[#B0B4F2] text-white rounded-full bg-[#565ADD]"> Booking Demo   </button>
+                 </Link>
             </div>
             <div className="p-8">
               <div
@@ -43,12 +47,7 @@ const Record = () => {
                   className="absolute top-0 left-0 w-full h-full border-none rounded-3xl"
                 ></iframe>
               </div>
-              <br />
-              <Link href="https://www.demoexpert8-solution.com"
-        target="_blank">
-        
-                  <button className="px-4 py-3 ring-4 ring-[#B0B4F2] text-white rounded-full bg-[#565ADD]"> Booking Demo   </button>
-                 </Link>
+              
             </div>
           </div>
         </div>
