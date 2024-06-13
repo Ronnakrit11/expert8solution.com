@@ -17,13 +17,13 @@ const Contact = (props: Props) => {
   const schema = Yup.object().shape({
     email: Yup.string()
       .email("Invalid email!")
-      .required("Please enter your email!"),
+      .required("Please Enter Your Email!"),
     name: Yup.string()
-      .required("Please enter your name!"),
+      .required("Please Enter Your name!"),
     message: Yup.string()
-      .required("Please enter your message!"),
+      .required("Please Enter Your Message!"),
     phone: Yup.string()
-      .required("Please enter your phone!"),
+      .required("Please Enter Your Phone!"),
   });
   const formik = useFormik({
     initialValues: { email: "", name: "", subject: "", message: "", phone: "" },
