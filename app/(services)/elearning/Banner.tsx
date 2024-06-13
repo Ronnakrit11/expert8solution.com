@@ -1,6 +1,7 @@
 import React from 'react'
 import { LuCheckCircle } from "react-icons/lu";
 import Image from "next/image";
+import Link from 'next/link';
 
 
 const Banner = () => {
@@ -17,7 +18,11 @@ const Banner = () => {
                                 <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' />นักเรียนชำระเงินภายใน 3 คลิ๊ก</li>
                                 <li className='flex items-center gap-1 sm:gap-1 xl:gap-2 '><LuCheckCircle className='text-[#98EFD2] w-[50px]' /> ระบบตรวจสอบสลิปอัตโนมัติ คุณไม่จำเป็นต้องมาคอยอนุมัติ</li>
                             </ul>
-                            <button className='bg-primary text-white px-6 py-4 rounded-2xl'>Get Started</button>
+                            <br />
+                            <Link href="https://www.demoexpert8-solution.com"
+                                  target="_blank">
+                            <button className='bg-primary text-white px-6 py-4 rounded-2xl'>Booking Demo</button>
+                            </Link>
                         </div>
                     </div>
                     <div className='flex justify-center items-center'>
