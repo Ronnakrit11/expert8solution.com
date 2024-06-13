@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 type Props = {};
 import { Button, Label, TextInput, Textarea } from "flowbite-react";
+
 interface FormW3 {
   email: string,
   name: string,
@@ -128,7 +129,6 @@ const Contact = (props: Props) => {
                     <TextInput
                       type="email"
                       name="email"
-                      sizing="lg"
                       value={values.email}
                       onChange={handleChange}
                       id="email"
@@ -162,7 +162,6 @@ const Contact = (props: Props) => {
                     <Textarea
                       rows={4}
                       name=""
-                      sizing="lg"
                       value={values.message}
                       onChange={handleChange}
                       id="message"
