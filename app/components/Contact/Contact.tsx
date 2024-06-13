@@ -67,7 +67,7 @@ const Contact = (props: Props) => {
     <div className="">
       <div className="w-full text-black ">
         <div className="px-5 m-auto">
-          <div className="pt-12">
+          <div className="pt-9">
             <dl className="space-y-8">
               <div className='grid grid-cols-1  gap-3'>
                 {/* <div>
