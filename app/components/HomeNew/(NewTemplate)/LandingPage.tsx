@@ -46,7 +46,7 @@ const LandingPage = () => {
             <div className="relative flex items-center rounded-full border border-primary/20 bg-white dark:bg-[#101726] p-1 px-2 shadow-md focus-within:ring-2 dark:border-white/10 dark:bg-dark dark:text-white md:p-2 lg:pr-3">
               <FaEnvelope className="h-6 w-6 ml-2 text-gray-600" />
               <input
-                placeholder="Your mail address"
+                placeholder="Your Email Address"
                 value={email}
                 onChange={(e) => { setEmail(e.target.value) }}
                 className="w-full rounded-full bg-transparent p-4 placeholder-gray-600  outline-none dark:placeholder-white dark:text-[#fff] text-[#000]"
