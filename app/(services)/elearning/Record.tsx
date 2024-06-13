@@ -8,7 +8,7 @@ const Record = () => {
     <div className="container mx-auto mt-20">
       <div className="py-10">
         <h1 className="text-[30px] md:text-[65px] text-center">
-          So much more than a screen recorder
+          เข้าเรียนได้ทันทีหลังจากชำระเงิน
         </h1>
       </div>
 
