@@ -163,17 +163,19 @@ const Contact = (props: Props) => {
                     <Textarea
                       rows={4}
                       name=""
+                      
                       value={values.message}
                       onChange={handleChange}
+
                       id="message"
-                      placeholder="your message"
+                      placeholder="Your message"
                     />
                     {errors.message && touched.message && (
                       <span className="text-red-500 pt-2 block">{errors.message}</span>
                     )}
                   </div>
                 </div>
-                <div className='col-span-1 flex justify-end py-2'>
+                <div className='col-span-1 flex justify-end py-4'>
                   <Button onClick={() => { handleSubmit() }} color="blue">{result ? result : 'Send'}</Button>
                 </div>
               </div>
