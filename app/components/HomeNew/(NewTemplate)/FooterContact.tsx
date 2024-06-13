@@ -13,9 +13,7 @@ const FooterContact = () => {
                             <h2 className="text-3xl font-bold text-gray-800 dark:text-white md:w-max md:text-4xl xl:text-5xl">ติดต่อเรา</h2>
                             <p className="mb-8 mt-6 text-gray-600 dark:text-gray-300">ติกต่อร่วมงานกับ Expert8Solution เพื่อเป็นส่วนหนึ่งกับเรา บริการรวดเร็ว ประทับใจ คุณภาพสูง ครบจบในที่เดียว</p>
                         </div>
-                        <div className=''>
-                            <Image width={1000} height={1000} alt="" src='/illustration-contact.webp' />
-                        </div>
+                     
 
                         {/* <div className='relative flex items-center rounded-full border border-primary/20 bg-white p-1 px-2 shadow-md focus-within:ring-2 dark:border-white/10 dark:bg-dark dark:text-white md:p-2 lg:pr-3'>
                             <FaEnvelope className='h-6 w-6 ml-2 text-gray-600' />
