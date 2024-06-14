@@ -10,6 +10,7 @@ import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Loader from "./components/Loader/Loader";
 import socketIO from "socket.io-client";
 import SimpleBackdrop from "./components/Loading/SimpleBackdrop";
+import { Analytics } from "@vercel/analytics/react"
 
 const ENDPOINT = process.env.NEXT_PUBLIC_SOCKET_SERVER_URI || "";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
@@ -35,6 +36,7 @@ export default function RootLayout({
           <SessionProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
               <Custom>
+              <Analytics />
                 <div>{children}</div>
               </Custom>
               <Toaster position="top-center" reverseOrder={false} />
