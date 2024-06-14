@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import { track } from '@vercel/analytics';
 
-
+track('Booking Demo');
 
 const Banner = () => {
     return (
