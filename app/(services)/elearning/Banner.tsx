@@ -23,7 +23,7 @@ const Banner = () => {
                             <br />
                             <Link href="https://www.demoexpert8-solution.com"
                                   target="_blank">
-                            <button className='bg-primary text-white px-6 py-4 rounded-2xl data-analytics-on="click" ' > Booking Demo</button>
+                            <button data-analytics-on="click" className='bg-primary text-white px-6 py-4 rounded-2xl  ' > Booking Demo</button>
                             </Link>
                         </div>
                     </div>
