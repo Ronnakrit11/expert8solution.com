@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaEnvelope } from "react-icons/fa6";
 import React, { useState } from "react";
 
+
 const LandingPage = () => {
   const [email, setEmail] = useState<any>('');
   const [result, setResult] = useState("");
