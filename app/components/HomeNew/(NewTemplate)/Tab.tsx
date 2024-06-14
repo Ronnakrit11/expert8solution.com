@@ -1,7 +1,10 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { track } from '@vercel/analytics';
 import React, { useState } from 'react'
+track('ดูรายละเอียดเพิ่มเติม');
+
 
 const Tab = () => {
     
@@ -54,7 +57,7 @@ const Tab = () => {
                                 </div>
                                 <div>
                                     <Link href={"/elearning"}>
-                                        <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
+                                        <button  data-analytics-on="ดูรายละเอียดเพิ่มเติม"  className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
                                     </Link>
                                 </div>
                             </div>

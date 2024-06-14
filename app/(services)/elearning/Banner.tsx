@@ -6,6 +6,8 @@ import { track } from '@vercel/analytics';
 
 track('Booking Demo');
 
+
+
 const Banner = () => {
     return (
         <div>
