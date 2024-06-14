@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
+import { track } from '@vercel/analytics';
+track('รายละเอียดเพิ่มเติม');
 
 
 const LeftImageContent = () => {
@@ -17,7 +19,7 @@ const LeftImageContent = () => {
                         <p className='mb-12 mt-4 text-gray-600 dark:text-gray-300'>ทางเราเข้าใจความต้องการของสถาบันหรือครูผู้สอนดี เเละเราพัฒนาระบบให้ตอบสนองการใช้งานของลูกค้าได้ครบ</p>
                         <div>
                         <Link href={"/elearning"}>
-                                        <button className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>ดูรายละเอียดเพิ่มเติม</button>
+                                        <button data-analytics-on="รายละเอียดเพิ่มเติม" className='bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]'>รายละเอียดเพิ่มเติม</button>
                                     </Link>                        </div>
                     </div>
                 </div>
