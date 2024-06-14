@@ -40,6 +40,10 @@ const Trust = () => {
       img: "/cus10.png",
       url: "https://treelearningx.online/",
     },
+    {
+      img: "/cusnew.png",
+      url: "https://nisittutor-client.vercel.app/",
+    },
   ];
   return (
     <div className="bg-white dark:bg-darkbg pt-12 p-4 ">
