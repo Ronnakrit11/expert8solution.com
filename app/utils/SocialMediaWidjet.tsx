@@ -33,7 +33,7 @@ function SocialMediaWidget() {
           <div className="mt-4 mb-6 rounded-lg absolute bottom-12 right-0 transition-opacity duration-500 opacity-100 transform translate-y-0">
             <div className="flex flex-col space-y-4">
               <a
-                href="https://www.facebook.com"
+                href="https://www.m.me/111601928593371"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center bg-sky-600 p-4 rounded-full text-xl  duration-300 transform hover:scale-110"
@@ -41,7 +41,7 @@ function SocialMediaWidget() {
                 <FaFacebookMessenger className="text-2xl" />
               </a>
               <a
-                href="https://www.twitter.com"
+                href="https://lin.ee/1MFF78k"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center bg-green-600 p-4 rounded-full text-xl  duration-300 transform hover:scale-110"
