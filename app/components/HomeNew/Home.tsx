@@ -22,6 +22,7 @@ import Feature from "./(NewTemplate)/Feature";
 import Services from "./(NewTemplate)/Services";
 import Services2 from "./(NewTemplate)/Services2";
 import VideoBanner from "./(NewTemplate)/VideoBanner";
+import SocialMediaWidget from "@/app/utils/SocialMediaWidjet";
 
 function Home({ webInfo }: any) {
   console.log("🚀 ~ file: Home.tsx:24 ~ Home ~ layout:", webInfo);
@@ -49,7 +50,7 @@ function Home({ webInfo }: any) {
         setRoute={setRoute}
         route={route}
       />
-
+      <SocialMediaWidget />
       {/* New Theme */}
       <LandingPage />
       <VideoBanner />
