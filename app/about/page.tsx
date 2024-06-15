@@ -17,7 +17,7 @@ const Page = (props: Props) => {
     <div>
       <Heading
         title={
-          "เกี่ยวกับเรา Expert8-Solution ทำซอฟเเวร์ พัฒนาเว็บไซต์  Marketing ครบวงจร"
+          "เกี่ยวกับเรา Expert8-Solution ทำซอฟเเวร์ พัฒนาเว็บไซต์เเละMarketingครบวงจร"
         }
         description={
           "บริษัท Expert8Solution จำกัด พัฒนาซอฟเเวร์ครบวงจร ระบบคอร์สเรียนออนไลน์ , ระบบ E-Commerce , ระบบจองโรงเเรม เเละการตลาดออนไลน์ทุกเเพลทฟอร์ม "
