@@ -36,7 +36,7 @@ function SocialMediaWidget() {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center bg-sky-600 p-4 rounded-full text-xl hover:text-blue-500 transition-colors duration-300 transform hover:scale-110"
+                className="flex items-center bg-sky-600 p-4 rounded-full text-xl  duration-300 transform hover:scale-110"
               >
                 <FaFacebookMessenger className="text-2xl" />
               </a>
@@ -44,7 +44,7 @@ function SocialMediaWidget() {
                 href="https://www.twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center bg-green-600 p-4 rounded-full text-xl hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
+                className="flex items-center bg-green-600 p-4 rounded-full text-xl  duration-300 transform hover:scale-110"
               >
                 <FaLine className="text-2xl" />
               </a>
