@@ -27,19 +27,22 @@ const Tab = () => {
         <div>
           <div className="relative mx-auto mt-12 grid w-auto grid-cols-3 items-center gap-x-1 overflow-hidden rounded-full border border-gray-200 bg-gray-100 px-[3px] text-gray-600 dark:bg-[#101726] dark:border-gray-700 dark:border-opacity-60 dark:bg-darker dark:text-gray-300 dark:shadow-none sm:w-max">
             <button
-              className={` p-4 m-2 ${tabState === 0 ? ' bg-white dark:bg-[#1a253d] rounded-full' : ''}`}
+              type="button"
+              className={`p-4 m-2 ${tabState === 0 ? ' bg-white dark:bg-[#1a253d] rounded-full' : ''}`}
               onClick={() => handleTabChange(0)}
             >
               หน้าเว็ปไซต์
             </button>
             <button
-              className={` p-4 m-2 ${tabState === 1 ? ' bg-white dark:bg-[#1a253d] rounded-full' : ''}`}
+              type="button"
+              className={`p-4 m-2 ${tabState === 1 ? ' bg-white dark:bg-[#1a253d] rounded-full' : ''}`}
               onClick={() => handleTabChange(1)}
             >
               หลังบ้าน
             </button>
             <button
-              className={` p-4 m-2 ${tabState === 2 ? ' bg-white dark:bg-[#1a253d] rounded-full' : ''}`}
+              type="button"
+              className={`p-4 m-2 ${tabState === 2 ? ' bg-white dark:bg-[#1a253d] rounded-full' : ''}`}
               onClick={() => handleTabChange(2)}
             >
               คอมมิชชั่น
@@ -97,7 +100,7 @@ const Tab = () => {
                   </div>
                 </div>
                 <div>
-                  <Link href={'/elearning'}>
+                  <Link href="/elearning">
                     <button
                       data-analytics-on="ดูรายละเอียดเพิ่มเติม"
                       className="bg-[#1565c0] py-4 w-[200px] px-4 text-white rounded-full text-[16px]"

@@ -1,6 +1,6 @@
-import { trustImagesModel } from './types'
+import { TrustImagesModel } from './types'
 
-export const trustImages: trustImagesModel = [
+export const trustImages: TrustImagesModel = [
   {
     img: '/cus1.png',
     url: 'https://www.aeroplanecenter.com/',
