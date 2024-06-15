@@ -1,27 +1,27 @@
-import { useGetCourseContentQuery } from "@/redux/features/courses/coursesApi";
-import React, { useState } from "react";
-import Loader from "../Loader/Loader";
-import Heading from "@/app/utils/Heading";
-import CourseContentMedia from "./CourseContentMedia";
-import Header from "../Header";
-import CourseContentList from "./CourseContentList";
+import { useGetCourseContentQuery } from "@/redux/features/courses/coursesApi"
+import React, { useState } from "react"
+import Loader from "../Loader/Loader"
+import Heading from "@/app/utils/Heading"
+import CourseContentMedia from "./CourseContentMedia"
+import Header from "../../../components/Layout/Header"
+import CourseContentList from "./CourseContentList"
 
 type Props = {
-  id: string;
-  user: any;
-};
+  id: string
+  user: any
+}
 
 const CourseContent = ({ id, user }: Props) => {
   const {
     data: contentData,
     isLoading,
     refetch,
-  } = useGetCourseContentQuery(id, { refetchOnMountOrArgChange: true });
-  const [open, setOpen] = useState(false);
-  const [route, setRoute] = useState("Login");
-  const data = contentData?.content;
+  } = useGetCourseContentQuery(id, { refetchOnMountOrArgChange: true })
+  const [open, setOpen] = useState(false)
+  const [route, setRoute] = useState("Login")
+  const data = contentData?.content
 
-  const [activeVideo, setActiveVideo] = useState(0);
+  const [activeVideo, setActiveVideo] = useState(0)
 
   return (
     <>
@@ -65,7 +65,7 @@ const CourseContent = ({ id, user }: Props) => {
         </>
       )}
     </>
-  );
-};
+  )
+}
 
-export default CourseContent;
+export default CourseContent

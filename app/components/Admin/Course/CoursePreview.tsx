@@ -1,38 +1,38 @@
-import React, { FC } from "react";
-import CoursePlayer from "../../../utils/CoursePlayer";
-import { styles } from "../../../../app/styles/style";
-import Ratings from "../../../../app/utils/Ratings";
-import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import React, { FC } from "react"
+import CoursePlayer from "../../../utils/CoursePlayer"
+import { styles } from "../../@/app/styles/style"
+import Ratings from "../../@/app/utils/Ratings"
+import { IoCheckmarkDoneOutline } from "react-icons/io5"
 
 type Props = {
-  active: number;
-  setActive: (active: number) => void;
-  courseData: any;
-  handleCourseCreate: any;
-  isEdit?: boolean;
-};
+  active: number
+  setActive: (active: number) => void
+  courseData: any
+  handleCourseCreate: any
+  isEdit?: boolean
+}
 
 const CoursePreview: FC<Props> = ({
   courseData,
   handleCourseCreate,
   setActive,
   active,
-  isEdit
+  isEdit,
 }) => {
   const dicountPercentenge =
     ((courseData?.estimatedPrice - courseData?.price) /
       courseData?.estimatedPrice) *
-    100;
+    100
 
-  const discountPercentengePrice = dicountPercentenge.toFixed(0);
+  const discountPercentengePrice = dicountPercentenge.toFixed(0)
 
   const prevButton = () => {
-    setActive(active - 1);
-  };
+    setActive(active - 1)
+  }
 
   const createCourse = () => {
-    handleCourseCreate();
-  };
+    handleCourseCreate()
+  }
 
   return (
     <div className="w-[90%] m-auto py-5 mb-5">
@@ -78,7 +78,6 @@ const CoursePreview: FC<Props> = ({
             Apply
           </div>
         </div>
-        
       </div>
       <div className="w-full">
         <div className="w-full 800px:pr-5">
@@ -143,13 +142,11 @@ const CoursePreview: FC<Props> = ({
           className="w-full 800px:w-[180px] flex items-center justify-center h-[40px] bg-[#37a39a] text-center text-[#fff] rounded mt-8 cursor-pointer"
           onClick={() => createCourse()}
         >
-         {
-          isEdit ? 'Update' : 'Create'
-         }
+          {isEdit ? "Update" : "Create"}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CoursePreview;
+export default CoursePreview

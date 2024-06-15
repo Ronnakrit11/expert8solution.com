@@ -1,62 +1,61 @@
-import Image from "next/image";
-import { styles } from "../../../app/styles/style";
-import React, { FC, useEffect, useState } from "react";
-import { AiOutlineCamera } from "react-icons/ai";
-import avatarIcon from "../../../public/assests/avatar.png";
+import Image from "next/image"
+import React, { FC, useEffect, useState } from "react"
+import { AiOutlineCamera } from "react-icons/ai"
+import avatarIcon from "@/public/assests/avatar.png"
 import {
   useEditProfileMutation,
   useUpdateAvatarMutation,
-} from "@/redux/features/user/userApi";
-import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
-import { toast } from "react-hot-toast";
-import { Button, Checkbox, Label, TextInput, Card } from "flowbite-react";
+} from "@/redux/features/user/userApi"
+import { useLoadUserQuery } from "@/redux/features/api/apiSlice"
+import { toast } from "react-hot-toast"
+import { Button, Label, TextInput } from "flowbite-react"
 
 type Props = {
-  avatar: string | null;
-  user: any;
-};
+  avatar: string | null
+  user: any
+}
 
 const ProfileInfo: FC<Props> = ({ avatar, user }) => {
-  const [name, setName] = useState(user && user.name);
-  const [updateAvatar, { isSuccess, error }] = useUpdateAvatarMutation();
+  const [name, setName] = useState(user && user.name)
+  const [updateAvatar, { isSuccess, error }] = useUpdateAvatarMutation()
   const [editProfile, { isSuccess: success, error: updateError }] =
-    useEditProfileMutation();
-  const [loadUser, setLoadUser] = useState(false);
-  const { } = useLoadUserQuery(undefined, { skip: loadUser ? false : true });
+    useEditProfileMutation()
+  const [loadUser, setLoadUser] = useState(false)
+  useLoadUserQuery(undefined, { skip: loadUser ? false : true })
 
-  const imageHandler = async (e: any) => {
-    const fileReader = new FileReader();
+  async function imageHandler(e: any) {
+    const fileReader = new FileReader()
 
     fileReader.onload = () => {
       if (fileReader.readyState === 2) {
-        const avatar = fileReader.result;
-        updateAvatar(avatar);
+        const avatar = fileReader.result
+        updateAvatar(avatar)
       }
-    };
-    fileReader.readAsDataURL(e.target.files[0]);
-  };
+    }
+    fileReader.readAsDataURL(e.target.files[0])
+  }
 
   useEffect(() => {
     if (isSuccess) {
-      setLoadUser(true);
+      setLoadUser(true)
     }
     if (error || updateError) {
-      console.log(error);
+      console.log(error)
     }
     if (success) {
-      toast.success("Profile updated successfully!");
-      setLoadUser(true);
+      toast.success("Profile updated successfully!")
+      setLoadUser(true)
     }
-  }, [isSuccess, error, success, updateError]);
+  }, [isSuccess, error, success, updateError])
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault();
+    e.preventDefault()
     if (name !== "") {
       await editProfile({
         name: name,
-      });
+      })
     }
-  };
+  }
 
   return (
     <div className="bg-white dark:bg-darkbg mx-2 px-2 py-10 rounded-xl shadow-md">
@@ -114,13 +113,15 @@ const ProfileInfo: FC<Props> = ({ avatar, user }) => {
                 value={user?.email}
               />
             </div>
-            <Button type="submit" className="mt-4">Update Profile</Button>
+            <Button type="submit" className="mt-4">
+              Update Profile
+            </Button>
           </div>
         </form>
         <br />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProfileInfo;
+export default ProfileInfo

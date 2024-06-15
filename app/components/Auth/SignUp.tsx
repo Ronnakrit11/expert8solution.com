@@ -1,21 +1,21 @@
-"use client";
-import React, { FC, useEffect, useState } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+"use client"
+import React, { FC, useEffect, useState } from "react"
+import { useFormik } from "formik"
+import * as Yup from "yup"
 import {
   AiOutlineEye,
   AiOutlineEyeInvisible,
   AiFillGithub,
-} from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
-import { styles } from "../../../app/styles/style";
-import { useRegisterMutation } from "@/redux/features/auth/authApi";
-import { toast } from "react-hot-toast";
-import { Button, Checkbox, Label, TextInput, Card } from "flowbite-react";
+} from "react-icons/ai"
+import { FcGoogle } from "react-icons/fc"
+import { styles } from "../@/app/styles/style"
+import { useRegisterMutation } from "@/redux/features/auth/authApi"
+import { toast } from "react-hot-toast"
+import { Button, Checkbox, Label, TextInput, Card } from "flowbite-react"
 
 type Props = {
-  setRoute: (route: string) => void;
-};
+  setRoute: (route: string) => void
+}
 
 const schema = Yup.object().shape({
   name: Yup.string().required("Please enter your name!"),
@@ -23,44 +23,49 @@ const schema = Yup.object().shape({
     .email("Invalid email!")
     .required("Please enter your email!"),
   password: Yup.string().required("Please enter your password!").min(6),
-});
+})
 
 const Signup: FC<Props> = ({ setRoute }) => {
-  const [show, setShow] = useState(false);
-  const [register, { data, error, isSuccess }] = useRegisterMutation();
+  const [show, setShow] = useState(false)
+  const [register, { data, error, isSuccess }] = useRegisterMutation()
 
   useEffect(() => {
     if (isSuccess) {
-      const message = data?.message || "Registration successful";
-      toast.success(message);
-      setRoute("Verification");
+      const message = data?.message || "Registration successful"
+      toast.success(message)
+      setRoute("Verification")
     }
     if (error) {
       if ("data" in error) {
-        const errorData = error as any;
-        toast.error(errorData.data.message);
+        const errorData = error as any
+        toast.error(errorData.data.message)
       }
     }
-  }, [isSuccess, error]);
-
+  }, [isSuccess, error])
 
   const formik = useFormik({
     initialValues: { name: "", email: "", password: "" },
     validationSchema: schema,
     onSubmit: async ({ name, email, password }) => {
       const data = {
-        name, email, password
-      };
-      await register(data);
+        name,
+        email,
+        password,
+      }
+      await register(data)
     },
-  });
+  })
 
-  const { errors, touched, values, handleChange, handleSubmit } = formik;
+  const { errors, touched, values, handleChange, handleSubmit } = formik
 
   return (
     <Card>
-      <p className='text-xl sm:text-2xl lg:text-left lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text'>Register With Expert8-Solution</p>
-      <p className="text-center text-gray-600">ขอบคุณทุกท่านที่ร่วมเป็นส่วนหนึ่งกับเรา</p>
+      <p className="text-xl sm:text-2xl lg:text-left lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+        Register With Expert8-Solution
+      </p>
+      <p className="text-center text-gray-600">
+        ขอบคุณทุกท่านที่ร่วมเป็นส่วนหนึ่งกับเรา
+      </p>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <div className="mb-2 block">
@@ -144,7 +149,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
         </h5>
       </form>
     </Card>
-  );
-};
+  )
+}
 
-export default Signup;
+export default Signup
