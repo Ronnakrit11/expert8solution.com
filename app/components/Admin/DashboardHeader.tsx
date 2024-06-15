@@ -5,6 +5,7 @@ import {
   useGetAllNotificationsQuery,
   useUpdateNotificationStatusMutation,
 } from '@/redux/features/notifications/notificationsApi'
+import { isCSR } from '@/utils/index.ts'
 
 import React, { FC, useEffect, useState } from 'react'
 
@@ -27,7 +28,7 @@ const DashboardHeader: FC<Props> = ({ open, setOpen }) => {
   const [updateNotificationStatus, { isSuccess }] = useUpdateNotificationStatusMutation()
   const [notifications, setNotifications] = useState<any>([])
   const [audio] = useState<any>(
-    typeof window !== 'undefined' &&
+    isCSR() &&
       new Audio(
         'https://res.cloudinary.com/damk25wo5/video/upload/v1693465789/notification_vcetjn.mp3',
       ),

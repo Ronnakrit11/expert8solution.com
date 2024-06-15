@@ -8,10 +8,11 @@ import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import avatar from '@/public/assests/avatar.png'
 import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
 import { useLogOutQuery, useSocialAuthMutation } from '@/redux/features/auth/authApi'
-import { isSSR } from '@/utils/index.ts'
+import { isCSR } from '@/utils/index.ts'
 
 import React, { FC, useEffect, useState } from 'react'
 
+import clsx from 'clsx'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -40,7 +41,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
     skip: !logout ? true : false,
   })
 
-  if (isSSR()) {
+  if (isCSR()) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 85) {
         setActive(true)
@@ -105,17 +106,16 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
               <NavItems isMobile={false} />
               <ThemeSwitcher /> {/* only for mobile */}
               {userData ? (
-                <Link href={'/profile'}>
+                <Link href="/profile">
                   <Image
                     src={userData?.user.avatar ? userData.user.avatar.url : avatar}
                     alt=""
                     width={30}
                     height={30}
-                    className="w-[35px] h-[35px] rounded-full border-2 mr-2 cursor-pointer"
-                    style={{
-                      border: activeItem === 5 ? '2px solid #1565c0' : 'none',
-                      marginLeft: '15px',
-                    }}
+                    className={clsx(
+                      'w-[35px] h-[35px] rounded-full border-2 mr-2 cursor-pointer ml-[15px]',
+                      activeItem === 5 ? `border-blue-500` : ' border-none',
+                    )}
                   />
                 </Link>
               ) : (
@@ -177,4 +177,4 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
   )
 }
 
-export default Header
+export default React.memo(Header)

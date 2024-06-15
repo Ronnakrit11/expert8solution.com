@@ -2,6 +2,7 @@
 
 import { useGetUsersAllCoursesQuery } from '@/redux/features/courses/coursesApi'
 import { useGetAllEbookQuery } from '@/redux/features/ebooks/ebookApi'
+import { isCSR } from '@/utils/index.ts'
 
 import React, { FC, useEffect, useState } from 'react'
 
@@ -39,7 +40,7 @@ const Profile: FC<Props> = ({ user }) => {
     await signOut()
   }
 
-  if (typeof window !== 'undefined') {
+  if (isCSR()) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 85) {
         setScroll(true)
