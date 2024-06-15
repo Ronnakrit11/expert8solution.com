@@ -34,9 +34,6 @@ export const metadata = {
   },
 }
 
-export const revalidate = 180
-
-// http://localhost:8000/api/v1/get-layout/Banner
 const Page = async () => {
   console.log('porcess env =>', process.env.NEXT_PUBLIC_SERVER_URI)
 

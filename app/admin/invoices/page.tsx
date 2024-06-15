@@ -2,7 +2,7 @@
 
 import DashboardHeader from '@/app/components/Admin/DashboardHeader'
 import AllInvoices from '@/app/components/Admin/Order/AllInvoices'
-import Heading from '@/app/utils/Heading'
+import Heading from '@/components/Heading'
 
 import React from 'react'
 

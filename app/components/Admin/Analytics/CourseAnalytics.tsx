@@ -1,11 +1,11 @@
-import { styles } from '@/app/styles/style'
 import { useGetCoursesAnalyticsQuery } from '@/redux/features/analytics/analyticsApi'
+import { styles } from '@/styles'
 
 import React from 'react'
 
 import { Bar, BarChart, Label, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 
-import Loader from '../../Loader/Loader'
+import Loader from '../../../../components/Loader/Loader'
 
 type Props = {}
 

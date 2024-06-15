@@ -1,28 +1,19 @@
 'use client'
 
+import Header from '@/components/Layout/Header'
+
 import React, { useState } from 'react'
 
-import Header from '../../components/Layout/Header'
 import Footer from '../components/Footer'
-import Heading from '../utils/Heading'
-import Pricing from './Pricing'
+import Pricing from './components/Pricing'
 
-type Props = {}
-
-const Page = (props: Props) => {
+const Page = () => {
   const [open, setOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState(5)
   const [route, setRoute] = useState('Login')
 
   return (
     <div>
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
+      <Header open={open} setOpen={setOpen} activeItem={5} setRoute={setRoute} route={route} />
       <Pricing />
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import CourseContent from '@/app/components/Course/CourseContent'
-import Loader from '@/app/components/Loader/Loader'
+import Loader from '@/components/Loader/Loader'
 import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
 
 import React, { useEffect } from 'react'

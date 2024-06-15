@@ -10,11 +10,10 @@ import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import socketIO from 'socket.io-client'
 
+import Loader from '../components/Loader/Loader'
+import { ThemeProvider } from '../components/theme-provider'
 import { Providers } from './Provider'
-import Loader from './components/Loader/Loader'
-import SimpleBackdrop from './components/Loading/SimpleBackdrop'
 import './globals.css'
-import { ThemeProvider } from './utils/theme-provider'
 
 const ENDPOINT = process.env.NEXT_PUBLIC_SOCKET_SERVER_URI || ''
 const socketId = socketIO(ENDPOINT, { transports: ['websocket'] })
@@ -39,10 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               enableSystem
               disableTransitionOnChange
             >
-              <Custom>
+              <LoadUser>
                 <Analytics />
                 <div>{children}</div>
-              </Custom>
+              </LoadUser>
               <Toaster position="top-center" reverseOrder={false} />
             </ThemeProvider>
           </SessionProvider>
@@ -52,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   )
 }
 
-const Custom: FC<{ children: React.ReactNode }> = ({ children }) => {
+const LoadUser: FC<{ children: React.ReactNode }> = ({ children }) => {
   const { isLoading } = useLoadUserQuery({})
   const { data: session } = useSession()
 

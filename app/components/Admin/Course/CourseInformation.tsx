@@ -1,5 +1,5 @@
-import { styles } from '@/app/styles/style'
 import { useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
+import { styles } from '@/styles'
 
 import React, { FC, useEffect, useState } from 'react'
 
@@ -109,8 +109,7 @@ const CourseInformation: FC<Props> = ({ courseInfo, setCourseInfo, active, setAc
               onChange={(e: any) => setCourseInfo({ ...courseInfo, price: e.target.value })}
               id="price"
               placeholder="29"
-              className={`
-            ${styles.input}`}
+              className={styles.input}
             />
           </div>
           <div className="w-[50%]">
@@ -124,35 +123,35 @@ const CourseInformation: FC<Props> = ({ courseInfo, setCourseInfo, active, setAc
               }
               id="price"
               placeholder="79"
-              className={`
-            ${styles.input}`}
+              className={styles.input}
             />
           </div>
         </div>
         <br />
         <div className="w-full flex justify-between">
           <div className="w-[45%]">
-            <label className={`${styles.label}`} htmlFor="email">
+            <label className={styles.label} htmlFor="email">
               Course Tags
             </label>
             <input
               type="text"
-              required
-              name=""
+              id="tags"
+              name="tags"
               value={courseInfo.tags}
               onChange={(e: any) => setCourseInfo({ ...courseInfo, tags: e.target.value })}
-              id="tags"
               placeholder="MERN,Next 13,Socket io,tailwind css,LMS"
-              className={`
-            ${styles.input}`}
+              className={styles.input}
+              required
             />
           </div>
           <div className="w-[50%]">
-            <label className={`${styles.label} w-[50%]`}>Course Categories</label>
+            <label htmlFor="category" className={`${styles.label} w-[50%]`}>
+              Course Categories
+            </label>
             <select
-              name=""
-              id=""
-              className={`${styles.input}`}
+              id="category"
+              name="category"
+              className={styles.input}
               value={courseInfo.category}
               onChange={(e: any) => setCourseInfo({ ...courseInfo, categories: e.target.value })}
             >

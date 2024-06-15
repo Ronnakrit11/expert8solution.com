@@ -1,10 +1,10 @@
 'use client'
 
 import DashboardHeader from '@/app/components/Admin/DashboardHeader'
-import SimpleBackdrop from '@/app/components/Loading/SimpleBackdrop'
-import { styles } from '@/app/styles/style'
-import Heading from '@/app/utils/Heading'
+import Heading from '@/components/Heading'
+import SimpleBackdrop from '@/components/Loading/SimpleBackdrop'
 import { useCreateEbookMutation } from '@/redux/features/ebooks/ebookApi'
+import { styles } from '@/styles'
 import ImageIcon from '@mui/icons-material/Image'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
 import { Box } from '@mui/material'

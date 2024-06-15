@@ -1,4 +1,5 @@
-import { styles } from '@/app/styles/style'
+import Loader from '@/components/Loader/Loader'
+import LoadingBackDrop from '@/components/Loader/LoadingBackDrop'
 import { useGetAllCoursesQuery } from '@/redux/features/courses/coursesApi'
 import { useAddEbookUserMutation, useGetAllEbookQuery } from '@/redux/features/ebooks/ebookApi'
 import {
@@ -8,7 +9,7 @@ import {
   useGetAllUsersQuery,
   useUpdateUserRoleMutation,
 } from '@/redux/features/user/userApi'
-import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack'
+import { styles } from '@/styles'
 import { Box, Button, Modal } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
 
@@ -24,8 +25,9 @@ import {
 } from 'react-icons/ai'
 import { format } from 'timeago.js'
 
-import Loader from '../../Loader/Loader'
-import LoadingBackDrop from '../../Loader/LoadingBackDrop'
+import ModalAddCourse from './components/ModalAddCourse'
+import ModalAddEbook from './components/ModalAddEbook'
+import ModalAddUser from './components/ModalAddUser'
 
 type Props = {
   isTeam?: boolean
@@ -38,8 +40,8 @@ interface IUserState {
   confirmPassword: string
 }
 
-const AllCourses: FC<Props> = ({ isTeam }) => {
-  const { theme, setTheme } = useTheme()
+const Users: FC<Props> = ({ isTeam }) => {
+  const { theme } = useTheme()
   const [active, setActive] = useState(false)
   const [email, setEmail] = useState('')
   const [role, setRole] = useState('admin')
@@ -67,24 +69,13 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
     { isLoading: isLoadingAddCourse, error: AddCourseError, isSuccess: AddCourseSuccess },
   ] = useAddCourseToUserMutation()
 
-  const [
-    addEbook,
-    { isLoading: isLoadingAddEbook, error: AddEbookError, isSuccess: AddEbookSuccess },
-  ] = useAddEbookUserMutation()
+  const [addEbook, { error: AddEbookError, isSuccess: AddEbookSuccess }] = useAddEbookUserMutation()
 
   const { isLoading, data, refetch } = useGetAllUsersQuery({}, { refetchOnMountOrArgChange: true })
 
-  const {
-    isLoading: isLoadingCourse,
-    data: courseList,
-    refetch: refetchCourse,
-  } = useGetAllCoursesQuery({}, { refetchOnMountOrArgChange: true })
+  const { data: courseList } = useGetAllCoursesQuery({}, { refetchOnMountOrArgChange: true })
 
-  const {
-    isLoading: isLoadingEbook,
-    data: ebookList,
-    refetch: refetchEbook,
-  } = useGetAllEbookQuery({}, { refetchOnMountOrArgChange: true })
+  const { data: ebookList } = useGetAllEbookQuery({}, { refetchOnMountOrArgChange: true })
 
   const [deleteUser, { isSuccess: deleteSuccess, error: deleteError }] = useDeleteUserMutation({})
 
@@ -493,216 +484,4 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
   )
 }
 
-const ModalAddCourse = ({
-  handleAddCourse,
-  selectCourse,
-  openModalAddCourse,
-  setOpenModalAddCourse,
-  userInfo,
-  courseList,
-  setSelectCourse,
-}: any) => {
-  const [courseOption, setCourseOption] = useState([])
-
-  useEffect(() => {
-    if (courseList?.courses.length) {
-      const newOption = courseList?.courses.map((ele: any) => {
-        const isExits = userInfo.courses.some((course: any) => course._id === ele._id)
-        return {
-          ...ele,
-          isExits,
-        }
-      })
-      setCourseOption(newOption)
-    }
-  }, [])
-
-  return (
-    <Modal
-      open={openModalAddCourse}
-      onClose={() => setOpenModalAddCourse(false)}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-    >
-      <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-        <h1 className={`${styles.title}`}>Add Course To "{userInfo?.name}"</h1>
-        <div className="w-[100%] mt-4">
-          <select
-            name=""
-            id=""
-            className={`${styles.input}`}
-            value={selectCourse}
-            onChange={(e: any) => setSelectCourse(e.target.value)}
-          >
-            <option value="">Select Course</option>
-            {courseOption.map?.((item: any) => (
-              <option value={item._id} key={item._id} disabled={item.isExits}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          <div />
-        </div>
-        <div className="flex w-full items-center justify-center mb-6 mt-6">
-          <button
-            disabled={!!!selectCourse}
-            className={`${styles.button}  w-full h-[30px] bg-[#2190ff] mt-4`}
-            onClick={handleAddCourse}
-          >
-            Add
-          </button>
-        </div>
-      </Box>
-    </Modal>
-  )
-}
-
-const ModalAddEbook = ({
-  openModalAddEbook,
-  setOpenModalAddEbook,
-  userInfo,
-  ebookList,
-  setSelectEbook,
-  selectEbook,
-  handleAddEbook,
-}: any) => {
-  const [ebookOption, setEbookOption] = useState([])
-
-  useEffect(() => {
-    if (ebookList?.ebooks.length) {
-      const newOption = ebookList?.ebooks.map((ele: any) => {
-        const isExits = userInfo.ebooks.some((item: any) => item._id === ele._id)
-        return {
-          ...ele,
-          isExits,
-        }
-      })
-      setEbookOption(newOption)
-    }
-  }, [])
-
-  return (
-    <Modal
-      open={openModalAddEbook}
-      onClose={() => setOpenModalAddEbook(false)}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-    >
-      <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-        <h1 className={`${styles.title}`}>Add Ebook To "{userInfo?.name}"</h1>
-        <div className="w-[100%] mt-4">
-          <select
-            name=""
-            id=""
-            className={`${styles.input}`}
-            value={selectEbook}
-            onChange={(e: any) => setSelectEbook(e.target.value)}
-          >
-            <option value="">Select Course</option>
-            {ebookOption.map?.((item: any) => (
-              <option value={item._id} key={item._id} disabled={item.isExits}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          <div />
-        </div>
-        <div className="flex w-full items-center justify-center mb-6 mt-6">
-          <button
-            disabled={!!!selectEbook}
-            className={`${styles.button}  w-full h-[30px] bg-[#2190ff] mt-4`}
-            onClick={handleAddEbook}
-          >
-            Add
-          </button>
-        </div>
-      </Box>
-    </Modal>
-  )
-}
-
-const ModalAddUser = ({
-  openModalAddUser,
-  setOpenModalAddUser,
-  userState,
-  setUserState,
-  handleSubmit,
-}) => {
-  const validateError = () => {
-    let error = ''
-    if (!userState.name) {
-      error = 'name user is required!'
-    } else if (!userState.email) {
-      error = 'email is required!'
-    } else if (!userState.password) {
-      error = 'password is required!'
-    } else if (!userState.confirmPassword) {
-      error = 'confirm password is required!'
-    } else if (userState.password !== userState.confirmPassword) {
-      error = 'password and confirm password is not match!'
-    }
-
-    return error
-  }
-
-  const onSubmit = () => {
-    let error = validateError()
-    if (error) {
-      return alert(error)
-    }
-
-    handleSubmit()
-  }
-
-  return (
-    <Modal
-      open={openModalAddUser}
-      onClose={() => setOpenModalAddUser(prev => !prev)}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-    >
-      <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-        <h1 className={`${styles.title}`}>Add New User</h1>
-        <div className="mt-4 text-black">
-          Name:
-          <input
-            type="text"
-            value={userState.name}
-            onChange={e => setUserState(prev => ({ ...prev, name: e.target.value }))}
-            placeholder="Enter name..."
-            className={`${styles.input} mb-2`}
-          />
-          Email:
-          <input
-            type="email"
-            value={userState.email}
-            onChange={e => setUserState(prev => ({ ...prev, email: e.target.value }))}
-            placeholder="Enter email..."
-            className={`${styles.input} mb-2`}
-          />
-          Password:
-          <input
-            type="text"
-            value={userState.password}
-            onChange={e => setUserState(prev => ({ ...prev, password: e.target.value }))}
-            placeholder="Enter Password"
-            className={`${styles.input} mb-2`}
-          />
-          Confirm Password:
-          <input
-            type="text"
-            value={userState.confirmPassword}
-            onChange={e => setUserState(prev => ({ ...prev, confirmPassword: e.target.value }))}
-            placeholder="Confirm Password"
-            className={`${styles.input} mb-2`}
-          />
-          <br />
-          <div className={`${styles.button} my-6 !h-[30px]`} onClick={onSubmit}>
-            Submit
-          </div>
-        </div>
-      </Box>
-    </Modal>
-  )
-}
-export default AllCourses
+export default Users

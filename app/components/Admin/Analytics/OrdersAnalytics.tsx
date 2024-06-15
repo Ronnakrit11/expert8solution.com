@@ -1,5 +1,5 @@
-import { styles } from '@/app/styles/style'
 import { useGetOrdersAnalyticsQuery } from '@/redux/features/analytics/analyticsApi'
+import { styles } from '@/styles'
 
 import React, { useEffect } from 'react'
 
@@ -14,7 +14,7 @@ import {
   YAxis,
 } from 'recharts'
 
-import Loader from '../../Loader/Loader'
+import Loader from '../../../../components/Loader/Loader'
 
 // const analyticsData = [
 //   {

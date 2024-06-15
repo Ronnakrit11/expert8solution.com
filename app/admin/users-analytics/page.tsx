@@ -4,9 +4,9 @@ import UserAnalytics from '@/app/components/Admin/Analytics/UserAnalytics'
 
 import React from 'react'
 
+import Heading from '../../../components/Heading'
 import DashboardHeader from '../../components/Admin/DashboardHeader'
 import AdminSidebar from '../../components/Admin/sidebar/AdminSidebar'
-import Heading from '../../utils/Heading'
 
 type Props = {}
 

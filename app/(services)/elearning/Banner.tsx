@@ -1,14 +1,16 @@
-import { track } from '@vercel/analytics'
+import { track } from '@vercel/analytics/server'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
 import { LuCheckCircle } from 'react-icons/lu'
 
-track('Booking Demo')
-
 const Banner = () => {
+  useEffect(() => {
+    track('e_learning_banner')
+  }, [])
+
   return (
     <div>
       <div className="w-[90%] sm:w-[90%] md:w-[60%] mx-auto py-20">

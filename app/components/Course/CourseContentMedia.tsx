@@ -1,6 +1,5 @@
-import { styles } from '@/app/styles/style'
-import CoursePlayer from '@/app/utils/CoursePlayer'
-import Ratings from '@/app/utils/Ratings'
+import CoursePlayer from '@/components/CoursePlayer'
+import Ratings from '@/components/Ratings'
 import {
   useAddAnswerInQuestionMutation,
   useAddNewQuestionMutation,
@@ -8,6 +7,7 @@ import {
   useAddReviewInCourseMutation,
   useGetCourseDetailsQuery,
 } from '@/redux/features/courses/coursesApi'
+import { styles } from '@/styles'
 
 import React, { useEffect, useState } from 'react'
 

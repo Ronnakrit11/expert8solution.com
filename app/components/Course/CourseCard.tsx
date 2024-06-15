@@ -1,4 +1,4 @@
-import Ratings from '@/app/utils/Ratings'
+import Ratings from '@/components/Ratings'
 
 import React, { FC } from 'react'
 

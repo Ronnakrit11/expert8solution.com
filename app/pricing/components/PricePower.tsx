@@ -203,7 +203,7 @@ const PricePower = () => {
           <div className="mt-12 text-center">
             <div className="mt-8 flex flex-wrap justify-center gap-6 brightness-75 contrast-200 grayscale dark:brightness-200 dark:contrast-0 sm:justify-between lg:gap-24">
               {item.map((item, index) => (
-                <img src={item.img} key={index} className="h-8 w-auto lg:h-10 lg:w-auto" />
+                <img src={item.img} key={index} className="h-8 w-auto lg:h-10 lg:w-auto" alt="" />
               ))}
             </div>
           </div>

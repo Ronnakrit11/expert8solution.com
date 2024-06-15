@@ -1,4 +1,4 @@
-import Heading from '@/app/utils/Heading'
+import Heading from '@/components/Heading'
 import Header from '@/components/Layout/Header'
 import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
 import { useGetCourseDetailsQuery } from '@/redux/features/courses/coursesApi'
@@ -9,8 +9,8 @@ import {
 
 import React, { useEffect, useState } from 'react'
 
+import Loader from '../../../components/Loader/Loader'
 import Footer from '../Footer'
-import Loader from '../Loader/Loader'
 import CourseDetails from './CourseDetails'
 
 type Props = {

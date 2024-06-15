@@ -1,17 +1,11 @@
 'use client'
 
-import Heading from '@/app/utils/Heading'
-import { useGetBlogContentQuery } from '@/redux/features/blog/blogsApi'
-import { useGetCourseContentQuery } from '@/redux/features/courses/coursesApi'
+import Heading from '@/components/Heading'
+import Header from '@/components/Layout/Header'
 
 import React, { useState } from 'react'
 
-// import CourseContentMedia from "./CourseContentMedia";
-import Header from '../../../components/Layout/Header'
 import Footer from '../Footer'
-import Loader from '../Loader/Loader'
-
-// import CourseContentList from "./CourseContentList";
 
 type Props = {
   slug: string

@@ -1,6 +1,7 @@
 'use client'
 
-import Loader from '@/app/components/Loader/Loader'
+import Header from '@/components/Layout/Header'
+import Loader from '@/components/Loader/Loader'
 import { Viewer, Worker } from '@react-pdf-viewer/core'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout'
@@ -12,7 +13,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useSearchParams } from 'next/navigation'
 
-import Header from '../../../components/Layout/Header'
 import Footer from '../../components/Footer'
 
 const Page = ({ params }: any) => {

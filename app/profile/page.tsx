@@ -1,14 +1,15 @@
 'use client'
 
+import Header from '@/components/Layout/Header'
+
 import React, { FC, useState } from 'react'
 
 import { useSelector } from 'react-redux'
 
-import Header from '../../components/Layout/Header'
+import Heading from '../../components/Heading'
+import Protected from '../../hooks/useProtected'
 import Footer from '../components/Footer'
 import Profile from '../components/Profile/Profile'
-import Protected from '../hooks/useProtected'
-import Heading from '../utils/Heading'
 
 type Props = {}
 

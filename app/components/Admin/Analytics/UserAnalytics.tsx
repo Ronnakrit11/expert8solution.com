@@ -1,12 +1,12 @@
-import { styles } from '@/app/styles/style'
 import { useGetUsersAnalyticsQuery } from '@/redux/features/analytics/analyticsApi'
+import { styles } from '@/styles'
 
 import React, { FC } from 'react'
 
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { Line, LineChart } from 'recharts'
 
-import Loader from '../../Loader/Loader'
+import Loader from '../../../../components/Loader/Loader'
 
 type Props = {
   isDashboard?: boolean

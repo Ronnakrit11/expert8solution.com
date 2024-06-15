@@ -1,6 +1,6 @@
 'use client'
 
-import { ThemeSwitcher } from '@/app/utils/ThemeSwitcher'
+import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import {
   useGetAllNotificationsQuery,
   useUpdateNotificationStatusMutation,

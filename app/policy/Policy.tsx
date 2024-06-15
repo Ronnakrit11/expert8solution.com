@@ -1,10 +1,8 @@
+import { styles } from '@/styles'
+
 import React from 'react'
 
-import { styles } from '../styles/style'
-
-type Props = {}
-
-const Policy = (props: Props) => {
+const Policy = () => {
   return (
     <div className="w-full bg-gradient-4 text-white">
       <div>

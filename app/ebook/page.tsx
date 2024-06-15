@@ -8,13 +8,13 @@ import React, { useEffect, useState } from 'react'
 
 import { useSearchParams } from 'next/navigation'
 
+import Heading from '../../components/Heading'
 import Header from '../../components/Layout/Header'
+import Loader from '../../components/Loader/Loader'
+import { styles } from '../../styles'
 import CourseCard from '../components/Course/CourseCard'
 import EbookCard from '../components/Ebook/EbookCard'
 import Footer from '../components/Footer'
-import Loader from '../components/Loader/Loader'
-import { styles } from '../styles/style'
-import Heading from '../utils/Heading'
 
 type Props = {}
 

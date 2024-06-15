@@ -55,8 +55,6 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export const revalidate = 120
-
 const Page = async ({ params }: Props) => {
   const slug = params.slug
   const response = await fetch(`${process.env.SERVER_URI}/api/v1/get-blog/${slug}`).then(res =>

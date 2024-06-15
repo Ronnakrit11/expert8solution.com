@@ -1,6 +1,6 @@
-import { styles } from '@/app/styles/style'
 import { useDeleteCourseMutation, useGetAllCoursesQuery } from '@/redux/features/courses/coursesApi'
 import { useDeleteEbookMutation, useGetAllEbookQuery } from '@/redux/features/ebooks/ebookApi'
+import { styles } from '@/styles'
 import AddIcon from '@mui/icons-material/Add'
 import { Box, Button, Modal, Typography } from '@mui/material'
 import Dialog from '@mui/material/Dialog'
@@ -21,8 +21,8 @@ import { AiOutlineDelete } from 'react-icons/ai'
 import { FiEdit2 } from 'react-icons/fi'
 import { format } from 'timeago.js'
 
-import Loader from '../../Loader/Loader'
-import SimpleBackdrop from '../../Loading/SimpleBackdrop'
+import Loader from '../../../../components/Loader/Loader'
+import SimpleBackdrop from '../../../../components/Loading/SimpleBackdrop'
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {

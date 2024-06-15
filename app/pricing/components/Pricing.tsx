@@ -2,7 +2,7 @@ import GridThreeGradient from '@/components/GridThreeGradient'
 
 import React from 'react'
 
-import FAQPricing from '../components/FAQ/FAQPricing'
+import FAQPricing from '../../components/FAQ/FAQPricing'
 import ComparePlan from './ComparePlan'
 import PricePower from './PricePower'
 

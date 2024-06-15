@@ -1,5 +1,5 @@
-import { styles } from '@/app/styles/style'
 import { useEditLayoutMutation, useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
+import { styles } from '@/styles'
 
 import React, { useEffect, useState } from 'react'
 
@@ -7,7 +7,7 @@ import { toast } from 'react-hot-toast'
 import { AiOutlineDelete } from 'react-icons/ai'
 import { IoMdAddCircleOutline } from 'react-icons/io'
 
-import Loader from '../../Loader/Loader'
+import Loader from '../../../../components/Loader/Loader'
 
 type Props = {}
 

@@ -1,8 +1,8 @@
-import { styles } from '@/app/styles/style'
-import CoursePlayer from '@/app/utils/CoursePlayer'
-import Ratings from '@/app/utils/Ratings'
+import CoursePlayer from '@/components/CoursePlayer'
+import Ratings from '@/components/Ratings'
 import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
 import { useGetTokenPaymentMutation } from '@/redux/features/orders/ordersApi'
+import { styles } from '@/styles'
 import { Elements } from '@stripe/react-stripe-js'
 
 import React, { useEffect, useRef, useState } from 'react'
@@ -26,7 +26,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
   const { data: userData, refetch } = useLoadUserQuery(undefined, {})
   const [getToken, { isLoading, isSuccess, error }] = useGetTokenPaymentMutation()
 
-  const submitRef = useRef<HTMLButtonElement | null>(null)
+  const submitRef = useRef<HTMLInputElement | null>(null)
   const [user, setUser] = useState<any>()
   const [token, setToken] = useState<string | ''>('')
   const [refId, setRefId] = useState<string | ''>('')
@@ -95,7 +95,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
         <input type="hidden" name="lang" defaultValue="TH" />
         <input type="hidden" name="returnurl" defaultValue={returnUrl} value={returnUrl} />
         <input type="hidden" name="postbackurl" defaultValue={postBackUrl} value={postBackUrl} />
-        <button className="hidden" ref={submitRef} type="submit"></button>
+        <input ref={submitRef} type="submit" hidden />
       </form>
       <div className="w-[90%] 800px:w-[90%] m-auto py-5">
         <div className="w-full flex flex-col-reverse 800px:flex-row">

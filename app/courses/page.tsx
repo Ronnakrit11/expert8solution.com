@@ -1,5 +1,8 @@
 'use client'
 
+import Heading from '@/components/Heading'
+import Header from '@/components/Layout/Header'
+import Loader from '@/components/Loader/Loader'
 import { useGetUsersAllCoursesQuery } from '@/redux/features/courses/coursesApi'
 import { useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
 
@@ -7,12 +10,9 @@ import React, { useEffect, useState } from 'react'
 
 import { useSearchParams } from 'next/navigation'
 
-import Header from '../../components/Layout/Header'
+import { styles } from '../../styles'
 import CourseCard from '../components/Course/CourseCard'
 import Footer from '../components/Footer'
-import Loader from '../components/Loader/Loader'
-import { styles } from '../styles/style'
-import Heading from '../utils/Heading'
 
 type Props = {}
 

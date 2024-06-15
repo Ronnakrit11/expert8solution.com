@@ -1,5 +1,5 @@
-import { styles } from '@/app/styles/style'
 import { useActivationMutation } from '@/redux/features/auth/authApi'
+import { styles } from '@/styles'
 
 import React, { FC, useEffect, useRef, useState } from 'react'
 

@@ -1,5 +1,5 @@
-import { styles } from '@/app/styles/style'
 import { useDeleteCourseMutation, useGetAllCoursesQuery } from '@/redux/features/courses/coursesApi'
+import { styles } from '@/styles'
 import { Box, Button, Modal } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
 
@@ -12,7 +12,7 @@ import { AiOutlineDelete } from 'react-icons/ai'
 import { FiEdit2 } from 'react-icons/fi'
 import { format } from 'timeago.js'
 
-import Loader from '../../Loader/Loader'
+import Loader from '../../../../components/Loader/Loader'
 
 type Props = {}
 

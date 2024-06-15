@@ -5,7 +5,7 @@ import { FaLine } from 'react-icons/fa6'
 import { FaSquareFacebook } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 
-import { styles } from '../styles/style'
+import { styles } from '../../styles'
 
 const About = () => {
   return (

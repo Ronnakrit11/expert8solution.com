@@ -1,11 +1,11 @@
-import { styles } from '@/app/styles/style'
-import Ratings from '@/app/utils/Ratings'
+import Ratings from '@/components/Ratings'
+import { styles } from '@/styles'
 
 import React, { FC } from 'react'
 
 import { IoCheckmarkDoneOutline } from 'react-icons/io5'
 
-import CoursePlayer from '../../../utils/CoursePlayer'
+import CoursePlayer from '../../../../components/CoursePlayer'
 
 type Props = {
   active: number

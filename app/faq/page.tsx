@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react'
 
+import Heading from '../../components/Heading'
 import Header from '../../components/Layout/Header'
 import FAQ from '../components/FAQ/FAQ'
 import Footer from '../components/Footer'
-import Heading from '../utils/Heading'
 
 type Props = {}
 

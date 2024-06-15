@@ -2,8 +2,8 @@
 
 import DashboardHero from '@/app/components/Admin/DashboardHero'
 import AllEbook from '@/app/components/Admin/ebook/AllEbook'
-import AdminProtected from '@/app/hooks/adminProtected'
-import Heading from '@/app/utils/Heading'
+import Heading from '@/components/Heading'
+import AdminProtected from '@/hooks/adminProtected'
 
 import React from 'react'
 

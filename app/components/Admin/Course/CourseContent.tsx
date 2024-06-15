@@ -1,4 +1,4 @@
-import { styles } from '@/app/styles/style'
+import { styles } from '@/styles'
 
 import React, { FC, useState } from 'react'
 

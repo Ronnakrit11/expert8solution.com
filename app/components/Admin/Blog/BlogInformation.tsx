@@ -1,14 +1,14 @@
-import { styles } from '@/app/styles/style'
 import { useCreateBlogMutation, useEditBlogMutation } from '@/redux/features/blog/blogsApi'
 import { useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
+import { styles } from '@/styles'
 import ImageIcon from '@mui/icons-material/Image'
 
 import React, { FC, useEffect, useState } from 'react'
 
 import toast from 'react-hot-toast'
 
+import SimpleBackdrop from '../../../../components/Loading/SimpleBackdrop'
 import Editor from '../../Editor'
-import SimpleBackdrop from '../../Loading/SimpleBackdrop'
 
 type Props = {
   blogData?: any

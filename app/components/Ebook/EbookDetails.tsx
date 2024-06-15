@@ -1,8 +1,8 @@
 'use client'
 
-import { styles } from '@/app/styles/style'
 import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
 import { useGetTokenPaymentEbookMutation } from '@/redux/features/orders/ordersApi'
+import { styles } from '@/styles'
 import { Box, Modal } from '@mui/material'
 import { Elements } from '@stripe/react-stripe-js'
 
@@ -16,7 +16,7 @@ import { BsBook, BsFileEarmarkMinus, BsFilePdf } from 'react-icons/bs'
 import { HiOutlineDownload } from 'react-icons/hi'
 import { IoCheckmarkDoneOutline, IoCloseOutline } from 'react-icons/io5'
 
-import SimpleBackdrop from '../Loading/SimpleBackdrop'
+import SimpleBackdrop from '../../../components/Loading/SimpleBackdrop'
 import CheckOutForm from '../Payment/CheckOutForm'
 
 type Props = {
@@ -43,7 +43,7 @@ const EbookDetails = ({
   const [isLoadingBackDrop, setLoadingBackDrop] = useState(false)
   const [openModalDownLoad, setOpenModalDownLoad] = useState(false)
 
-  const submitRef = useRef<HTMLButtonElement | null>(null)
+  const submitRef = useRef<HTMLInputElement | null>(null)
   const [token, setToken] = useState<string | ''>('')
   const [refId, setRefId] = useState<string | ''>('')
 
@@ -127,7 +127,7 @@ const EbookDetails = ({
         <input type="hidden" name="lang" defaultValue="TH" />
         <input type="hidden" name="returnurl" defaultValue={returnUrl} value={returnUrl} />
         <input type="hidden" name="postbackurl" defaultValue={postBackUrl} value={postBackUrl} />
-        <button className="hidden" ref={submitRef} type="submit"></button>
+        <input hidden ref={submitRef} type="submit" />
       </form>
 
       <div className="w-[90%] 800px:w-[90%] m-auto py-5">
@@ -205,13 +205,6 @@ const EbookDetails = ({
                       <AiFillEye style={{ fontSize: 20 }} />
                       &nbsp; View
                     </button>
-                    {/* <button
-                      onClick={saveFile}
-                      className={`${styles.button} !w-[190px] my-3 font-Poppins cursor-pointer bg-[#47d097] hover:bg-[#37a074]`}
-                    >
-                      <HiOutlineDownload style={{ fontSize: 20 }} />&nbsp;
-                      Download Now
-                    </button> */}
                   </div>
                 ) : (
                   <div

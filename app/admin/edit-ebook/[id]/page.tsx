@@ -1,12 +1,12 @@
 'use client'
 
-import SimpleBackdrop from '@/app/components/Loading/SimpleBackdrop'
-import { styles } from '@/app/styles/style'
+import SimpleBackdrop from '@/components/Loading/SimpleBackdrop'
 import {
   useCreateEbookMutation,
   useEditEbookMutation,
   useGetEbookDetailAdminQuery,
 } from '@/redux/features/ebooks/ebookApi'
+import { styles } from '@/styles'
 import ImageIcon from '@mui/icons-material/Image'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
 import { Box } from '@mui/material'
@@ -16,10 +16,10 @@ import React, { useEffect, useState } from 'react'
 import { redirect } from 'next/navigation'
 import toast from 'react-hot-toast'
 
+import Heading from '../../../../components/Heading'
 import CreateCourse from '../../../components/Admin/Course/CreateCourse'
 import DashboardHeader from '../../../components/Admin/DashboardHeader'
 import AdminSidebar from '../../../components/Admin/sidebar/AdminSidebar'
-import Heading from '../../../utils/Heading'
 
 type Props = {}
 

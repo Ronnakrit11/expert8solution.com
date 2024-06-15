@@ -1,11 +1,7 @@
-import { track } from '@vercel/analytics'
-
 import React from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
-
-track('รายละเอียดเพิ่มเติม')
 
 const LeftImageContent = () => {
   return (

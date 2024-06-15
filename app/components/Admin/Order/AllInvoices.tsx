@@ -10,7 +10,7 @@ import { useTheme } from 'next-themes'
 import { AiOutlineMail } from 'react-icons/ai'
 import { format } from 'timeago.js'
 
-import Loader from '../../Loader/Loader'
+import Loader from '../../../../components/Loader/Loader'
 
 type Props = {
   isDashboard?: boolean

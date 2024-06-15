@@ -1,13 +1,9 @@
 'use client'
 
-import { track } from '@vercel/analytics'
-
 import React, { useState } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
-
-track('ดูรายละเอียดเพิ่มเติม')
 
 const Tab = () => {
   const [tabState, setTabState] = useState(0)

@@ -1,5 +1,5 @@
-import { styles } from '@/app/styles/style'
 import { useEditLayoutMutation, useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
+import { styles } from '@/styles'
 
 import React, { FC, useEffect, useRef, useState } from 'react'
 

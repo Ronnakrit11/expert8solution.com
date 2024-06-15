@@ -1,5 +1,5 @@
-import { styles } from '@/app/styles/style'
 import { useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
+import { styles } from '@/styles'
 
 import React, { FC, useEffect, useState } from 'react'
 
@@ -103,11 +103,11 @@ const CourseInformation: FC<Props> = ({ courseInfo, setCourseInfo, active, setAc
             <label className={`${styles.label}`}>Course Price</label>
             <input
               type="number"
-              name=""
+              id="price-1"
+              name="price1"
               required
               value={courseInfo.price}
               onChange={(e: any) => setCourseInfo({ ...courseInfo, price: e.target.value })}
-              id="price"
               placeholder="29"
               className={`
             ${styles.input}`}
@@ -117,12 +117,12 @@ const CourseInformation: FC<Props> = ({ courseInfo, setCourseInfo, active, setAc
             <label className={`${styles.label} w-[50%]`}>Estimated Price (optional)</label>
             <input
               type="number"
-              name=""
+              name="price2"
               value={courseInfo.estimatedPrice}
               onChange={(e: any) =>
                 setCourseInfo({ ...courseInfo, estimatedPrice: e.target.value })
               }
-              id="price"
+              id="price-2"
               placeholder="79"
               className={`
             ${styles.input}`}
@@ -148,10 +148,12 @@ const CourseInformation: FC<Props> = ({ courseInfo, setCourseInfo, active, setAc
             />
           </div>
           <div className="w-[50%]">
-            <label className={`${styles.label} w-[50%]`}>Course Categories</label>
+            <label htmlFor="category" className={`${styles.label} w-[50%]`}>
+              Course Categories
+            </label>
             <select
-              name=""
-              id=""
+              name="category"
+              id="category"
               className={`${styles.input}`}
               value={courseInfo.category}
               onChange={(e: any) => setCourseInfo({ ...courseInfo, categories: e.target.value })}
@@ -172,7 +174,7 @@ const CourseInformation: FC<Props> = ({ courseInfo, setCourseInfo, active, setAc
             <label className={`${styles.label}`}>Course Level</label>
             <input
               type="text"
-              name=""
+              name="level"
               value={courseInfo.level}
               required
               onChange={(e: any) => setCourseInfo({ ...courseInfo, level: e.target.value })}

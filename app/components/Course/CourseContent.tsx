@@ -1,10 +1,10 @@
-import Heading from '@/app/utils/Heading'
+import Heading from '@/components/Heading'
+import Header from '@/components/Layout/Header'
+import Loader from '@/components/Loader/Loader'
 import { useGetCourseContentQuery } from '@/redux/features/courses/coursesApi'
 
 import React, { useState } from 'react'
 
-import Header from '../../../components/Layout/Header'
-import Loader from '../Loader/Loader'
 import CourseContentList from './CourseContentList'
 import CourseContentMedia from './CourseContentMedia'
 

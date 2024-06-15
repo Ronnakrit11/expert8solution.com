@@ -1,13 +1,15 @@
 'use client'
 
-import SocialMediaWidget from '@/app/utils/SocialMediaWidjet'
 import GridThreeGradient from '@/components/GridThreeGradient'
 import Header from '@/components/Layout/Header'
+import SocialMediaWidget from '@/components/SocialMediaWidjet'
+import { track } from '@vercel/analytics'
 
 import React, { useEffect, useState } from 'react'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import dynamic from 'next/dynamic'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 
@@ -20,7 +22,8 @@ import Review from './components/Review'
 import Services2 from './components/Services2'
 import Tab from './components/Tab'
 import Trust from './components/Trust'
-import VideoBanner from './components/VideoBanner'
+
+const VideoBanner = dynamic(() => import('./components/VideoBanner'), { ssr: false })
 
 function Home({ webInfo }: any) {
   console.log('🚀 ~ file: Home.tsx:24 ~ Home ~ layout:', webInfo)
@@ -32,6 +35,8 @@ function Home({ webInfo }: any) {
       once: true,
       delay: 300,
     })
+
+    track('home_view')
   }, [])
 
   return (

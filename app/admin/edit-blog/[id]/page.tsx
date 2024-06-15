@@ -3,8 +3,8 @@
 import BlogEdit from '@/app/components/Admin/Blog/BlogEdit'
 import BlogInformation from '@/app/components/Admin/Blog/BlogInformation'
 import DashboardHero from '@/app/components/Admin/DashboardHero'
-import AdminProtected from '@/app/hooks/adminProtected'
-import Heading from '@/app/utils/Heading'
+import Heading from '@/components/Heading'
+import AdminProtected from '@/hooks/adminProtected'
 import { useGetBlogContentQuery } from '@/redux/features/blog/blogsApi'
 
 import React from 'react'

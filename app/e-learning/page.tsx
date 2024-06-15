@@ -1,10 +1,11 @@
 'use client'
 
+import Header from '@/components/Layout/Header'
+
 import React, { useState } from 'react'
 
-import Header from '../../components/Layout/Header'
+import Heading from '../../components/Heading'
 import Footer from '../components/Footer'
-import Heading from '../utils/Heading'
 
 type Props = {}
 

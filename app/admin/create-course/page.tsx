@@ -1,7 +1,7 @@
 'use client'
 
 import DashboardHeader from '@/app/components/Admin/DashboardHeader'
-import Heading from '@/app/utils/Heading'
+import Heading from '@/components/Heading'
 
 import React from 'react'
 

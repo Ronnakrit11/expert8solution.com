@@ -1,7 +1,7 @@
 'use client'
 
-import { styles } from '@/app/styles/style'
 import { useRegisterMutation } from '@/redux/features/auth/authApi'
+import { styles } from '@/styles'
 
 import React, { FC, useEffect, useState } from 'react'
 
