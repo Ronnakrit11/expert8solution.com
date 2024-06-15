@@ -1,6 +1,6 @@
 import { trustImages } from '@/app/components/Home/constants'
 
-import React, { useMemo } from 'react'
+import React from 'react'
 
 import TrustImage from './components/TrustImage'
 
