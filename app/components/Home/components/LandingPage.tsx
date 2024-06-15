@@ -9,7 +9,8 @@ const LandingPage = () => {
 
   const onSubmitToW3 = async () => {
     setResult('Sending....')
-    let formData: any = new FormData()
+
+    const formData: any = new FormData()
     formData.append('email', email)
     formData.append('access_key', '7f1167f1-42d2-4065-b7f4-37ee69e92c9b')
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -26,6 +27,7 @@ const LandingPage = () => {
       setResult(data.message)
     }
   }
+
   return (
     <div className="bg-white dark:bg-[#101726] p-4">
       <div className="container mx-auto">
@@ -54,9 +56,8 @@ const LandingPage = () => {
                 className="w-full rounded-full bg-transparent p-4 placeholder-gray-600  outline-none dark:placeholder-white dark:text-[#fff] text-[#000]"
               />
               <button
-                onClick={() => {
-                  onSubmitToW3()
-                }}
+                type="button"
+                onClick={onSubmitToW3}
                 className="bg-[#1565c0] py-5 w-[150px] px-4 text-white rounded-full text-[16px]"
               >
                 {result ? result : `Sent`}
