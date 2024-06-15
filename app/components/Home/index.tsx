@@ -13,8 +13,7 @@ import dynamic from 'next/dynamic'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 
-import LandingPage from './components/LandingPage'
-
+const LandingPage = dynamic(() => import('./components/LandingPage'))
 const Feature = dynamic(() => import('./components/Feature'))
 const Footer = dynamic(() => import('../Footer'))
 const FooterContact = dynamic(() => import('./components/FooterContact'))
