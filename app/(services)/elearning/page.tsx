@@ -8,16 +8,11 @@ import React, { useState } from 'react'
 
 import Banner from './Banner'
 import Record from './Record'
-import Shere from './Shere'
 import Solution from './Solution'
 import TheEasy from './TheEasy'
-import Working from './Working'
 
-type Props = {}
-
-const Page = (props: Props) => {
+const Page = () => {
   const [open, setOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState(1)
   const [route, setRoute] = useState('Login')
 
   return (
@@ -31,18 +26,10 @@ const Page = (props: Props) => {
           'ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์, ระบบเรียนออนไลน์'
         }
       />
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
+      <Header open={open} setOpen={setOpen} activeItem={1} setRoute={setRoute} route={route} />
       <Banner />
       <TheEasy />
       <Record />
-      {/* <Shere /> */}
-      {/* <Working /> */}
       <Solution />
       <br />
       <br />

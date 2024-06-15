@@ -17,8 +17,6 @@ import Footer from '../../components/Footer'
 
 const Page = ({ params }: any) => {
   const [open, setOpen] = useState(false)
-  // const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  const [activeItem, setActiveItem] = useState(2)
   const [route, setRoute] = useState('Login')
 
   const searchParams = useSearchParams()
@@ -32,7 +30,7 @@ const Page = ({ params }: any) => {
 
   const checkPaymentToken = async () => {
     try {
-      const result = await axios.get(
+      await axios.get(
         `${process.env.NEXT_PUBLIC_SERVER_URI}/create-order-ebook-postback?payment_token=${paymentToken}`,
       )
     } catch (err) {}
@@ -81,16 +79,10 @@ const Page = ({ params }: any) => {
 
   return (
     <>
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
+      <Header open={open} setOpen={setOpen} activeItem={2} setRoute={setRoute} route={route} />
       <div className="w-full text-center py-10">
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.js">
-          <div style={{ height: '750px' }} id="my-component">
+          <div className="h-750" id="my-component">
             <Viewer
               withCredentials={true}
               fileUrl={`${process.env.NEXT_PUBLIC_ORIGIN_URI}/api/v1/get-ebook/${params.id}/download`}

@@ -1,18 +1,15 @@
 'use client'
 
+import Heading from '@/components/Heading'
 import Header from '@/components/Layout/Header'
 
 import React, { useState } from 'react'
 
-import Heading from '../../components/Heading'
 import Footer from '../components/Footer'
 import Policy from './Policy'
 
-type Props = {}
-
-const Page = (props: Props) => {
+const Page = () => {
   const [open, setOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState(5)
   const [route, setRoute] = useState('Login')
 
   return (
@@ -22,13 +19,7 @@ const Page = (props: Props) => {
         description="Elearning is a learning management system for helping programmers."
         keywords="programming,mern"
       />
-      <Header
-        open={open}
-        setOpen={setOpen}
-        activeItem={activeItem}
-        setRoute={setRoute}
-        route={route}
-      />
+      <Header open={open} setOpen={setOpen} activeItem={5} setRoute={setRoute} route={route} />
       <Policy />
       <Footer />
     </div>

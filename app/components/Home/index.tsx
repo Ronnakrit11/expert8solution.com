@@ -13,16 +13,16 @@ import dynamic from 'next/dynamic'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 
-import Footer from '../Footer'
-import Feature from './components/Feature'
-import FooterContact from './components/FooterContact'
 import LandingPage from './components/LandingPage'
-import LeftImageContent from './components/LeftImageContent'
-import Review from './components/Review'
-import Services2 from './components/Services2'
-import Tab from './components/Tab'
-import Trust from './components/Trust'
 
+const Feature = dynamic(() => import('./components/Feature'))
+const Footer = dynamic(() => import('../Footer'))
+const FooterContact = dynamic(() => import('./components/FooterContact'))
+const LeftImageContent = dynamic(() => import('./components/LeftImageContent'))
+const Review = dynamic(() => import('./components/Review'))
+const Services2 = dynamic(() => import('./components/Services2'))
+const Tab = dynamic(() => import('./components/Tab'))
+const Trust = dynamic(() => import('./components/Trust'))
 const VideoBanner = dynamic(() => import('./components/VideoBanner'), { ssr: false })
 
 function Home({ webInfo }: any) {
