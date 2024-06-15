@@ -34,7 +34,7 @@ export const trustImages: TrustImagesModel = [
     url: 'https://whatsskill.com/',
   },
   {
-    img: '/cus10.png',
+    img: '/cus10.webp',
     url: 'https://treelearningx.online/',
   },
   {
