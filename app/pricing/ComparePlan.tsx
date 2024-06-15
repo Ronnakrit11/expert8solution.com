@@ -1,17 +1,19 @@
-import React from 'react'
-import { FaCheck } from "react-icons/fa6";
-import { FaX } from "react-icons/fa6";
-import Image from 'next/image'
+import React from "react"
+import { FaCheck } from "react-icons/fa6"
+import { FaX } from "react-icons/fa6"
+import Image from "next/image"
 
 const ComparePlan = () => {
-    return (
-        <>
-            <section className="mt-32">
-                <div className="mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0">
-                    <h2 className="mb-12 text-center text-3xl font-bold text-gray-800 dark:text-white md:text-4xl hidden sm:hidden xl:block">Pricing Plan</h2>
-                </div>
-            </section>
-             {/* 
+  return (
+    <>
+      <section className="mt-32">
+        <div className="mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0">
+          <h2 className="mb-12 text-center text-3xl font-bold text-gray-800 dark:text-white md:text-4xl hidden sm:hidden xl:block">
+            Pricing Plan
+          </h2>
+        </div>
+      </section>
+      {/* 
             <section>
                 <div className="mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0">
                     <div className="hidden lg:block">
@@ -215,7 +217,7 @@ const ComparePlan = () => {
                                                 </ul>
                                                 <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
-                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" />
+                                                        <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clipRule="evenodd" />
                                                     </svg>
                                                 </a>
                                             </div>
@@ -253,7 +255,7 @@ const ComparePlan = () => {
                                                 </ul>
                                                 <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
-                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                        <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clipRule="evenodd"></path>
                                                     </svg>
                                                 </a>
                                             </div>
@@ -299,7 +301,7 @@ const ComparePlan = () => {
                                                 </ul>
                                                 <a aria-label="read more" href="#" className="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
-                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                        <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clipRule="evenodd"></path>
                                                     </svg>
                                                 </a>
                                             </div>
@@ -312,9 +314,8 @@ const ComparePlan = () => {
                 </div>
             </section>
             */}
-        </>
-
-    )
+    </>
+  )
 }
 
 export default ComparePlan

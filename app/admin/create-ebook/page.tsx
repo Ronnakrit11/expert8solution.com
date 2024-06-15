@@ -1,42 +1,41 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import AdminSidebar from "../../components/Admin/sidebar/AdminSidebar";
-import Heading from "../../../app/utils/Heading";
-import CreateCourse from "../../components/Admin/Course/CreateCourse";
-import DashboardHeader from "../../../app/components/Admin/DashboardHeader";
-import { Box } from "@mui/material";
-import { styles } from "@/app/styles/style";
-import ImageIcon from "@mui/icons-material/Image";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
-import { useCreateEbookMutation } from "@/redux/features/ebooks/ebookApi";
-import toast from "react-hot-toast";
-import { redirect } from "next/navigation";
-import SimpleBackdrop from "@/app/components/Loading/SimpleBackdrop";
+"use client"
+import React, { useEffect, useState } from "react"
+import AdminSidebar from "../../components/Admin/sidebar/AdminSidebar"
+import Heading from "@/app/utils/Heading"
+import DashboardHeader from "@/app/components/Admin/DashboardHeader"
+import { Box } from "@mui/material"
+import { styles } from "@/app/styles/style"
+import ImageIcon from "@mui/icons-material/Image"
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf"
+import { useCreateEbookMutation } from "@/redux/features/ebooks/ebookApi"
+import toast from "react-hot-toast"
+import { redirect } from "next/navigation"
+import SimpleBackdrop from "@/app/components/Loading/SimpleBackdrop"
 
-type Props = {};
+type Props = {}
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const [createEbook, { isSuccess, error, isLoading }] = useCreateEbookMutation(
     {}
-  );
-  const [ebookInfo, setEbookInfo] = useState({}) as any;
-  const [dragging, setDragging] = useState(false);
-  const [filePdf, setFilePdf] = useState(null) as any;
-  const [filePdfInfo, setFilePdfInfo] = useState(null) as any;
-  const [fileImg, setFileImg] = useState(null) as any;
+  )
+  const [ebookInfo, setEbookInfo] = useState({}) as any
+  const [dragging, setDragging] = useState(false)
+  const [filePdf, setFilePdf] = useState(null) as any
+  const [filePdfInfo, setFilePdfInfo] = useState(null) as any
+  const [fileImg, setFileImg] = useState(null) as any
 
   useEffect(() => {
     if (isSuccess) {
-      toast.success("Ebook created successfully");
-      redirect("/admin/ebook");
+      toast.success("Ebook created successfully")
+      redirect("/admin/ebook")
     }
     if (error) {
       if ("data" in error) {
-        const errorMessage = error as any;
-        toast.error(errorMessage.data.message);
+        const errorMessage = error as any
+        toast.error(errorMessage.data.message)
       }
     }
-  }, [isSuccess, error]);
+  }, [isSuccess, error])
 
   //   {
   //     "thumbnail": {
@@ -57,7 +56,7 @@ const page = (props: Props) => {
   // }
 
   const handleSubmit = (event: any) => {
-    event.preventDefault();
+    event.preventDefault()
     //     .name
     // .description
     // .price
@@ -74,68 +73,68 @@ const page = (props: Props) => {
       filePdfSize: +(filePdfInfo.size / (1024 * 1024)).toFixed(2),
       filePdf,
       fileImg,
-    };
-    createEbook(data);
-  };
+    }
+    createEbook(data)
+  }
 
   const handleFilePDFChange = (e: any) => {
-    const file = e.target.files?.[0];
-    console.log("🚀 ~ file: page.tsx:28 ~ handleFilePDFChange ~ file:", file);
+    const file = e.target.files?.[0]
+    console.log("🚀 ~ file: page.tsx:28 ~ handleFilePDFChange ~ file:", file)
     if (file) {
-      setFilePdfInfo(file);
-      const reader = new FileReader();
+      setFilePdfInfo(file)
+      const reader = new FileReader()
 
       reader.onload = (e: any) => {
         if (reader.readyState === 2) {
           // setEbookInfo({ ...ebookInfo, pdfFile: reader.result });
-          setFilePdf(reader.result);
+          setFilePdf(reader.result)
         }
-      };
-      reader.readAsDataURL(file);
+      }
+      reader.readAsDataURL(file)
     }
-  };
+  }
 
   const handleFileImageChange = (e: any) => {
-    const file = e.target.files?.[0];
+    const file = e.target.files?.[0]
     if (file) {
-      const reader = new FileReader();
+      const reader = new FileReader()
 
       reader.onload = (e: any) => {
         if (reader.readyState === 2) {
           // setEbookInfo({ ...ebookInfo, thumbnail: reader.result });
-          setFileImg(reader.result);
+          setFileImg(reader.result)
         }
-      };
-      reader.readAsDataURL(file);
+      }
+      reader.readAsDataURL(file)
     }
-  };
+  }
 
   const handleDragOver = (e: any) => {
-    e.preventDefault();
-    setDragging(true);
-  };
+    e.preventDefault()
+    setDragging(true)
+  }
 
   const handleDragLeave = (e: any) => {
-    e.preventDefault();
-    setDragging(false);
-  };
+    e.preventDefault()
+    setDragging(false)
+  }
 
   const handleDrop = (e: any) => {
-    e.preventDefault();
-    setDragging(false);
+    e.preventDefault()
+    setDragging(false)
 
-    const file = e.dataTransfer.files?.[0];
+    const file = e.dataTransfer.files?.[0]
 
     if (file) {
-      const reader = new FileReader();
+      const reader = new FileReader()
 
       reader.onload = () => {
         // setEbookInfo({ ...ebookInfo, thumbnail: reader.result });
-        setFileImg(reader.result);
-      };
-      reader.readAsDataURL(file);
+        setFileImg(reader.result)
+      }
+      reader.readAsDataURL(file)
     }
-  };
+  }
 
   return (
     <div>
@@ -376,7 +375,7 @@ const page = (props: Props) => {
       </div>
       <SimpleBackdrop open={isLoading} setOpen={() => {}} />
     </div>
-  );
-};
+  )
+}
 
-export default page;
+export default Page

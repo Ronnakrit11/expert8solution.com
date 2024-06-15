@@ -1,27 +1,31 @@
-import { useGetCourseContentQuery } from "@/redux/features/courses/coursesApi";
-import React, { useState } from "react";
-import Loader from "../Loader/Loader";
-import Heading from "@/app/utils/Heading";
-import CourseContentMedia from "./EbookContentMedia";
-import Header from "../Header";
-import CourseContentList from "./EbookContentList";
-import { useGetEbookDetailQuery } from "@/redux/features/ebooks/ebookApi";
-import { styles } from "@/app/styles/style";
-import { BsBook, BsFileEarmarkMinus, BsFilePdf } from "react-icons/bs";
-import Image from "next/image";
+import { useGetCourseContentQuery } from "@/redux/features/courses/coursesApi"
+import React, { useState } from "react"
+import Loader from "../Loader/Loader"
+import Heading from "@/app/utils/Heading"
+import CourseContentMedia from "./EbookContentMedia"
+import Header from "../../../components/Layout/Header"
+import CourseContentList from "./EbookContentList"
+import { useGetEbookDetailQuery } from "@/redux/features/ebooks/ebookApi"
+import { styles } from "@/app/styles/style"
+import { BsBook, BsFileEarmarkMinus, BsFilePdf } from "react-icons/bs"
+import Image from "next/image"
 
 type Props = {
-  id: string;
-  user: any;
-};
+  id: string
+  user: any
+}
 
 const EbookContent = ({ id, user }: Props) => {
-  const { data: contentData, isLoading, refetch } = useGetEbookDetailQuery(id, { refetchOnMountOrArgChange: true });
-  const [open, setOpen] = useState(false);
-  const [route, setRoute] = useState('Login')
-  const data = contentData?.ebook;
+  const {
+    data: contentData,
+    isLoading,
+    refetch,
+  } = useGetEbookDetailQuery(id, { refetchOnMountOrArgChange: true })
+  const [open, setOpen] = useState(false)
+  const [route, setRoute] = useState("Login")
+  const data = contentData?.ebook
 
-  const [activeVideo, setActiveVideo] = useState(0);
+  const [activeVideo, setActiveVideo] = useState(0)
 
   return (
     <>
@@ -38,7 +42,6 @@ const EbookContent = ({ id, user }: Props) => {
                   </h1>
                   <div className="dark:text-white mt-10 w-[90%]">
                     &nbsp;{data.description}
-
                   </div>
 
                   <div className=" overflow-x-auto mt-10 bottom-0 w-[90%]">
@@ -88,16 +91,14 @@ const EbookContent = ({ id, user }: Props) => {
                       width={400}
                       height={350}
                       alt=""
-
                     />
                     <div className="flex items-center">
-                  
-                        <div
-                          className={`${styles.button} !w-[180px] my-3 font-Poppins cursor-pointer !bg-[crimson]`}
-                          // onClick={handleOrder}
-                        >
-                          Download Now
-                        </div>
+                      <div
+                        className={`${styles.button} !w-[180px] my-3 font-Poppins cursor-pointer !bg-[crimson]`}
+                        // onClick={handleOrder}
+                      >
+                        Download Now
+                      </div>
                     </div>
                     <br />
                   </div>
@@ -108,7 +109,7 @@ const EbookContent = ({ id, user }: Props) => {
         </>
       )}
     </>
-  );
-};
+  )
+}
 
-export default EbookContent;
+export default EbookContent

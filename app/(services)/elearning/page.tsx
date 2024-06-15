@@ -1,21 +1,21 @@
-"use client";
-import React, { useState } from "react";
-import Heading from "@/app/utils/Heading";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
-import Banner from "./Banner";
-import Working from "./Working";
-import Solution from "./Solution";
-import TheEasy from "./TheEasy";
-import Record from "./Record";
-import Shere from "./Shere";
+"use client"
+import React, { useState } from "react"
+import Heading from "@/app/utils/Heading"
+import Header from "@/components/Layout/Header"
+import Footer from "@/app/components/Footer"
+import Banner from "./Banner"
+import Working from "./Working"
+import Solution from "./Solution"
+import TheEasy from "./TheEasy"
+import Record from "./Record"
+import Shere from "./Shere"
 
-type Props = {};
+type Props = {}
 
 const Page = (props: Props) => {
-  const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(1);
-  const [route, setRoute] = useState("Login");
+  const [open, setOpen] = useState(false)
+  const [activeItem, setActiveItem] = useState(1)
+  const [route, setRoute] = useState("Login")
 
   return (
     <div>
@@ -47,7 +47,7 @@ const Page = (props: Props) => {
       <br />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

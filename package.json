@@ -30,6 +30,7 @@
     "axios": "^1.4.0",
     "bufferutil": "^4.0.7",
     "chart.js": "2.9.3",
+    "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",

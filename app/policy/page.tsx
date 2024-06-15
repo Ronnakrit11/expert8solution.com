@@ -1,16 +1,16 @@
-"use client";
-import React, { useState } from "react";
-import Heading from "../utils/Heading";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Policy from "./Policy";
+"use client"
+import React, { useState } from "react"
+import Heading from "../utils/Heading"
+import Header from "../../components/Layout/Header"
+import Footer from "../components/Footer"
+import Policy from "./Policy"
 
-type Props = {};
+type Props = {}
 
 const Page = (props: Props) => {
-  const [open, setOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(5);
-  const [route, setRoute] = useState("Login");
+  const [open, setOpen] = useState(false)
+  const [activeItem, setActiveItem] = useState(5)
+  const [route, setRoute] = useState("Login")
 
   return (
     <div>
@@ -29,7 +29,7 @@ const Page = (props: Props) => {
       <Policy />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
