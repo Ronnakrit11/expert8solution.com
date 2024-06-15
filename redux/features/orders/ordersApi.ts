@@ -1,84 +1,84 @@
-import { apiSlice } from "../api/apiSlice";
+import { apiSlice } from '../api/apiSlice'
 
 export const ordersApi = apiSlice.injectEndpoints({
-  endpoints: (builder) => ({
+  endpoints: builder => ({
     getAllOrders: builder.query({
-      query: (type) => ({
+      query: type => ({
         url: `get-orders`,
-        method: "GET",
-        credentials: "include" as const,
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     getStripePublishablekey: builder.query({
       query: () => ({
         url: `payment/stripepublishablekey`,
-        method: "GET",
-        credentials: "include" as const,
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
 
     getTokenPayment: builder.mutation({
-      query: (courseId) => ({
+      query: courseId => ({
         url: `/payment/token`,
-        method: "POST",
+        method: 'POST',
         body: {
-          courseId
+          courseId,
         },
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
 
     getTokenPaymentEbook: builder.mutation({
-      query: (ebookId) => ({
+      query: ebookId => ({
         url: `/payment/token`,
-        method: "POST",
+        method: 'POST',
         body: {
-          ebookId
+          ebookId,
         },
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
     createPaymentIntent: builder.mutation({
-      query: (amount) => ({
-        url: "payment",
-        method: "POST",
+      query: amount => ({
+        url: 'payment',
+        method: 'POST',
         body: {
           amount,
         },
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
     createOrder: builder.mutation({
       query: ({ courseId, payment_info }) => ({
-        url: "create-order",
+        url: 'create-order',
         body: {
           courseId,
           payment_info,
         },
-        method: "POST",
-        credentials: "include" as const,
+        method: 'POST',
+        credentials: 'include' as const,
       }),
     }),
     createOrderEbook: builder.mutation({
       query: ({ ebookId, payment_info }) => ({
-        url: "create-order-ebook",
+        url: 'create-order-ebook',
         body: {
           ebookId,
           payment_info,
         },
-        method: "POST",
-        credentials: "include" as const,
+        method: 'POST',
+        credentials: 'include' as const,
       }),
     }),
   }),
-});
+})
 
-export const { 
+export const {
   useGetAllOrdersQuery,
   useGetTokenPaymentMutation,
   useGetTokenPaymentEbookMutation,
-  useGetStripePublishablekeyQuery, 
-  useCreatePaymentIntentMutation ,
-  useCreateOrderMutation, 
-  useCreateOrderEbookMutation
-} = ordersApi;
+  useGetStripePublishablekeyQuery,
+  useCreatePaymentIntentMutation,
+  useCreateOrderMutation,
+  useCreateOrderEbookMutation,
+} = ordersApi

@@ -1,14 +1,17 @@
-import { useGetCourseContentQuery } from "@/redux/features/courses/coursesApi"
-import React, { useState } from "react"
-import Loader from "../Loader/Loader"
-import Heading from "@/app/utils/Heading"
-import CourseContentMedia from "./EbookContentMedia"
-import Header from "../../../components/Layout/Header"
-import CourseContentList from "./EbookContentList"
-import { useGetEbookDetailQuery } from "@/redux/features/ebooks/ebookApi"
-import { styles } from "@/app/styles/style"
-import { BsBook, BsFileEarmarkMinus, BsFilePdf } from "react-icons/bs"
-import Image from "next/image"
+import { styles } from '@/app/styles/style'
+import Heading from '@/app/utils/Heading'
+import { useGetCourseContentQuery } from '@/redux/features/courses/coursesApi'
+import { useGetEbookDetailQuery } from '@/redux/features/ebooks/ebookApi'
+
+import React, { useState } from 'react'
+
+import Image from 'next/image'
+import { BsBook, BsFileEarmarkMinus, BsFilePdf } from 'react-icons/bs'
+
+import Header from '../../../components/Layout/Header'
+import Loader from '../Loader/Loader'
+import CourseContentList from './EbookContentList'
+import CourseContentMedia from './EbookContentMedia'
 
 type Props = {
   id: string
@@ -22,7 +25,7 @@ const EbookContent = ({ id, user }: Props) => {
     refetch,
   } = useGetEbookDetailQuery(id, { refetchOnMountOrArgChange: true })
   const [open, setOpen] = useState(false)
-  const [route, setRoute] = useState("Login")
+  const [route, setRoute] = useState('Login')
   const data = contentData?.ebook
 
   const [activeVideo, setActiveVideo] = useState(0)
@@ -40,9 +43,7 @@ const EbookContent = ({ id, user }: Props) => {
                   <h1 className="text-[25px] font-Poppins font-[600] text-black dark:text-white">
                     {data.name}
                   </h1>
-                  <div className="dark:text-white mt-10 w-[90%]">
-                    &nbsp;{data.description}
-                  </div>
+                  <div className="dark:text-white mt-10 w-[90%]">&nbsp;{data.description}</div>
 
                   <div className=" overflow-x-auto mt-10 bottom-0 w-[90%]">
                     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -86,12 +87,7 @@ const EbookContent = ({ id, user }: Props) => {
                 </div>
                 <div className="w-full 800px:w-[35%] relative">
                   <div className="sticky top-[100px] left-0 z-50 w-full">
-                    <Image
-                      src={data.thumbnail.url}
-                      width={400}
-                      height={350}
-                      alt=""
-                    />
+                    <Image src={data.thumbnail.url} width={400} height={350} alt="" />
                     <div className="flex items-center">
                       <div
                         className={`${styles.button} !w-[180px] my-3 font-Poppins cursor-pointer !bg-[crimson]`}

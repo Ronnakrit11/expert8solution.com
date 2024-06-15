@@ -1,31 +1,31 @@
-import Image from "next/image";
-import { FaEnvelope } from "react-icons/fa6";
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
+import Image from 'next/image'
+import { FaEnvelope } from 'react-icons/fa6'
 
 const LandingPage = () => {
-  const [email, setEmail] = useState<any>('');
-  const [result, setResult] = useState("");
+  const [email, setEmail] = useState<any>('')
+  const [result, setResult] = useState('')
 
   const onSubmitToW3 = async () => {
-    setResult("Sending....");
-    let formData: any = new FormData();
-    formData.append('email', email);
-    formData.append("access_key", "7f1167f1-42d2-4065-b7f4-37ee69e92c9b");
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+    setResult('Sending....')
+    let formData: any = new FormData()
+    formData.append('email', email)
+    formData.append('access_key', '7f1167f1-42d2-4065-b7f4-37ee69e92c9b')
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    })
 
-    const data = await response.json();
+    const data = await response.json()
 
     if (data.success) {
-      setResult("Thank you!");
+      setResult('Thank you!')
     } else {
-      console.log("Error", data);
-      setResult(data.message);
+      console.log('Error', data)
+      setResult(data.message)
     }
-  };
+  }
   return (
     <div className="bg-white dark:bg-[#101726] p-4">
       <div className="container mx-auto">
@@ -40,8 +40,7 @@ const LandingPage = () => {
               </h1>
             </div>
             <h2 className="my-6 lg:my-12 text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
-              บริการทำระบบเรียนออนไลน์
-              เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing
+              บริการทำระบบเรียนออนไลน์ เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing
               เเละพัฒนาเว็บไซต์ทุกประเภท
             </h2>
             <div className="relative flex items-center rounded-full border border-primary/20 bg-white dark:bg-[#101726] p-1 px-2 shadow-md focus-within:ring-2 dark:border-white/10 dark:bg-dark dark:text-white md:p-2 lg:pr-3">
@@ -49,12 +48,17 @@ const LandingPage = () => {
               <input
                 placeholder="Your Email Address"
                 value={email}
-                onChange={(e) => { setEmail(e.target.value) }}
+                onChange={e => {
+                  setEmail(e.target.value)
+                }}
                 className="w-full rounded-full bg-transparent p-4 placeholder-gray-600  outline-none dark:placeholder-white dark:text-[#fff] text-[#000]"
               />
               <button
-                onClick={() => { onSubmitToW3() }}
-                className="bg-[#1565c0] py-5 w-[150px] px-4 text-white rounded-full text-[16px]">
+                onClick={() => {
+                  onSubmitToW3()
+                }}
+                className="bg-[#1565c0] py-5 w-[150px] px-4 text-white rounded-full text-[16px]"
+              >
                 {result ? result : `Sent`}
               </button>
             </div>
@@ -71,7 +75,7 @@ const LandingPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage

@@ -1,33 +1,35 @@
-import React, { FC, useEffect, useState } from "react";
-import { DataGrid } from "@mui/x-data-grid";
-import { Box, Button, Modal } from "@mui/material";
-import {
-  AiOutlineDelete,
-  AiOutlineMail,
-  AiOutlineFileAdd,
-  AiOutlineVideoCameraAdd,
-} from "react-icons/ai";
-
-import { useTheme } from "next-themes";
-import Loader from "../../Loader/Loader";
-import { format } from "timeago.js";
+import { styles } from '@/app/styles/style'
+import { useGetAllCoursesQuery } from '@/redux/features/courses/coursesApi'
+import { useAddEbookUserMutation, useGetAllEbookQuery } from '@/redux/features/ebooks/ebookApi'
 import {
   useAddCourseToUserMutation,
   useAddUserMutation,
   useDeleteUserMutation,
   useGetAllUsersQuery,
   useUpdateUserRoleMutation,
-} from "@/redux/features/user/userApi";
-import { styles } from "@/app/styles/style";
-import { toast } from "react-hot-toast";
-import { useGetAllCoursesQuery } from "@/redux/features/courses/coursesApi";
-import LoadingBackDrop from "../../Loader/LoadingBackDrop";
-import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
-import { useAddEbookUserMutation, useGetAllEbookQuery } from "@/redux/features/ebooks/ebookApi";
+} from '@/redux/features/user/userApi'
+import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack'
+import { Box, Button, Modal } from '@mui/material'
+import { DataGrid } from '@mui/x-data-grid'
+
+import React, { FC, useEffect, useState } from 'react'
+
+import { useTheme } from 'next-themes'
+import { toast } from 'react-hot-toast'
+import {
+  AiOutlineDelete,
+  AiOutlineFileAdd,
+  AiOutlineMail,
+  AiOutlineVideoCameraAdd,
+} from 'react-icons/ai'
+import { format } from 'timeago.js'
+
+import Loader from '../../Loader/Loader'
+import LoadingBackDrop from '../../Loader/LoadingBackDrop'
 
 type Props = {
-  isTeam?: boolean;
-};
+  isTeam?: boolean
+}
 
 interface IUserState {
   name: string
@@ -36,220 +38,213 @@ interface IUserState {
   confirmPassword: string
 }
 
-
 const AllCourses: FC<Props> = ({ isTeam }) => {
-  const { theme, setTheme } = useTheme();
-  const [active, setActive] = useState(false);
-  const [email, setEmail] = useState("");
-  const [role, setRole] = useState("admin");
-  const [open, setOpen] = useState(false);
-  const [openModalAddCourse, setOpenModalAddCourse] = useState(false);
-  const [openModalAddEbook, setOpenModalAddEbook] = useState(false);
-  const [openModalAddUser, setOpenModalAddUser] = useState(false);
-  const [userId, setUserId] = useState("");
+  const { theme, setTheme } = useTheme()
+  const [active, setActive] = useState(false)
+  const [email, setEmail] = useState('')
+  const [role, setRole] = useState('admin')
+  const [open, setOpen] = useState(false)
+  const [openModalAddCourse, setOpenModalAddCourse] = useState(false)
+  const [openModalAddEbook, setOpenModalAddEbook] = useState(false)
+  const [openModalAddUser, setOpenModalAddUser] = useState(false)
+  const [userId, setUserId] = useState('')
   const [userInfo, setUserInfo] = useState({
-    name: "",
-  });
-  const [updateUserRole, { error: updateError, isSuccess }] =
-    useUpdateUserRoleMutation();
+    name: '',
+  })
+  const [updateUserRole, { error: updateError, isSuccess }] = useUpdateUserRoleMutation()
 
   const [userState, setUserState] = useState<IUserState>({
     name: '',
     email: '',
     password: '',
     confirmPassword: '',
-
   })
   const [addUser, { isLoading: isLoadingAddUser, error: AddUserError, isSuccess: AddUserSuccess }] =
-    useAddUserMutation();
+    useAddUserMutation()
 
-  const [addCourse, { isLoading: isLoadingAddCourse, error: AddCourseError, isSuccess: AddCourseSuccess }] =
-    useAddCourseToUserMutation();
+  const [
+    addCourse,
+    { isLoading: isLoadingAddCourse, error: AddCourseError, isSuccess: AddCourseSuccess },
+  ] = useAddCourseToUserMutation()
 
-  const [addEbook, { isLoading: isLoadingAddEbook, error: AddEbookError, isSuccess: AddEbookSuccess }] =
-    useAddEbookUserMutation();
+  const [
+    addEbook,
+    { isLoading: isLoadingAddEbook, error: AddEbookError, isSuccess: AddEbookSuccess },
+  ] = useAddEbookUserMutation()
 
-  const { isLoading, data, refetch } = useGetAllUsersQuery(
-    {},
-    { refetchOnMountOrArgChange: true }
-  );
+  const { isLoading, data, refetch } = useGetAllUsersQuery({}, { refetchOnMountOrArgChange: true })
 
   const {
     isLoading: isLoadingCourse,
     data: courseList,
     refetch: refetchCourse,
-  } = useGetAllCoursesQuery({}, { refetchOnMountOrArgChange: true });
+  } = useGetAllCoursesQuery({}, { refetchOnMountOrArgChange: true })
 
   const {
     isLoading: isLoadingEbook,
     data: ebookList,
     refetch: refetchEbook,
-  } = useGetAllEbookQuery({}, { refetchOnMountOrArgChange: true });
+  } = useGetAllEbookQuery({}, { refetchOnMountOrArgChange: true })
 
-  const [deleteUser, { isSuccess: deleteSuccess, error: deleteError }] =
-    useDeleteUserMutation({});
+  const [deleteUser, { isSuccess: deleteSuccess, error: deleteError }] = useDeleteUserMutation({})
 
-  const [selectCourse, setSelectCourse] = useState("");
-  const [selectEbook, setSelectEbook] = useState("");
+  const [selectCourse, setSelectCourse] = useState('')
+  const [selectEbook, setSelectEbook] = useState('')
 
   useEffect(() => {
     if (updateError) {
-      if ("data" in updateError) {
-        const errorMessage = updateError as any;
-        toast.error(errorMessage.data.message);
+      if ('data' in updateError) {
+        const errorMessage = updateError as any
+        toast.error(errorMessage.data.message)
       }
     }
 
     if (isSuccess) {
-      refetch();
-      toast.success("User role updated successfully");
-      setActive(false);
+      refetch()
+      toast.success('User role updated successfully')
+      setActive(false)
     }
 
     if (AddCourseSuccess) {
-      refetch();
-      toast.success("Add Course successfully");
+      refetch()
+      toast.success('Add Course successfully')
       setOpenModalAddCourse(false)
       setSelectCourse('')
     }
 
     if (AddEbookSuccess) {
-      refetch();
-      toast.success("Add Ebook successfully");
+      refetch()
+      toast.success('Add Ebook successfully')
       setOpenModalAddEbook(false)
       setSelectEbook('')
     }
 
     if (deleteSuccess) {
-      refetch();
-      toast.success("Delete user successfully!");
-      setOpen(false);
+      refetch()
+      toast.success('Delete user successfully!')
+      setOpen(false)
     }
 
     if (AddUserSuccess) {
-      refetch();
-      toast.success("Add User successfully");
+      refetch()
+      toast.success('Add User successfully')
       setOpenModalAddUser(false)
     }
 
-
     if (deleteError) {
-      if ("data" in deleteError) {
-        const errorMessage = deleteError as any;
-        toast.error(errorMessage.data.message);
+      if ('data' in deleteError) {
+        const errorMessage = deleteError as any
+        toast.error(errorMessage.data.message)
       }
     }
 
     if (AddCourseError) {
-      if ("data" in AddCourseError) {
-        const errorMessage = AddCourseError as any;
-        toast.error(errorMessage.data.message);
+      if ('data' in AddCourseError) {
+        const errorMessage = AddCourseError as any
+        toast.error(errorMessage.data.message)
       }
     }
     if (AddEbookError) {
-      if ("data" in AddEbookError) {
-        const errorMessage = AddEbookError as any;
-        toast.error(errorMessage.data.message);
+      if ('data' in AddEbookError) {
+        const errorMessage = AddEbookError as any
+        toast.error(errorMessage.data.message)
       }
     }
 
     if (AddUserError) {
-      if ("data" in AddUserError) {
-        const errorMessage = AddUserError as any;
-        toast.error(errorMessage?.data?.message);
+      if ('data' in AddUserError) {
+        const errorMessage = AddUserError as any
+        toast.error(errorMessage?.data?.message)
       }
     }
-  }, [updateError, isSuccess, deleteSuccess, deleteError, AddCourseError, AddCourseSuccess, AddEbookError, AddEbookSuccess, AddUserError, AddUserSuccess]);
-
+  }, [
+    updateError,
+    isSuccess,
+    deleteSuccess,
+    deleteError,
+    AddCourseError,
+    AddCourseSuccess,
+    AddEbookError,
+    AddEbookSuccess,
+    AddUserError,
+    AddUserSuccess,
+  ])
 
   const columns = [
-    { field: "id", headerName: "ID", flex: 0.3 },
-    { field: "name", headerName: "Name", flex: 0.5 },
-    { field: "email", headerName: "Email", flex: 0.5 },
-    { field: "role", headerName: "Role", flex: 0.5 },
-    { field: "courses", headerName: "Purchased Courses", flex: 0.5 },
-    { field: "created_at", headerName: "Joined At", flex: 0.5 },
+    { field: 'id', headerName: 'ID', flex: 0.3 },
+    { field: 'name', headerName: 'Name', flex: 0.5 },
+    { field: 'email', headerName: 'Email', flex: 0.5 },
+    { field: 'role', headerName: 'Role', flex: 0.5 },
+    { field: 'courses', headerName: 'Purchased Courses', flex: 0.5 },
+    { field: 'created_at', headerName: 'Joined At', flex: 0.5 },
     {
-      field: "     ",
-      headerName: "Add Ebook",
+      field: '     ',
+      headerName: 'Add Ebook',
       flex: 0.25,
       renderCell: (params: any) => {
         return (
           <>
             <Button
               onClick={() => {
-                setOpenModalAddEbook(true);
-                setUserId(params.row.id);
+                setOpenModalAddEbook(true)
+                setUserId(params.row.id)
 
-                const userObj = data.users.find(
-                  (ele: any) => ele._id === params.row.id
-                );
+                const userObj = data.users.find((ele: any) => ele._id === params.row.id)
 
-                setUserInfo(userObj);
+                setUserInfo(userObj)
               }}
             >
-              <AiOutlineFileAdd
-                className="dark:text-white text-black"
-                size={20}
-              />
+              <AiOutlineFileAdd className="dark:text-white text-black" size={20} />
             </Button>
           </>
-        );
+        )
       },
     },
     {
-      field: "    ",
-      headerName: "Add Course",
+      field: '    ',
+      headerName: 'Add Course',
       flex: 0.25,
       renderCell: (params: any) => {
         return (
           <>
             <Button
               onClick={() => {
-                setOpenModalAddCourse((prev) => !prev);
-                setUserId(params.row.id);
+                setOpenModalAddCourse(prev => !prev)
+                setUserId(params.row.id)
 
-                const userObj = data.users.find(
-                  (ele: any) => ele._id === params.row.id
-                );
+                const userObj = data.users.find((ele: any) => ele._id === params.row.id)
 
-                setUserInfo(userObj);
+                setUserInfo(userObj)
               }}
             >
-              <AiOutlineVideoCameraAdd
-                className="dark:text-white text-black"
-                size={20}
-              />
+              <AiOutlineVideoCameraAdd className="dark:text-white text-black" size={20} />
             </Button>
           </>
-        );
+        )
       },
     },
     {
-      field: " ",
-      headerName: "Delete",
+      field: ' ',
+      headerName: 'Delete',
       flex: 0.2,
       renderCell: (params: any) => {
         return (
           <>
             <Button
               onClick={() => {
-                setOpen(!open);
-                setUserId(params.row.id);
+                setOpen(!open)
+                setUserId(params.row.id)
               }}
             >
-              <AiOutlineDelete
-                className="dark:text-white text-black"
-                size={20}
-              />
+              <AiOutlineDelete className="dark:text-white text-black" size={20} />
             </Button>
           </>
-        );
+        )
       },
     },
     {
-      field: "  ",
-      headerName: "Email",
+      field: '  ',
+      headerName: 'Email',
       flex: 0.2,
       renderCell: (params: any) => {
         return (
@@ -258,16 +253,15 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
               <AiOutlineMail className="dark:text-white text-black" size={20} />
             </a>
           </>
-        );
+        )
       },
     },
-  ];
+  ]
 
-  const rows: any = [];
+  const rows: any = []
 
   if (isTeam) {
-    const newData =
-      data && data.users.filter((item: any) => item.role === "admin");
+    const newData = data && data.users.filter((item: any) => item.role === 'admin')
 
     newData &&
       newData.forEach((item: any) => {
@@ -278,8 +272,8 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
           role: item.role,
           courses: item.courses.length,
           created_at: format(item.createdAt),
-        });
-      });
+        })
+      })
   } else {
     data &&
       data.users.forEach((item: any) => {
@@ -290,44 +284,40 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
           role: item.role,
           courses: item.courses.length,
           created_at: format(item.createdAt),
-        });
-      });
+        })
+      })
   }
 
   const handleSubmit = async () => {
-    await updateUserRole({ email, role });
-  };
+    await updateUserRole({ email, role })
+  }
 
   const handleDelete = async () => {
-    const id = userId;
-    await deleteUser(id);
-  };
+    const id = userId
+    await deleteUser(id)
+  }
 
   const handleAddCourse = () => {
-    const body = { user_id: userId, course_id: selectCourse };
-    addCourse(body);
-  };
+    const body = { user_id: userId, course_id: selectCourse }
+    addCourse(body)
+  }
 
   const handleAddEbook = () => {
-    const body = { user_id: userId, ebook_id: selectEbook };
-    addEbook(body);
-  };
+    const body = { user_id: userId, ebook_id: selectEbook }
+    addEbook(body)
+  }
 
   const handleAddUser = () => {
     addUser(userState)
-  };
-
+  }
 
   return (
     <div className="mt-[120px]">
       {isLoading ? (
         <Loader />
       ) : (
-
         <Box m="20px">
-          {
-            isLoadingAddCourse || isLoadingAddUser && <LoadingBackDrop />
-          }
+          {isLoadingAddCourse || (isLoadingAddUser && <LoadingBackDrop />)}
 
           {isTeam ? (
             <div className="w-full flex justify-end">
@@ -338,67 +328,61 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
                 Add New Member
               </div>
             </div>
-          )
-            :
-            (
-              <div className="w-full flex justify-end">
-                <div
-                  className={`${styles.button} !w-[200px] !rounded-[10px] bg-primary text-white dark:bg-primary !h-[35px] dark:border dark:border-[#ffffff6c]`}
-                  onClick={() => setOpenModalAddUser(prev => !prev)}
-                >
-                  + Add New User
-                </div>
+          ) : (
+            <div className="w-full flex justify-end">
+              <div
+                className={`${styles.button} !w-[200px] !rounded-[10px] bg-primary text-white dark:bg-primary !h-[35px] dark:border dark:border-[#ffffff6c]`}
+                onClick={() => setOpenModalAddUser(prev => !prev)}
+              >
+                + Add New User
               </div>
-            )
-          }
+            </div>
+          )}
           <Box
             m="40px 0 0 0"
             height="80vh"
             sx={{
-              "& .MuiDataGrid-root": {
-                border: "none",
-                outline: "none",
+              '& .MuiDataGrid-root': {
+                border: 'none',
+                outline: 'none',
               },
-              "& .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon": {
-                color: theme === "dark" ? "#fff" : "#fff",
+              '& .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon': {
+                color: theme === 'dark' ? '#fff' : '#fff',
               },
-              "& .MuiDataGrid-sortIcon": {
-                color: theme === "dark" ? "#fff" : "#fff",
+              '& .MuiDataGrid-sortIcon': {
+                color: theme === 'dark' ? '#fff' : '#fff',
               },
-              "& .MuiDataGrid-row": {
-                color: theme === "dark" ? "#fff" : "#000",
+              '& .MuiDataGrid-row': {
+                color: theme === 'dark' ? '#fff' : '#000',
                 borderBottom:
-                  theme === "dark"
-                    ? "1px solid #ffffff30!important"
-                    : "1px solid #ccc!important",
+                  theme === 'dark' ? '1px solid #ffffff30!important' : '1px solid #ccc!important',
               },
-              "& .MuiTablePagination-root": {
-                color: theme === "dark" ? "#fff" : "#fff",
+              '& .MuiTablePagination-root': {
+                color: theme === 'dark' ? '#fff' : '#fff',
               },
-              "& .MuiDataGrid-cell": {
-                borderBottom: "none!important",
+              '& .MuiDataGrid-cell': {
+                borderBottom: 'none!important',
               },
-              "& .name-column--cell": {
-                color: theme === "dark" ? "#fff" : "#fff",
+              '& .name-column--cell': {
+                color: theme === 'dark' ? '#fff' : '#fff',
               },
-              "& .MuiDataGrid-columnHeaders": {
-                backgroundColor: theme === "dark" ? "#1565c0" : "#1565c0",
-                borderBottom: "none",
-                color: theme === "dark" ? "#fff" : "#fff",
+              '& .MuiDataGrid-columnHeaders': {
+                backgroundColor: theme === 'dark' ? '#1565c0' : '#1565c0',
+                borderBottom: 'none',
+                color: theme === 'dark' ? '#fff' : '#fff',
               },
-              "& .MuiDataGrid-virtualScroller": {
-                backgroundColor: theme === "dark" ? "#1F2A40" : "#F2F0F0",
+              '& .MuiDataGrid-virtualScroller': {
+                backgroundColor: theme === 'dark' ? '#1F2A40' : '#F2F0F0',
               },
-              "& .MuiDataGrid-footerContainer": {
-                color: theme === "dark" ? "#fff" : "#fff",
-                borderTop: "none",
-                backgroundColor: theme === "dark" ? "#1565c0" : "#1565c0",
+              '& .MuiDataGrid-footerContainer': {
+                color: theme === 'dark' ? '#fff' : '#fff',
+                borderTop: 'none',
+                backgroundColor: theme === 'dark' ? '#1565c0' : '#1565c0',
               },
-              "& .MuiCheckbox-root": {
-                color:
-                  theme === "dark" ? `#b7ebde !important` : `#000 !important`,
+              '& .MuiCheckbox-root': {
+                color: theme === 'dark' ? `#b7ebde !important` : `#000 !important`,
               },
-              "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+              '& .MuiDataGrid-toolbarContainer .MuiButton-text': {
                 color: `#fff !important`,
               },
             }}
@@ -418,7 +402,7 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
                   <input
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={e => setEmail(e.target.value)}
                     placeholder="Enter email..."
                     className={`${styles.input}`}
                   />
@@ -432,10 +416,7 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
                     <option value="user">User</option>
                   </select>
                   <br />
-                  <div
-                    className={`${styles.button} my-6 !h-[30px]`}
-                    onClick={handleSubmit}
-                  >
+                  <div className={`${styles.button} my-6 !h-[30px]`} onClick={handleSubmit}>
                     Submit
                   </div>
                 </div>
@@ -451,9 +432,7 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
               aria-describedby="modal-modal-description"
             >
               <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-                <h1 className={`${styles.title}`}>
-                  Are you sure you want to delete this user?
-                </h1>
+                <h1 className={`${styles.title}`}>Are you sure you want to delete this user?</h1>
                 <div className="flex w-full items-center justify-between mb-6 mt-4">
                   <div
                     className={`${styles.button} !w-[120px] h-[30px] bg-[#57c7a3]`}
@@ -473,52 +452,56 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
           )}
           {openModalAddCourse && (
             <ModalAddCourse
-              {...({
+              {...{
                 openModalAddCourse,
                 setOpenModalAddCourse,
                 userInfo,
                 courseList,
                 setSelectCourse,
                 selectCourse,
-                handleAddCourse
-              })}
+                handleAddCourse,
+              }}
             />
           )}
           {openModalAddEbook && (
             <ModalAddEbook
-              {...({
+              {...{
                 openModalAddEbook,
                 setOpenModalAddEbook,
                 userInfo,
                 ebookList,
                 setSelectEbook,
                 selectEbook,
-                handleAddEbook
-              })}
+                handleAddEbook,
+              }}
             />
           )}
-          {
-            openModalAddUser && (
-              <ModalAddUser
-                {
-                ...({
-                  openModalAddUser,
-                  setOpenModalAddUser,
-                  userState,
-                  setUserState,
-                  handleSubmit: handleAddUser,
-                })
-                }
-              />
-            )
-          }
+          {openModalAddUser && (
+            <ModalAddUser
+              {...{
+                openModalAddUser,
+                setOpenModalAddUser,
+                userState,
+                setUserState,
+                handleSubmit: handleAddUser,
+              }}
+            />
+          )}
         </Box>
       )}
     </div>
-  );
-};
+  )
+}
 
-const ModalAddCourse = ({ handleAddCourse, selectCourse, openModalAddCourse, setOpenModalAddCourse, userInfo, courseList, setSelectCourse }: any) => {
+const ModalAddCourse = ({
+  handleAddCourse,
+  selectCourse,
+  openModalAddCourse,
+  setOpenModalAddCourse,
+  userInfo,
+  courseList,
+  setSelectCourse,
+}: any) => {
   const [courseOption, setCourseOption] = useState([])
 
   useEffect(() => {
@@ -529,7 +512,6 @@ const ModalAddCourse = ({ handleAddCourse, selectCourse, openModalAddCourse, set
           ...ele,
           isExits,
         }
-
       })
       setCourseOption(newOption)
     }
@@ -543,9 +525,7 @@ const ModalAddCourse = ({ handleAddCourse, selectCourse, openModalAddCourse, set
       aria-describedby="modal-modal-description"
     >
       <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-        <h1 className={`${styles.title}`}>
-          Add Course To "{userInfo?.name}"
-        </h1>
+        <h1 className={`${styles.title}`}>Add Course To "{userInfo?.name}"</h1>
         <div className="w-[100%] mt-4">
           <select
             name=""
@@ -555,12 +535,11 @@ const ModalAddCourse = ({ handleAddCourse, selectCourse, openModalAddCourse, set
             onChange={(e: any) => setSelectCourse(e.target.value)}
           >
             <option value="">Select Course</option>
-            {
-              courseOption.map?.((item: any) => (
-                <option value={item._id} key={item._id} disabled={item.isExits}>
-                  {item.name}
-                </option>
-              ))}
+            {courseOption.map?.((item: any) => (
+              <option value={item._id} key={item._id} disabled={item.isExits}>
+                {item.name}
+              </option>
+            ))}
           </select>
           <div />
         </div>
@@ -578,7 +557,6 @@ const ModalAddCourse = ({ handleAddCourse, selectCourse, openModalAddCourse, set
   )
 }
 
-
 const ModalAddEbook = ({
   openModalAddEbook,
   setOpenModalAddEbook,
@@ -586,7 +564,8 @@ const ModalAddEbook = ({
   ebookList,
   setSelectEbook,
   selectEbook,
-  handleAddEbook }: any) => {
+  handleAddEbook,
+}: any) => {
   const [ebookOption, setEbookOption] = useState([])
 
   useEffect(() => {
@@ -597,7 +576,6 @@ const ModalAddEbook = ({
           ...ele,
           isExits,
         }
-
       })
       setEbookOption(newOption)
     }
@@ -611,9 +589,7 @@ const ModalAddEbook = ({
       aria-describedby="modal-modal-description"
     >
       <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-        <h1 className={`${styles.title}`}>
-          Add Ebook To "{userInfo?.name}"
-        </h1>
+        <h1 className={`${styles.title}`}>Add Ebook To "{userInfo?.name}"</h1>
         <div className="w-[100%] mt-4">
           <select
             name=""
@@ -623,12 +599,11 @@ const ModalAddEbook = ({
             onChange={(e: any) => setSelectEbook(e.target.value)}
           >
             <option value="">Select Course</option>
-            {
-              ebookOption.map?.((item: any) => (
-                <option value={item._id} key={item._id} disabled={item.isExits}>
-                  {item.name}
-                </option>
-              ))}
+            {ebookOption.map?.((item: any) => (
+              <option value={item._id} key={item._id} disabled={item.isExits}>
+                {item.name}
+              </option>
+            ))}
           </select>
           <div />
         </div>
@@ -646,22 +621,24 @@ const ModalAddEbook = ({
   )
 }
 
-const ModalAddUser = ({ openModalAddUser, setOpenModalAddUser, userState, setUserState, handleSubmit }) => {
+const ModalAddUser = ({
+  openModalAddUser,
+  setOpenModalAddUser,
+  userState,
+  setUserState,
+  handleSubmit,
+}) => {
   const validateError = () => {
     let error = ''
     if (!userState.name) {
       error = 'name user is required!'
-    }
-    else if (!userState.email) {
+    } else if (!userState.email) {
       error = 'email is required!'
-    }
-    else if (!userState.password) {
+    } else if (!userState.password) {
       error = 'password is required!'
-    }
-    else if (!userState.confirmPassword) {
+    } else if (!userState.confirmPassword) {
       error = 'confirm password is required!'
-    }
-    else if (userState.password !== userState.confirmPassword) {
+    } else if (userState.password !== userState.confirmPassword) {
       error = 'password and confirm password is not match!'
     }
 
@@ -691,7 +668,7 @@ const ModalAddUser = ({ openModalAddUser, setOpenModalAddUser, userState, setUse
           <input
             type="text"
             value={userState.name}
-            onChange={(e) => setUserState(prev => ({ ...prev, name: e.target.value }))}
+            onChange={e => setUserState(prev => ({ ...prev, name: e.target.value }))}
             placeholder="Enter name..."
             className={`${styles.input} mb-2`}
           />
@@ -699,7 +676,7 @@ const ModalAddUser = ({ openModalAddUser, setOpenModalAddUser, userState, setUse
           <input
             type="email"
             value={userState.email}
-            onChange={(e) => setUserState(prev => ({ ...prev, email: e.target.value }))}
+            onChange={e => setUserState(prev => ({ ...prev, email: e.target.value }))}
             placeholder="Enter email..."
             className={`${styles.input} mb-2`}
           />
@@ -707,7 +684,7 @@ const ModalAddUser = ({ openModalAddUser, setOpenModalAddUser, userState, setUse
           <input
             type="text"
             value={userState.password}
-            onChange={(e) => setUserState(prev => ({ ...prev, password: e.target.value }))}
+            onChange={e => setUserState(prev => ({ ...prev, password: e.target.value }))}
             placeholder="Enter Password"
             className={`${styles.input} mb-2`}
           />
@@ -715,15 +692,12 @@ const ModalAddUser = ({ openModalAddUser, setOpenModalAddUser, userState, setUse
           <input
             type="text"
             value={userState.confirmPassword}
-            onChange={(e) => setUserState(prev => ({ ...prev, confirmPassword: e.target.value }))}
+            onChange={e => setUserState(prev => ({ ...prev, confirmPassword: e.target.value }))}
             placeholder="Confirm Password"
             className={`${styles.input} mb-2`}
           />
           <br />
-          <div
-            className={`${styles.button} my-6 !h-[30px]`}
-            onClick={onSubmit}
-          >
+          <div className={`${styles.button} my-6 !h-[30px]`} onClick={onSubmit}>
             Submit
           </div>
         </div>
@@ -731,4 +705,4 @@ const ModalAddUser = ({ openModalAddUser, setOpenModalAddUser, userState, setUse
     </Modal>
   )
 }
-export default AllCourses;
+export default AllCourses

@@ -1,12 +1,12 @@
-import { apiSlice } from "../api/apiSlice";
+import { apiSlice } from '../api/apiSlice'
 
 export const layoutApi = apiSlice.injectEndpoints({
-  endpoints: (builder) => ({
+  endpoints: builder => ({
     getHeroData: builder.query({
-      query: (type) => ({
+      query: type => ({
         url: `get-layout/${type}`,
-        method: "GET",
-        credentials: "include" as const,
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     editLayout: builder.mutation({
@@ -21,11 +21,11 @@ export const layoutApi = apiSlice.injectEndpoints({
           categories,
           imageList,
         },
-        method: "PUT",
-        credentials: "include" as const,
+        method: 'PUT',
+        credentials: 'include' as const,
       }),
     }),
   }),
-});
+})
 
-export const { useGetHeroDataQuery,useEditLayoutMutation } = layoutApi;
+export const { useGetHeroDataQuery, useEditLayoutMutation } = layoutApi

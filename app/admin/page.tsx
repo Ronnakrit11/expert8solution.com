@@ -1,11 +1,13 @@
-"use client";
-import React from "react";
-import Heading from "../utils/Heading";
-import AdminSidebar from "../components/Admin/sidebar/AdminSidebar";
-import AdminProtected from "../hooks/adminProtected";
-import DashboardHero from "../components/Admin/DashboardHero";
+'use client'
 
-type Props = {};
+import React from 'react'
+
+import DashboardHero from '../components/Admin/DashboardHero'
+import AdminSidebar from '../components/Admin/sidebar/AdminSidebar'
+import AdminProtected from '../hooks/adminProtected'
+import Heading from '../utils/Heading'
+
+type Props = {}
 
 const page = (props: Props) => {
   return (
@@ -26,7 +28,7 @@ const page = (props: Props) => {
         </div>
       </AdminProtected>
     </div>
-  );
-};
+  )
+}
 
-export default page;
+export default page

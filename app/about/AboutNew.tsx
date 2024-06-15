@@ -1,5 +1,6 @@
-import React from "react"
-import { FaCheckCircle } from "react-icons/fa"
+import React from 'react'
+
+import { FaCheckCircle } from 'react-icons/fa'
 
 const AboutNew = () => {
   return (
@@ -26,9 +27,8 @@ const AboutNew = () => {
           <div className="mb-8">
             <p className="text-[48px] text-white font-bold">Our mission</p>
             <p className="text-[16px] text-[#7f848c] w-auto sm:w-auto lg:w-[700px]">
-              บริษัท แน็คซ์ คอร์ปอเรชั่น จำกัด เป็นบริษัทก่อตั้งขึ้นในปี พ.ศ.
-              2561 บริษัท start up สำหรับคนรุ่นใหม่
-              โดยมุ่งเน้นในเรื่องการเขียนโปรแกรมและพัฒนา software
+              บริษัท แน็คซ์ คอร์ปอเรชั่น จำกัด เป็นบริษัทก่อตั้งขึ้นในปี พ.ศ. 2561 บริษัท start up
+              สำหรับคนรุ่นใหม่ โดยมุ่งเน้นในเรื่องการเขียนโปรแกรมและพัฒนา software
               เพื่อให้ลูกค้าได้ประโยชน์จากการใช้งานได้สูงสุดเราเปลี่ยนไอเดียของลูกค้าให้เป็นธุรกิจ
               หรือโปรแกรมที่ใช้งานได้จริงขับเคลื่อนเติบโตไปพร้อมกับลูกค้าอย่างมืออาชีพ
             </p>
@@ -43,9 +43,7 @@ const AboutNew = () => {
               </div>
               <div className="flex items-center gap-2">
                 <FaCheckCircle className="text-green-400" />
-                <p className="text-[16px] text-white">
-                  เปลี่ยนไอเดียของลูกค้าเป็นธุรกิจ
-                </p>
+                <p className="text-[16px] text-white">เปลี่ยนไอเดียของลูกค้าเป็นธุรกิจ</p>
               </div>
               <button className="text-[16px] text-white bg-primary rounded-3xl py-2 px-4">
                 สอบถามบริการ
@@ -93,8 +91,8 @@ const AboutNew = () => {
                 <div>
                   <span className="text-gray-500">2021</span>
                   <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                    Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1
-                    ชั้นนำของ Mazda , Mg เเละ Suzuki
+                    Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg
+                    เเละ Suzuki
                   </h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                 </div>
@@ -140,8 +138,8 @@ const AboutNew = () => {
                 <div>
                   <span className="text-gray-500">2021</span>
                   <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                    Lead Marketting & Ads Optimize KPAuto Groups
-                    ซึ่งทำให้ขึ้นเป็นยอดขายอันดับ 1 ของ MG Dealer 2 ปีซ้อน
+                    Lead Marketting & Ads Optimize KPAuto Groups ซึ่งทำให้ขึ้นเป็นยอดขายอันดับ 1 ของ
+                    MG Dealer 2 ปีซ้อน
                   </h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                 </div>
@@ -187,8 +185,8 @@ const AboutNew = () => {
                 <div>
                   <span className="text-gray-500">2021</span>
                   <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                    Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1
-                    ชั้นนำของ Mazda , Mg , Suzuki
+                    Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg
+                    , Suzuki
                   </h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                 </div>
@@ -234,8 +232,8 @@ const AboutNew = () => {
                 <div>
                   <span className="text-gray-500">2021</span>
                   <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                    Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1
-                    ชั้นนำของ Mazda , Mg , Suzuki
+                    Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg
+                    , Suzuki
                   </h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                 </div>
@@ -285,8 +283,7 @@ const AboutNew = () => {
               มีไอเดียปรึกษาเราสิ
             </p>
             <p className="text-[16px] text-[#7f848c] text-center">
-              ให้เราช่วยคุณเปลี่ยนไอเดียเป็นธุรกิจ หรือ
-              โปรแกรมที่ขับเคลื่อนธุรกิจคุณสู่ยุคดิจิตอล
+              ให้เราช่วยคุณเปลี่ยนไอเดียเป็นธุรกิจ หรือ โปรแกรมที่ขับเคลื่อนธุรกิจคุณสู่ยุคดิจิตอล
             </p>
             <button className="text-[16px] text-white bg-primary rounded-3xl py-2 px-4">
               สอบถามบริการ

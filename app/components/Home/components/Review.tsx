@@ -1,6 +1,7 @@
-import React from "react"
-import { Rating } from "flowbite-react"
-import Image from "next/image"
+import React from 'react'
+
+import { Rating } from 'flowbite-react'
+import Image from 'next/image'
 
 const Review = () => {
   return (
@@ -27,8 +28,7 @@ const Review = () => {
                 <Rating.Star />
               </Rating>
               <p className="text-gray-600 dark:text-gray-300 md:text-lg lg:text-xl">
-                " ชอบความทุ่มเทของคุณนุ๊ก การ
-                บริการที่รวดเร็วและการรับปรับตามความ ต้องการของผม
+                " ชอบความทุ่มเทของคุณนุ๊ก การ บริการที่รวดเร็วและการรับปรับตามความ ต้องการของผม
                 ไม่มีการเรียกร้องใดๆ ถือว่าดีมากๆครับ เว็บออกมาดูดีตามที่เรา "
                 <br />
                 <br />" ชอบเลย"
@@ -62,8 +62,8 @@ const Review = () => {
               <Rating.Star />
             </Rating>
             <p className="text-gray-600 dark:text-gray-300">
-              " ผู้รับงานสุภาพ ใจเย็น ใช้เวลาทํางาน ตามตกลง
-              สอนการใช้งานแก่ผู้ว่าจ้างได้ดี บริการหลังการขายเป็นที่น่าพึงพอใจ"
+              " ผู้รับงานสุภาพ ใจเย็น ใช้เวลาทํางาน ตามตกลง สอนการใช้งานแก่ผู้ว่าจ้างได้ดี
+              บริการหลังการขายเป็นที่น่าพึงพอใจ"
             </p>
             <div className="flex items-center gap-3">
               <Image
@@ -93,9 +93,8 @@ const Review = () => {
               <Rating.Star />
             </Rating>
             <p className="text-gray-600 dark:text-gray-300">
-              " ระบบของคุณนุ๊ก มี features ให้เลือกใช้เยอะมากๆครับ และใจดี
-              คอยให้คําปรึกษา ตลอดเส้นทาง ส่วนตัวแนะนําเลยครับ ระบบของ Expert8
-              Academy "
+              " ระบบของคุณนุ๊ก มี features ให้เลือกใช้เยอะมากๆครับ และใจดี คอยให้คําปรึกษา
+              ตลอดเส้นทาง ส่วนตัวแนะนําเลยครับ ระบบของ Expert8 Academy "
             </p>
             <div className="flex items-center gap-3">
               <Image

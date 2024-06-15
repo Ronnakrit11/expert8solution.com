@@ -1,6 +1,7 @@
-import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { FaEraser } from "react-icons/fa";
+import React from 'react'
+
+import { FaLongArrowAltRight } from 'react-icons/fa'
+import { FaEraser } from 'react-icons/fa'
 
 const Shere = () => {
   return (
@@ -9,10 +10,7 @@ const Shere = () => {
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8">
-              <div
-                className="relative w-full"
-                style={{ paddingBottom: "100%" }}
-              >
+              <div className="relative w-full" style={{ paddingBottom: '100%' }}>
                 <iframe
                   allow="fullscreen; autoplay"
                   allowFullScreen
@@ -25,12 +23,10 @@ const Shere = () => {
               {/* <div className="bg-[#EFF0FF]">
                 <FaEraser />
               </div> */}
-              <h2 className="text-[33px] text-[#2B1C50]">
-                Share or embed video anywhere you work
-              </h2>
+              <h2 className="text-[33px] text-[#2B1C50]">Share or embed video anywhere you work</h2>
               <p className="text-[19px] text-[#3D2E7C]">
-                From Google Workspace to Slack, Loom videos seamlessly integrate
-                with hundreds of tools you use every day.
+                From Google Workspace to Slack, Loom videos seamlessly integrate with hundreds of
+                tools you use every day.
               </p>
               <button className="flex items-center gap-2 text-[18px]">
                 Start sharing
@@ -41,7 +37,7 @@ const Shere = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Shere;
+export default Shere

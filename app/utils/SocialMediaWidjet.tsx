@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaComments } from "react-icons/fa6";
-import { FaFacebookMessenger } from "react-icons/fa6";
-import { FaLine } from "react-icons/fa6";
-import { FaXmark } from "react-icons/fa6";
+import React, { useState } from 'react'
+
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaComments } from 'react-icons/fa6'
+import { FaFacebookMessenger } from 'react-icons/fa6'
+import { FaLine } from 'react-icons/fa6'
+import { FaXmark } from 'react-icons/fa6'
 
 function SocialMediaWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className="relative text-white z-[999999]">
@@ -75,7 +76,7 @@ function SocialMediaWidget() {
         )}
       </div>
     </div>
-  );
+  )
 }
 
-export default SocialMediaWidget;
+export default SocialMediaWidget

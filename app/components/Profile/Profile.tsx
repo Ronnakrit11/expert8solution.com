@@ -1,78 +1,79 @@
-"use client";
-import React, { FC, useEffect, useState } from "react";
-import SideBarProfile from "./SideBarProfile";
-import { useLogOutQuery } from "../../../redux/features/auth/authApi";
-import { signOut } from "next-auth/react";
-import ProfileInfo from "./ProfileInfo";
-import ChangePassword from "./ChangePassword";
-import CourseCard from "../Course/CourseCard";
-import { useGetUsersAllCoursesQuery } from "@/redux/features/courses/coursesApi";
-import { useGetAllEbookQuery } from "@/redux/features/ebooks/ebookApi";
-import EbookCard from "../Ebook/EbookCard";
+'use client'
+
+import { useGetUsersAllCoursesQuery } from '@/redux/features/courses/coursesApi'
+import { useGetAllEbookQuery } from '@/redux/features/ebooks/ebookApi'
+
+import React, { FC, useEffect, useState } from 'react'
+
+import { signOut } from 'next-auth/react'
+
+import { useLogOutQuery } from '../../../redux/features/auth/authApi'
+import CourseCard from '../Course/CourseCard'
+import EbookCard from '../Ebook/EbookCard'
+import ChangePassword from './ChangePassword'
+import ProfileInfo from './ProfileInfo'
+import SideBarProfile from './SideBarProfile'
 
 type Props = {
-  user: any;
-};
+  user: any
+}
 
 const Profile: FC<Props> = ({ user }) => {
-  const [scroll, setScroll] = useState(false);
-  const [avatar, setAvatar] = useState(null);
-  const [logout, setLogout] = useState(false);
-  const [courses, setCourses] = useState([]);
-  const [ebooks, setEbooks] = useState([]);
+  const [scroll, setScroll] = useState(false)
+  const [avatar, setAvatar] = useState(null)
+  const [logout, setLogout] = useState(false)
+  const [courses, setCourses] = useState([])
+  const [ebooks, setEbooks] = useState([])
 
-  const { data: ebookList, isLoading: isLoadingEbook } = useGetAllEbookQuery(undefined, {});
-  const { data, isLoading } = useGetUsersAllCoursesQuery(undefined, {});
+  const { data: ebookList, isLoading: isLoadingEbook } = useGetAllEbookQuery(undefined, {})
+  const { data, isLoading } = useGetUsersAllCoursesQuery(undefined, {})
 
-  const { } = useLogOutQuery(undefined, {
+  const {} = useLogOutQuery(undefined, {
     skip: !logout ? true : false,
-  });
+  })
 
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(1)
 
   const logOutHandler = async () => {
-    setLogout(true);
-    await signOut();
-  };
+    setLogout(true)
+    await signOut()
+  }
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 85) {
-        setScroll(true);
+        setScroll(true)
       } else {
-        setScroll(false);
+        setScroll(false)
       }
-    });
+    })
   }
 
   useEffect(() => {
     if (data) {
       const filteredCourses = user.courses
-        .map((userCourse: any) =>
-          data.courses.find((course: any) => course._id === userCourse._id)
-        )
-        .filter((course: any) => course !== undefined);
-      setCourses(filteredCourses);
+        .map((userCourse: any) => data.courses.find((course: any) => course._id === userCourse._id))
+        .filter((course: any) => course !== undefined)
+      setCourses(filteredCourses)
     }
-  }, [data]);
+  }, [data])
 
   useEffect(() => {
     if (ebookList) {
       const filteredEbooks = user.ebooks
-        .map((userEbook: any) =>
-          ebookList.ebooks.find((item: any) => item._id === userEbook._id)
-        )
-        .filter((ebook: any) => ebook !== undefined);
-      setEbooks(filteredEbooks);
+        .map((userEbook: any) => ebookList.ebooks.find((item: any) => item._id === userEbook._id))
+        .filter((ebook: any) => ebook !== undefined)
+      setEbooks(filteredEbooks)
     }
-  }, [ebookList]);
+  }, [ebookList])
 
   return (
     <div className="bg-[#e3e9f7] dark:bg-darkbg py-10">
       <div className="w-[85%] flex  mx-auto ">
         <div
-          className={`w-[60px] 800px:w-[310px] h-[450px] dark:bg-slate-900 bg-opacity-90 border bg-white dark:border-[#ffffff1d] border-[#00000014] rounded-xl shadow-md dark:shadow-sm mt-[80px] mb-[80px] sticky ${scroll ? "top-[120px]" : "top-[30px]"
-            } left-[30px]`}
+          className={`w-[60px] 800px:w-[310px] h-[450px] dark:bg-slate-900 bg-opacity-90 border bg-white dark:border-[#ffffff1d] border-[#00000014] rounded-xl shadow-md dark:shadow-sm mt-[80px] mb-[80px] sticky ${
+            scroll ? 'top-[120px]' : 'top-[30px]'
+          } left-[30px]`}
         >
           <SideBarProfile
             user={user}
@@ -95,7 +96,7 @@ const Profile: FC<Props> = ({ user }) => {
         )}
 
         {active === 3 && (
-          <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px] bg-white dark:bg-darkbg mx-2 py-10 rounded-xl shadow-md" >
+          <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px] bg-white dark:bg-darkbg mx-2 py-10 rounded-xl shadow-md">
             <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
               {courses &&
                 courses.map((item: any, index: number) => (
@@ -114,9 +115,7 @@ const Profile: FC<Props> = ({ user }) => {
           <div className="w-full pl-7 px-2 800px:px-10 800px:pl-8 mt-[80px] bg-white text-black dark:bg-darkbg mx-2 py-10 rounded-xl shadow-md">
             <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-3 lg:gap-[25px] 1500px:grid-cols-4 1500px:gap-[35px] mb-12 border-0">
               {ebooks &&
-                ebooks.map((item: any, index: number) => (
-                  <EbookCard item={item} key={index} />
-                ))}
+                ebooks.map((item: any, index: number) => <EbookCard item={item} key={index} />)}
             </div>
             {ebooks.length === 0 && (
               <h1 className="text-center text-[18px] font-Poppins dark:text-white text-black">
@@ -127,7 +126,7 @@ const Profile: FC<Props> = ({ user }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

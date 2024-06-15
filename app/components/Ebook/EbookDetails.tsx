@@ -1,27 +1,31 @@
-"use client"
-import { styles } from "@/app/styles/style";
-import React, { useEffect, useRef, useState } from "react";
-import { IoCheckmarkDoneOutline, IoCloseOutline } from "react-icons/io5";
-import { Elements } from "@stripe/react-stripe-js";
-import CheckOutForm from "../Payment/CheckOutForm";
-import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
-import Image from "next/image";
-import { BsBook, BsFileEarmarkMinus, BsFilePdf } from "react-icons/bs";
-import { HiOutlineDownload } from "react-icons/hi";
-import { saveAs } from "file-saver";
-import { Box, Modal } from "@mui/material";
-import SimpleBackdrop from "../Loading/SimpleBackdrop";
-import { AiFillEye } from "react-icons/ai";
-import { useRouter } from "next/navigation";
-import { useGetTokenPaymentEbookMutation } from "@/redux/features/orders/ordersApi";
+'use client'
+
+import { styles } from '@/app/styles/style'
+import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
+import { useGetTokenPaymentEbookMutation } from '@/redux/features/orders/ordersApi'
+import { Box, Modal } from '@mui/material'
+import { Elements } from '@stripe/react-stripe-js'
+
+import React, { useEffect, useRef, useState } from 'react'
+
+import { saveAs } from 'file-saver'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { AiFillEye } from 'react-icons/ai'
+import { BsBook, BsFileEarmarkMinus, BsFilePdf } from 'react-icons/bs'
+import { HiOutlineDownload } from 'react-icons/hi'
+import { IoCheckmarkDoneOutline, IoCloseOutline } from 'react-icons/io5'
+
+import SimpleBackdrop from '../Loading/SimpleBackdrop'
+import CheckOutForm from '../Payment/CheckOutForm'
 
 type Props = {
-  data: any;
-  stripePromise: any;
-  clientSecret: string;
-  setRoute: any;
-  setOpen: any;
-};
+  data: any
+  stripePromise: any
+  clientSecret: string
+  setRoute: any
+  setOpen: any
+}
 
 const EbookDetails = ({
   data: ebookInfo,
@@ -30,23 +34,22 @@ const EbookDetails = ({
   setRoute,
   setOpen: openAuthModal,
 }: Props) => {
-
-  const { data: userData, refetch } = useLoadUserQuery(undefined, {});
-  const [getToken, { isLoading, isSuccess, error }] = useGetTokenPaymentEbookMutation();
+  const { data: userData, refetch } = useLoadUserQuery(undefined, {})
+  const [getToken, { isLoading, isSuccess, error }] = useGetTokenPaymentEbookMutation()
 
   const router = useRouter()
-  const [user, setUser] = useState<any>();
-  const [open, setOpen] = useState(false);
-  const [isLoadingBackDrop, setLoadingBackDrop] = useState(false);
-  const [openModalDownLoad, setOpenModalDownLoad] = useState(false);
+  const [user, setUser] = useState<any>()
+  const [open, setOpen] = useState(false)
+  const [isLoadingBackDrop, setLoadingBackDrop] = useState(false)
+  const [openModalDownLoad, setOpenModalDownLoad] = useState(false)
 
   const submitRef = useRef<HTMLButtonElement | null>(null)
   const [token, setToken] = useState<string | ''>('')
   const [refId, setRefId] = useState<string | ''>('')
 
   useEffect(() => {
-    setUser(userData?.user);
-  }, [userData]);
+    setUser(userData?.user)
+  }, [userData])
 
   useEffect(() => {
     if (user && ebookInfo._id) {
@@ -58,35 +61,34 @@ const EbookDetails = ({
   }, [user, ebookInfo])
 
   const dicountPercentenge =
-    ((ebookInfo?.estimatedPrice - ebookInfo.price) / ebookInfo?.estimatedPrice) * 100;
+    ((ebookInfo?.estimatedPrice - ebookInfo.price) / ebookInfo?.estimatedPrice) * 100
 
-  const discountPercentengePrice = dicountPercentenge.toFixed(0);
+  const discountPercentengePrice = dicountPercentenge.toFixed(0)
 
-  const isPurchased =
-    user && user?.ebooks?.find((item: any) => item._id === ebookInfo._id);
+  const isPurchased = user && user?.ebooks?.find((item: any) => item._id === ebookInfo._id)
 
-    const handleOrder = (e: any) => {
-      if (user) {
-        if(!token){
-          return window.alert('token payment notfound!')
-         }
-         if(!refId){
-          return window.alert('refId payment notfound!')
-         }
-  
-        submitRef.current?.click()
-      } else {
-        setRoute("Login");
-        openAuthModal(true);
+  const handleOrder = (e: any) => {
+    if (user) {
+      if (!token) {
+        return window.alert('token payment notfound!')
       }
-    };
+      if (!refId) {
+        return window.alert('refId payment notfound!')
+      }
+
+      submitRef.current?.click()
+    } else {
+      setRoute('Login')
+      openAuthModal(true)
+    }
+  }
 
   const saveFile = () => {
     saveAs(
       `${process.env.NEXT_PUBLIC_ORIGIN_URI}/api/v1/get-ebook/${ebookInfo._id}/download`,
-      `${ebookInfo.name}.pdf`
+      `${ebookInfo.name}.pdf`,
     )
-  };
+  }
 
   const handleClickView = () => {
     router.push(`/view-pdf/${ebookInfo._id}`)
@@ -97,24 +99,36 @@ const EbookDetails = ({
 
   return (
     <div>
-
-        <form className="hidden" method="post" action="https://payment.paysolutions.asia/epaylink/payment.aspx">
-          <input type="hidden" name="customeremail" defaultValue={userData?.user?.email} value={userData?.user?.email} />
-          <input type="hidden" name="productdetail" defaultValue={ebookInfo.name} value={ebookInfo.name} />
-          <input type="hidden" name="refno" defaultValue={refId} />
-          <input type="hidden" name="merchantid" defaultValue={process.env.NEXT_PUBLIC_PAYMENT_MERCHANT_ID} />
-          <input type="hidden" name="cc" defaultValue={'00'} />
-          <input type="hidden" name="total" defaultValue={ebookInfo.price} value={ebookInfo.price} />
-          <input type="hidden" name="lang" defaultValue="TH" />
-          <input type="hidden" name="returnurl" defaultValue={returnUrl} value={returnUrl} />
-          <input type="hidden" name="postbackurl" defaultValue={postBackUrl} value={postBackUrl} />
-          <button
-            className="hidden"
-            ref={submitRef}
-            type="submit"
-          >
-          </button>
-        </form>
+      <form
+        className="hidden"
+        method="post"
+        action="https://payment.paysolutions.asia/epaylink/payment.aspx"
+      >
+        <input
+          type="hidden"
+          name="customeremail"
+          defaultValue={userData?.user?.email}
+          value={userData?.user?.email}
+        />
+        <input
+          type="hidden"
+          name="productdetail"
+          defaultValue={ebookInfo.name}
+          value={ebookInfo.name}
+        />
+        <input type="hidden" name="refno" defaultValue={refId} />
+        <input
+          type="hidden"
+          name="merchantid"
+          defaultValue={process.env.NEXT_PUBLIC_PAYMENT_MERCHANT_ID}
+        />
+        <input type="hidden" name="cc" defaultValue={'00'} />
+        <input type="hidden" name="total" defaultValue={ebookInfo.price} value={ebookInfo.price} />
+        <input type="hidden" name="lang" defaultValue="TH" />
+        <input type="hidden" name="returnurl" defaultValue={returnUrl} value={returnUrl} />
+        <input type="hidden" name="postbackurl" defaultValue={postBackUrl} value={postBackUrl} />
+        <button className="hidden" ref={submitRef} type="submit"></button>
+      </form>
 
       <div className="w-[90%] 800px:w-[90%] m-auto py-5">
         <div className="w-full flex flex-col-reverse 800px:flex-row">
@@ -122,10 +136,7 @@ const EbookDetails = ({
             <h1 className="text-[25px] font-Poppins font-[600] text-white dark:text-white">
               {ebookInfo?.name}
             </h1>
-            <div className="dark:text-white mt-10 w-[90%]">
-              &nbsp;{ebookInfo?.description}
-
-            </div>
+            <div className="dark:text-white mt-10 w-[90%]">&nbsp;{ebookInfo?.description}</div>
 
             <div className=" overflow-x-auto mt-10 bottom-0 w-[90%]">
               <table className="w-full text-sm text-left  dark:text-gray-400">
@@ -170,17 +181,11 @@ const EbookDetails = ({
           <div className="w-full 800px:w-[35%] relative">
             <div className="sticky top-[100px] left-0 z-50 w-full">
               {!!ebookInfo?.thumbnail?.url && (
-                <Image
-                  src={ebookInfo?.thumbnail?.url}
-                  width={400}
-                  height={350}
-                  alt=""
-
-                />
+                <Image src={ebookInfo?.thumbnail?.url} width={400} height={350} alt="" />
               )}
               <div className="flex items-center">
                 <h1 className="pt-5 text-[25px] text-white dark:text-white">
-                  {ebookInfo?.price === 0 ? "Free" : ebookInfo?.price + "฿"}
+                  {ebookInfo?.price === 0 ? 'Free' : ebookInfo?.price + '฿'}
                 </h1>
                 <h5 className="pl-3 text-[20px] mt-2 line-through opacity-80 text-white dark:text-white">
                   {ebookInfo?.estimatedPrice}฿
@@ -197,8 +202,8 @@ const EbookDetails = ({
                       onClick={handleClickView}
                       className={`${styles.button} w-full my-3 font-Poppins cursor-pointer bg-[#47d097] hover:bg-[#37a074]`}
                     >
-                      <AiFillEye style={{ fontSize: 20 }} />&nbsp;
-                      View
+                      <AiFillEye style={{ fontSize: 20 }} />
+                      &nbsp; View
                     </button>
                     {/* <button
                       onClick={saveFile}
@@ -208,7 +213,6 @@ const EbookDetails = ({
                       Download Now
                     </button> */}
                   </div>
-
                 ) : (
                   <div
                     className={`${styles.button} !w-[180px] my-3 font-Poppins cursor-pointer !bg-[crimson]`}
@@ -237,7 +241,15 @@ const EbookDetails = ({
               <div className="w-full">
                 {stripePromise && clientSecret && (
                   <Elements stripe={stripePromise} options={{ clientSecret }}>
-                    <CheckOutForm setLoadingBackDrop={setLoadingBackDrop} setOpenModalDownLoad={setOpenModalDownLoad} setOpen={setOpen} data={ebookInfo} user={user} refetch={refetch} payForm="ebook" />
+                    <CheckOutForm
+                      setLoadingBackDrop={setLoadingBackDrop}
+                      setOpenModalDownLoad={setOpenModalDownLoad}
+                      setOpen={setOpen}
+                      data={ebookInfo}
+                      user={user}
+                      refetch={refetch}
+                      payForm="ebook"
+                    />
                   </Elements>
                 )}
               </div>
@@ -254,18 +266,15 @@ const EbookDetails = ({
             aria-describedby="modal-modal-description2"
           >
             <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-              <h1 className={`${styles.title}`}>
-                EBook Already Download!
-              </h1>
+              <h1 className={`${styles.title}`}>EBook Already Download!</h1>
               <div className="flex w-full items-center justify-center mb-6 mt-4 text-center">
                 <button
                   onClick={saveFile}
                   className={`${styles.button} !w-[190px] my-3 font-Poppins cursor-pointer bg-[#47d097]`}
                 >
-                  <HiOutlineDownload style={{ fontSize: 20 }} />&nbsp;
-                  Download Now
+                  <HiOutlineDownload style={{ fontSize: 20 }} />
+                  &nbsp; Download Now
                 </button>
-
               </div>
             </Box>
           </Modal>
@@ -273,22 +282,21 @@ const EbookDetails = ({
       </>
       <SimpleBackdrop open={isLoadingBackDrop} setOpen={setLoadingBackDrop} />
     </div>
-  );
-};
+  )
+}
 
-export default EbookDetails;
+export default EbookDetails
 
-
-// 184.22.159.119/32 		
+// 184.22.159.119/32
 //  Active
 //  EDIT  DELETE
-// 0.0.0.0/1 		
+// 0.0.0.0/1
 //  Active
 //  EDIT  DELETE
-// 223.24.166.80/32  (includes your current IP address)		
+// 223.24.166.80/32  (includes your current IP address)
 //  Active
 //  EDIT  DELETE
-// 223.24.162.24/32 		
+// 223.24.162.24/32
 //  Active
 //  EDIT  DELETE
-// 184.22.158.104/32 
+// 184.22.158.104/32

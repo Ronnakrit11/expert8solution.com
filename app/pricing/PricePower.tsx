@@ -1,22 +1,23 @@
-import Link from "next/link"
-import React from "react"
+import React from 'react'
+
+import Link from 'next/link'
 
 const PricePower = () => {
   const item = [
     {
-      img: "https://ampire.tailus.io/images/clients/airbnb.svg",
+      img: 'https://ampire.tailus.io/images/clients/airbnb.svg',
     },
     {
-      img: "https://ampire.tailus.io/images/clients/coty.svg",
+      img: 'https://ampire.tailus.io/images/clients/coty.svg',
     },
     {
-      img: "https://ampire.tailus.io/images/clients/ge.svg",
+      img: 'https://ampire.tailus.io/images/clients/ge.svg',
     },
     {
-      img: "https://ampire.tailus.io/images/clients/lilly.png",
+      img: 'https://ampire.tailus.io/images/clients/lilly.png',
     },
     {
-      img: "https://ampire.tailus.io/images/clients/microsoft.svg",
+      img: 'https://ampire.tailus.io/images/clients/microsoft.svg',
     },
   ]
   return (
@@ -51,9 +52,7 @@ const PricePower = () => {
                     <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">
                       Lifetime Package
                     </h2>
-                    <p className="mt-1 text-gray-600 dark:text-gray-400">
-                      Sale for you
-                    </p>
+                    <p className="mt-1 text-gray-600 dark:text-gray-400">Sale for you</p>
                   </div>
                 </div>
                 <div className="relative flex justify-around">
@@ -128,14 +127,10 @@ const PricePower = () => {
                     <h2 className="text-2xl font-semibold text-white dark:text-gray-800">
                       โปรโมชั่นสุดพิเศษ
                     </h2>
-                    <p className="mt-1 text-gray-400 dark:text-gray-600">
-                      สำหรับ Lifetime Package
-                    </p>
+                    <p className="mt-1 text-gray-400 dark:text-gray-600">สำหรับ Lifetime Package</p>
                   </div>
                 </div>
-                <p className="my-8 text-white dark:text-gray-700">
-                  สำหรับลูกค้าเเพคเกจ Lifetime
-                </p>
+                <p className="my-8 text-white dark:text-gray-700">สำหรับลูกค้าเเพคเกจ Lifetime</p>
                 <div className="mb-8 grid grid-cols-2 rounded-3xl border border-gray-700 text-white dark:border-gray-200 dark:text-gray-600 [&>*]:border-gray-700 [&>*]:p-4 [&>*]:dark:border-gray-200">
                   <div className="flex justify-center gap-2 border-b">
                     <svg
@@ -208,11 +203,7 @@ const PricePower = () => {
           <div className="mt-12 text-center">
             <div className="mt-8 flex flex-wrap justify-center gap-6 brightness-75 contrast-200 grayscale dark:brightness-200 dark:contrast-0 sm:justify-between lg:gap-24">
               {item.map((item, index) => (
-                <img
-                  src={item.img}
-                  key={index}
-                  className="h-8 w-auto lg:h-10 lg:w-auto"
-                />
+                <img src={item.img} key={index} className="h-8 w-auto lg:h-10 lg:w-auto" />
               ))}
             </div>
           </div>

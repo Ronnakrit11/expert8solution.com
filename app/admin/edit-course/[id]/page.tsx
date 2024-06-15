@@ -1,9 +1,12 @@
-"use client"
-import React from "react"
-import AdminSidebar from "../../../components/Admin/sidebar/AdminSidebar"
-import Heading from "@/app/utils/Heading"
-import DashboardHeader from "@/app/components/Admin/DashboardHeader"
-import EditCourse from "../../../components/Admin/Course/EditCourse"
+'use client'
+
+import DashboardHeader from '@/app/components/Admin/DashboardHeader'
+import Heading from '@/app/utils/Heading'
+
+import React from 'react'
+
+import EditCourse from '../../../components/Admin/Course/EditCourse'
+import AdminSidebar from '../../../components/Admin/sidebar/AdminSidebar'
 
 type Props = {}
 

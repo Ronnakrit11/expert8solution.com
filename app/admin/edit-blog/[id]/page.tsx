@@ -1,19 +1,23 @@
 'use client'
+
+import BlogEdit from '@/app/components/Admin/Blog/BlogEdit'
+import BlogInformation from '@/app/components/Admin/Blog/BlogInformation'
 import DashboardHero from '@/app/components/Admin/DashboardHero'
 import AdminProtected from '@/app/hooks/adminProtected'
 import Heading from '@/app/utils/Heading'
-import React from 'react'
-import AdminSidebar from "../../../components/Admin/sidebar/AdminSidebar";
-import AllCourses from "../../../components/Admin/Course/AllCourses";
-import BlogInformation from '@/app/components/Admin/Blog/BlogInformation'
 import { useGetBlogContentQuery } from '@/redux/features/blog/blogsApi'
-import BlogEdit from '@/app/components/Admin/Blog/BlogEdit'
+
+import React from 'react'
+
+import AllCourses from '../../../components/Admin/Course/AllCourses'
+import AdminSidebar from '../../../components/Admin/sidebar/AdminSidebar'
+
 // import AllEbook from '@/app/components/Admin/ebook/AllEbook'
 
 type Props = {}
 
 const page = ({ params }: any) => {
-  const id = params?.id;
+  const id = params?.id
 
   return (
     <div>
@@ -29,8 +33,8 @@ const page = ({ params }: any) => {
           </div>
           <div className="w-[85%]">
             <DashboardHero />
-            <BlogEdit id={id}/>
-           
+            <BlogEdit id={id} />
+
             {/* <AllEbook /> */}
           </div>
         </div>

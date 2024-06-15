@@ -1,14 +1,13 @@
-import Image from "next/image"
-import React, { FC, useEffect, useState } from "react"
-import { AiOutlineCamera } from "react-icons/ai"
-import avatarIcon from "@/public/assests/avatar.png"
-import {
-  useEditProfileMutation,
-  useUpdateAvatarMutation,
-} from "@/redux/features/user/userApi"
-import { useLoadUserQuery } from "@/redux/features/api/apiSlice"
-import { toast } from "react-hot-toast"
-import { Button, Label, TextInput } from "flowbite-react"
+import avatarIcon from '@/public/assests/avatar.png'
+import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
+import { useEditProfileMutation, useUpdateAvatarMutation } from '@/redux/features/user/userApi'
+
+import React, { FC, useEffect, useState } from 'react'
+
+import { Button, Label, TextInput } from 'flowbite-react'
+import Image from 'next/image'
+import { toast } from 'react-hot-toast'
+import { AiOutlineCamera } from 'react-icons/ai'
 
 type Props = {
   avatar: string | null
@@ -18,8 +17,7 @@ type Props = {
 const ProfileInfo: FC<Props> = ({ avatar, user }) => {
   const [name, setName] = useState(user && user.name)
   const [updateAvatar, { isSuccess, error }] = useUpdateAvatarMutation()
-  const [editProfile, { isSuccess: success, error: updateError }] =
-    useEditProfileMutation()
+  const [editProfile, { isSuccess: success, error: updateError }] = useEditProfileMutation()
   const [loadUser, setLoadUser] = useState(false)
   useLoadUserQuery(undefined, { skip: loadUser ? false : true })
 
@@ -43,14 +41,14 @@ const ProfileInfo: FC<Props> = ({ avatar, user }) => {
       console.log(error)
     }
     if (success) {
-      toast.success("Profile updated successfully!")
+      toast.success('Profile updated successfully!')
       setLoadUser(true)
     }
   }, [isSuccess, error, success, updateError])
 
   const handleSubmit = async (e: any) => {
     e.preventDefault()
-    if (name !== "") {
+    if (name !== '') {
       await editProfile({
         name: name,
       })
@@ -97,21 +95,14 @@ const ProfileInfo: FC<Props> = ({ avatar, user }) => {
                 type="text"
                 required
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={e => setName(e.target.value)}
               />
             </div>
             <div className="w-[100%] pt-2">
               <div className="mb-2 block">
                 <Label htmlFor="email" value="Email Address" />
               </div>
-              <TextInput
-                id="email"
-                type="email"
-                readOnly
-                required
-                disabled
-                value={user?.email}
-              />
+              <TextInput id="email" type="email" readOnly required disabled value={user?.email} />
             </div>
             <Button type="submit" className="mt-4">
               Update Profile

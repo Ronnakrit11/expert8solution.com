@@ -1,24 +1,21 @@
-import React, { useState } from "react";
-import DashboardHeader from "./DashboardHeader";
-import DashboardWidgets from "../../components/Admin/Widgets/DashboardWidgets";
+import React, { useState } from 'react'
+
+import DashboardWidgets from '../../components/Admin/Widgets/DashboardWidgets'
+import DashboardHeader from './DashboardHeader'
 
 type Props = {
-  isDashboard?: boolean;
-};
+  isDashboard?: boolean
+}
 
 const DashboardHero = ({ isDashboard }: Props) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <div>
       <DashboardHeader open={open} setOpen={setOpen} />
-      {
-        isDashboard && (
-          <DashboardWidgets open={open} />
-        )
-      }
+      {isDashboard && <DashboardWidgets open={open} />}
     </div>
-  );
-};
+  )
+}
 
-export default DashboardHero;
+export default DashboardHero

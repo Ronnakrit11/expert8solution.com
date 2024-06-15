@@ -1,27 +1,31 @@
-"use client"
-import { useGetUsersAllCoursesQuery } from "@/redux/features/courses/coursesApi"
-import { useGetHeroDataQuery } from "@/redux/features/layout/layoutApi"
-import { useSearchParams } from "next/navigation"
-import React, { useEffect, useState } from "react"
-import Loader from "../components/Loader/Loader"
-import Header from "../../components/Layout/Header"
-import Heading from "../utils/Heading"
-import { styles } from "../styles/style"
-import CourseCard from "../components/Course/CourseCard"
-import Footer from "../components/Footer"
-import BlogCard from "../components/Admin/Blog/BlogCard"
-import { useGetAllBlogQuery } from "@/redux/features/blog/blogsApi"
-import { FaEnvelope } from "react-icons/fa6"
-import BlogCardNew from "../components/Admin/Blog/BlogCardNew"
-import BlogShowCard from "../components/Admin/Blog/BlogShowCard"
+'use client'
+
+import { useGetAllBlogQuery } from '@/redux/features/blog/blogsApi'
+import { useGetUsersAllCoursesQuery } from '@/redux/features/courses/coursesApi'
+import { useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
+
+import React, { useEffect, useState } from 'react'
+
+import { useSearchParams } from 'next/navigation'
+import { FaEnvelope } from 'react-icons/fa6'
+
+import Header from '../../components/Layout/Header'
+import BlogCard from '../components/Admin/Blog/BlogCard'
+import BlogCardNew from '../components/Admin/Blog/BlogCardNew'
+import BlogShowCard from '../components/Admin/Blog/BlogShowCard'
+import CourseCard from '../components/Course/CourseCard'
+import Footer from '../components/Footer'
+import Loader from '../components/Loader/Loader'
+import { styles } from '../styles/style'
+import Heading from '../utils/Heading'
 
 type Props = {}
 
 const Page = (props: Props) => {
   const searchParams = useSearchParams()
-  const search = searchParams?.get("title")
+  const search = searchParams?.get('title')
   const { data, isLoading } = useGetAllBlogQuery(undefined, {})
-  const [route, setRoute] = useState("Login")
+  const [route, setRoute] = useState('Login')
   const [open, setOpen] = useState(false)
   const [courses, setcourses] = useState(data?.result || [])
   const [course2, setCourse2] = useState([])
@@ -35,20 +39,14 @@ const Page = (props: Props) => {
 
   return (
     <div>
-      <Header
-        route={route}
-        setRoute={setRoute}
-        open={open}
-        setOpen={setOpen}
-        activeItem={3}
-      />
+      <Header route={route} setRoute={setRoute} open={open} setOpen={setOpen} activeItem={3} />
       <Heading
-        title={"บทความความรู้ในวงการคอร์สเรียนออนไลน์ Expert8-Solution"}
+        title={'บทความความรู้ในวงการคอร์สเรียนออนไลน์ Expert8-Solution'}
         description={
-          "Blog บทความที่เกี่ยวกข้องกับการทำคอร์สเรียนออนไลน์ การทำเว็ปไซต์คอร์สเรียนออนไลน์ เเละเคล็ดลับการขายคอร์สเรียนออนไลน์ให้ประสบความสำเร็จ"
+          'Blog บทความที่เกี่ยวกข้องกับการทำคอร์สเรียนออนไลน์ การทำเว็ปไซต์คอร์สเรียนออนไลน์ เเละเคล็ดลับการขายคอร์สเรียนออนไลน์ให้ประสบความสำเร็จ'
         }
         keywords={
-          "บทความเกี่ยวกับคอร์สเรียนออนไลน์ ,ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์"
+          'บทความเกี่ยวกับคอร์สเรียนออนไลน์ ,ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์'
         }
       />
       <div className="bg-white dark:bg-darkbg pb-10">
@@ -72,10 +70,7 @@ const Page = (props: Props) => {
               <div className="flex flex-wrap lg:flex-nowrap">
                 <div className="mb-8 w-full sm:py-4 lg:w-1/4 lg:py-12">
                   <div className="flex flex-wrap justify-center gap-6 p-4 sm:justify-between sm:px-12 lg:block lg:space-y-6 lg:px-0">
-                    <a
-                      href="/blog"
-                      className="flex snap-center items-center gap-4"
-                    >
+                    <a href="/blog" className="flex snap-center items-center gap-4">
                       <div className="flex h-12 w-12 rounded-xl border bg-gray-100 dark:border-gray-700 dark:bg-gray-800">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -107,9 +102,7 @@ const Page = (props: Props) => {
                   {courses &&
                     courses.map(
                       (item: any, index: number) =>
-                        index === courses.length - 1 && (
-                          <BlogCardNew item={item} key={index} />
-                        )
+                        index === courses.length - 1 && <BlogCardNew item={item} key={index} />,
                     )}
                 </div>
               </div>
@@ -130,9 +123,7 @@ const Page = (props: Props) => {
                       courses
                         .slice(0)
                         .reverse()
-                        .map((item: any, index: number) => (
-                          <BlogCardNew item={item} key={index} />
-                        ))}
+                        .map((item: any, index: number) => <BlogCardNew item={item} key={index} />)}
                     {/* {course2 &&
                                             course2.map((item: any, index: number) => (
                                                 <BlogCardNew item={item} key={index} />

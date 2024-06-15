@@ -1,49 +1,48 @@
-import React, { FC, useEffect, useState } from "react";
-import axios from "axios";
+import React, { FC, useEffect, useState } from 'react'
+
+import axios from 'axios'
 
 type Props = {
-  videoUrl: string;
-  title: string;
-};
+  videoUrl: string
+  title: string
+}
 
 const CoursePlayer: FC<Props> = ({ videoUrl }) => {
   const [videoData, setVideoData] = useState({
-    otp: "",
-    playbackInfo: "",
-  });
+    otp: '',
+    playbackInfo: '',
+  })
 
-  const [isYoutubeVideo, setIsYoutubeVideo] = useState<boolean | null>(false);
-  const [isStreamableVideo, setStreamableVideo] = useState<boolean | null>(
-    false
-  );
-  const [linkYT, setLinkYT] = useState("");
+  const [isYoutubeVideo, setIsYoutubeVideo] = useState<boolean | null>(false)
+  const [isStreamableVideo, setStreamableVideo] = useState<boolean | null>(false)
+  const [linkYT, setLinkYT] = useState('')
 
   useEffect(() => {
-    if (videoUrl?.includes("youtube.com")) {
-      setIsYoutubeVideo(true);
-      setLinkYT(videoUrl?.replace("watch?v=", "embed/"));
-    } else if (videoUrl?.includes("streamable.com")) {
-      setStreamableVideo(true);
-      setLinkYT(videoUrl?.replace(".com/", ".com/e/"));
+    if (videoUrl?.includes('youtube.com')) {
+      setIsYoutubeVideo(true)
+      setLinkYT(videoUrl?.replace('watch?v=', 'embed/'))
+    } else if (videoUrl?.includes('streamable.com')) {
+      setStreamableVideo(true)
+      setLinkYT(videoUrl?.replace('.com/', '.com/e/'))
     } else {
       axios
         .post(`${process.env.NEXT_PUBLIC_ORIGIN_URI}/api/v1/getVdoCipherOTP`, {
           videoId: videoUrl,
         })
-        .then((res) => {
-          setVideoData(res.data);
-        });
+        .then(res => {
+          setVideoData(res.data)
+        })
     }
-  }, [videoUrl]);
+  }, [videoUrl])
 
-  const isVideoOrStreamable = isYoutubeVideo || isStreamableVideo;
+  const isVideoOrStreamable = isYoutubeVideo || isStreamableVideo
 
   return (
     <div
       style={{
-        position: "relative",
-        paddingTop: `${isVideoOrStreamable ? 0 : "56.25%"}`,
-        overflow: "hidden",
+        position: 'relative',
+        paddingTop: `${isVideoOrStreamable ? 0 : '56.25%'}`,
+        overflow: 'hidden',
       }}
     >
       <>
@@ -55,15 +54,15 @@ const CoursePlayer: FC<Props> = ({ videoUrl }) => {
               <RenderStreamableVideo linkYT={linkYT} />
             ) : (
               <>
-                {videoData.otp && videoData.playbackInfo !== "" && (
+                {videoData.otp && videoData.playbackInfo !== '' && (
                   <iframe
                     src={`https://player.vdocipher.com/v2/?otp=${videoData?.otp}&playbackInfo=${videoData.playbackInfo}&player=NdBnMYD`}
                     style={{
-                      position: "absolute",
+                      position: 'absolute',
                       top: 0,
                       left: 0,
-                      width: "100%",
-                      height: "100%",
+                      width: '100%',
+                      height: '100%',
                       border: 0,
                     }}
                     allowFullScreen={true}
@@ -76,8 +75,8 @@ const CoursePlayer: FC<Props> = ({ videoUrl }) => {
         )}
       </>
     </div>
-  );
-};
+  )
+}
 
 const RenderYoutubeVideo = ({ linkYT }: any) => {
   return (
@@ -91,18 +90,18 @@ const RenderYoutubeVideo = ({ linkYT }: any) => {
         allowFullScreen
       />
     </div>
-  );
-};
+  )
+}
 
 const RenderStreamableVideo = ({ linkYT }: any) => {
   return (
     <div className="videoWrapper">
       <div
         style={{
-          width: "100%",
+          width: '100%',
           height: 0,
-          position: "relative",
-          paddingBottom: "62.500%",
+          position: 'relative',
+          paddingBottom: '62.500%',
         }}
       >
         <iframe
@@ -112,17 +111,17 @@ const RenderStreamableVideo = ({ linkYT }: any) => {
           height="100%"
           allowFullScreen
           style={{
-            width: "100%",
-            height: "100%",
-            position: "absolute",
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
             left: 0,
             top: 0,
-            overflow: "hidden",
+            overflow: 'hidden',
           }}
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CoursePlayer;
+export default CoursePlayer

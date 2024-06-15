@@ -1,10 +1,12 @@
-import { useGetCourseContentQuery } from "@/redux/features/courses/coursesApi"
-import React, { useState } from "react"
-import Loader from "../Loader/Loader"
-import Heading from "@/app/utils/Heading"
-import CourseContentMedia from "./CourseContentMedia"
-import Header from "../../../components/Layout/Header"
-import CourseContentList from "./CourseContentList"
+import Heading from '@/app/utils/Heading'
+import { useGetCourseContentQuery } from '@/redux/features/courses/coursesApi'
+
+import React, { useState } from 'react'
+
+import Header from '../../../components/Layout/Header'
+import Loader from '../Loader/Loader'
+import CourseContentList from './CourseContentList'
+import CourseContentMedia from './CourseContentMedia'
 
 type Props = {
   id: string
@@ -18,7 +20,7 @@ const CourseContent = ({ id, user }: Props) => {
     refetch,
   } = useGetCourseContentQuery(id, { refetchOnMountOrArgChange: true })
   const [open, setOpen] = useState(false)
-  const [route, setRoute] = useState("Login")
+  const [route, setRoute] = useState('Login')
   const data = contentData?.content
 
   const [activeVideo, setActiveVideo] = useState(0)
@@ -29,13 +31,7 @@ const CourseContent = ({ id, user }: Props) => {
         <Loader />
       ) : (
         <>
-          <Header
-            activeItem={1}
-            open={open}
-            setOpen={setOpen}
-            route={route}
-            setRoute={setRoute}
-          />
+          <Header activeItem={1} open={open} setOpen={setOpen} route={route} setRoute={setRoute} />
           <div className="w-full grid 800px:grid-cols-1">
             <Heading
               title={data[activeVideo]?.title}

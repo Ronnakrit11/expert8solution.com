@@ -1,13 +1,13 @@
-import { apiSlice } from "../api/apiSlice";
+import { apiSlice } from '../api/apiSlice'
 
 export const blogsApi = apiSlice.injectEndpoints({
-  endpoints: (builder) => ({
+  endpoints: builder => ({
     createBlog: builder.mutation({
-      query: (data) => ({
-        url: "create-blog",
-        method: "POST",
+      query: data => ({
+        url: 'create-blog',
+        method: 'POST',
         body: data,
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
     // getAllCourses: builder.query({
@@ -18,39 +18,39 @@ export const blogsApi = apiSlice.injectEndpoints({
     //   }),
     // }),
     deleteBlog: builder.mutation({
-      query: (id) => ({
+      query: id => ({
         url: `delete-blog/${id}`,
-        method: "DELETE",
-        credentials: "include" as const,
+        method: 'DELETE',
+        credentials: 'include' as const,
       }),
     }),
     editBlog: builder.mutation({
       query: ({ id, data }) => ({
         url: `/edit-blog/${id}`,
-        method: "PUT",
+        method: 'PUT',
         body: data,
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
     getAllBlog: builder.query({
       query: () => ({
-        url: "get-all-blog",
-        method: "GET",
-        credentials: "include" as const,
+        url: 'get-all-blog',
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     getBlogContent: builder.query({
       query: (id: any) => ({
         url: `get-blog/${id}`,
-        method: "GET",
-        credentials: "include" as const,
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     getBlogContentById: builder.query({
       query: (id: any) => ({
         url: `get-blog-byid/${id}`,
-        method: "GET",
-        credentials: "include" as const,
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     // getCourseContent: builder.query({
@@ -107,7 +107,7 @@ export const blogsApi = apiSlice.injectEndpoints({
     //   }),
     // }),
   }),
-});
+})
 
 export const {
   useCreateBlogMutation,
@@ -122,4 +122,4 @@ export const {
   // useAddAnswerInQuestionMutation,
   // useAddReviewInCourseMutation,
   // useAddReplyInReviewMutation
-} = blogsApi;
+} = blogsApi

@@ -1,21 +1,19 @@
-import { styles } from "@/app/styles/style"
-import {
-  useEditLayoutMutation,
-  useGetHeroDataQuery,
-} from "@/redux/features/layout/layoutApi"
-import React, { FC, useEffect, useRef, useState } from "react"
-import { toast } from "react-hot-toast"
-import { AiOutlineCamera } from "react-icons/ai"
+import { styles } from '@/app/styles/style'
+import { useEditLayoutMutation, useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
 
-import { RiDeleteBin5Line } from "react-icons/ri"
+import React, { FC, useEffect, useRef, useState } from 'react'
+
+import { toast } from 'react-hot-toast'
+import { AiOutlineCamera } from 'react-icons/ai'
+import { RiDeleteBin5Line } from 'react-icons/ri'
 
 type Props = {}
 
 const EditHero: FC<Props> = (props: Props) => {
-  const [image, setImage] = useState("")
-  const [title, setTitle] = useState("")
-  const [subTitle, setSubTitle] = useState("")
-  const { data, refetch } = useGetHeroDataQuery("Banner", {
+  const [image, setImage] = useState('')
+  const [title, setTitle] = useState('')
+  const [subTitle, setSubTitle] = useState('')
+  const { data, refetch } = useGetHeroDataQuery('Banner', {
     refetchOnMountOrArgChange: true,
   })
   const inputFileElement: any = useRef(null)
@@ -38,11 +36,11 @@ const EditHero: FC<Props> = (props: Props) => {
 
   useEffect(() => {
     if (isSuccess) {
-      toast.success("Hero updated successfully!")
+      toast.success('Hero updated successfully!')
       refetch()
     }
     if (error) {
-      if ("data" in error) {
+      if ('data' in error) {
         const errorData = error as any
         toast.error(errorData?.data?.message)
       }
@@ -68,7 +66,7 @@ const EditHero: FC<Props> = (props: Props) => {
 
   const handleEdit = async () => {
     await editLayout({
-      type: "Banner",
+      type: 'Banner',
       image,
       title,
       subTitle,
@@ -94,7 +92,7 @@ const EditHero: FC<Props> = (props: Props) => {
     }
   }
 
-  const handleDelImage = (idx) => {
+  const handleDelImage = idx => {
     let newImageList = []
 
     for (let index in imageList) {
@@ -116,11 +114,7 @@ const EditHero: FC<Props> = (props: Props) => {
             {imageList.map((ele: any, idx) => {
               return (
                 <div key={idx} className="flex flex-col">
-                  <img
-                    src={ele.img_url || ele.url}
-                    alt="not fount"
-                    width={"250px"}
-                  />
+                  <img src={ele.img_url || ele.url} alt="not fount" width={'250px'} />
                   <div
                     onClick={() => handleDelImage(idx)}
                     className="w-full text-center text-black bg-gray-200 cursor-pointer flex items-center justify-center py-2 hover:bg-gray-500 hover:text-white"
@@ -152,13 +146,13 @@ const EditHero: FC<Props> = (props: Props) => {
             className="dark:text-white resize-none text-[#000000c7] text-[30px] px-3 w-full 1000px:text-[60px] 1500px:text-[70px] font-[600] font-Josefin py-2 1000px:leading-[75px] 1500px:w-[60%] 1100px:w-[78%] outline-none bg-transparent block"
             placeholder="Improve Your Online Learning Experience Better Instantly"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={e => setTitle(e.target.value)}
             rows={4}
           />
           <br />
           <textarea
             value={subTitle}
-            onChange={(e) => setSubTitle(e.target.value)}
+            onChange={e => setSubTitle(e.target.value)}
             placeholder="We have 40k+ Online courses & 500K+ Online registered student. Find your desired Courses from them."
             className="dark:text-[#edfff4] text-[#000000ac] font-Josefin font-[600] text-[18px] 1500px:!w-[55%] 1100px:!w-[74%] bg-transparent outline-none resize-none"
           ></textarea>

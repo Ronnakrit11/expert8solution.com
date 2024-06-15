@@ -1,16 +1,18 @@
-"use client"
-import React, { useState } from "react"
-import Heading from "../utils/Heading"
-import Header from "../../components/Layout/Header"
-import Footer from "../components/Footer"
-import Policy from "./Policy"
+'use client'
+
+import React, { useState } from 'react'
+
+import Header from '../../components/Layout/Header'
+import Footer from '../components/Footer'
+import Heading from '../utils/Heading'
+import Policy from './Policy'
 
 type Props = {}
 
 const Page = (props: Props) => {
   const [open, setOpen] = useState(false)
   const [activeItem, setActiveItem] = useState(5)
-  const [route, setRoute] = useState("Login")
+  const [route, setRoute] = useState('Login')
 
   return (
     <div>

@@ -1,7 +1,8 @@
-import Image from "next/image"
-import React from "react"
+import React from 'react'
 
-const GridThreeGadient = () => {
+import Image from 'next/image'
+
+const GridThreeGradient = () => {
   return (
     <div className="bg-white dark:bg-[#101726]">
       <div className="container mx-auto">
@@ -37,28 +38,20 @@ const GridThreeGadient = () => {
                       Standard
                     </h3>
                     <div className="space-y-2">
-                      <p className="text-5xl font-bold text-blue-600">
-                        ฿ 15,900
-                      </p>
-                      <p className="text-xl text-black dark:text-white">
-                        ปีเเรก
-                      </p>
+                      <p className="text-5xl font-bold text-blue-600">฿ 15,900</p>
+                      <p className="text-xl text-black dark:text-white">ปีเเรก</p>
                     </div>
                     <ul className="text-gray-800 dark:text-gray-300 flex flex-col">
                       <li className="border-t border-b py-4 dark:border-gray-700">
-                        ฟรีโดเมน , SSL{" "}
+                        ฟรีโดเมน , SSL{' '}
                       </li>
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ระบบการเรียนออนไลน์
-                      </li>
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ระบบหลังบ้าน
-                      </li>
+                      <li className="border-b py-4 dark:border-gray-700">ระบบการเรียนออนไลน์</li>
+                      <li className="border-b py-4 dark:border-gray-700">ระบบหลังบ้าน</li>
                       <li className="border-b py-4 dark:border-gray-700">
                         รองรับการเเสดงผลทุกอุปกรณ์
                       </li>
                       <li className="border-b py-4 dark:border-gray-700">
-                        {" "}
+                        {' '}
                         Free 10GB Video Hosting
                       </li>
                     </ul>
@@ -101,42 +94,26 @@ const GridThreeGadient = () => {
                       <p className="text-xl text-white">ปีเเรก</p>
                     </div>
                     <ul className="text-white dark:text-gray-300  flex flex-col justify-start">
-                      <li className="border-t border-b border-gray-700 py-4">
-                        ฟรีโดเมน , SSL{" "}
-                      </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ระบบการเรียนออนไลน์
-                      </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ระบบหลังบ้าน
-                      </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ระบบบทความ
-                      </li>
+                      <li className="border-t border-b border-gray-700 py-4">ฟรีโดเมน , SSL </li>
+                      <li className="border-b py-4 border-gray-700">ระบบการเรียนออนไลน์</li>
+                      <li className="border-b py-4 border-gray-700">ระบบหลังบ้าน</li>
+                      <li className="border-b py-4 border-gray-700">ระบบบทความ</li>
 
-                      <li className="border-b py-4 border-gray-700">
-                        รองรับการเเสดงผลทุกอุปกรณ์
-                      </li>
+                      <li className="border-b py-4 border-gray-700">รองรับการเเสดงผลทุกอุปกรณ์</li>
                       <li className="border-b py-4 border-gray-700">
                         ระบบจ่ายเงินด้วยบัตรเครดิต เดบิต เเละผ่อนชำระ
                       </li>
                       <li className="border-b py-4 border-gray-700">
                         ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง
                       </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ติดตั้ง Google Analytic
-                      </li>
+                      <li className="border-b py-4 border-gray-700">ติดตั้ง Google Analytic</li>
                       <li className="border-b py-4 border-gray-700">
                         ติดตั้ง Google Seach console
                       </li>
-                      <li className="border-b py-4 border-gray-700">
-                        SEO 1 Keywords
-                      </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ติดตั้ง Facebook Pixel
-                      </li>
+                      <li className="border-b py-4 border-gray-700">SEO 1 Keywords</li>
+                      <li className="border-b py-4 border-gray-700">ติดตั้ง Facebook Pixel</li>
                       <li className="border-b py-4 dark:border-gray-700">
-                        {" "}
+                        {' '}
                         Free 80GB Video Hosting
                       </li>
                     </ul>
@@ -175,16 +152,12 @@ const GridThreeGadient = () => {
                       Ultimate
                     </h3>
                     <div className="space-y-2">
-                      <p className="text-5xl font-bold text-blue-600">
-                        ฿ 59,900
-                      </p>
-                      <p className="text-xl text-black dark:text-white">
-                        ปีเเรก
-                      </p>
+                      <p className="text-5xl font-bold text-blue-600">฿ 59,900</p>
+                      <p className="text-xl text-black dark:text-white">ปีเเรก</p>
                     </div>
                     <ul className="text-gray-800 dark:text-gray-300 flex flex-col justify-start">
                       <li className="border-t border-b py-4 dark:border-gray-700">
-                        ฟรีโดเมน , SSL{" "}
+                        ฟรีโดเมน , SSL{' '}
                       </li>
                       <li className="border-b py-4 dark:border-gray-700">
                         Design ใหม่ทุกจุด Custom ได้ทั้งหมด
@@ -195,12 +168,8 @@ const GridThreeGadient = () => {
                       <li className="border-b py-4 dark:border-gray-700">
                         ระบบแบบทดสอบ Pre-test/Post-test
                       </li>
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ระบบ Report
-                      </li>
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ระบบขาย E-Book
-                      </li>
+                      <li className="border-b py-4 dark:border-gray-700">ระบบ Report</li>
+                      <li className="border-b py-4 dark:border-gray-700">ระบบขาย E-Book</li>
                       <li className="border-b py-4 border-gray-700">
                         ระบบจ่ายเงินด้วยบัตรเครดิต เดบิต เเละผ่อนชำระ
                       </li>
@@ -208,39 +177,25 @@ const GridThreeGadient = () => {
                         รองรับนักเรียนไม่จำกัด ระบบไม่ช้าไม่ล่ม
                       </li>
 
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ระบบการเรียนออนไลน์
-                      </li>
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ระบบหลังบ้าน
-                      </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ระบบบทความ
-                      </li>
+                      <li className="border-b py-4 dark:border-gray-700">ระบบการเรียนออนไลน์</li>
+                      <li className="border-b py-4 dark:border-gray-700">ระบบหลังบ้าน</li>
+                      <li className="border-b py-4 border-gray-700">ระบบบทความ</li>
 
                       <li className="border-b py-4 dark:border-gray-700">
                         รองรับการเเสดงผลทุกอุปกรณ์
                       </li>
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ทำกราฟฟิก
-                      </li>
+                      <li className="border-b py-4 dark:border-gray-700">ทำกราฟฟิก</li>
                       <li className="border-b py-4 dark:border-gray-700">
                         ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง
                       </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ติดตั้ง Google Analytic
-                      </li>
+                      <li className="border-b py-4 border-gray-700">ติดตั้ง Google Analytic</li>
                       <li className="border-b py-4 border-gray-700">
                         ติดตั้ง Google Seach console
                       </li>
-                      <li className="border-b py-4 border-gray-700">
-                        SEO 3 Keywords
-                      </li>
-                      <li className="border-b py-4 border-gray-700">
-                        ติดตั้ง Facebook Pixel
-                      </li>
+                      <li className="border-b py-4 border-gray-700">SEO 3 Keywords</li>
+                      <li className="border-b py-4 border-gray-700">ติดตั้ง Facebook Pixel</li>
                       <li className="border-b py-4 dark:border-gray-700">
-                        {" "}
+                        {' '}
                         Free 200GB Video Hosting
                       </li>
                     </ul>
@@ -273,4 +228,4 @@ const GridThreeGadient = () => {
   )
 }
 
-export default GridThreeGadient
+export default GridThreeGradient

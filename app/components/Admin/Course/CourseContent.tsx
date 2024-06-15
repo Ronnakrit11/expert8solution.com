@@ -1,17 +1,19 @@
-import { styles } from "@/app/styles/style";
-import React, { FC, useState } from "react";
-import { toast } from "react-hot-toast";
-import { AiOutlineDelete, AiOutlinePlusCircle } from "react-icons/ai";
-import { BsLink45Deg, BsPencil } from "react-icons/bs";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { styles } from '@/app/styles/style'
+
+import React, { FC, useState } from 'react'
+
+import { toast } from 'react-hot-toast'
+import { AiOutlineDelete, AiOutlinePlusCircle } from 'react-icons/ai'
+import { BsLink45Deg, BsPencil } from 'react-icons/bs'
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 
 type Props = {
-  active: number;
-  setActive: (active: number) => void;
-  courseContentData: any;
-  setCourseContentData: (courseContentData: any) => void;
-  handleSubmit: any;
-};
+  active: number
+  setActive: (active: number) => void
+  courseContentData: any
+  setCourseContentData: (courseContentData: any) => void
+  handleSubmit: any
+}
 
 const CourseContent: FC<Props> = ({
   courseContentData,
@@ -20,125 +22,119 @@ const CourseContent: FC<Props> = ({
   setActive,
   handleSubmit: handlleCourseSubmit,
 }) => {
-  const [isCollapsed, setIsCollapsed] = useState(
-    Array(courseContentData.length).fill(false)
-  );
+  const [isCollapsed, setIsCollapsed] = useState(Array(courseContentData.length).fill(false))
 
-  const [activeSection, setActiveSection] = useState(1);
+  const [activeSection, setActiveSection] = useState(1)
 
   const handleSubmit = (e: any) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   const handleCollapseToggle = (index: number) => {
-    const updatedCollasped = [...isCollapsed];
-    updatedCollasped[index] = !updatedCollasped[index];
-    setIsCollapsed(updatedCollasped);
-  };
+    const updatedCollasped = [...isCollapsed]
+    updatedCollasped[index] = !updatedCollasped[index]
+    setIsCollapsed(updatedCollasped)
+  }
 
   const handleRemoveLink = (index: number, linkIndex: number) => {
-    const updatedData = [...courseContentData];
-    updatedData[index].links.splice(linkIndex, 1);
-    setCourseContentData(updatedData);
-  };
+    const updatedData = [...courseContentData]
+    updatedData[index].links.splice(linkIndex, 1)
+    setCourseContentData(updatedData)
+  }
 
   const handleAddLink = (index: number) => {
-    const updatedData = [...courseContentData];
-    updatedData[index].links.push({ title: "", url: "" });
-    setCourseContentData(updatedData);
-  };
+    const updatedData = [...courseContentData]
+    updatedData[index].links.push({ title: '', url: '' })
+    setCourseContentData(updatedData)
+  }
 
   const newContentHandler = (item: any) => {
     if (
-      item.title === "" ||
-      item.description === "" ||
-      item.videoUrl === "" ||
-      item.links[0].title === "" ||
-      item.links[0].url === "" ||
-      item.videoLength === ""
+      item.title === '' ||
+      item.description === '' ||
+      item.videoUrl === '' ||
+      item.links[0].title === '' ||
+      item.links[0].url === '' ||
+      item.videoLength === ''
     ) {
-      toast.error("Please fill all the fields first!");
+      toast.error('Please fill all the fields first!')
     } else {
-      let newVideoSection = "";
+      let newVideoSection = ''
 
       if (courseContentData.length > 0) {
-        const lastVideoSection =
-          courseContentData[courseContentData.length - 1].videoSection;
+        const lastVideoSection = courseContentData[courseContentData.length - 1].videoSection
 
         // use the last videoSection if available, else use user input
         if (lastVideoSection) {
-          newVideoSection = lastVideoSection;
+          newVideoSection = lastVideoSection
         }
       }
       let newContent = {
-        videoUrl: "",
-        title: "",
-        description: "",
+        videoUrl: '',
+        title: '',
+        description: '',
         videoSection: newVideoSection,
-        videoLength: "",
-        links: [{ title: "", url: "" }],
-      };
+        videoLength: '',
+        links: [{ title: '', url: '' }],
+      }
 
-      setCourseContentData([...courseContentData, newContent]);
+      setCourseContentData([...courseContentData, newContent])
     }
-  };
+  }
 
   const addNewSection = () => {
     if (
-      courseContentData[courseContentData.length - 1].title === "" ||
-      courseContentData[courseContentData.length - 1].description === "" ||
-      courseContentData[courseContentData.length - 1].videoUrl === "" ||
-      courseContentData[courseContentData.length - 1].links[0].title === "" ||
-      courseContentData[courseContentData.length - 1].links[0].url === ""
+      courseContentData[courseContentData.length - 1].title === '' ||
+      courseContentData[courseContentData.length - 1].description === '' ||
+      courseContentData[courseContentData.length - 1].videoUrl === '' ||
+      courseContentData[courseContentData.length - 1].links[0].title === '' ||
+      courseContentData[courseContentData.length - 1].links[0].url === ''
     ) {
-      toast.error("Please fill all the fields first!");
+      toast.error('Please fill all the fields first!')
     } else {
-      setActiveSection(activeSection + 1);
+      setActiveSection(activeSection + 1)
       const newContent = {
-        videoUrl: "",
-        title: "",
-        description: "",
-        videoLength: "",
+        videoUrl: '',
+        title: '',
+        description: '',
+        videoLength: '',
         videoSection: `Untitled Section ${activeSection}`,
-        links: [{ title: "", url: "" }],
-      };
-      setCourseContentData([...courseContentData, newContent]);
+        links: [{ title: '', url: '' }],
+      }
+      setCourseContentData([...courseContentData, newContent])
     }
-  };
+  }
 
   const prevButton = () => {
-    setActive(active - 1);
-  };
+    setActive(active - 1)
+  }
 
   const handleOptions = () => {
     if (
-      courseContentData[courseContentData.length - 1].title === "" ||
-      courseContentData[courseContentData.length - 1].description === "" ||
-      courseContentData[courseContentData.length - 1].videoUrl === "" ||
-      courseContentData[courseContentData.length - 1].videoLength === "" ||
-      courseContentData[courseContentData.length - 1].links[0].title === "" ||
-      courseContentData[courseContentData.length - 1].links[0].url === ""
+      courseContentData[courseContentData.length - 1].title === '' ||
+      courseContentData[courseContentData.length - 1].description === '' ||
+      courseContentData[courseContentData.length - 1].videoUrl === '' ||
+      courseContentData[courseContentData.length - 1].videoLength === '' ||
+      courseContentData[courseContentData.length - 1].links[0].title === '' ||
+      courseContentData[courseContentData.length - 1].links[0].url === ''
     ) {
-      toast.error("section can't be empty!");
+      toast.error("section can't be empty!")
     } else {
-      setActive(active + 1);
-      handlleCourseSubmit();
+      setActive(active + 1)
+      handlleCourseSubmit()
     }
-  };
+  }
 
   return (
     <div className="w-[80%] m-auto mt-24 p-3">
       <form onSubmit={handleSubmit}>
         {courseContentData?.map((item: any, index: number) => {
           const showSectionInput =
-            index === 0 ||
-            item.videoSection !== courseContentData[index - 1].videoSection;
+            index === 0 || item.videoSection !== courseContentData[index - 1].videoSection
 
           return (
             <div
-              className={`w-full bg-[#cdc8c817] p-4 ${
-                showSectionInput ? "mt-10" : "mb-0"
-              }`}
+              className={`w-full bg-[#cdc8c817] p-4 ${showSectionInput ? 'mt-10' : 'mb-0'}`}
               key={index}
             >
               {showSectionInput && (
@@ -147,18 +143,16 @@ const CourseContent: FC<Props> = ({
                     <input
                       type="text"
                       className={`text-[20px] ${
-                        item.videoSection === "Untitled Section"
-                          ? "w-[170px]"
-                          : "w-min"
+                        item.videoSection === 'Untitled Section' ? 'w-[170px]' : 'w-min'
                       } font-Poppins cursor-pointer dark:text-white text-black bg-transparent outline-none`}
                       value={item.videoSection}
-                      onChange={(e) => {
-                        const updatedData = [...courseContentData];
+                      onChange={e => {
+                        const updatedData = [...courseContentData]
                         updatedData[index] = {
                           ...updatedData[index],
                           videoSection: e.target.value,
-                        };
-                        setCourseContentData(updatedData);
+                        }
+                        setCourseContentData(updatedData)
                       }}
                     />
                     <BsPencil className="cursor-pointer dark:text-white text-black" />
@@ -186,13 +180,13 @@ const CourseContent: FC<Props> = ({
                 <div className="flex items-center">
                   <AiOutlineDelete
                     className={`dark:text-white text-[20px] mr-2 text-black ${
-                      index > 0 ? "cursor-pointer" : "cursor-no-drop"
+                      index > 0 ? 'cursor-pointer' : 'cursor-no-drop'
                     }`}
                     onClick={() => {
                       if (index > 0) {
-                        const updatedData = [...courseContentData];
-                        updatedData.splice(index, 1);
-                        setCourseContentData(updatedData);
+                        const updatedData = [...courseContentData]
+                        updatedData.splice(index, 1)
+                        setCourseContentData(updatedData)
                       }
                     }}
                   />
@@ -200,9 +194,7 @@ const CourseContent: FC<Props> = ({
                     fontSize="large"
                     className="dark:text-white text-black"
                     style={{
-                      transform: isCollapsed[index]
-                        ? "rotate(180deg)"
-                        : "rotate(0deg)",
+                      transform: isCollapsed[index] ? 'rotate(180deg)' : 'rotate(0deg)',
                     }}
                     onClick={() => handleCollapseToggle(index)}
                   />
@@ -217,13 +209,13 @@ const CourseContent: FC<Props> = ({
                       placeholder="Project Plan..."
                       className={`${styles.input}`}
                       value={item.title}
-                      onChange={(e) => {
-                        const updatedData = [...courseContentData];
+                      onChange={e => {
+                        const updatedData = [...courseContentData]
                         updatedData[index] = {
                           ...updatedData[index],
                           title: e.target.value,
-                        };
-                        setCourseContentData(updatedData);
+                        }
+                        setCourseContentData(updatedData)
                       }}
                     />
                   </div>
@@ -234,32 +226,30 @@ const CourseContent: FC<Props> = ({
                       placeholder="sdder"
                       className={`${styles.input}`}
                       value={item.videoUrl}
-                      onChange={(e) => {
-                        const updatedData = [...courseContentData];
+                      onChange={e => {
+                        const updatedData = [...courseContentData]
                         updatedData[index] = {
                           ...updatedData[index],
                           videoUrl: e.target.value,
-                        };
-                        setCourseContentData(updatedData);
+                        }
+                        setCourseContentData(updatedData)
                       }}
                     />
                   </div>
                   <div className="mb-3">
-                    <label className={styles.label}>
-                      Video Length (in minutes)
-                    </label>
+                    <label className={styles.label}>Video Length (in minutes)</label>
                     <input
                       type="number"
                       placeholder="20"
                       className={`${styles.input}`}
                       value={item.videoLength}
-                      onChange={(e) => {
-                        const updatedData = [...courseContentData];
+                      onChange={e => {
+                        const updatedData = [...courseContentData]
                         updatedData[index] = {
                           ...updatedData[index],
                           videoLength: e.target.value,
-                        };
-                        setCourseContentData(updatedData);
+                        }
+                        setCourseContentData(updatedData)
                       }}
                     />
                   </div>
@@ -272,13 +262,13 @@ const CourseContent: FC<Props> = ({
                       placeholder="sdder"
                       className={`${styles.input} !h-min py-2`}
                       value={item.description}
-                      onChange={(e) => {
-                        const updatedData = [...courseContentData];
+                      onChange={e => {
+                        const updatedData = [...courseContentData]
                         updatedData[index] = {
                           ...updatedData[index],
                           description: e.target.value,
-                        };
-                        setCourseContentData(updatedData);
+                        }
+                        setCourseContentData(updatedData)
                       }}
                     />
                     <br />
@@ -286,19 +276,13 @@ const CourseContent: FC<Props> = ({
                   {item?.links.map((link: any, linkIndex: number) => (
                     <div className="mb-3 block" key={linkIndex}>
                       <div className="w-full flex items-center justify-between">
-                        <label className={styles.label}>
-                          Link {linkIndex + 1}
-                        </label>
+                        <label className={styles.label}>Link {linkIndex + 1}</label>
                         <AiOutlineDelete
                           className={`${
-                            linkIndex === 0
-                              ? "cursor-no-drop"
-                              : "cursor-pointer"
+                            linkIndex === 0 ? 'cursor-no-drop' : 'cursor-pointer'
                           } text-black dark:text-white text-[20px]`}
                           onClick={() =>
-                            linkIndex === 0
-                              ? null
-                              : handleRemoveLink(index, linkIndex)
+                            linkIndex === 0 ? null : handleRemoveLink(index, linkIndex)
                           }
                         />
                       </div>
@@ -307,28 +291,24 @@ const CourseContent: FC<Props> = ({
                         placeholder="Source Code... (Link title)"
                         className={`${styles.input}`}
                         value={link.title}
-                        onChange={(e) => {
-                          const updatedData = courseContentData.map(
-                            (item, dataIndex) => {
-                              if (dataIndex === index) {
-                                const updatedLinks = item.links.map(
-                                  (linkItem, linkItemIndex) => {
-                                    if (linkItemIndex === linkIndex) {
-                                      return {
-                                        ...linkItem,
-                                        title: e.target.value,
-                                      };
-                                    }
-                                    return linkItem;
+                        onChange={e => {
+                          const updatedData = courseContentData.map((item, dataIndex) => {
+                            if (dataIndex === index) {
+                              const updatedLinks = item.links.map((linkItem, linkItemIndex) => {
+                                if (linkItemIndex === linkIndex) {
+                                  return {
+                                    ...linkItem,
+                                    title: e.target.value,
                                   }
-                                );
+                                }
+                                return linkItem
+                              })
 
-                                return { ...item, links: updatedLinks };
-                              }
-                              return item;
+                              return { ...item, links: updatedLinks }
                             }
-                          );
-                          setCourseContentData(updatedData);
+                            return item
+                          })
+                          setCourseContentData(updatedData)
                         }}
                       />
                       <input
@@ -336,28 +316,24 @@ const CourseContent: FC<Props> = ({
                         placeholder="Source Code Url... (Link URL)"
                         className={`${styles.input} mt-6`}
                         value={link.url}
-                        onChange={(e) => {
-                          const updatedData = courseContentData.map(
-                            (item, dataIndex) => {
-                              if (dataIndex === index) {
-                                const updatedLinks = item.links.map(
-                                  (linkItem, linkItemIndex) => {
-                                    if (linkItemIndex === linkIndex) {
-                                      return {
-                                        ...linkItem,
-                                        url: e.target.value,
-                                      };
-                                    }
-                                    return linkItem;
+                        onChange={e => {
+                          const updatedData = courseContentData.map((item, dataIndex) => {
+                            if (dataIndex === index) {
+                              const updatedLinks = item.links.map((linkItem, linkItemIndex) => {
+                                if (linkItemIndex === linkIndex) {
+                                  return {
+                                    ...linkItem,
+                                    url: e.target.value,
                                   }
-                                );
+                                }
+                                return linkItem
+                              })
 
-                                return { ...item, links: updatedLinks };
-                              }
-                              return item;
+                              return { ...item, links: updatedLinks }
                             }
-                          );
-                          setCourseContentData(updatedData);
+                            return item
+                          })
+                          setCourseContentData(updatedData)
                         }}
                       />
                     </div>
@@ -387,7 +363,7 @@ const CourseContent: FC<Props> = ({
                 </div>
               )}
             </div>
-          );
+          )
         })}
         <br />
         <div
@@ -416,7 +392,7 @@ const CourseContent: FC<Props> = ({
       <br />
       <br />
     </div>
-  );
-};
+  )
+}
 
-export default CourseContent;
+export default CourseContent

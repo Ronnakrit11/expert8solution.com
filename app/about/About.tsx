@@ -1,9 +1,11 @@
-import React from "react"
-import { styles } from "../styles/style"
-import Image from "next/image"
-import { FaLine } from "react-icons/fa6"
-import { FaSquareFacebook } from "react-icons/fa6"
-import { MdEmail } from "react-icons/md"
+import React from 'react'
+
+import Image from 'next/image'
+import { FaLine } from 'react-icons/fa6'
+import { FaSquareFacebook } from 'react-icons/fa6'
+import { MdEmail } from 'react-icons/md'
+
+import { styles } from '../styles/style'
 
 const About = () => {
   return (
@@ -26,9 +28,8 @@ const About = () => {
                 Solution
               </p>
               <p className="mt-12 text-center text-lg text-gray-600 dark:text-gray-300 sm:text-xl md:text-left lg:w-3/4">
-                Expert8Solution เรามีบริการให้ครบครัน
-                ตั้งเเต่ทำระบบคอร์สเรียนออนไลน์ห งานกราฟฟิก งานตัดต่อ
-                หรืองานด้าน marketing
+                Expert8Solution เรามีบริการให้ครบครัน ตั้งเเต่ทำระบบคอร์สเรียนออนไลน์ห งานกราฟฟิก
+                งานตัดต่อ หรืองานด้าน marketing
               </p>
             </div>
             <div className="relative -mx-4 mt-16 flex snap-x snap-mandatory justify-between gap-6 overflow-x-auto border-y border-gray-100 px-4 py-8 dark:border-gray-800 sm:-mx-12 sm:px-12 lg:mx-0 lg:px-0">
@@ -39,9 +40,7 @@ const About = () => {
                 <h2 className="mx-auto w-max text-lg font-semibold text-gray-700 dark:text-white sm:ml-0 sm:w-auto">
                   Line
                 </h2>
-                <p className="mx-auto mt-1 w-max text-gray-500 sm:ml-0 sm:w-auto">
-                  Some text here
-                </p>
+                <p className="mx-auto mt-1 w-max text-gray-500 sm:ml-0 sm:w-auto">Some text here</p>
               </div>
               <div className="snap-center text-center sm:text-left">
                 <div className="mx-auto mb-4 flex h-12 w-12 rounded-xl border border-primary/20 bg-white shadow-md shadow-primary/10 dark:border-gray-700 dark:bg-gray-800 sm:mr-auto sm:ml-0">
@@ -50,9 +49,7 @@ const About = () => {
                 <h2 className="mx-auto w-max text-lg font-semibold text-gray-700 dark:text-white sm:ml-0 sm:w-auto">
                   Facebook
                 </h2>
-                <p className="mx-auto mt-1 w-max text-gray-500 sm:ml-0 sm:w-auto">
-                  Some text here
-                </p>
+                <p className="mx-auto mt-1 w-max text-gray-500 sm:ml-0 sm:w-auto">Some text here</p>
               </div>
               <div className="snap-center text-center sm:text-left">
                 <div className="mx-auto mb-4 flex h-12 w-12 rounded-xl border border-primary/20 bg-white shadow-md shadow-primary/10 dark:border-gray-700 dark:bg-gray-800 sm:mr-auto sm:ml-0">
@@ -61,9 +58,7 @@ const About = () => {
                 <h2 className="mx-auto w-max text-lg font-semibold text-gray-700 dark:text-white sm:ml-0 sm:w-auto">
                   Email
                 </h2>
-                <p className="mx-auto mt-1 w-max text-gray-500 sm:ml-0 sm:w-auto">
-                  Some text here
-                </p>
+                <p className="mx-auto mt-1 w-max text-gray-500 sm:ml-0 sm:w-auto">Some text here</p>
               </div>
             </div>
             <div className="grid grid-cols-2 my-40">
@@ -108,22 +103,15 @@ const About = () => {
                   </span>
                 </h2>
                 <p className="mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5">
-                  A growing team doesn't need to mean growing pains. With
-                  best-of-breed features, security, privacy, and the right tool
-                  for every step of your journey - Jira Software allows you to
-                  scale without friction - regardless of your company size.
+                  A growing team doesn't need to mean growing pains. With best-of-breed features,
+                  security, privacy, and the right tool for every step of your journey - Jira
+                  Software allows you to scale without friction - regardless of your company size.
                 </p>
               </div>
               <div className="relative mt-32 hidden h-40 w-40 items-center justify-center lg:mx-auto lg:flex">
                 <div className="it absolute inset-0 flex flex-wrap blur-3xl">
-                  <div
-                    aria-hidden="true"
-                    className="h-1/2 w-1/2 rounded-tl-full bg-sky-700"
-                  ></div>
-                  <div
-                    aria-hidden="true"
-                    className="h-1/2 w-1/2 rounded-tr-full bg-sky-700"
-                  ></div>
+                  <div aria-hidden="true" className="h-1/2 w-1/2 rounded-tl-full bg-sky-700"></div>
+                  <div aria-hidden="true" className="h-1/2 w-1/2 rounded-tr-full bg-sky-700"></div>
                   <div
                     aria-hidden="true"
                     className="h-1/2 w-1/2 rounded-bl-full bg-purple-700"
@@ -193,8 +181,8 @@ const About = () => {
                       <div>
                         <span className="text-gray-500">2021</span>
                         <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                          Business Development ของ KPAuto Groups ซึ่งเป็น Dealer
-                          Top1 ชั้นนำของ Mazda , Mg เเละ Suzuki
+                          Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ
+                          Mazda , Mg เเละ Suzuki
                         </h3>
                         <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                       </div>
@@ -240,8 +228,8 @@ const About = () => {
                       <div>
                         <span className="text-gray-500">2021</span>
                         <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                          Lead Marketting & Ads Optimize KPAuto Groups
-                          ซึ่งทำให้ขึ้นเป็นยอดขายอันดับ 1 ของ MG Dealer 2 ปีซ้อน
+                          Lead Marketting & Ads Optimize KPAuto Groups ซึ่งทำให้ขึ้นเป็นยอดขายอันดับ
+                          1 ของ MG Dealer 2 ปีซ้อน
                         </h3>
                         <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                       </div>
@@ -287,8 +275,8 @@ const About = () => {
                       <div>
                         <span className="text-gray-500">2021</span>
                         <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                          Business Development ของ KPAuto Groups ซึ่งเป็น Dealer
-                          Top1 ชั้นนำของ Mazda , Mg เเละ Suzuki
+                          Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ
+                          Mazda , Mg เเละ Suzuki
                         </h3>
                         <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                       </div>
@@ -334,8 +322,8 @@ const About = () => {
                       <div>
                         <span className="text-gray-500">2021</span>
                         <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                          Business Development ของ KPAuto Groups ซึ่งเป็น Dealer
-                          Top1 ชั้นนำของ Mazda , Mg เเละ Suzuki
+                          Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ
+                          Mazda , Mg เเละ Suzuki
                         </h3>
                         <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
                       </div>
@@ -431,9 +419,8 @@ const About = () => {
                       </span>
                     </h2>
                     <p className="mb-12 mt-6 text-gray-600 dark:text-gray-300 md:mx-auto md:w-5/6 lg:w-1/2">
-                      Saepe nulla ab nobis itaque corporis fuga illo doloribus
-                      sequi esse aspernatur impedit nihil quisquam, voluptates
-                      placeat architecto adipisci id cum enim.
+                      Saepe nulla ab nobis itaque corporis fuga illo doloribus sequi esse aspernatur
+                      impedit nihil quisquam, voluptates placeat architecto adipisci id cum enim.
                     </p>
                     <a
                       href="contact.html"

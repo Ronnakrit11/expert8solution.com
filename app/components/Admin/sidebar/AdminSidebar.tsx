@@ -1,100 +1,98 @@
-"use client";
-import { FC, useEffect, useState } from "react";
-import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Box, IconButton, Typography } from "@mui/material";
-import "react-pro-sidebar/dist/css/styles.css";
+'use client'
+
+import ArtTrackIcon from '@mui/icons-material/ArtTrack'
+import ArticleIcon from '@mui/icons-material/Article'
+import { Box, IconButton, Typography } from '@mui/material'
+
+import { FC, useEffect, useState } from 'react'
+
+import { Badge } from 'flowbite-react'
+import { useTheme } from 'next-themes'
+import Image from 'next/image'
+import Link from 'next/link'
+import { AiFillFileAdd } from 'react-icons/ai'
+import { Menu, MenuItem, ProSidebar } from 'react-pro-sidebar'
+import 'react-pro-sidebar/dist/css/styles.css'
+import { useSelector } from 'react-redux'
+
+import avatarDefault from '../../../../public/assests/avatar.png'
 import {
-  HomeOutlinedIcon,
-  ArrowForwardIosIcon,
   ArrowBackIosIcon,
-  PeopleOutlinedIcon,
-  ReceiptOutlinedIcon,
+  ArrowForwardIosIcon,
   BarChartOutlinedIcon,
-  MapOutlinedIcon,
+  DifferenceIcon,
+  ExitToAppIcon,
   GroupsIcon,
+  HomeOutlinedIcon,
+  InsertDriveFileIcon,
+  ManageHistoryIcon,
+  MapOutlinedIcon,
   OndemandVideoIcon,
+  PeopleOutlinedIcon,
+  QuizIcon,
+  ReceiptOutlinedIcon,
+  SettingsIcon,
   VideoCallIcon,
   WebIcon,
-  QuizIcon,
   WysiwygIcon,
-  ManageHistoryIcon,
-  SettingsIcon,
-  ExitToAppIcon,
-  DifferenceIcon,
-  InsertDriveFileIcon,
-} from "./Icon";
-import avatarDefault from "../../../../public/assests/avatar.png";
-import { useSelector } from "react-redux";
-import Link from "next/link";
-import Image from "next/image";
-import { useTheme } from "next-themes";
-import { AiFillFileAdd } from "react-icons/ai";
-import ArtTrackIcon from '@mui/icons-material/ArtTrack';
-import ArticleIcon from '@mui/icons-material/Article';
-import { Badge } from "flowbite-react";
+} from './Icon'
 
 interface itemProps {
-  title: string;
-  to: string;
-  icon: JSX.Element;
-  selected: string;
-  setSelected: any;
+  title: string
+  to: string
+  icon: JSX.Element
+  selected: string
+  setSelected: any
 }
 
 const Item: FC<itemProps> = ({ title, to, icon, selected, setSelected }) => {
   return (
-    <MenuItem
-      active={selected === title}
-
-      icon={icon}
-      className="hover:bg-[#f3f4f6] rounded-l-full"
-    >
+    <MenuItem active={selected === title} icon={icon} className="hover:bg-[#f3f4f6] rounded-l-full">
       <Typography className="!text-[16px]  !font-Poppins">{title}</Typography>
       <Link href={to} />
     </MenuItem>
-  );
-};
+  )
+}
 
 const Sidebar = () => {
-  const { user } = useSelector((state: any) => state.auth);
-  const [logout, setlogout] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [selected, setSelected] = useState("Dashboard");
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { user } = useSelector((state: any) => state.auth)
+  const [logout, setlogout] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [selected, setSelected] = useState('Dashboard')
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
   console.log(selected)
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [])
 
   if (!mounted) {
-    return null;
+    return null
   }
 
   const logoutHandler = () => {
-    setlogout(true);
-  };
+    setlogout(true)
+  }
 
   return (
     <Box
       sx={{
-        "& .pro-sidebar-inner": {
-          background: `${theme === "dark" ? "#0f1623 !important" : "#fff !important"
-            }`,
+        '& .pro-sidebar-inner': {
+          background: `${theme === 'dark' ? '#0f1623 !important' : '#fff !important'}`,
         },
-        "& .pro-icon-wrapper": {
-          backgroundColor: "transparent !important",
+        '& .pro-icon-wrapper': {
+          backgroundColor: 'transparent !important',
         },
-        "& .pro-inner-item:hover": {
-          color: "#1565c0 !important",
+        '& .pro-inner-item:hover': {
+          color: '#1565c0 !important',
         },
-        "& .pro-menu-item.active": {
-          color: "#1565c0 !important",
+        '& .pro-menu-item.active': {
+          color: '#1565c0 !important',
         },
-        "& .pro-inner-item": {
-          padding: "5px 35px 5px 20px !important",
+        '& .pro-inner-item': {
+          padding: '5px 35px 5px 20px !important',
           opacity: 1,
         },
-        "& .pro-menu-item": {
-          color: `${theme !== "dark" && "#000"}`,
+        '& .pro-menu-item': {
+          color: `${theme !== 'dark' && '#000'}`,
         },
       }}
       className="!bg-white dark:bg-[#0f1623] z-99"
@@ -102,12 +100,12 @@ const Sidebar = () => {
       <ProSidebar
         collapsed={isCollapsed}
         style={{
-          position: "fixed",
+          position: 'fixed',
           top: 0,
           left: 0,
-          height: "100vh",
+          height: '100vh',
           zIndex: 99999999999999,
-          width: isCollapsed ? "0%" : "16%",
+          width: isCollapsed ? '0%' : '16%',
         }}
       >
         <Menu iconShape="square">
@@ -116,16 +114,11 @@ const Sidebar = () => {
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <ArrowForwardIosIcon /> : undefined}
             style={{
-              margin: "10px 0 20px 0",
+              margin: '10px 0 20px 0',
             }}
           >
             {!isCollapsed && (
-              <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                ml="15px"
-              >
+              <Box display="flex" justifyContent="space-between" alignItems="center" ml="15px">
                 <Link href="/" className="block">
                   <h3 className="text-[18px] sm:text-[18px] lg:text-[20px] font-Poppins uppercase dark:text-white text-black">
                     Expert8Solution
@@ -148,7 +141,6 @@ const Sidebar = () => {
                   height={100}
                   className="w-[100px] h-[100px] rounded-xl border-2 border-primary"
                   src={user.avatar ? user.avatar.url : avatarDefault}
-
                 />
                 <div>
                   <div className="flex justify-center items-center">
@@ -164,21 +156,20 @@ const Sidebar = () => {
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+          <Box paddingLeft={isCollapsed ? undefined : '10%'}>
             <Item
               title="Dashboard"
               to="/admin"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-
             />
             <Typography
               variant="h5"
-              sx={{ m: "15px 0 5px 25px" }}
+              sx={{ m: '15px 0 5px 25px' }}
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
             >
-              {!isCollapsed && "Data"}
+              {!isCollapsed && 'Data'}
             </Typography>
             <Item
               title="Users"
@@ -199,9 +190,9 @@ const Sidebar = () => {
             <Typography
               variant="h5"
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: '15px 0 5px 20px' }}
             >
-              {!isCollapsed && "Content"}
+              {!isCollapsed && 'Content'}
             </Typography>
             <Item
               title="Create Course"
@@ -250,9 +241,9 @@ const Sidebar = () => {
             <Typography
               variant="h5"
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: '15px 0 5px 20px' }}
             >
-              {!isCollapsed && "Customization"}
+              {!isCollapsed && 'Customization'}
             </Typography>
             <Item
               title="Hero"
@@ -279,9 +270,9 @@ const Sidebar = () => {
             <Typography
               variant="h5"
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: '15px 0 5px 20px' }}
             >
-              {!isCollapsed && "Controllers"}
+              {!isCollapsed && 'Controllers'}
             </Typography>
             <Item
               title="Manage Team"
@@ -294,9 +285,9 @@ const Sidebar = () => {
             <Typography
               variant="h6"
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: '15px 0 5px 20px' }}
             >
-              {!isCollapsed && "Analytics"}
+              {!isCollapsed && 'Analytics'}
             </Typography>
             <Item
               title="Courses Analytics"
@@ -324,9 +315,9 @@ const Sidebar = () => {
             <Typography
               variant="h6"
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: '15px 0 5px 20px' }}
             >
-              {!isCollapsed && "Extras"}
+              {!isCollapsed && 'Extras'}
             </Typography>
             <div onClick={logoutHandler}>
               <Item
@@ -341,7 +332,7 @@ const Sidebar = () => {
         </Menu>
       </ProSidebar>
     </Box>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

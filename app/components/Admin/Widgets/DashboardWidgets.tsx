@@ -1,33 +1,34 @@
-import React, { FC, useEffect, useState } from "react";
-import UserAnalytics from "../Analytics/UserAnalytics";
-import { BiBorderLeft } from "react-icons/bi";
-import { PiUsersFourLight } from "react-icons/pi";
-import { Box, CircularProgress } from "@mui/material";
-import OrdersAnalytics from "../Analytics/OrdersAnalytics";
-import AllInvoices from "../Order/AllInvoices";
-import Grid from '@mui/material/Grid';
-
-
 import {
   useGetOrdersAnalyticsQuery,
   useGetUsersAnalyticsQuery,
-} from "@/redux/features/analytics/analyticsApi";
-import UserAnalyticsNew from "../Analytics/UserAnalyticsNew";
-import OrdersAnalyticsNew from "../Analytics/OrdersAnalyticsNew";
+} from '@/redux/features/analytics/analyticsApi'
+import { Box, CircularProgress } from '@mui/material'
+import Grid from '@mui/material/Grid'
+
+import React, { FC, useEffect, useState } from 'react'
+
+import { BiBorderLeft } from 'react-icons/bi'
+import { PiUsersFourLight } from 'react-icons/pi'
+
+import OrdersAnalytics from '../Analytics/OrdersAnalytics'
+import OrdersAnalyticsNew from '../Analytics/OrdersAnalyticsNew'
+import UserAnalytics from '../Analytics/UserAnalytics'
+import UserAnalyticsNew from '../Analytics/UserAnalyticsNew'
+import AllInvoices from '../Order/AllInvoices'
 
 type Props = {
-  open?: boolean;
-  value?: number;
-};
+  open?: boolean
+  value?: number
+}
 
 const CircularProgressWithLabel: FC<Props> = ({ open, value }) => {
   return (
-    <Box sx={{ position: "relative", display: "inline-flex" }}>
+    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
       <CircularProgress
         variant="determinate"
         value={value}
         size={45}
-        color={value && value > 99 ? "info" : "error"}
+        color={value && value > 99 ? 'info' : 'error'}
         thickness={4}
         style={{ zIndex: open ? -1 : 1 }}
       />
@@ -37,69 +38,67 @@ const CircularProgressWithLabel: FC<Props> = ({ open, value }) => {
           left: 0,
           bottom: 0,
           right: 0,
-          position: "absolute",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       ></Box>
     </Box>
-  );
-};
+  )
+}
 
 const DashboardWidgets: FC<Props> = ({ open }) => {
-  const [ordersComparePercentage, setOrdersComparePercentage] = useState<any>();
-  const [userComparePercentage, setuserComparePercentage] = useState<any>();
+  const [ordersComparePercentage, setOrdersComparePercentage] = useState<any>()
+  const [userComparePercentage, setuserComparePercentage] = useState<any>()
 
-  const { data, isLoading } = useGetUsersAnalyticsQuery({});
-  const { data: ordersData, isLoading: ordersLoading } =
-    useGetOrdersAnalyticsQuery({});
+  const { data, isLoading } = useGetUsersAnalyticsQuery({})
+  const { data: ordersData, isLoading: ordersLoading } = useGetOrdersAnalyticsQuery({})
 
   useEffect(() => {
     if (isLoading && ordersLoading) {
-      return;
+      return
     } else {
       if (data && ordersData) {
-        const usersLastTwoMonths = data.users.last12Months.slice(-2);
-        const ordersLastTwoMonths = ordersData.orders.last12Months.slice(-2);
+        const usersLastTwoMonths = data.users.last12Months.slice(-2)
+        const ordersLastTwoMonths = ordersData.orders.last12Months.slice(-2)
 
-        if (
-          usersLastTwoMonths.length === 2 &&
-          ordersLastTwoMonths.length === 2
-        ) {
-          const usersCurrentMonth = usersLastTwoMonths[1].count;
-          const usersPreviousMonth = usersLastTwoMonths[0].count;
-          const ordersCurrentMonth = ordersLastTwoMonths[1].count;
-          const ordersPreviousMonth = ordersLastTwoMonths[0].count;
+        if (usersLastTwoMonths.length === 2 && ordersLastTwoMonths.length === 2) {
+          const usersCurrentMonth = usersLastTwoMonths[1].count
+          const usersPreviousMonth = usersLastTwoMonths[0].count
+          const ordersCurrentMonth = ordersLastTwoMonths[1].count
+          const ordersPreviousMonth = ordersLastTwoMonths[0].count
 
-          const usersPercentChange = usersPreviousMonth !== 0 ?
-            ((usersCurrentMonth - usersPreviousMonth) / usersPreviousMonth) *
-            100 : 100;
+          const usersPercentChange =
+            usersPreviousMonth !== 0
+              ? ((usersCurrentMonth - usersPreviousMonth) / usersPreviousMonth) * 100
+              : 100
 
-          const ordersPercentChange = ordersPreviousMonth !== 0 ?
-            ((ordersCurrentMonth - ordersPreviousMonth) / ordersPreviousMonth) *
-            100 : 100;
+          const ordersPercentChange =
+            ordersPreviousMonth !== 0
+              ? ((ordersCurrentMonth - ordersPreviousMonth) / ordersPreviousMonth) * 100
+              : 100
 
           setuserComparePercentage({
             currentMonth: usersCurrentMonth,
             previousMonth: usersPreviousMonth,
             percentChange: usersPercentChange,
-          });
+          })
 
           setOrdersComparePercentage({
             currentMonth: ordersCurrentMonth,
             previousMonth: ordersPreviousMonth,
             percentChange: ordersPercentChange,
-          });
+          })
         }
       }
     }
-  }, [isLoading, ordersLoading, data, ordersData]);
+  }, [isLoading, ordersLoading, data, ordersData])
 
   return (
-    <div className=" my-24 pl-8 sm:pl-8 md:pl-40 lg:pl-16 xl:pl-8" >
+    <div className=" my-24 pl-8 sm:pl-8 md:pl-40 lg:pl-16 xl:pl-8">
       <Box>
-        <Grid container spacing={2} >
+        <Grid container spacing={2}>
           <Grid item xs={12} md={8} padding={2}>
             <UserAnalyticsNew isDashboard={true} />
           </Grid>
@@ -116,17 +115,15 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
                   </h5>
                 </div>
                 <div>
-                  <CircularProgressWithLabel value={
-                    ordersComparePercentage?.percentChange > 0
-                      ? 100
-                      : 0
-                  } open={open} />
+                  <CircularProgressWithLabel
+                    value={ordersComparePercentage?.percentChange > 0 ? 100 : 0}
+                    open={open}
+                  />
                   <h5 className="text-center pt-4 text-black dark:text-white">
-                    {
-                      ordersComparePercentage?.percentChange > 0
-                        ? "+" + ordersComparePercentage?.percentChange.toFixed(2)
-                        : "-" + ordersComparePercentage?.percentChange.toFixed(2)
-                    } %
+                    {ordersComparePercentage?.percentChange > 0
+                      ? '+' + ordersComparePercentage?.percentChange.toFixed(2)
+                      : '-' + ordersComparePercentage?.percentChange.toFixed(2)}{' '}
+                    %
                   </h5>
                 </div>
               </div>
@@ -143,22 +140,22 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
                   </h5>
                 </div>
                 <div>
-                  <CircularProgressWithLabel value={
-                    userComparePercentage?.percentChange > 0
-                      ? 100
-                      : 0
-                  } open={open} />
+                  <CircularProgressWithLabel
+                    value={userComparePercentage?.percentChange > 0 ? 100 : 0}
+                    open={open}
+                  />
                   <h5 className="text-center pt-4 text-black dark:text-white">
                     {userComparePercentage?.percentChange > 0
-                      ? "+" + userComparePercentage?.percentChange.toFixed(2)
-                      : "-" + userComparePercentage?.percentChange.toFixed(2)} %
+                      ? '+' + userComparePercentage?.percentChange.toFixed(2)
+                      : '-' + userComparePercentage?.percentChange.toFixed(2)}{' '}
+                    %
                   </h5>
                 </div>
               </div>
             </div>
           </Grid>
         </Grid>
-        <Grid container spacing={2} >
+        <Grid container spacing={2}>
           <Grid item xs={12} md={8} padding={2}>
             <OrdersAnalyticsNew isDashboard={true} />
           </Grid>
@@ -246,7 +243,7 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
         </div>
       </div> */}
     </div>
-  );
-};
+  )
+}
 
-export default DashboardWidgets;
+export default DashboardWidgets

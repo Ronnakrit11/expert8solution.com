@@ -1,13 +1,13 @@
-import { apiSlice } from "../api/apiSlice";
+import { apiSlice } from '../api/apiSlice'
 
 export const ebookApi = apiSlice.injectEndpoints({
-  endpoints: (builder) => ({
+  endpoints: builder => ({
     createEbook: builder.mutation({
-      query: (data) => ({
-        url: "create-ebook",
-        method: "POST",
+      query: data => ({
+        url: 'create-ebook',
+        method: 'POST',
         body: data,
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
     // getAllCourses: builder.query({
@@ -18,47 +18,47 @@ export const ebookApi = apiSlice.injectEndpoints({
     //   }),
     // }),
     deleteEbook: builder.mutation({
-      query: (id) => ({
+      query: id => ({
         url: `delete-ebook/${id}`,
-        method: "DELETE",
-        credentials: "include" as const,
+        method: 'DELETE',
+        credentials: 'include' as const,
       }),
     }),
     editEbook: builder.mutation({
       query: ({ id, data }) => ({
         url: `edit-ebook/${id}`,
-        method: "PUT",
+        method: 'PUT',
         body: data,
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
     addEbookUser: builder.mutation({
-      query: (data) => ({
+      query: data => ({
         url: `add-ebook-user`,
-        method: "POST",
+        method: 'POST',
         body: data,
-        credentials: "include" as const,
+        credentials: 'include' as const,
       }),
     }),
     getAllEbook: builder.query({
       query: () => ({
-        url: "get-ebooks",
-        method: "GET",
-        credentials: "include" as const,
+        url: 'get-ebooks',
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     getEbookDetail: builder.query({
       query: (id: any) => ({
         url: `get-ebook/${id}`,
-        method: "GET",
-        credentials: "include" as const,
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     getEbookDetailAdmin: builder.query({
       query: (id: any) => ({
         url: `get-admin-ebook/${id}`,
-        method: "GET",
-        credentials: "include" as const,
+        method: 'GET',
+        credentials: 'include' as const,
       }),
     }),
     // getCourseContent: builder.query({
@@ -115,7 +115,7 @@ export const ebookApi = apiSlice.injectEndpoints({
     //   }),
     // }),
   }),
-});
+})
 
 export const {
   useGetAllEbookQuery,
@@ -125,4 +125,4 @@ export const {
   useDeleteEbookMutation,
   useEditEbookMutation,
   useAddEbookUserMutation,
-} = ebookApi;
+} = ebookApi

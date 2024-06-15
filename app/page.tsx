@@ -1,62 +1,57 @@
-import Home from "./components/HomeNew/Home";
+import Home from './components/Home'
 
 export const metadata = {
-  title: "Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร",
+  title: 'Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร',
   description:
-  "บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท",
+    'บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท',
   keywords:
-    "สร้างระบบคอร์สเรียนสออนไลน์,ระบบสอนออนไลน์,การตลาดออนไลน์,ระบบเรียนออนไลน์ , ระบบขายคอร์สออนไลน์เเบบครบวงจร ",
+    'สร้างระบบคอร์สเรียนสออนไลน์,ระบบสอนออนไลน์,การตลาดออนไลน์,ระบบเรียนออนไลน์ , ระบบขายคอร์สออนไลน์เเบบครบวงจร ',
   openGraph: {
-    title: "Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร ",
-    description: "บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท ",
-    url: "https://www.expert8-solution.com/",
+    title: 'Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร ',
+    description:
+      'บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท ',
+    url: 'https://www.expert8-solution.com/',
 
-    siteName: "expert8-solution",
+    siteName: 'expert8-solution',
     images: [
       {
-        url: "https://res.cloudinary.com/dtmtluhfw/image/upload/v1716983686/qeew54xsvcpbcjrdhusb.png",
+        url: 'https://res.cloudinary.com/dtmtluhfw/image/upload/v1716983686/qeew54xsvcpbcjrdhusb.png',
         width: 800,
         height: 600,
       },
     ],
-    locale: "th-TH",
-    type: "website",
+    locale: 'th-TH',
+    type: 'website',
   },
   twitter: {
-    card: "summary",
-    title: "Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร",
+    card: 'summary',
+    title: 'Expert8-Solution บริการสร้างระบบคอร์สเรียนสออนไลน์ครบวงจร',
     description:
-      "บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท",
+      'บริการทำระบบเรียนออนไลน์ เว็ปไซต์ E-learning เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing เเละพัฒนาเว็บไซต์ทุกประเภท',
     images: [
-      "https://res.cloudinary.com/dtmtluhfw/image/upload/v1716983686/qeew54xsvcpbcjrdhusb.png ",
+      'https://res.cloudinary.com/dtmtluhfw/image/upload/v1716983686/qeew54xsvcpbcjrdhusb.png ',
     ],
   },
-};
+}
 
-export const revalidate = 180;
+export const revalidate = 180
 
 // http://localhost:8000/api/v1/get-layout/Banner
 const Page = async () => {
-  console.log("porcess env =>", process.env.NEXT_PUBLIC_SERVER_URI);
+  console.log('porcess env =>', process.env.NEXT_PUBLIC_SERVER_URI)
 
-  const pmBanner = fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URI}/get-layout/Banner`,
-    {}
-  );
-  const pmCategory = fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URI}/get-layout/Categories`,
-    {}
-  );
-  const [resBanner, resCategory] = await Promise.all([pmBanner, pmCategory]);
-  const banner = await resBanner.json();
-  const category = await resCategory.json();
+  const pmBanner = fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/get-layout/Banner`, {})
+  const pmCategory = fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/get-layout/Categories`, {})
+  const [resBanner, resCategory] = await Promise.all([pmBanner, pmCategory])
+  const banner = await resBanner.json()
+  const category = await resCategory.json()
 
   const webInfo = {
     banner: banner?.layout?.banner || {},
     category: category?.layout?.categories || [],
-  };
+  }
 
-  return <Home webInfo={webInfo} />;
-};
+  return <Home webInfo={webInfo} />
+}
 
-export default Page;
+export default Page

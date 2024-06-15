@@ -1,22 +1,25 @@
 'use client'
-import CourseContent from "@/app/components/Course/CourseContent";
-import Loader from "@/app/components/Loader/Loader";
-import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
-import axios from "axios";
-import { useRouter, useSearchParams } from "next/navigation";
-import React, { useEffect } from "react";
+
+import CourseContent from '@/app/components/Course/CourseContent'
+import Loader from '@/app/components/Loader/Loader'
+import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
+
+import React, { useEffect } from 'react'
+
+import axios from 'axios'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 type Props = {
-  params: any;
+  params: any
 }
 
 const Page = ({ params }: Props) => {
-  const id = params.id;
-  const { isLoading, error, data, refetch } = useLoadUserQuery(undefined, {});
-  const router = useRouter();
+  const id = params.id
+  const { isLoading, error, data, refetch } = useLoadUserQuery(undefined, {})
+  const router = useRouter()
 
-  const searchParams = useSearchParams();
-  const paymentToken = searchParams?.get("ptoken");
+  const searchParams = useSearchParams()
+  const paymentToken = searchParams?.get('ptoken')
 
   useEffect(() => {
     if (paymentToken) {
@@ -26,39 +29,36 @@ const Page = ({ params }: Props) => {
 
   const checkPaymentToken = async () => {
     try {
-      const result = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URI}/create-order-postback?payment_token=${paymentToken}`)
-    } catch (err) {
-    }
+      const result = await axios.get(
+        `${process.env.NEXT_PUBLIC_SERVER_URI}/create-order-postback?payment_token=${paymentToken}`,
+      )
+    } catch (err) {}
     window.location.href = `/course-access/${id}`
   }
 
   useEffect(() => {
     if (!paymentToken) {
       if (data) {
-        const isPurchased = data.user.courses.find(
-          (item: any) => item._id === id
-        );
+        const isPurchased = data.user.courses.find((item: any) => item._id === id)
         if (!isPurchased) {
-          router.replace("/");
+          router.replace('/')
         }
       }
       if (error) {
-        router.replace("/");
+        router.replace('/')
       }
     }
-  }, [data, error]);
+  }, [data, error])
 
   return (
     <>
-      {
-        (paymentToken || isLoading) ? (
-          <Loader />
-        ) : (
-          <div>
-            <CourseContent id={id} user={data.user} />
-          </div>
-        )
-      }
+      {paymentToken || isLoading ? (
+        <Loader />
+      ) : (
+        <div>
+          <CourseContent id={id} user={data.user} />
+        </div>
+      )}
     </>
   )
 }

@@ -1,6 +1,8 @@
-"use client"
-import React from "react"
-import CourseDetailsPage from "@/app/components/Course/CourseDetailsPage"
+'use client'
+
+import CourseDetailsPage from '@/app/components/Course/CourseDetailsPage'
+
+import React from 'react'
 
 const Page = ({ params }: any) => {
   return (

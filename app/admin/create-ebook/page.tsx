@@ -1,23 +1,25 @@
-"use client"
-import React, { useEffect, useState } from "react"
-import AdminSidebar from "../../components/Admin/sidebar/AdminSidebar"
-import Heading from "@/app/utils/Heading"
-import DashboardHeader from "@/app/components/Admin/DashboardHeader"
-import { Box } from "@mui/material"
-import { styles } from "@/app/styles/style"
-import ImageIcon from "@mui/icons-material/Image"
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf"
-import { useCreateEbookMutation } from "@/redux/features/ebooks/ebookApi"
-import toast from "react-hot-toast"
-import { redirect } from "next/navigation"
-import SimpleBackdrop from "@/app/components/Loading/SimpleBackdrop"
+'use client'
+
+import DashboardHeader from '@/app/components/Admin/DashboardHeader'
+import SimpleBackdrop from '@/app/components/Loading/SimpleBackdrop'
+import { styles } from '@/app/styles/style'
+import Heading from '@/app/utils/Heading'
+import { useCreateEbookMutation } from '@/redux/features/ebooks/ebookApi'
+import ImageIcon from '@mui/icons-material/Image'
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
+import { Box } from '@mui/material'
+
+import React, { useEffect, useState } from 'react'
+
+import { redirect } from 'next/navigation'
+import toast from 'react-hot-toast'
+
+import AdminSidebar from '../../components/Admin/sidebar/AdminSidebar'
 
 type Props = {}
 
 const Page = (props: Props) => {
-  const [createEbook, { isSuccess, error, isLoading }] = useCreateEbookMutation(
-    {}
-  )
+  const [createEbook, { isSuccess, error, isLoading }] = useCreateEbookMutation({})
   const [ebookInfo, setEbookInfo] = useState({}) as any
   const [dragging, setDragging] = useState(false)
   const [filePdf, setFilePdf] = useState(null) as any
@@ -26,11 +28,11 @@ const Page = (props: Props) => {
 
   useEffect(() => {
     if (isSuccess) {
-      toast.success("Ebook created successfully")
-      redirect("/admin/ebook")
+      toast.success('Ebook created successfully')
+      redirect('/admin/ebook')
     }
     if (error) {
-      if ("data" in error) {
+      if ('data' in error) {
         const errorMessage = error as any
         toast.error(errorMessage.data.message)
       }
@@ -79,7 +81,7 @@ const Page = (props: Props) => {
 
   const handleFilePDFChange = (e: any) => {
     const file = e.target.files?.[0]
-    console.log("🚀 ~ file: page.tsx:28 ~ handleFilePDFChange ~ file:", file)
+    console.log('🚀 ~ file: page.tsx:28 ~ handleFilePDFChange ~ file:', file)
     if (file) {
       setFilePdfInfo(file)
       const reader = new FileReader()
@@ -160,9 +162,7 @@ const Page = (props: Props) => {
                       name=""
                       required
                       value={ebookInfo.name}
-                      onChange={(e: any) =>
-                        setEbookInfo({ ...ebookInfo, name: e.target.value })
-                      }
+                      onChange={(e: any) => setEbookInfo({ ...ebookInfo, name: e.target.value })}
                       id="name"
                       placeholder="MERN stack LMS platform with next 13"
                       className={`
@@ -197,9 +197,7 @@ const Page = (props: Props) => {
                         name=""
                         required
                         value={ebookInfo.price}
-                        onChange={(e: any) =>
-                          setEbookInfo({ ...ebookInfo, price: e.target.value })
-                        }
+                        onChange={(e: any) => setEbookInfo({ ...ebookInfo, price: e.target.value })}
                         id="price"
                         placeholder="29"
                         className={`${styles.input}`}
@@ -273,7 +271,7 @@ const Page = (props: Props) => {
                       htmlFor="pdfFile"
                       // className={`${styles.input}`}
                       className={` w-full min-h-[10vh] dark:border-white border-[#00000026] p-3 border flex items-center justify-center ${
-                        dragging ? "bg-blue-500" : "bg-transparent"
+                        dragging ? 'bg-blue-500' : 'bg-transparent'
                       }`}
                       // onDragOver={handleDragOver}
                       // onDragLeave={handleDragLeave}
@@ -282,15 +280,11 @@ const Page = (props: Props) => {
                       {filePdfInfo ? (
                         <div>
                           <div>{filePdfInfo.name}</div>
-                          <div>
-                            file size:{" "}
-                            {(filePdfInfo.size / (1024 * 1024)).toFixed(2)} MB
-                          </div>
+                          <div>file size: {(filePdfInfo.size / (1024 * 1024)).toFixed(2)} MB</div>
                         </div>
                       ) : (
                         <span className="text-black dark:text-white">
-                          <PictureAsPdfIcon /> Drag and drop PDF File here or
-                          click to browse
+                          <PictureAsPdfIcon /> Drag and drop PDF File here or click to browse
                         </span>
                       )}
                     </label>
@@ -307,22 +301,17 @@ const Page = (props: Props) => {
                     <label
                       htmlFor="file"
                       className={`w-full min-h-[10vh] dark:border-white border-[#00000026] p-3 border flex items-center justify-center ${
-                        dragging ? "bg-blue-500" : "bg-transparent"
+                        dragging ? 'bg-blue-500' : 'bg-transparent'
                       }`}
                       onDragOver={handleDragOver}
                       onDragLeave={handleDragLeave}
                       onDrop={handleDrop}
                     >
                       {fileImg ? (
-                        <img
-                          src={fileImg}
-                          alt=""
-                          className="max-h-full w-full object-cover"
-                        />
+                        <img src={fileImg} alt="" className="max-h-full w-full object-cover" />
                       ) : (
                         <span className="text-black dark:text-white">
-                          <ImageIcon /> Drag and drop your thumbnail here or
-                          click to browse
+                          <ImageIcon /> Drag and drop your thumbnail here or click to browse
                         </span>
                       )}
                     </label>

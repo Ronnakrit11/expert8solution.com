@@ -1,7 +1,8 @@
-import React from "react"
-import { FaCheck } from "react-icons/fa6"
-import { FaX } from "react-icons/fa6"
-import Image from "next/image"
+import React from 'react'
+
+import Image from 'next/image'
+import { FaCheck } from 'react-icons/fa6'
+import { FaX } from 'react-icons/fa6'
 
 const ComparePlan = () => {
   return (

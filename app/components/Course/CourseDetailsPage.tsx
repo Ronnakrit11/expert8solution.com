@@ -1,22 +1,24 @@
-import { useGetCourseDetailsQuery } from "@/redux/features/courses/coursesApi"
-import React, { useEffect, useState } from "react"
-import Loader from "../Loader/Loader"
-import Heading from "@/app/utils/Heading"
-import Header from "@/components/Layout/Header"
-import Footer from "../Footer"
-import CourseDetails from "./CourseDetails"
+import Heading from '@/app/utils/Heading'
+import Header from '@/components/Layout/Header'
+import { useLoadUserQuery } from '@/redux/features/api/apiSlice'
+import { useGetCourseDetailsQuery } from '@/redux/features/courses/coursesApi'
 import {
   useCreatePaymentIntentMutation,
   useGetStripePublishablekeyQuery,
-} from "@/redux/features/orders/ordersApi"
-import { useLoadUserQuery } from "@/redux/features/api/apiSlice"
+} from '@/redux/features/orders/ordersApi'
+
+import React, { useEffect, useState } from 'react'
+
+import Footer from '../Footer'
+import Loader from '../Loader/Loader'
+import CourseDetails from './CourseDetails'
 
 type Props = {
   id: string
 }
 
 const CourseDetailsPage = ({ id }: Props) => {
-  const [route, setRoute] = useState("Login")
+  const [route, setRoute] = useState('Login')
   const [open, setOpen] = useState(false)
   const { data, isLoading } = useGetCourseDetailsQuery(id)
   const { data: config } = useGetStripePublishablekeyQuery({})
@@ -37,23 +39,13 @@ const CourseDetailsPage = ({ id }: Props) => {
   return (
     <div>
       <Heading
-        title={data.course.name + " - ELearning"}
+        title={data.course.name + ' - ELearning'}
         description="ELearning is a programming community which is developed by shahriar sajeeb for helping programmers"
         keywords={data?.course?.tags}
       />
-      <Header
-        route={route}
-        setRoute={setRoute}
-        open={open}
-        setOpen={setOpen}
-        activeItem={1}
-      />
+      <Header route={route} setRoute={setRoute} open={open} setOpen={setOpen} activeItem={1} />
       <div className="w-full bg-gradient-4 text-white">
-        <CourseDetails
-          data={data.course}
-          setRoute={setRoute}
-          setOpen={setOpen}
-        />
+        <CourseDetails data={data.course} setRoute={setRoute} setOpen={setOpen} />
       </div>
       <Footer />
     </div>

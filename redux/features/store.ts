@@ -1,7 +1,9 @@
-"use client"
-import { configureStore } from "@reduxjs/toolkit"
-import { apiSlice } from "./api/apiSlice"
-import authSlice from "./auth/authSlice"
+'use client'
+
+import { configureStore } from '@reduxjs/toolkit'
+
+import { apiSlice } from './api/apiSlice'
+import authSlice from './auth/authSlice'
 
 export const store = configureStore({
   reducer: {
@@ -9,15 +11,12 @@ export const store = configureStore({
     auth: authSlice,
   },
   devTools: false,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(apiSlice.middleware),
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(apiSlice.middleware),
 })
 
 // call the load user function on every page load
 const initializeApp = async () => {
-  await store.dispatch(
-    apiSlice.endpoints.loadUser.initiate({}, { forceRefetch: true })
-  )
+  await store.dispatch(apiSlice.endpoints.loadUser.initiate({}, { forceRefetch: true }))
 }
 
 initializeApp()

@@ -1,19 +1,18 @@
-"use client"
-import React, { FC, useEffect, useState } from "react"
-import { useFormik } from "formik"
-import * as Yup from "yup"
-import {
-  AiOutlineEye,
-  AiOutlineEyeInvisible,
-  AiFillGithub,
-} from "react-icons/ai"
-import { FcGoogle } from "react-icons/fc"
-import { styles } from "@/app/styles/style"
-import { useLoginMutation } from "@/redux/features/auth/authApi"
-import { toast } from "react-hot-toast"
-import { signIn } from "next-auth/react"
-import { Button, Checkbox, Label, TextInput, Card } from "flowbite-react"
-import { FaEye, FaEyeLowVision } from "react-icons/fa6"
+'use client'
+
+import { styles } from '@/app/styles/style'
+import { useLoginMutation } from '@/redux/features/auth/authApi'
+
+import React, { FC, useEffect, useState } from 'react'
+
+import { Button, Card, Checkbox, Label, TextInput } from 'flowbite-react'
+import { useFormik } from 'formik'
+import { signIn } from 'next-auth/react'
+import { toast } from 'react-hot-toast'
+import { AiFillGithub, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
+import { FaEye, FaEyeLowVision } from 'react-icons/fa6'
+import { FcGoogle } from 'react-icons/fc'
+import * as Yup from 'yup'
 
 type Props = {
   setRoute: (route: string) => void
@@ -22,17 +21,15 @@ type Props = {
 }
 
 const schema = Yup.object().shape({
-  email: Yup.string()
-    .email("Invalid email!")
-    .required("Please enter your email!"),
-  password: Yup.string().required("Please enter your password!").min(6),
+  email: Yup.string().email('Invalid email!').required('Please enter your email!'),
+  password: Yup.string().required('Please enter your password!').min(6),
 })
 
 const Login: FC<Props> = ({ setRoute, setOpen, refetch }) => {
   const [show, setShow] = useState(false)
   const [login, { isSuccess, error }] = useLoginMutation()
   const formik = useFormik({
-    initialValues: { email: "", password: "" },
+    initialValues: { email: '', password: '' },
     validationSchema: schema,
     onSubmit: async ({ email, password }) => {
       await login({ email, password })
@@ -41,12 +38,12 @@ const Login: FC<Props> = ({ setRoute, setOpen, refetch }) => {
 
   useEffect(() => {
     if (isSuccess) {
-      toast.success("Login Successfully!")
+      toast.success('Login Successfully!')
       setOpen(false)
       refetch()
     }
     if (error) {
-      if ("data" in error) {
+      if ('data' in error) {
         const errorData = error as any
         toast.error(errorData.data.message)
       }
@@ -82,7 +79,7 @@ const Login: FC<Props> = ({ setRoute, setOpen, refetch }) => {
             <Label htmlFor="password" value="Your Password" />
           </div>
           <TextInput
-            type={!show ? "password" : "text"}
+            type={!show ? 'password' : 'text'}
             name="password"
             value={values.password}
             onChange={handleChange}
@@ -112,11 +109,8 @@ const Login: FC<Props> = ({ setRoute, setOpen, refetch }) => {
           </Button>
         </div>
         <h5 className="text-center pt-4 font-Poppins text-[14px]">
-          Not have any account?{" "}
-          <span
-            className="text-[#2190ff] pl-1 cursor-pointer"
-            onClick={() => setRoute("Sign-Up")}
-          >
+          Not have any account?{' '}
+          <span className="text-[#2190ff] pl-1 cursor-pointer" onClick={() => setRoute('Sign-Up')}>
             Sign up
           </span>
         </h5>
@@ -128,18 +122,14 @@ const Login: FC<Props> = ({ setRoute, setOpen, refetch }) => {
         </div>
         <div className="flex flex-col items-center justify-center my-3 space-y-2">
           <button className="flex justify-center items-center py-2 rounded-xl border-2 w-full">
-            <FcGoogle
-              size={30}
-              className="cursor-pointer mr-2"
-              onClick={() => signIn("google")}
-            />
+            <FcGoogle size={30} className="cursor-pointer mr-2" onClick={() => signIn('google')} />
             <p>Login With Gmail</p>
           </button>
           <button className="flex justify-center items-center py-2 rounded-xl border-2 w-full">
             <AiFillGithub
               size={30}
               className="cursor-pointer mr-2"
-              onClick={() => signIn("github")}
+              onClick={() => signIn('github')}
             />
             <p>Login With Github</p>
           </button>

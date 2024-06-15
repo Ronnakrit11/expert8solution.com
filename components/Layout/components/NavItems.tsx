@@ -1,8 +1,9 @@
-import Link from "next/link"
-import React from "react"
-import { usePathname } from "next/navigation"
+import React from 'react'
 
-import { navItemsData, highlightMenu } from "../constants"
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+import { highlightMenu, navItemsData } from '../constants'
 
 type Props = {
   isMobile: boolean
@@ -24,11 +25,11 @@ const NavItems: React.FC<Props> = ({ isMobile }) => {
               <span
                 className={`${
                   isEqualCurrentPathname(item.url)
-                    ? "text-black dark:text-white border-primary border-b-4 p-6"
-                    : "dark:text-white text-black"
+                    ? 'text-black dark:text-white border-primary border-b-4 p-6'
+                    : 'dark:text-white text-black'
                 } text-[18px] px-6 font-Poppins font-[400] ${
                   item.name === highlightMenu
-                    ? "border-solid border-2 border-red-300 py-1 rounded-md"
+                    ? 'border-solid border-2 border-red-300 py-1 rounded-md'
                     : null
                 } `}
               >
@@ -42,9 +43,7 @@ const NavItems: React.FC<Props> = ({ isMobile }) => {
         <div className="800px:hidden mt-5 pb-3">
           <div className="w-full text-center py-6">
             <Link href="/" passHref>
-              <span
-                className={`text-[25px] font-Poppins font-[500] text-black dark:text-white`}
-              >
+              <span className={`text-[25px] font-Poppins font-[500] text-black dark:text-white`}>
                 ELearning
               </span>
             </Link>
@@ -55,11 +54,11 @@ const NavItems: React.FC<Props> = ({ isMobile }) => {
                 <span
                   className={`${
                     isEqualCurrentPathname(item.url)
-                      ? "text-primary dark:text-primary font-bold"
-                      : "dark:text-white text-black"
+                      ? 'text-primary dark:text-primary font-bold'
+                      : 'dark:text-white text-black'
                   } block py-5 text-[18px] px-6 font-Poppins font-[400] ${
                     item.name === highlightMenu
-                      ? "border-solid border-2 border-red-300 py-1 rounded-md"
+                      ? 'border-solid border-2 border-red-300 py-1 rounded-md'
                       : null
                   }`}
                 >
