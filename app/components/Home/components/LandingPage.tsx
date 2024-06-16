@@ -33,14 +33,14 @@ const LandingPage = () => {
       <div className="container mx-auto">
         <div className="py-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
-            <h1 className="flex justify-center sm:justify-center md:justify-start break-words">
-              <span className="text-center text-3xl font-bold text-blue-900 dark:text-white sm:text-6xl lg:text-left lg:text-5xl mr-2">
-                E-LEARNING
-              </span>
-              <span className="text-3xl sm:text-3xl lg:text-center lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+            <div className="flex justify-center sm:justify-center md:justify-start">
+              <h1 className="text-center text-3xl font-bold text-blue-900 dark:text-white sm:text-6xl lg:text-left lg:text-5xl">
+                E-LEARNING &nbsp;
+              </h1>
+              <h1 className="text-3xl sm:text-3xl lg:text-center lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-400 inline-block text-transparent bg-clip-text">
                 SOLUTION
-              </span>
-            </h1>
+              </h1>
+            </div>
             <h2 className="my-6 lg:my-12 text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
               บริการทำระบบเรียนออนไลน์ เเพลทฟอร์มการเรียนออนไลน์ครบวงจรรวมถึงการทำ Marketing
               เเละพัฒนาเว็บไซต์ทุกประเภท
