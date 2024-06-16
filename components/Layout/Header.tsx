@@ -99,7 +99,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                 href={'/'}
                 className={`text-[18px] md:text-[25px] flex items-center font-Poppins font-[500] text-black dark:text-white`}
               >
-                <Image src={'/Expert8logo.png'} width={170} height={95} alt="logo" />
+                <Image src={'/Expert8logo.webp'} width={170} height={95} alt="logo" />
               </Link>
             </div>
             <div className="flex items-center">
