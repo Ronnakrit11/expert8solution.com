@@ -71,7 +71,6 @@ const LandingPage = () => {
               alt="ระบบคอร์สเรียนออนไลน์"
               src="/mm2322.webp"
               className="w-full"
-              priority
             />
           </div>
         </div>
