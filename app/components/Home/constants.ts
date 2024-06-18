@@ -42,7 +42,7 @@ export const trustImages: TrustImagesModel = [
     url: 'https://nisittutor-client.vercel.app/',
   },
   {
-    img: '/cus15.webp',
+    img: '/cus151.webp',
     url: 'https://bunche-client.vercel.app/',
   },
 ]
