@@ -28,13 +28,14 @@ const Solution = () => {
               className="w-[500px] h-auto"
             />{' '}
           </div>
+          
           <div className="flex justify-center items-center ">
             <div className="text-black space-y-8">
               <h1 className="text-[40px] sm:text-[40px] xl:text-[56px] font-bold">
                 Pre test & Post test{' '}
               </h1>
               <p className="text-[14px] sm:text-[14px] xl:text-[17px] text-[#6D7176]">
-                ฟังก์ชั่นข้อสอบก่อนเรียนเเละหลังเรียนเเบบสามารถตั้งเวลาในการสอบได้
+                ฟังก์ชั่นข้อสอบก่อนเรียนเเละหลังเรียนสามารถตั้งเวลาในการสอบได้
               </p>
               <ul className="text-[17px] sm:text-[14px] xl:text-[16px] space-y-4 text-[#6D7176]">
                 <li className="flex items-center gap-1 sm:gap-1 xl:gap-2 ">
