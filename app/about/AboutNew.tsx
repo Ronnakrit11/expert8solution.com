@@ -91,7 +91,7 @@ const AboutNew = () => {
                 <div>
                   <span className="text-gray-500">2021</span>
                   <h3 className="mt-0.5 text-xl font-semibold text-gray-700 dark:text-white">
-                    Business Development ของ KPAuto Groups ซึ่งเป็น Dealer Top1 ชั้นนำของ Mazda , Mg
+                    Business Development ของ KPAuto Groups ซึ่งเป็น Top1  Dealer ชั้นนำของ Mazda , Mg
                     เเละ Suzuki
                   </h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400"></p>
