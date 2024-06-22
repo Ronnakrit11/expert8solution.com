@@ -15,7 +15,7 @@ const VideoBanner = () => {
         </div>
         <iframe
           className="absolute top-0 left-0 w-full h-full rounded-md border-none"
-          src="https://streamable.com/e/gnmnn9?autoplay=1&muted=1&nocontrols=1"
+          src="https://streamable.com/e/791l47?autoplay=1&muted=1&nocontrols=1"
           allow="fullscreen; autoplay"
           allowFullScreen
         />
