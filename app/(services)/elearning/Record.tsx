@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Link from 'next/link'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { FaEraser } from 'react-icons/fa'
 import { Calendly } from '@/app/components/Home/components/Calendly'
@@ -9,7 +8,7 @@ const Record = () => {
   return (
     <div className="container mx-auto mt-20">
       <div className="py-10">
-        <h1 className="text-[30px] md:text-[65px] text-center">เข้าเรียนได้ทันทีหลังจากชำระเงิน</h1>
+        <h1 className="text-[25px] md:text-[50px] text-center   text-[#3D2E7C]">เข้าเรียนได้ทันทีหลังจากชำระเงิน</h1>
       </div>
 
       <div className=" rounded-3xl py-10">
@@ -26,8 +25,10 @@ const Record = () => {
                 มีระบบตรวจสลิปการโอนเงินอัตโนมัติ เจ้าของเว็บไซต์ไม่ต้องมากดอนุมัติเอง
               </p>
 
-              
+              <div className="flex justify-center mt-12">
+
               <Calendly/>
+              </div>
               
             </div>
             <div className="p-8">
