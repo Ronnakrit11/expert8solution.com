@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Link from 'next/link'
+import { Calendly } from '@/app/components/Home/components/Calendly'
+
 
 const VideoBanner = () => {
   return (
@@ -21,12 +22,8 @@ const VideoBanner = () => {
         />
         <div className="absolute top-0 left-0 w-full h-full bg-transparent pointer-events-none" />
       </div>
-      <div className="flex justify-center mt-8">
-        <Link href="https://www.demoexpert8-solution.com" target="_blank">
-          <button className="bg-[#1565c0] py-4 w-[170px] px-4 text-white rounded-full text-[17px] my-5">
-            Booking demo
-          </button>
-        </Link>
+      <div className="flex justify-center mt-12">
+      <Calendly />
       </div>
     </div>
   )

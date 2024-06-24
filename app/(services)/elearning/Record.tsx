@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { FaEraser } from 'react-icons/fa'
+import { Calendly } from '@/app/components/Home/components/Calendly'
 
 const Record = () => {
   return (
@@ -25,12 +26,9 @@ const Record = () => {
                 มีระบบตรวจสลิปการโอนเงินอัตโนมัติ เจ้าของเว็บไซต์ไม่ต้องมากดอนุมัติเอง
               </p>
 
-              <Link href="https://www.demoexpert8-solution.com" target="_blank">
-                <button className="px-4 py-3 ring-4 ring-[#B0B4F2] text-white rounded-full bg-[#565ADD]">
-                  {' '}
-                  Booking Demo{' '}
-                </button>
-              </Link>
+              
+              <Calendly/>
+              
             </div>
             <div className="p-8">
               <div className="relative w-full" style={{ paddingBottom: '100%' }}>

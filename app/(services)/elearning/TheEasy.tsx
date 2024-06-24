@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Link from 'next/link'
+import { Calendly } from '@/app/components/Home/components/Calendly'
+
 
 const TheEasy = () => {
   return (
@@ -25,13 +27,10 @@ const TheEasy = () => {
                 เพียง 3 คลิ๊ก นักเรียนก็สามารถเข้าสู่ระบบได้ทันที
                 ตอบโจทย์ทั้งนักเรียนเเละเจ้าของเว็บไซต์
               </p>
+              <Calendly/>
+              
 
-              <Link href="https://www.demoexpert8-solution.com" target="_blank">
-                <button className="px-4 py-3 ring-4 ring-[#B0B4F2] text-white rounded-full bg-[#565ADD]">
-                  {' '}
-                  Booking Demo{' '}
-                </button>
-              </Link>
+             
             </div>
             <div className="p-8">
               <div className="relative w-full" style={{ paddingBottom: '100%' }}>
