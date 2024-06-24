@@ -12,6 +12,7 @@ import 'aos/dist/aos.css'
 import dynamic from 'next/dynamic'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
+import { Calendly } from './components/Calendly'
 
 const LandingPage = dynamic(() => import('./components/LandingPage'))
 const Feature = dynamic(() => import('./components/Feature'))
@@ -44,6 +45,7 @@ function Home({ webInfo }: any) {
       <SocialMediaWidget />
       {/* New Theme */}
       <LandingPage />
+      {/* <Calendly /> */}
       <VideoBanner />
       <Trust />
       <Tab />

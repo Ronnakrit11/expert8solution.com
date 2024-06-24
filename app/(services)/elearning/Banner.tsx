@@ -5,6 +5,7 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { LuCheckCircle } from 'react-icons/lu'
+import { Calendly } from '@/app/components/Home/components/Calendly'
 
 const Banner = () => {
   useEffect(() => {
@@ -38,7 +39,7 @@ const Banner = () => {
                 </li>
               </ul>
               <br />
-              <Link href="https://www.demoexpert8-solution.com" target="_blank">
+              {/* <Link href="https://www.demoexpert8-solution.com" target="_blank">
                 <button
                   data-analytics-on="Booking Demo"
                   className="bg-primary text-white px-6 py-4 rounded-2xl  "
@@ -46,7 +47,9 @@ const Banner = () => {
                   {' '}
                   Booking Demo
                 </button>
-              </Link>
+              </Link> */}
+              <Calendly />
+
             </div>
           </div>
           <div className="flex justify-center items-center">
