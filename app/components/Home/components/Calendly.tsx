@@ -18,7 +18,7 @@ export const Calendly = () => {
         Booking Demo
       </button>
       <Modal show={openModal} onClose={() => setOpenModal(false)} className="z-[999999]">
-        <Modal.Header>Terms of Service</Modal.Header>
+        <Modal.Header>นัดหมายดู Demo</Modal.Header>
         <Modal.Body>
           <div className="text-center" id="calendly">
             <div className="flex items-center justify-center">
