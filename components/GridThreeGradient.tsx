@@ -94,24 +94,20 @@ const GridThreeGradient = () => {
                       <p className="text-xl text-white">ปีเเรก</p>
                     </div>
                     <ul className="text-white dark:text-gray-300  flex flex-col justify-start">
-                      <li className="border-t border-b border-gray-700 py-4">ฟรีโดเมน , SSL </li>
-                      <li className="border-b py-4 border-gray-700">ระบบการเรียนออนไลน์</li>
-                      <li className="border-b py-4 border-gray-700">ระบบหลังบ้าน</li>
+                      <li className="border-t border-b border-gray-700 py-4">ทุกอย่างใน Standard </li>
+                    
                       <li className="border-b py-4 border-gray-700">ระบบบทความ</li>
 
-                      <li className="border-b py-4 border-gray-700">รองรับการเเสดงผลทุกอุปกรณ์</li>
+                    
                       <li className="border-b py-4 border-gray-700">
                         ระบบจ่ายเงินด้วยบัตรเครดิต เดบิต เเละผ่อนชำระ
                       </li>
                       <li className="border-b py-4 border-gray-700">
                         ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง
                       </li>
-                      <li className="border-b py-4 border-gray-700">ติดตั้ง Google Analytic</li>
                       <li className="border-b py-4 border-gray-700">
                         ติดตั้ง Google Seach console
                       </li>
-                      <li className="border-b py-4 border-gray-700">SEO 1 Keywords</li>
-                      <li className="border-b py-4 border-gray-700">ติดตั้ง Facebook Pixel</li>
                       <li className="border-b py-4 dark:border-gray-700">
                         {' '}
                         Free 80GB Video Hosting
@@ -157,7 +153,7 @@ const GridThreeGradient = () => {
                     </div>
                     <ul className="text-gray-800 dark:text-gray-300 flex flex-col justify-start">
                       <li className="border-t border-b py-4 dark:border-gray-700">
-                        ฟรีโดเมน , SSL{' '}
+                       ทุกอย่างใน Pro {' '}
                       </li>
                       <li className="border-b py-4 dark:border-gray-700">
                         Design ใหม่ทุกจุด Custom ได้ทั้งหมด
@@ -170,30 +166,19 @@ const GridThreeGradient = () => {
                       </li>
                       <li className="border-b py-4 dark:border-gray-700">ระบบ Report</li>
                       <li className="border-b py-4 dark:border-gray-700">ระบบขาย E-Book</li>
-                      <li className="border-b py-4 border-gray-700">
-                        ระบบจ่ายเงินด้วยบัตรเครดิต เดบิต เเละผ่อนชำระ
-                      </li>
+                  
                       <li className="border-b py-4 dark:border-gray-700">
-                        รองรับนักเรียนไม่จำกัด ระบบไม่ช้าไม่ล่ม
+                      ติดตั้ง Google Analytic
                       </li>
-
-                      <li className="border-b py-4 dark:border-gray-700">ระบบการเรียนออนไลน์</li>
-                      <li className="border-b py-4 dark:border-gray-700">ระบบหลังบ้าน</li>
-                      <li className="border-b py-4 border-gray-700">ระบบบทความ</li>
-
-                      <li className="border-b py-4 dark:border-gray-700">
-                        รองรับการเเสดงผลทุกอุปกรณ์
-                      </li>
-                      <li className="border-b py-4 dark:border-gray-700">ทำกราฟฟิก</li>
-                      <li className="border-b py-4 dark:border-gray-700">
-                        ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง
-                      </li>
-                      <li className="border-b py-4 border-gray-700">ติดตั้ง Google Analytic</li>
-                      <li className="border-b py-4 border-gray-700">
-                        ติดตั้ง Google Seach console
-                      </li>
-                      <li className="border-b py-4 border-gray-700">SEO 3 Keywords</li>
                       <li className="border-b py-4 border-gray-700">ติดตั้ง Facebook Pixel</li>
+
+                  
+
+                 
+                      <li className="border-b py-4 dark:border-gray-700">ทำกราฟฟิก</li>
+            
+                      <li className="border-b py-4 border-gray-700">SEO 1 Keywords</li>
+                      
                       <li className="border-b py-4 dark:border-gray-700">
                         {' '}
                         Free 200GB Video Hosting
