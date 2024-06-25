@@ -57,9 +57,9 @@ const Tab = () => {
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
                     หน้าเว็ปไซต์สำหรับนักเรียน
                   </h2>
-                  <h4 className="mt-8 text-gray-600 dark:text-gray-300">
+                  <h2 className="mt-8 text-gray-600 dark:text-gray-300">
                     ระบบพัฒนาด้วยการเขียนโค้ดทั้งหมด ไม่ใช้ wordpress เเละไม่ใช้เว็ปไซต์สำเร็จรูป
-                  </h4>
+                  </h2>
                 </div>
                 <div className="flex items-center gap-6">
                   <div className="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
