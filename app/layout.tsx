@@ -9,7 +9,6 @@ import { SessionProvider, useSession } from 'next-auth/react'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import socketIO from 'socket.io-client'
-import Script from 'next/script'
 
 import Loader from '../components/Loader/Loader'
 import { ThemeProvider } from '../components/theme-provider'
