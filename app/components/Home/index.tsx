@@ -42,7 +42,7 @@ function Home({ webInfo }: any) {
   return (
     <div>
       <Header open={open} setOpen={setOpen} activeItem={0} setRoute={setRoute} route={route} />
-      {/* <SocialMediaWidget />*/}
+       <SocialMediaWidget />
       {/* New Theme */}
       <LandingPage />
       {/* <Calendly /> */}

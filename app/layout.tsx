@@ -28,7 +28,7 @@ const inter = Inter({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-          <head>
+          {/* <head>
           
           <Script id="tawk-script" strategy="afterInteractive">
           {`
@@ -44,7 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
+
       </head>
+      */}
       <body
         className={`${inter.variable} bg-no-repeat dark:bg-gradient-to-b dark:from-gray-900 dark:to-black duration-300`}
       >
