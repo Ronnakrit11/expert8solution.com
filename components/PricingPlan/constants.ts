@@ -1,0 +1,45 @@
+export const pricingPlanItems = [
+  {
+    imgSrc: '/i1.png',
+    title: 'Standard',
+    price: '15,000',
+    promotions: [
+      'ฟรีโดเมน, SSL',
+      'ระบบการเรียนออนไลน์',
+      'ระบบหลังบ้าน',
+      'รองรับการเเสดงผลทุกอุปกรณ์',
+      'Free 10GB Video Hosting',
+    ],
+  },
+  {
+    imgSrc: '/i1.png',
+    title: 'Pro',
+    price: '32,900',
+    promotions: [
+      'ทุกอย่างใน Standard',
+      'ระบบบทความ',
+      'ระบบจ่ายเงินด้วยบัตรเครดิต เดบิต เเละผ่อนชำระ',
+      'ดูเเลเเละเทรนการยิงโฆษณาทุกช่องทาง',
+      'ติดตั้ง Google Seach console',
+      'Free 80GB Video Hosting',
+    ],
+  },
+  {
+    imgSrc: '/i1.png',
+    title: 'Ultimate',
+    price: '59,900',
+    promotions: [
+      'ทุกอย่างใน Pro',
+      'Design ใหม่ทุกจุด Custom ได้ทั้งหมด',
+      'ระบบติวเตอร์ เเละคอมมิชชั่น',
+      'ระบบแบบทดสอบ Pre-test/Post-test',
+      'ระบบ Report',
+      'ระบบขาย E-Book',
+      'ติดตั้ง Google Analytic',
+      'ติดตั้ง Facebook Pixel',
+      'ทำกราฟฟิก',
+      'SEO 1 Keywords',
+      'Free 200GB Video Hosting',
+    ],
+  },
+]
