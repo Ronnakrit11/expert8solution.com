@@ -14,7 +14,7 @@ const Footer = (props: Props) => {
       <div className="w-[95%] 800px:w-full 800px:max-w-[85%] mx-auto px-2 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-3">
           <div className="space-y-3">
-            <h3 className="text-[20px] font-[600] text-white dark:text-white">Social Links</h3>
+            <h6 className="text-[20px] font-[600] text-white dark:text-white">Social Links</h6>
 
             <ul className="space-y-4">
               <li>
@@ -40,9 +40,9 @@ const Footer = (props: Props) => {
           </div>
           <div className="flex">
             <div>
-              <h3 className="text-[20px] font-[600] text-white dark:text-white pb-3">
+              <h6 className="text-[20px] font-[600] text-white dark:text-white pb-3">
                 Contact Info
-              </h3>
+              </h6>
               <p className="text-base text-white dark:text-gray-300 dark:hover:text-white pb-2"></p>
 
               <p className="text-base text-white dark:text-gray-300 dark:hover:text-white pb-2">
