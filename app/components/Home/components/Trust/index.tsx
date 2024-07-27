@@ -2,7 +2,9 @@ import { trustImages } from '@/app/components/Home/constants'
 
 import React from 'react'
 
-import TrustImage from './components/TrustImage'
+import dynamic from 'next/dynamic'
+
+const TrustImage = dynamic(() => import('./components/TrustImage'))
 
 const Trust = () => {
   return (
