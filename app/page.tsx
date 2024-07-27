@@ -49,7 +49,7 @@ const Page = async () => {
 
   return (
     <>
-      <link rel="canonical" href={process.env.NEXT_PUBLIC_ORIGIN_URI} />
+      <link rel="canonical" href={`${process.env.NEXT_PUBLIC_ORIGIN_URI}/`} />
       <Home webInfo={webInfo} />
     </>
   )

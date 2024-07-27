@@ -14,7 +14,9 @@ const Heading: FC<HeadProps> = ({ title, description, keywords, canonical }) => 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={process.env.NEXT_PUBLIC_ORIGIN_URI + canonical} />}
+      {canonical && (
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_ORIGIN_URI}/${canonical}`} />
+      )}
     </>
   )
 }
