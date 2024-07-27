@@ -47,7 +47,12 @@ const Page = async () => {
     category: category?.layout?.categories || [],
   }
 
-  return <Home webInfo={webInfo} />
+  return (
+    <>
+      <link rel="canonical" href={process.env.NEXT_PUBLIC_ORIGIN_URI} />
+      <Home webInfo={webInfo} />
+    </>
+  )
 }
 
 export default Page
