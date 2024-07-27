@@ -1,53 +1,33 @@
 'use client'
 
 import { useGetAllBlogQuery } from '@/redux/features/blog/blogsApi'
-import { useGetUsersAllCoursesQuery } from '@/redux/features/courses/coursesApi'
-import { useGetHeroDataQuery } from '@/redux/features/layout/layoutApi'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
-import { useSearchParams } from 'next/navigation'
-import { FaEnvelope } from 'react-icons/fa6'
+import { isEmptyArray } from 'formik'
+import dynamic from 'next/dynamic'
 
 import Heading from '../../components/Heading'
 import Header from '../../components/Layout/Header'
-import Loader from '../../components/Loader/Loader'
-import { styles } from '../../styles'
-import BlogCard from '../components/Admin/Blog/BlogCard'
-import BlogCardNew from '../components/Admin/Blog/BlogCardNew'
-import BlogShowCard from '../components/Admin/Blog/BlogShowCard'
-import CourseCard from '../components/Course/CourseCard'
+import BlogCardNew, { BlogCardProps } from '../components/Admin/Blog/BlogCardNew'
 import Footer from '../components/Footer'
 
-type Props = {}
+const AllBlog = dynamic(() => import('./components/AllBlog'))
 
-const Page = (props: Props) => {
-  const searchParams = useSearchParams()
-  const search = searchParams?.get('title')
-  const { data, isLoading } = useGetAllBlogQuery(undefined, {})
+const Page = () => {
+  const { data, isFetching } = useGetAllBlogQuery(undefined, {})
   const [route, setRoute] = useState('Login')
   const [open, setOpen] = useState(false)
-  const [courses, setcourses] = useState(data?.result || [])
-  const [course2, setCourse2] = useState([])
 
-  useEffect(() => {
-    setcourses(data?.result || [])
-    const gridtwoCourse = courses.slice(1)
-    setCourse2(gridtwoCourse)
-  }, [data])
-  console.log(course2)
+  const courses: BlogCardProps[] = data?.result || []
 
   return (
     <div>
       <Header route={route} setRoute={setRoute} open={open} setOpen={setOpen} activeItem={3} />
       <Heading
         title={'บทความความรู้ในวงการคอร์สเรียนออนไลน์ Expert8-Solution'}
-        description={
-          'Blog บทความที่เกี่ยวกข้องกับการทำคอร์สเรียนออนไลน์ การทำเว็ปไซต์คอร์สเรียนออนไลน์ เเละเคล็ดลับการขายคอร์สเรียนออนไลน์ให้ประสบความสำเร็จ'
-        }
-        keywords={
-          'บทความเกี่ยวกับคอร์สเรียนออนไลน์ ,ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์'
-        }
+        description="Blog บทความที่เกี่ยวกข้องกับการทำคอร์สเรียนออนไลน์ การทำเว็ปไซต์คอร์สเรียนออนไลน์ เเละเคล็ดลับการขายคอร์สเรียนออนไลน์ให้ประสบความสำเร็จ"
+        keywords="บทความเกี่ยวกับคอร์สเรียนออนไลน์ ,ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์"
       />
       <div className="bg-white dark:bg-darkbg pb-10">
         <div className="container mx-auto ">
@@ -88,9 +68,9 @@ const Page = (props: Props) => {
                         </svg>
                       </div>
                       <div>
-                        <h2 className="text-base font-medium text-gray-800 dark:text-white">
+                        <h3 className="text-base font-medium text-gray-800 dark:text-white">
                           จำนวนบทความ
-                        </h2>
+                        </h3>
                         <span className="-mt-1 block w-max text-sm text-gray-500 dark:text-gray-400">
                           {courses.length} บทความ
                         </span>
@@ -99,38 +79,10 @@ const Page = (props: Props) => {
                   </div>
                 </div>
                 <div className="lg:w-3/4">
-                  {courses &&
-                    courses.map(
-                      (item: any, index: number) =>
-                        index === courses.length - 1 && <BlogCardNew item={item} key={index} />,
-                    )}
+                  {!isEmptyArray(courses) && <BlogCardNew {...courses[courses.length - 1]} />}
                 </div>
               </div>
-              <div className="mt-32">
-                <p className="text-center text-4xl font-bold text-gray-900 dark:text-white my-10">
-                  บทความทั้งหมด
-                </p>
-                <div className="mx-auto px-0 sm:px-0 xl:max-w-6xl xl:px-0">
-                  <div className="grid gap-y-20 md:grid-cols-2 md:gap-x-6 lg:gap-x-12">
-                    {courses && courses.length === 0 && (
-                      <p
-                        className={`${styles.label} justify-center min-h-[50vh] flex items-center`}
-                      >
-                        No Blog found!
-                      </p>
-                    )}
-                    {courses &&
-                      courses
-                        .slice(0)
-                        .reverse()
-                        .map((item: any, index: number) => <BlogCardNew item={item} key={index} />)}
-                    {/* {course2 &&
-                                            course2.map((item: any, index: number) => (
-                                                <BlogCardNew item={item} key={index} />
-                                            ))} */}
-                  </div>
-                </div>
-              </div>
+              <AllBlog courses={courses} isLoading={isFetching} />
             </div>
           </div>
         </div>
