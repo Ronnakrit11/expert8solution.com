@@ -25,12 +25,13 @@ const Page = () => {
     <div>
       <Header route={route} setRoute={setRoute} open={open} setOpen={setOpen} activeItem={3} />
       <Heading
-        title={'บทความความรู้ในวงการคอร์สเรียนออนไลน์ Expert8-Solution'}
-        description="Blog บทความที่เกี่ยวกข้องกับการทำคอร์สเรียนออนไลน์ การทำเว็ปไซต์คอร์สเรียนออนไลน์ เเละเคล็ดลับการขายคอร์สเรียนออนไลน์ให้ประสบความสำเร็จ"
-        keywords="บทความเกี่ยวกับคอร์สเรียนออนไลน์ ,ทำคอร์สเรียนออนไลน์, ระบบคอร์สเรียนออนไลน์, ไอเดียคอร์สเรียนออนไลน์, การขายคอร์สออนไลน์"
+        title="บทความความรู้ในวงการคอร์สเรียนออนไลน์ Expert8-Solution"
+        description="Blog บทความที่เกี่ยวข้องกับการทำคอร์สเรียนออนไลน์ การทำเว็ปไซต์คอร์สเรียนออนไลน์ เเละเคล็ดลับการขายคอร์สเรียนออนไลน์ให้ประสบความสำเร็จ"
+        keywords="บทความเกี่ยวกับคอร์สเรียนออนไลน์,ทำคอร์สเรียนออนไลน์,ระบบคอร์สเรียนออนไลน์,ไอเดียคอร์สเรียนออนไลน์,การขายคอร์สออนไลน์"
+        canonical="blog"
       />
       <div className="bg-white dark:bg-darkbg pb-10">
-        <div className="container mx-auto ">
+        <div className="container mx-auto">
           <div className="overflow-x-hidden pt-32 sm:pt-40 md:pt-48 lg:pt-50">
             <div className="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
               <div className="z-10">
@@ -64,16 +65,16 @@ const Page = () => {
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
-                          ></path>
+                          />
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-base font-medium text-gray-800 dark:text-white">
+                        <div className="text-base font-medium text-gray-800 dark:text-white">
                           จำนวนบทความ
-                        </h3>
-                        <span className="-mt-1 block w-max text-sm text-gray-500 dark:text-gray-400">
+                        </div>
+                        <div className="-mt-1 block w-max text-sm text-gray-500 dark:text-gray-400">
                           {courses.length} บทความ
-                        </span>
+                        </div>
                       </div>
                     </a>
                   </div>
