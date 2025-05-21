@@ -44,6 +44,8 @@ function Home({ webInfo }: any) {
     <div>
       <Header open={open} setOpen={setOpen} activeItem={0} setRoute={setRoute} route={route} />
       <SocialMediaWidget />
+      {/* Our Software Products */}
+      <Services2 />
       {/* New Theme */}
       <LandingPage />
       {/* <Calendly /> */}
@@ -51,7 +53,6 @@ function Home({ webInfo }: any) {
       <Trust />
       <Tab />
       {/* <Services /> */}
-      <Services2 />
       <LeftImageContent />
       <Feature />
       <PricingPlan />
