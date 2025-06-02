@@ -45,45 +45,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold relative inline-block">
-              บริการของเรา
-              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/e-learning" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                  <span className="mr-2 text-xs">▸</span>
-                  ระบบเรียนออนไลน์ครบวงจร
-                </Link>
-              </li>
-              <li>
-                <Link href="/gold-shop" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                  <span className="mr-2 text-xs">▸</span>
-                  ระบบออมทอง บริหารร้านทอง
-                </Link>
-              </li>
-              <li>
-                <Link href="/temple-donation" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                  <span className="mr-2 text-xs">▸</span>
-                  เว็บไซต์วัดหรือมูลนิธิ
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                  <span className="mr-2 text-xs">▸</span>
-                  บทความ
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                  <span className="mr-2 text-xs">▸</span>
-                  เกี่ยวกับเรา
-                </Link>
-              </li>
-            </ul>
-          </div>
+        
 
           {/* Social & Contact */}
           <div className="space-y-6">
