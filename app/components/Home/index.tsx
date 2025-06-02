@@ -46,17 +46,7 @@ function Home({ webInfo }: any) {
       <SocialMediaWidget />
       {/* Our Software Products */}
       <Services2 />
-      {/* New Theme */}
-      <LandingPage />
       {/* <Calendly /> */}
-      <VideoBanner />
-      <Trust />
-      <Tab />
-      {/* <Services /> */}
-      <LeftImageContent />
-      <Feature />
-      <PricingPlan />
-      <Review />
       <FooterContact />
 
       <Footer />

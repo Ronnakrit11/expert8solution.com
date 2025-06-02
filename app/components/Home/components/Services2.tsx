@@ -46,6 +46,14 @@ const Services2 = () => {
       image: '/affiliate.webp',
       tag: 'Affiliate',
       link: '#'
+    },
+    {
+      id: 6,
+      title: 'เว็บไซต์วัดหรือมูลนิธิ พร้อมฟังก์ชั่นรับบริจาค',
+      description: 'ระบบเว็บไซต์สำหรับวัดหรือมูลนิธิที่มีฟังก์ชั่นรับบริจาค พร้อมหลังบ้านจัดการหน้าเว็บไซต์ ระบบเช็คสลิปอัตโนมัติ และสรุปยอดบริจาครายคน',
+      image: '/temple-donation.webp',
+      tag: 'Temple & Foundation',
+      link: '/temple-donation'
     }
   ];
 
