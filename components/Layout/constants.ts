@@ -15,10 +15,7 @@ export const navItemsData = [
     name: 'FAQ',
     url: '/faq',
   },
-  {
-    name: 'Price',
-    url: '/pricing',
-  },
+ 
 ]
 
 export const highlightMenu = 'เข้าสู่ห้องเรียน'
