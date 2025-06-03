@@ -9,7 +9,7 @@ const Services2 = () => {
       id: 1,
       title: 'ระบบเรียนออนไลน์ครบวงจร',
       description: 'ระบบเรียนออนไลน์ที่ครบครัน รองรับการขายคอร์สเรียนและอีบุ๊ค ใช้งานง่าย มีระบบชำระเงินที่ครบครัน',
-      image: '/courseebook1.webp',
+      image: '/lms.png',
       tag: 'E-Learning',
       link: '/e-learning'
     },
@@ -23,17 +23,17 @@ const Services2 = () => {
     },
     {
       id: 3,
-      title: 'ระบบประเมินราคาสินค้าทอง',
-      description: 'ระบบประเมินราคาทองคำและเครื่องประดับที่แม่นยำ อัพเดทราคาทองตามตลาดแบบเรียลไทม์',
-      image: '/gold-valuation.webp',
-      tag: 'Gold Valuation',
-      link: '#'
+      title: 'ระบบบริหารจัดการมหาวิทยาลัย',
+      description: 'ระบบบริหารจัดการมหาวิทยาลัย',
+      image: '/univer.png',
+      tag: 'University',
+      link: '/university'
     },
     {
       id: 4,
       title: 'ระบบ E-commerce ครบวงจร',
       description: 'ระบบร้านค้าออนไลน์ที่ครบวงจร รองรับการขายสินค้าทุกประเภท มีระบบจัดการสต๊อกและการชำระเงินที่ครบครัน',
-      image: '/ecommerce.webp',
+      image: '/ecom.png',
       tag: 'E-Commerce',
       link: '#'
     },
@@ -41,20 +41,58 @@ const Services2 = () => {
       id: 5,
       title: 'ระบบ Affiliate',
       description: 'ระบบตัวแทนจำหน่ายที่ช่วยขยายฐานลูกค้าและเพิ่มยอดขาย ด้วยการให้ค่าคอมมิชชั่นแก่ผู้แนะนำ',
-      image: '/affiliate.webp',
+      image: '/afflia.png',
       tag: 'Affiliate',
       link: '#'
     },
     {
       id: 6,
-      title: 'เว็บไซต์วัดหรือมูลนิธิ พร้อมฟังก์ชั่นรับบริจาค',
+      title: 'เว็บไซต์วัด พร้อมฟังก์ชั่นรับบริจาค',
       description: 'ระบบเว็บไซต์สำหรับวัดหรือมูลนิธิที่มีฟังก์ชั่นรับบริจาค พร้อมหลังบ้านจัดการหน้าเว็บไซต์ ระบบเช็คสลิปอัตโนมัติ และสรุปยอดบริจาครายคน',
       image: '/donate.png',
       tag: 'Temple & Foundation',
       link: '/temple-donation'
     }
-  ];
+    ,
+    {
+      id: 7,
+      title: 'เว็บไซต์มูลนิธิ พร้อมฟังก์ชั่นรับบริจาค',
+      description: 'ระบบเว็บไซต์สำหรับ มูลนิธิที่มีฟังก์ชั่นรับบริจาค พร้อมหลังบ้านจัดการหน้าเว็บไซต์ ระบบเช็คสลิปอัตโนมัติ และสรุปยอดบริจาครายคน',
+      image: '/donate.png',
+      tag: 'Foundation',
+      link: '/foundation-donation'
+    }
+    ,
+    {
+      id: 8,
+      title: 'ระบบรวมเเชท Facebook line oa',
+      description: 'ระบบรวมเเชท Facebook line oa พร้อมฟังก์ชั่นส่งข้อความอัตโนมัติและส่งข้อความกลับอีเมล',
+      image: '/allchat.png',
+      tag: 'Chat',
+      link: '/chat'
+    }
+    ,
+    {
+      id: 9,
+      title: 'ระบบเติมเกมออนไลน์',
+      description: 'ระบบเติมเกมออนไลน์',
+      image: '/term.png',
+      tag: 'Game',
+      link: '/game'
+    }
+    ,
 
+    
+    {
+      id:10,
+      title: 'ระบบประเมินราคาสินค้าทอง',
+      description: 'ระบบประเมินราคาทองคำและเครื่องประดับที่แม่นยำ อัพเดทราคาทองตามตลาดแบบเรียลไทม์',
+      image: '/es.png',
+      tag: 'Gold Valuation',
+      link: '#'
+    }
+  ];
+ 
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 py-20 overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
