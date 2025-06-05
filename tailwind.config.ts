@@ -28,11 +28,16 @@ const config: Config = {
         '400px': '400px',
       },
       colors: {
-        primary: '#1565c0',
-        secondary: '#d249ac',
+        primary: '#2563eb', // Updated to a more vibrant blue
+        'primary-dark': '#1d4ed8', // Darker shade for hover states
+        secondary: '#8b5cf6', // Updated to a modern purple
         header: '#1f2937',
         lolem: '#4b5563',
         darkbg: '#0f1623',
+        accent: '#f97316', // New orange accent color
+        success: '#10b981', // New success color
+        warning: '#f59e0b', // New warning color
+        info: '#3b82f6', // New info color
       },
     },
   },

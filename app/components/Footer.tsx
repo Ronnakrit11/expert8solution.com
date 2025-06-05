@@ -3,8 +3,30 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaFacebookSquare, FaLine, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6 }
+    }
+  }
+
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Top wave decoration */}
@@ -15,10 +37,16 @@ const Footer = () => {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Company Info */}
-          <div className="space-y-6">
+          <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex items-center">
               <Image 
                 src="/Expert8logo.webp" 
@@ -35,23 +63,23 @@ const Footer = () => {
             </p>
             <div className="pt-2">
               <p className="flex items-center text-gray-300 mb-2">
-                <FaMapMarkerAlt className="mr-3 text-blue-400" />
+                <FaMapMarkerAlt className="mr-3 text-primary" />
                 170/51 ถนนอ้อมค่าย ตำบลท่าซัก อำเภอเมือง จังหวัดนครศรีธรรมราช
               </p>
               <p className="flex items-center text-gray-300">
-                <FaEnvelope className="mr-3 text-blue-400" />
+                <FaEnvelope className="mr-3 text-primary" />
                 info@expert8-solution.com
               </p>
             </div>
-          </div>
+          </motion.div>
 
         
 
           {/* Social & Contact */}
-          <div className="space-y-6">
+          <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-xl font-semibold relative inline-block">
               ติดต่อเรา
-              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-blue-500 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-primary rounded-full"></span>
             </h3>
             
             <div className="flex flex-col space-y-4">
@@ -62,7 +90,7 @@ const Footer = () => {
                 className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors duration-300 group"
               >
                 <div className="bg-white p-2 rounded-lg group-hover:bg-blue-100 transition-colors duration-300">
-                  <FaFacebookSquare size={30} className="text-blue-600" />
+                  <FaFacebookSquare size={30} className="text-primary" />
                 </div>
                 <span>Facebook</span>
               </Link>
@@ -74,7 +102,7 @@ const Footer = () => {
                 className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors duration-300 group"
               >
                 <div className="bg-white p-2 rounded-lg group-hover:bg-green-100 transition-colors duration-300">
-                  <FaLine size={30} className="text-green-600" />
+                  <FaLine size={30} className="text-success" />
                 </div>
                 <span>Line</span>
               </Link>
@@ -92,25 +120,28 @@ const Footer = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-800">
+        <motion.div 
+          variants={itemVariants}
+          className="mt-12 pt-8 border-t border-gray-800"
+        >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               Copyright © {new Date().getFullYear()} Expert8-Solution. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link href="/policy" className="text-gray-400 hover:text-gray-300 text-sm">
+              <Link href="/policy" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-gray-300 text-sm">
+              <Link href="/terms" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
                 Terms of Service
               </Link>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </footer>
   )
 }
